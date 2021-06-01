@@ -7,8 +7,7 @@
 
 *Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 años, que compre productos relacionados con su equipo o atleta de preferencia. Podemos diferenciar 2 tipos de públicos específicos de acuerdo a su estilo de vida: por un lado, quienes llevan una vida deportiva activa practicando el básquet regularmente y que además están dispuestos a invertir en la indumentaria para uso exclusivo en la actividad. Mientras que por otro lado, también nos dirigimos a un público conectado con una moda ya establecida en los últimos años llamada "athleisure". Esta moda consiste en utilizar ropa diseñada para entrenamientos y otras actividades deportivas en otras ocasiones o eventos casuales de la vida cotidiana sin necesariamente estar realizando algún ejercicio aeróbico. Sectores de la música, mayormente del trap y rap, e influencers que no estan estictamente relacionados con el deporte, son quienes también motivan esta unión de lo atlético con el ocio. La importancia e impacto actual del producto radica en que estos se están convirtiendo en símbolo de valores y estilos de vida de celebridades en las redes sociales, siendo de preferencia en cantantes, artistas y modelos.*
 
-
-+ ## ___Publico Objetivo___
+### Como ajustaremos nuestra oferta a dicho público
 
     ```
     Para ajustar nuestra oferta a este publico:
