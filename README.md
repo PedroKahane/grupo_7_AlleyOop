@@ -9,7 +9,6 @@
 
 ### Como ajustaremos nuestra oferta a dicho público
 
-    ```
     Para ajustar nuestra oferta a este publico:
     1.Diseñamos un logotipo y nombre pensando en uno de los términos y movimientos distintivos del deporte para que genere mayor impacto tanto en el aficionado como en el mundo del basquet.
     2.Ofreceremos una variedad de camisetas emblemáticas, icónicas de la historia del deporte y muy recordadas por los fanáticos.
