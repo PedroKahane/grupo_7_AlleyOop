@@ -34,7 +34,7 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
         Carrito de compras 
     ___  
     - [___Pure Cycles___](https://www.purecycles.com/collections/bicycles)
-        ![Carrito](/Capturas/tienda.jepg)
+        ![Carrito](/Capturas/tienda.jpeg)
         ```
         Dieseño de la tienda 
 
