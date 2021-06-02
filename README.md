@@ -22,9 +22,9 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
         ```
        Simpleza de la tienda de pocos productos
     ___
-    ´´´
+  ´
         ![Pan Danes Preguntas Frecuentes](/Capturas/Tienda_3.jpeg)
-        ```
+        
        Solapa de preguntas frecuentes
     ___
 
