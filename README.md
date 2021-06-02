@@ -18,17 +18,18 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
 
 + ## ___Referentes___
     - [___Pan Danes___](https://www.pandanes.com.ar/)
-        ![Pan Danes Tienda](/Capturas/Tienda_3)
+        ![Pan Danes Tienda](/Capturas/Tienda_3.JPEG)
         ```
        Simpleza de la tienda de pocos productos
     ___
+    ´´´
         ![Pan Danes Preguntas Frecuentes](/Capturas/Tienda_3)
         ```
        Solapa de preguntas frecuentes
     ___
 
     - [___Bacca___](https://bacca.online/)
-        ![Captura](/Capturas/carrito)
+        ![Carrito](/Capturas/carrito.JPEG)
         ```
         Carrito de compras 
 ___  
