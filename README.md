@@ -55,17 +55,27 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
 - [___Detalle Del producto___]
         ![Producto](/Wireframes/Producto.jpg)
     
-       Wireframe del detalle de cada uno de los productos dentro de la pagina
+       Wireframe del detalle de cada uno de los productos dentro de la pagina.
     ___
 - [___Login___]
         ![Login](/Wireframes/Login.jpg)
       
-       Wireframe del login para los usuarios
+       Wireframe del login para los usuarios.
     ___
     - [___Registro___]
         ![Registrate](/Wireframes/registro.jpg)
      
-       Wireframe de la pestaña para poder registratse en nuestro sitio
+       Wireframe de la pestaña para poder registratse en nuestro sitio.
+    ___
+    - [___Carrito___]
+        ![Carrito](/Wireframes/Carrito_2.jpg)
+     
+       Wireframe de la primera instancia del carrito, la cual ingresas desde cualquier parte de la pagina.
+       
+    ___
+        ![Carrito](/Wireframes/Carrito_1.jpg)
+     
+       Wireframe de la Segunda instancia del carrito, una vez que apretas en compras, te lleva a esta instancia, en la cual ingresas tus datos para seguir con la compra.
     ___
 
 
