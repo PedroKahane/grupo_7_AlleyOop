@@ -75,3 +75,9 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
         2. ![#FF8200](https://via.placeholder.com/15/FF8200/000000?text=+) `#FF8200`
         3. ![#FFC100](https://via.placeholder.com/15/FFC100/000000?text=+) `#FFC100`
         4. ![#FFEAAE](https://via.placeholder.com/15/FFEAAE/000000?text=+) `#FFEAAE`
+
++ ## ___Tipografia___
+    | Estilo TIpografico | Ejemplo |
+    | ------------- | ------------- | ------------- | ------------- ||
+    | Sans Serif  | [Montserrat](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F464504149069166737%2F&psig=AOvVaw2I-9_KNcQ_hDIrJTfP_Z8u&ust=1623079948504000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIjhq5Cqg_ECFQAAAAAdAAAAABAD) [Montserrat] | 
+___
