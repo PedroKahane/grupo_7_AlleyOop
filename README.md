@@ -20,29 +20,29 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
     - [___Pan Danes___](https://www.pandanes.com.ar/)
         ![Pan Danes Tienda](/Capturas/Tienda_3.jpg)
         ```
-       Simpleza de la tienda de pocos productos
+       Simpleza de la tienda con pocos productos.
     ___
   ´
         ![Pan Danes Preguntas Frecuentes](/Capturas/Tienda_4.jpg)
         
-       Solapa de preguntas frecuentes
+       Solapa de preguntas frecuentes.
     ___
 
     - [___Bacca___](https://bacca.online/)
         ![Carrito](/Capturas/carrito.jpeg)
         ```
-        Carrito de compras 
+        Estructura y experiencia de compra dentro del carrito. 
     ___  
     - [___Pure Cycles___](https://www.purecycles.com/collections/bicycles)
         ![Carrito](/Capturas/tienda.jpeg)
         ```
-        Dieseño de la tienda 
+        Diseño de la tienda y filtros. 
 
     ___  
      - [___Pure Cycles___](https://www.stockcenter.com.ar/login)
         ![Carrito](/Capturas/log_in_registrate.jpeg)
         ```
-        Login y registrate integrados 
+        Login y registrate integrados. 
 
 
 + ## ___Wireframes___ 
@@ -50,12 +50,12 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
 - [___Home___]
         ![Home](/Wireframes/Home.jpeg)
       
-       Wireframe de la Home
+       Wireframe de la Home.
     ___
 - [___Detalle Del producto___]
         ![Producto](/Wireframes/Producto.jpg)
     
-       Wireframe del detalle de cada uno de los productos dentro de la pagina.
+       Wireframe del detalle de cada uno de los productos dentro de la página.
     ___
 - [___Login___]
         ![Login](/Wireframes/Login.jpg)
@@ -70,7 +70,7 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
     - [___Carrito___]
         ![Carrito](/Wireframes/Carrito_2.jpeg)
      
-       Wireframe de la primera instancia del carrito, la cual ingresas desde cualquier parte de la pagina.
+       Wireframe de la primera instancia del carrito, la cual ingresas desde cualquier parte de la página.
        
     ___
      - [___Carrito 2___]
