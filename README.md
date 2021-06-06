@@ -78,6 +78,5 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
 
 + ## ___Tipografia___
     | Estilo TIpografico | Ejemplo |
-    | ------------- | ------------- | ------------- | ------------- ||
-    | Sans Serif  | [Montserrat](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F464504149069166737%2F&psig=AOvVaw2I-9_KNcQ_hDIrJTfP_Z8u&ust=1623079948504000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIjhq5Cqg_ECFQAAAAAdAAAAABAD) [Montserrat] | 
+    | Sans Serif  | [Montserrat](https://graffica.info/wp-content/uploads/2013/12/01-Montserrat1.pngD) [Montserrat] | 
 ___
