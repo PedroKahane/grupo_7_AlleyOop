@@ -28,8 +28,8 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
        Solapa de preguntas frecuentes.
     ___
 
-    - [___Bacca___](https://bacca.online/)
-        ![Carrito](/Capturas/carrito.jpeg)
+    - [___Bellroy___](https://bellroy.com/checkout)
+        ![Carrito](/Capturas/carrito_compra.jpeg)
         ```
         Estructura y experiencia de compra dentro del carrito. 
     ___  
