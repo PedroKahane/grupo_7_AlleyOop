@@ -45,7 +45,14 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
         ![Carrito](/Capturas/log_in_registrate.jpeg)
         ```
         Login y registrate integrados. 
+       
+    ___  
+     - [___Basket World___](https://basketworld.com/producto-oficial-nba/camisetas-retro-nba/)
+       ![Carrito](/Capturas/Referencia.jpeg)
+        ```
+        Referencia por los productos similares que ofrecen 
 
+    ___  
 
 + ## ___Wireframes___ 
 
@@ -92,6 +99,6 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
     ![Paleta de colores](/Design/Colores.png)
 + ## ___Tipografia___
     - Estilo TIpografico: Sans Serif 
-    - [Montserrat](https://graffica.info/wp-content/uploads/2013/12/01-Montserrat1.png) [Montserrat]  
+    - [Montserrat](https://graffica.info/wp-content/uploads/2013/12/01-Montserrat1.png) 
     ![Montserrat](/Design/Tipografia_monserrat.png)
 ___
