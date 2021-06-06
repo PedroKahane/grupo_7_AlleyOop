@@ -67,3 +67,11 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
      
        Wireframe de la pestaña para poder registratse en nuestro sitio
     ___
+
+
++ ## ___Paleta de colores___
+    - __Basado en la siguiente:__ [___Link___](https://coolors.co/0a0903-ff8200-ffc100-ffeaae)
+        1. ![#0A0903](https://via.placeholder.com/15/0A0903/000000?text=+) `#0A0903`
+        2. ![#FF8200](https://via.placeholder.com/15/FF8200/000000?text=+) `#FF8200`
+        3. ![#FFC100](https://via.placeholder.com/15/FFC100/000000?text=+) `#FFC100`
+        4. ![#FFEAAE](https://via.placeholder.com/15/FFEAAE/000000?text=+) `#FFEAAE`
