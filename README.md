@@ -43,3 +43,27 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
         ![Carrito](/Capturas/log_in_registrate.jpeg)
         ```
         Login y registrate integrados 
+
+
++ ## ___Wireframes___ 
+
+- [___Home___]
+        ![Home](/Wireframes/Home.jpeg)
+        ```
+       Wireframe de la Home
+    ___
+- [___Detalle Del producto___]
+        ![Producto](/Wireframes/Producto.jpg)
+        ```
+       Wireframe del detalle de cada uno de los productos dentro de la pagina
+    ___
+- [___Login___]
+        ![Login](/Wireframes/Login.jpg)
+        ```
+       Wireframe del login para los usuarios
+    ___
+    - [___Registro___]
+        ![Registrate](/Wireframes/registro.jpg)
+        ```
+       Wireframe de la pestaña para poder registratse en nuestro sitio
+    ___
