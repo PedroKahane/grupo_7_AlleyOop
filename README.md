@@ -18,12 +18,12 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
 
 + ## ___Referentes___
     - [___Pan Danes___](https://www.pandanes.com.ar/)
-        ![Pan Danes Tienda](/Capturas/Tienda_3.jpeg)
+        ![Pan Danes Tienda](/Capturas/Tienda_3.jpg)
         ```
        Simpleza de la tienda de pocos productos
     ___
   ´
-        ![Pan Danes Preguntas Frecuentes](/Capturas/Tienda_3.jpeg)
+        ![Pan Danes Preguntas Frecuentes](/Capturas/Tienda_4.jpg)
         
        Solapa de preguntas frecuentes
     ___
@@ -32,5 +32,38 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
         ![Carrito](/Capturas/carrito.jpeg)
         ```
         Carrito de compras 
-___  
+    ___  
+    - [___Pure Cycles___](https://www.purecycles.com/collections/bicycles)
+        ![Carrito](/Capturas/tienda.jpeg)
+        ```
+        Dieseño de la tienda 
 
+    ___  
+     - [___Pure Cycles___](https://www.stockcenter.com.ar/login)
+        ![Carrito](/Capturas/log_in_registrate.jpeg)
+        ```
+        Login y registrate integrados 
+
+
++ ## ___Wireframes___ 
+
+- [___Home___]
+        ![Home](/Wireframes/Home.jpeg)
+        ```
+       Wireframe de la Home
+    ___
+- [___Detalle Del producto___]
+        ![Producto](/Wireframes/Producto.jpg)
+        ```
+       Wireframe del detalle de cada uno de los productos dentro de la pagina
+    ___
+- [___Login___]
+        ![Login](/Wireframes/Login.jpg)
+        ```
+       Wireframe del login para los usuarios
+    ___
+    - [___Registro___]
+        ![Registrate](/Wireframes/registro.jpg)
+        ```
+       Wireframe de la pestaña para poder registratse en nuestro sitio
+    ___
