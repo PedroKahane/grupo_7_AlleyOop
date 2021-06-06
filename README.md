@@ -11,7 +11,9 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
 + ## ___Para ajustar nuestra oferta a este publico:___
 
 1.Diseñamos un logotipo y nombre pensando en uno de los términos y movimientos distintivos del deporte para que genere mayor impacto tanto en el aficionado como en el mundo del basquet.
+
 2.Ofreceremos una variedad de camisetas emblemáticas, icónicas de la historia del deporte y muy recordadas por los fanáticos.
+
 3.Prevaleceran camisetas llamativas y bonitas que también impacten en el público que no este tan estrictamente relacionado con el basquet.
 
 
