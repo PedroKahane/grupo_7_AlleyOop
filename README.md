@@ -68,12 +68,13 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
        Wireframe de la pestaña para poder registratse en nuestro sitio.
     ___
     - [___Carrito___]
-        ![Carrito](/Wireframes/Carrito_2.jpg)
+        ![Carrito](/Wireframes/Carrito_2.jpeg)
      
        Wireframe de la primera instancia del carrito, la cual ingresas desde cualquier parte de la pagina.
        
     ___
-        ![Carrito](/Wireframes/Carrito_1.jpg)
+     - [___Carrito 2___]
+        ![Carrito](/Wireframes/Carrito_1.jpeg)
      
        Wireframe de la Segunda instancia del carrito, una vez que apretas en compras, te lleva a esta instancia, en la cual ingresas tus datos para seguir con la compra.
     ___
