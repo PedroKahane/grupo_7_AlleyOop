@@ -41,7 +41,7 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
         Diseño de la tienda y filtros. 
 
     ___  
-     - [___Pure Cycles___](https://www.stockcenter.com.ar/login)
+     - [___Stock Center___](https://www.stockcenter.com.ar/login)
         ![Carrito](/Capturas/log_in_registrate.jpeg)
         ```
         Login y registrate integrados. 
