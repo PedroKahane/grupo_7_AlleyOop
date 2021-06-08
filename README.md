@@ -34,16 +34,14 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
         más interesado estoy por el mundo de la programación y el Diseño.
 
     ___
+   - __Ruíz Díaz Lautaro__
 
+        ```
+        Tengo 23 años, me apasiona la música, los desportes y el mundo del emprendimiento.
+        Estudié por 4 años Ingeniería Química, pero decidí dejarlo y meterme de lleno a la programación, 
+        ya que despues de investigar me empezó a gustar mucho.
+        Hoy en día estudio Licenciatura en informática y tengo un emprendiminto familiar. 
 
-- __Ruiz Diaz Lautaro__
--          
-         ` ``
-        Tengo 23 años, me apasiona la musica, los desportes y el mundo del emprendimiento
-        Estudie por 4 años Ingenieria Química, pero decidí dejarlo y meterme de lleno a la programacion, ya que despues
-         de investigar, me empezó a gustar mucho.
-        Hoy en dia estudió licenciatura en informatica y tengo un emprendiminto familiar. 
-       
     ___
 
 + ## ___Referentes___
