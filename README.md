@@ -116,7 +116,7 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
         4. ![#FFEAAE](https://via.placeholder.com/15/FFEAAE/000000?text=+) `#FFEAAE`
         5. ![FFFAFA](https://via.placeholder.com/15/FFFAFA/000000?text=+) `#FFFAFA`
     ![Paleta de colores](/Design/Colores.png)
-+ ## ___Tipografia___
++ ## ___Tipografías___
     - Estilo TIpografico: Sans Serif 
     - [Montserrat](https://fonts.google.com/specimen/Montserrat?category=Sans+Serif&query=m) 
     
