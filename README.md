@@ -129,6 +129,8 @@ ___
     ![Roboto Slab](/Design/Tiporgrafia_Roboto_Slab.jpg)
 + ## ___Logotipo(Sujeto a cambios)___
      -Subimos el logotipo que utilizaremos por el momento pero el mismo quedara sujeto a algn cambio que podremos hacer de cara al siguiente sprint.
+     
+     ____
      -![Logotipo 1](/Design/alley-oop-logo-2.jpg)
      -![Logotipo 2](/Design/alley-oop-logo.jpg)
      
