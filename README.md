@@ -126,4 +126,4 @@ ___
  - Estilo TIpografico: Serif 
     - [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab?category=Serif) 
     
-    ![Roboto Slab](/Design/Tiporgrafia_Roboto Slab.jpeg)
+    ![Roboto Slab](/Design/Tiporgrafia_Roboto_Slab.jpeg)
