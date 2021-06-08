@@ -26,6 +26,15 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
         del marketing digital como freelancer trabajando para agencias del rubro. Me intriga y entusiasma
         el mundo de la programación, por eso es que aspiro a poder trabajar y seguir formandome en ello.
     ___
+    - __Pedro Luke Kahane__
+
+        ```
+        Tengo 20 años, hace años soy fanático de los deportes y entreno futbol hace años.
+        Si bien estudio Economía hace 3 años, siempre me gustó mucho la tecnología y a medida que voy aprendiendo,
+        más interesado estoy por el mundo de la programación y el Diseño.
+
+    ___
+
 
 
 + ## ___Referentes___
@@ -113,3 +122,8 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
     
     ![Montserrat](/Design/Tipografia_monserrat.png)
 ___
+
+ - Estilo TIpografico: Serif 
+    - [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab?category=Serif) 
+    
+    ![Roboto Slab](/Design/Tiporgrafia_Roboto Slab.jpeg)
