@@ -16,6 +16,16 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
 
 3.Prevaleceran camisetas llamativas y bonitas que también impacten en el público que no este tan estrictamente relacionado con el basquet.
 
++ ## ___Integrantes___
+
+    - __Sebastián Salvat__
+
+        ```
+        Tengo 30 años, me apasionan los deportes y la tecnología. 
+        En 2020 terminé mis estudios de Comunicación Digital en UCA y actualmente me desempeño en el área 
+        del marketing digital como freelancer trabajando para agencias del rubro. Me intriga y entusiasma
+        el mundo de la programación, por eso es que aspiro a poder trabajar y seguir formandome en ello.
+    ___
 
 
 + ## ___Referentes___
@@ -41,11 +51,18 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
         Diseño de la tienda y filtros. 
 
     ___  
-     - [___Pure Cycles___](https://www.stockcenter.com.ar/login)
+     - [___Stock Center___](https://www.stockcenter.com.ar/login)
         ![Carrito](/Capturas/log_in_registrate.jpeg)
         ```
         Login y registrate integrados. 
+       
+    ___  
+     - [___Basket World___](https://basketworld.com/producto-oficial-nba/camisetas-retro-nba/)
+       ![Carrito](/Capturas/Referencia.jpeg)
+        ```
+        Referencia por los productos similares que ofrecen 
 
+    ___  
 
 + ## ___Wireframes___ 
 
@@ -92,6 +109,7 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
     ![Paleta de colores](/Design/Colores.png)
 + ## ___Tipografia___
     - Estilo TIpografico: Sans Serif 
-    - [Montserrat](https://graffica.info/wp-content/uploads/2013/12/01-Montserrat1.png) [Montserrat]  
+    - [Montserrat](https://graffica.info/wp-content/uploads/2013/12/01-Montserrat1.png) 
+    
     ![Montserrat](/Design/Tipografia_monserrat.png)
 ___
