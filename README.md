@@ -38,7 +38,6 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
 - __Ruiz Diaz Lautaro__
 
         ```
-
         Tengo 23 años, me apasiona la musica, los desportes y el mundo del emprendimiento.
         Estudie por 4 años Ingenieria Química, pero decidí dejarlo y meterme de lleno a la programacion, ya que despues
          de investigar, me empezó a gustar mucho.
