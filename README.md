@@ -127,3 +127,7 @@ ___
     - [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab?category=Serif) 
     
     ![Roboto Slab](/Design/Tiporgrafia_Roboto_Slab.jpg)
++ ## ___Logotipo(Sujeto a cambios)___
+     -(Logotipo 1)(/Design/alley-oop-logo-2.jpg)
+     -(Logotipo 2)(/Design/alley-oop-logo.jpg)
+     
