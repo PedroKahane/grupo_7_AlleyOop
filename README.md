@@ -48,12 +48,12 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
     - [___Pan Danes___](https://www.pandanes.com.ar/)
         ![Pan Danes Tienda](/Capturas/Tienda_3.jpg)
         ```
-       Simpleza de la tienda con pocos productos.
+        Simpleza de la tienda con pocos productos.
     ___
   ´
         ![Pan Danes Preguntas Frecuentes](/Capturas/Tienda_4.jpg)
         
-       Solapa de preguntas frecuentes.
+        Solapa de preguntas frecuentes.
     ___
 
     - [___Bellroy___](https://bellroy.com/checkout)
@@ -127,17 +127,16 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
     - Estilo TIpografico: Sans Serif 
     - [Montserrat](https://fonts.google.com/specimen/Montserrat?category=Sans+Serif&query=m) 
     
-    ![Montserrat](/Design/Tipografia_monserrat.png)
+   ![Montserrat](/Design/Tipografia_monserrat.png)
 ___
-
- - Estilo TIpografico: Serif 
+    - Estilo TIpografico: Serif 
     - [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab?category=Serif) 
     
-    ![Roboto Slab](/Design/Tiporgrafia_Roboto_Slab.jpg)
+   ![Roboto Slab](/Design/Tiporgrafia_Roboto_Slab.jpg)
 + ## ___Logotipo(Sujeto a cambios)___
      -Subimos el logotipo que utilizaremos por el momento pero el mismo quedara sujeto a algn cambio que podremos hacer de cara al siguiente sprint.
      
      ____
-     -![Logotipo 1](/Design/alley-oop-logo-2.jpg)
-     -![Logotipo 2](/Design/alley-oop-logo.jpg)
+     ![Logotipo 1](/Design/alley-oop-logo-2.jpg)
+     ![Logotipo 2](/Design/alley-oop-logo.jpg)
      
