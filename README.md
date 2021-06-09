@@ -124,15 +124,15 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
         5. ![FFFAFA](https://via.placeholder.com/15/FFFAFA/000000?text=+) `#FFFAFA`
     ![Paleta de colores](/Design/Colores.png)
 + ## ___Tipografías___
-    - Estilo TIpografico: Sans Serif 
-    - [Montserrat](https://fonts.google.com/specimen/Montserrat?category=Sans+Serif&query=m) 
+  - Estilo TIpografico: Sans Serif 
+  - [Montserrat](https://fonts.google.com/specimen/Montserrat?category=Sans+Serif&query=m) 
     
-   ![Montserrat](/Design/Tipografia_monserrat.png)
+  -![Montserrat](/Design/Tipografia_monserrat.png)
 ___
-    - Estilo TIpografico: Serif 
-    - [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab?category=Serif) 
+  - Estilo TIpografico: Serif 
+  - [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab?category=Serif) 
     
-   ![Roboto Slab](/Design/Tiporgrafia_Roboto_Slab.jpg)
+  -![Roboto Slab](/Design/Tiporgrafia_Roboto_Slab.jpg)
 + ## ___Logotipo(Sujeto a cambios)___
      -Subimos el logotipo que utilizaremos por el momento pero el mismo quedara sujeto a algn cambio que podremos hacer de cara al siguiente sprint.
      
