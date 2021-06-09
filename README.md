@@ -129,8 +129,8 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
     
   -![Montserrat](/Design/Tipografia_monserrat.png)
 ___
-    - Estilo TIpografico: Serif 
-    - [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab?category=Serif) 
+  - Estilo TIpografico: Serif 
+  - [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab?category=Serif) 
     
   -![Roboto Slab](/Design/Tiporgrafia_Roboto_Slab.jpg)
 + ## ___Logotipo(Sujeto a cambios)___
