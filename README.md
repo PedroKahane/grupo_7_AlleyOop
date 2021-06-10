@@ -34,19 +34,26 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
         más interesado estoy por el mundo de la programación y el Diseño.
 
     ___
+   - __Ruíz Díaz Lautaro__
 
+        ```
+        Tengo 23 años, me apasiona la música, los desportes y el mundo del emprendimiento.
+        Estudié por 4 años Ingeniería Química, pero decidí dejarlo y meterme de lleno a la programación, 
+        ya que despues de investigar me empezó a gustar mucho.
+        Hoy en día estudio Licenciatura en informática y tengo un emprendiminto familiar. 
 
+    ___
 
 + ## ___Referentes___
     - [___Pan Danes___](https://www.pandanes.com.ar/)
         ![Pan Danes Tienda](/Capturas/Tienda_3.jpg)
         ```
-       Simpleza de la tienda con pocos productos.
+        Simpleza de la tienda con pocos productos.
     ___
   ´
         ![Pan Danes Preguntas Frecuentes](/Capturas/Tienda_4.jpg)
         
-       Solapa de preguntas frecuentes.
+        Solapa de preguntas frecuentes.
     ___
 
     - [___Bellroy___](https://bellroy.com/checkout)
@@ -116,14 +123,20 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
         4. ![#FFEAAE](https://via.placeholder.com/15/FFEAAE/000000?text=+) `#FFEAAE`
         5. ![FFFAFA](https://via.placeholder.com/15/FFFAFA/000000?text=+) `#FFFAFA`
     ![Paleta de colores](/Design/Colores.png)
-+ ## ___Tipografia___
-    - Estilo TIpografico: Sans Serif 
-    - [Montserrat](https://fonts.google.com/specimen/Montserrat?category=Sans+Serif&query=m) 
++ ## ___Tipografías___
+- Estilo TIpografico: Sans Serif 
+- [Montserrat](https://fonts.google.com/specimen/Montserrat?category=Sans+Serif&query=m) 
     
-    ![Montserrat](/Design/Tipografia_monserrat.png)
+  -![Montserrat](/Design/Tipografia_monserrat.png)
 ___
-
- - Estilo TIpografico: Serif 
-    - [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab?category=Serif) 
+- Estilo TIpografico: Serif 
+- [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab?category=Serif) 
     
-    ![Roboto Slab](/Design/Tiporgrafia_Roboto_Slab.jpg)
+  -![Roboto Slab](/Design/Tiporgrafia_Roboto_Slab.jpg)
++ ## ___Logotipo(Sujeto a cambios)___
+     -Subimos el logotipo que utilizaremos por el momento pero el mismo quedara sujeto a algn cambio que podremos hacer de cara al siguiente sprint.
+     
+     ____
+     ![Logotipo 1](/Design/alley-oop-logo-2.jpg)
+     ![Logotipo 2](/Design/alley-oop-logo.jpg)
+     
