@@ -105,15 +105,19 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
     - [___Carrito___]
         ![Carrito](/Wireframes/Carrito_2.jpeg)
      
-       Wireframe de la primera instancia del carrito, la cual ingresas desde cualquier parte de la página.
+       Wireframe de la primera instancia del carrito, la cual sirve para verificar todo lo que compraste y en la cual pode decidir agregar mas cosas.
        
     ___
      - [___Carrito 2___]
         ![Carrito](/Wireframes/Carrito_1.jpeg)
      
-       Wireframe de la Segunda instancia del carrito, una vez que apretas en compras, te lleva a esta instancia, en la cual ingresas tus datos para seguir con la compra.
+       Wireframe de la Segunda instancia del carrito, esta parte es para poner los datos personales y de envio.
     ___
-
+  - [___Carrito 3___]
+        ![Carrito](/Wireframes/Carrito_3.jpeg)
+     
+       Por ultimo la tercera instancia de Wireframe, esta parte es para elegir el metodo de pagp y confirmar la compra.
+    ___
 
 + ## ___Paleta de colores___
     - __Basado en la siguiente:__ [___Link___](https://coolors.co/0a0903-ff8200-ffc100-ffeaae-fffafa)
