@@ -116,7 +116,7 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
   - [___Carrito 3___]
         ![Carrito](/Wireframes/Carrito_3.jpeg)
      
-       Por ultimo la tercera instancia de Wireframe, esta parte es para elegir el metodo de pagp y confirmar la compra.
+       Por ultimo la tercera instancia de Wireframe, esta parte es para elegir el metodo de pago y confirmar la compra.
     ___
 
 + ## ___Paleta de colores___
