@@ -29,6 +29,7 @@ header {
 }
 .imagen_header {
     margin: 0px 30px;
+    display: none;
 }
 .menu_header a {
     color: #0A0903;
@@ -36,6 +37,7 @@ header {
     padding: 20px;
     font-size: 22px;
     font-weight: bold;
+    display: none;
 }
 .icon_header a i {
     font-size: 1.3em;
@@ -44,4 +46,27 @@ header {
 }
 .icon_header {
     margin: 0 30px;
+    display: flex;
+    align-items: center;
+}
+.fa-bars {
+    font-size: 1.5em;
+    padding: 10px;
+    color: #0A0903;
+}
+@media (min-width:361px) {
+    .imagen_header {
+        display: unset;
+    }
+}
+@media (min-width:1000px) {
+    .logo_alley_oop {
+        width: 190px;
+    }
+    .burger-menu {
+        display: none;
+    }
+    .menu_header a {
+        display: unset;
+    }
 }

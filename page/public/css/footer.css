@@ -1,0 +1,30 @@
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0A0903;
+    height: 65px;
+
+}
+footer img {
+    margin: 20px;
+}
+.menu_footer a {
+    color: #FFFAFA;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+}
+.menu_footer {
+    margin: 25px;
+    display: none;
+}
+
+@media (min-width:769px) {
+    .menu_footer { 
+        display: unset;
+    }
+    footer {
+        justify-content: space-between;
+    }
+}
