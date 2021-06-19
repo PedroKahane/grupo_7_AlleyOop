@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'montserrat',sans-serif;
+}
+.main_home {
+    height: 455px;
+    background-color: #ebebeb;
+}
+.background_home {
+    background-image: url(/images/basket_pelota.jpeg);
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.title_background {
+    font-size: 48px;
+    text-align: center;
+    font-weight: 900;
+    color: #FFEAAE;
+    font-family: 'Roboto Slab',serif;
+}

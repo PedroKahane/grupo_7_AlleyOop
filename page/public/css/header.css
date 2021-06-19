@@ -1,9 +1,4 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'montserrat',sans-serif;
-}
+
 header {
     display: flex;
     flex-direction: column;
