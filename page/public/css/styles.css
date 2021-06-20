@@ -5,8 +5,7 @@
     font-family: 'montserrat',sans-serif;
 }
 .main_home {
-    height: 455px;
-    background-color: #ebebeb;
+    background-color: #FFFAFA;
 }
 .background_home {
     background-image: url(/images/basket_pelota.jpeg);
@@ -34,12 +33,128 @@
 .p_home{
     margin:10px;
 }
+.titulo_productos {
+    font-size: 48px;
+    margin: 15px;
+    text-align: center;
+}
+.articulo_destacado {
+    width: 95vw;
+    margin: 2vw;
+    box-sizing: border-box;
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw;
+}
+.imagen_promocion {
+    width: 90vw;
+}
+.precio_descuento {
+    display: flex;
+    align-items: center;
+}
+.precio_descuento p {
+    margin:  5px 20px;
+    font-weight: 600;
+}
+.descuento {
+    color: #39b54a;
+}
+.precio {
+    font-size: 28px;
+}
+.jugador {
+    font-weight: 600;
+}
+.articulos_promocion {
+    display: flex;
+    flex-direction: column;
+}
+.boton_productos {
+    background-color: #FF8200;
+    color: #FFFAFA;
+    border: none;
+    width: 300px;
+    font-size: 32px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 15px 0px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 40px;
+    text-align: center;
+
+}
+.contenedor_boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner_beneficios {
+    background-color: #0A0903;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 60px 0px;
+    padding: 20px
+}
+.banner_beneficios i {
+    font-size: 2em;
+    color: #FFFAFA;
+}
+.title_beneficio{
+    font-size: 22px;
+    color: #FFFAFA;
+    font-weight: 800;
+    text-align: center;
+}
+.subtitle_beneficio{
+    font-size: 16px;
+    color: #FFFAFA;
+    text-align: center;
+}
+.beneficio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 95vw;
+}
 @media (min-width:389px) {
     .title_background {
         font-size: 36px;
     }
     .subtitle_background{
         font-size: 22px;
+    }
+    .articulo_destacado {
+        width: 42vw;
+    }
+    .imagen_promocion {
+        width: 40vw;
+        height: 50vw;
+    }
+    .articulos_promocion {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .descripcion {
+        height: 38px;
+    }
+    .boton_productos {
+        padding: 10px 20px;
+        width: 350px;
+    }
+    .banner_beneficios{
+        flex-direction: row;
+    }
+    .beneficio{
+        width: 30vw;
     }
 }
 @media (min-width:790px) {
@@ -57,7 +172,21 @@
     .p_home {
     width: 600px;
     margin-left: 50px;
-}
+    }
+    .articulo_destacado {
+        width: 24vw;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    .imagen_promocion {
+        width: 20vw;
+        height: 28vw;
+    }
+    .articulos_promocion {
+        justify-content: space-around;
+    }
+    .precio_descuento p {
+        margin:5px;
+    }
 }
 @media (min-width:1100px){
     .p_home {
