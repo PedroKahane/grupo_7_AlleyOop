@@ -74,7 +74,7 @@
     flex-direction: column;
 }
 .boton_productos {
-    background-color: #FF8200;
+    background-color: #FFEAAE;
     color: #FFFAFA;
     border: none;
     width: 300px;
@@ -136,12 +136,14 @@
     }
     .imagen_promocion {
         width: 40vw;
-        height: 50vw;
+        height: 40vw;
     }
     .articulos_promocion {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
     }
     .descripcion {
         height: 38px;
@@ -174,18 +176,28 @@
     margin-left: 50px;
     }
     .articulo_destacado {
-        width: 24vw;
+        width: 16vw;
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
     .imagen_promocion {
-        width: 20vw;
-        height: 28vw;
+        width: 15vw;
+        height: 15vw;
     }
     .articulos_promocion {
         justify-content: space-around;
     }
     .precio_descuento p {
         margin:5px;
+    }
+    .productos_home {
+        padding: 80px 6vw;
+    }
+    .titulo_productos {
+        margin-bottom: 60px;
+    }
+    .boton_productos {
+        width: 30vw;
+        margin-top: 120px;
     }
 }
 @media (min-width:1100px){
