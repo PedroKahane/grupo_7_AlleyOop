@@ -74,7 +74,7 @@
     flex-direction: column;
 }
 .boton_productos {
-    background-color: #FFEAAE;
+    background-color: #FF8200;
     color: #FFFAFA;
     border: none;
     width: 300px;
@@ -94,7 +94,7 @@
     justify-content: center;
 }
 .banner_beneficios {
-    background-color: #0A0903;
+    background-color: #3e3e3e;
     display: flex;
     flex-direction: column;
     align-items: center;

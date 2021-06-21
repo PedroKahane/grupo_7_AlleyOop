@@ -5,20 +5,20 @@ header {
 }
 .header_top {
     height: 40px;
-    background-color: #0A0903;
+    background-color: #FFEAAE;
     display:flex;
     align-items: center;
     justify-content: center;
 }
 .header_top p {
-    color: #FFFAFA;
+    color: #0A0903;
     font-size: 20px;
     text-align: center;
 }
 .header_bottom {
     display: flex;
     justify-content: space-between;
-    background-color: #FFEAAE;
+    background-color: #0A0903;
     align-items: center;
     height: 100px;
 }
@@ -27,7 +27,7 @@ header {
     display: none;
 }
 .menu_header a {
-    color: #0A0903;
+    color: #FFFAFA;
     text-decoration: none;
     padding: 20px;
     font-size: 22px;
@@ -36,7 +36,7 @@ header {
 }
 .icon_header a i {
     font-size: 1.3em;
-    color: #0A0903;
+    color: #FFFAFA;
     padding: 10px;
 }
 .icon_header {
@@ -47,7 +47,7 @@ header {
 .fa-bars {
     font-size: 1.5em;
     padding: 10px;
-    color: #0A0903;
+    color: #FFFAFA;
 }
 @media (min-width:361px) {
     .imagen_header {
