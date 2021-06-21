@@ -124,6 +124,7 @@
     margin-bottom: 10px;
     width: 95vw;
 }
+
 @media (min-width:389px) {
     .title_background {
         font-size: 36px;
