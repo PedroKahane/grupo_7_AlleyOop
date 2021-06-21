@@ -6,13 +6,65 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
     <title>Alley Oop</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header>
+        <div class="header_top">
+            <p>OFERTAS</p>
+        </div>
+        <div class="header_bottom">
+            <figure class="imagen_header">
+                <img class="logo_alley_oop" src="/images/alley-oop-logo_fondoBlanco.png" alt="" width="120px">
+            </figure>
+            <section class="menu_header">
+                <a href="/">Home</a>
+                <a href="">Tienda</a>
+                <a href="">Quienes somos</a>
+                <a href="">Contacto</a>
+            </section>
+            <section class="icon_header">
+                <a class="icon_a" href="/login"><i class="fas fa-user"></i></a>
+                <a class="icon_a" href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+                <div class="burger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </section>
+        </div>
+    </header>
+    <main>
+        <section class="section_login">
+            <div class="login">
+                <img src="" alt="">
+                <p class="title_login">Registrate:</p>
+                <div class="a_login_register">
+                    <a class="menu_user border " href="/login"> LOG-IN</a>
+                    <a class="menu_user active" href="/register"> REGISTRATE</a>
+                </div>
+                <form  class="form_login" action="">
+                    <input type="text" name="correo" id="correo" placeholder="Correo electronico">
+                    <input type="text" name="user" id="user" placeholder="Elegi un nombre de usuario">
+                    <input type="text" name="name" id="name" placeholder="Nombre y apellido">
+                    <input type="password" name="password" id="password" placeholder="Escribi tu contaseña">
+                    <input type="password" name="RepeatPassword" id="RepeatPassword" placeholder="Repeti contraseña">
+                    <button class="button_login" type="submit"> Registrate</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <img src="/images/alley-oop-logo.png" width="150px">
+        <div class="menu_footer">
+            <a href="/">Home</a>
+            <a href="">Tienda</a>
+            <a href="">Quienes somos</a>
+            <a href="">Contacto</a>
+        </div>
+    </footer>
 </body>
 </html>
