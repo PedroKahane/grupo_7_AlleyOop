@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contacto.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/header.css">
     <title>Alley Oop</title>
@@ -40,7 +41,26 @@ rel="stylesheet">
             </section>
         </div>
     </header>
-    <main></main>
+    <main>
+        <section>
+            <form class="contacto" action="">
+                <p class="title_contacto">CONTACTO:</p>
+                <div class="label_input">
+                    <label for="name">Nombre y apellido:</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="label_input">
+                    <label for="mail">Correo Electronico:</label>
+                    <input type="email" name="mail" id="mail">
+                </div>
+                <div class="label_input">
+                    <label for="mail">Dejanos tu comentario:</label>
+                    <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder=""></textarea>
+                </div>
+                <button type="submit" class="submit">ENVIAR CONSULTA</button>
+            </form>
+        </section>
+    </main>
     <footer>
         <a href="/">
             <img src="/images/alley-oop-logo.png" width="150px">
