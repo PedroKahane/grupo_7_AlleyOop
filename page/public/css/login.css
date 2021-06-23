@@ -33,6 +33,7 @@
     color: #0A0903;
     text-align: center;
     text-decoration: none;
+    transition: all 1050ms;
 }
 .border {
     border-right: 1px solid #ebebeb;
@@ -68,13 +69,21 @@
     padding: 5px 30px;
     border-radius: 30px;
     cursor: pointer;
+    transition: all 750ms;
 }
 .menu_user:hover {
-    background-color: #0A0903 750ms;
+    background-color: #0A0903 ;
     color: #FFFAFA;
 }
 .button_login:hover{
-    background-color: #0a0903 1050ms;
+    background-color: #0a0903 ;
+}
+.login img {
+    margin-top:  40px;
+    margin-bottom: 40px;
+}
+.login_href {
+    font-size: 16px
 }
 @media (max-width:450px) {
     .login {
