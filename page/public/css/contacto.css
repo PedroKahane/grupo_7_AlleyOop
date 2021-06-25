@@ -3,6 +3,7 @@
     border: 1px solid #0A0903;
     border-radius: 20px;
     margin: 10vh 2.5vw ;
+    background-color: #a5a5a5;
 }
 .label_input {
     display: flex;
@@ -30,7 +31,8 @@ textarea{
     resize: none;
     border: 3px #ebebeb solid;
     background-color: #ffffff;
-    border-radius: 30px;
+    padding: 5px 5px;
+    border-radius: 10px;
 }
 
 .submit {
