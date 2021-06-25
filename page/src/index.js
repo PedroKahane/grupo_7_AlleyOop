@@ -1,13 +1,14 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 
-app.listen(4000, () => {
-    return console.log("Server start", "http://localhost:4000")
-})
+app.listen(4000,() => console.log("Server on http://localhost:4000"));
 
 
-app.use(express.static("../public"))
 
-app.use(require("./routes/web"))
+app.use(express.static(path.resolve(__dirname,"../public")));
+
+
+app.use(require('./routes/web'))
 
 
