@@ -1,9 +1,12 @@
+html {
+    background-color: #eee;;
+}
 .contacto {
     width: 95vw;
     border: 1px solid #0A0903;
     border-radius: 20px;
     margin: 10vh 2.5vw ;
-    background-color: #a5a5a5;
+    background-color: #ffffff;
 }
 .label_input {
     display: flex;
