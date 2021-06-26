@@ -91,9 +91,9 @@ section a {
 }
 
 .boton-compra {
-    background-color: #e15a1d;
     background-image: none;
-    border-radius: 8px;
+    background-color: #FF8200;
+    border-radius: 40px;
     border: none;
     box-shadow: 0 27px 15px -17px rgb(0 0 0 / 30%), 0 2px 4px rgb(0 0 0 / 30%);
     color: #fff;
