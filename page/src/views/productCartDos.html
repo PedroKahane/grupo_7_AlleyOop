@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/productCart.css">
+    <title>Alley Oop</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header_top">
+            <p>OFERTAS</p>
+        </div>
+        <div class="header_bottom">
+            <figure class="imagen_header">
+                <a href="/">
+                    <img class="logo_alley_oop" src="/images/alley-oop-logo.png" alt="" width="120px">
+                </a>
+            </figure>
+            <section class="menu_header">
+                <a href="/">Home</a>
+                <a href="/tienda">Tienda</a>
+                <a href="/quienesSomos">Quienes somos</a>
+                <a href="/contacto">Contacto</a>
+            </section>
+            <section class="icon_header">
+                <a class="icon_a" href="/login"><i class="fas fa-user"></i></a>
+                <a class="icon_a" href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+                <div class="burger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </section>
+        </div>
+    </header>
+    <main class="contenedor-main">
+        <section class="volver">
+            <i class="fas fa-chevron-left"></i><a href="/">Volver</a>
+        </section>
+        <section class="contenedor-carrito">
+            <p class="titular-carrito">Carrito de compras</p>
+            <form  class= "contenedor-form" action="" method="POST">
+                <fieldset class="contenedor-item">
+                    <p>2. DIRECCIÓN DE ENVÍO</p>
+                    <p class="subtitulo">Todos los datos son obligatorios</p>
+                </fieldset>
+                <fieldset class="contenedor-item">
+                    <label class="titulo-input" for="nombre">Nombre*</label>
+                    <input class="caja" type="text" name="nombre" id="nombre" required>
+                </fieldset>
+                <fieldset class="contenedor-item">
+                    <label class="titulo-input" for="apellido">Apellido*</label>
+                    <input class="caja" type="text" name="apellido" id="apellido" required>
+                </fieldset>
+                <fieldset class="contenedor-item">
+                    <label class="titulo-input"for="email">Dirección de correo electrónico*</label>
+                    <input class="caja" placeholder="p. ej. jordan@alleyoop.com" type="email" name="email" id="email" required>
+                </fieldset>
+                <fieldset class="contenedor-item">
+                    <label class="titulo-input"for="telefono">Teléfono*</label>
+                    <input class="caja" type="tel" name="telefono" id="telefono" required>
+                </fieldset>
+                <fieldset class="contenedor-item">
+                    <label class="titulo-input"for="direccion">Dirección de envío*</label>
+                    <input class="caja" type="text" name="direccion" id="direccion" placeholder="p. ej. Calle Scottie Pippen 1996" required>
+                </fieldset>
+                <fieldset class="contenedor-item">
+                    <label class="titulo-input" for="localidad">Localidad*</label>
+                    <input class="caja" type="text" name="localidad" id="localidad" required>
+                </fieldset>
+                <fieldset class="contenedor-item">
+                    <label class="titulo-input" for="provincia">Provincia*</label>
+                    <select class="caja" name="provincia" id="provincia" required>
+                        <option value="" selected>Elegí tu provincia</option>
+                        <option value="bsas">Provincia de Buenos Aires</option>
+                        <option value="cat">Provincia de Catamarca</option>
+                        <option value="cor">Provincia de Córdoba</option>
+                        <option value="Ctes">Provincia de Corrientes</option>
+                        <option value="er">Provincia de Entre Ríos</option>
+                        <option value="for">Provincia de Formosa</option>
+                        <option value="jj">Provincia de Jujuy</option>
+                        <option value="pam">Provincia de La Pampa</option>
+                        <option value="rio">Provincia de La Rioja</option>
+                        <option value="men">Provincia de Mendoza</option>
+                        <option value="mis">Provincia de Misiones</option>
+                        <option value="neu">Provincia de Neuquén</option>
+                        <option value="rn">Provincia de Río Negro</option>
+                        <option value="sal">Provincia de Salta</option>
+                        <option value="sj">Provincia de San Juan</option>
+                        <option value="sl">Provincia de San Luis</option>
+                        <option value="sc">Provincia de Santa Cruz</option>
+                        <option value="sf">Provincia de Santa Fe</option>
+                        <option value="sde">Provincia de Santiago del Estero</option>
+                        <option value="tdf">Provincia de Tierra del Fuego, Antártida e islas del Atlántico Sur</option>
+                        <option value="tuc">Provincia de Tucumán</option>
+                        <option value="cha">Provincia del Chaco</option>
+                        <option value="chu">Provincia del Chubut</option>
+                    </select>
+                </fieldset>
+                <fieldset class="contenedor-item">
+                    <label class="titulo-input" for="codigopostal">Código Postal*</label>
+                    <input class="caja" type="text" name="codigopostal" id="codigopostal" required>
+                </fieldset>
+                <fieldset class="contenedor-item">
+                    <a href="/productCartTres" class="boton-compra">A MÉTODO DE PAGO</a>
+                </fieldset>
+                
+                
+            </form>
+        </section>
+    </main>
+    <footer>
+        <a href="/">
+            <img src="/images/alley-oop-logo.png" width="150px">
+        </a>
+        <div class="menu_footer">
+            <a href="/">Home</a>
+            <a href="/tienda">Tienda</a>
+            <a href="/quienesSomos">Quienes somos</a>
+            <a href="/contacto">Contacto</a>
+        </div>
+    </footer>
+</body>
+</html>
+

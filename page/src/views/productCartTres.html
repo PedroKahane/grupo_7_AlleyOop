@@ -43,13 +43,13 @@ rel="stylesheet">
     </header>
     <main class="contenedor-main">
         <section class="volver">
-            <i class="fas fa-chevron-left"></i><a href="/">Continuar comprando</a>
+            <i class="fas fa-chevron-left"></i><a href="/">Volver</a>
         </section>
         <section class="contenedor-carrito">
             <p class="titular-carrito">Carrito de compras</p>
             <form  class= "contenedor-form" action="" method="POST">
                 <fieldset class="contenedor-item">
-                    <p>1. REVISA TU PEDIDO</p>
+                    <p>2. DIRECCIÓN DE ENVÍO</p>
                     <p class="subtitulo">Todos los datos son obligatorios</p>
                 </fieldset>
                 <fieldset class="contenedor-item">
@@ -60,9 +60,20 @@ rel="stylesheet">
                     <label class="titulo-input" for="apellido">Apellido*</label>
                     <input class="caja" type="text" name="apellido" id="apellido">
                 </fieldset>
-               
                 <fieldset class="contenedor-item">
-                    <a href="/productCartDos" class="boton-compra">IR A DIRECCIÓN DE ENVÍO</a>
+                    <label class="titulo-input"for="email">Dirección de correo electrónico*</label>
+                    <input class="caja" placeholder="p. ej. jordan@alleyoop.com" type="email" name="email" id="email">
+                </fieldset>
+                <fieldset class="contenedor-item">
+                    <label class="titulo-input"for="telefono">Teléfono*</label>
+                    <input class="caja" type="tel" name="telefono" id="telefono">
+                </fieldset>
+                <fieldset class="contenedor-item">
+                    <label class="titulo-input" for="codigopostal">Código Postal*</label>
+                    <input class="caja" type="text" name="codigopostal" id="codigopostal">
+                </fieldset>
+                <fieldset class="contenedor-item">
+                    <a href="/" class="boton-compra">IR A MÉTODO DE PAGO</a>
                 </fieldset>
                 
                 
