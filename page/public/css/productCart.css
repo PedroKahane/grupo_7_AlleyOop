@@ -216,6 +216,7 @@ section a.titulo-articulo {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    padding: 12px;
 }
 
 .resumen {
@@ -226,13 +227,15 @@ section a.titulo-articulo {
     flex-wrap: wrap;
     align-items: flex-start;
     flex-grow: 1;
+    border-bottom: 2px solid #eee; 
+    padding-bottom: 15px;
 }
 
 .resumen-articulos {
-    /* border-bottom: 2px solid #eee; */
     width: 100%;
     display: flex;
     flex-direction: row;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -240,4 +243,13 @@ p.subtotal {
     font-size: 16px;
     font-weight: 700;
     color: #333;
+}
+.precio_articulo{
+    text-align: right;
+    font-size: 12px;
+    width: 30%;
+}
+.subtitulo-articulo {
+    width: 70%;
+    text-align: left;
 }
