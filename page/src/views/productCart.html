@@ -50,22 +50,73 @@ rel="stylesheet">
             <form  class= "contenedor-form" action="" method="POST">
                 <fieldset class="contenedor-item">
                     <p class="titulo">1. REVISA TU PEDIDO</p>
-                    <p class="subtitulo">Todos los datos son obligatorios</p>
                 </fieldset>
-                <fieldset class="contenedor-item">
-                    <label class="titulo-input" for="nombre">Nombre*</label>
-                    <input class="caja" type="text" name="nombre" id="nombre">
+                <fieldset class="contenedor-item-delete">
+                    <i class="fas fa-times"></i>  
                 </fieldset>
-                <fieldset class="contenedor-item">
-                    <label class="titulo-input" for="apellido">Apellido*</label>
-                    <input class="caja" type="text" name="apellido" id="apellido">
+                <fieldset class="contenedor-item-foto">
+                    <img class="imagen_promocion" src="images/MJ-Bulls-frente.jpg" alt="">
+                    <div class="contenedor-propiedades-articulo">
+                        <p>Camiseta Chicago Bulls</p>
+                        <div>
+                            <p class="subtitulo-articulo">Color: Rojo</p>
+                            <p class="subtitulo-articulo">Equipo: Chicago Bulls</p>
+                        </div>
+                        <div class="contenedor-cantidad">
+                            <label class="subtitulo-articulo" for="cantidad">Cantidad:</label>
+                            <select class="caja select-cantidad" name="cantidad" id="cantidad">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                        <p class="precio">ARS $10.000</p>
+                    </div>
                 </fieldset>
+
+                <fieldset class="contenedor-item-foto">
+                    <img class="imagen_promocion" src="images/Duncan_SA_21_frente.jpg" alt="">
+                    <div class="contenedor-propiedades-articulo">
+                        <p>Camiseta San Antonio Spurs</p>
+                        <div>
+                            <p class="subtitulo-articulo">Color: Negro</p>
+                        </div>
+                        <div class="contenedor-cantidad">
+                            <label class="subtitulo-articulo" for="cantidad">Cantidad:</label>
+                            <select class="caja select-cantidad" name="cantidad" id="cantidad">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                        <p class="precio">ARS $8.000</p>
+                    </div>
+                </fieldset>
+
+                <div class="contenedor-subtotal">
+                    <div>Subtotal</div>
+                    <div>
+                        <span>ARS $18.000</span>
+                    </div>
+                </div>
                
                 <fieldset class="contenedor-item">
                     <a href="/productCartDos" class="boton-compra">IR A DIRECCIÓN DE ENVÍO</a>
                 </fieldset>
-                
-                
             </form>
         </section>
     </main>

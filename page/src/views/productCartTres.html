@@ -43,40 +43,49 @@ rel="stylesheet">
     </header>
     <main class="contenedor-main">
         <section class="volver">
-            <i class="fas fa-chevron-left"></i><a href="/">Volver</a>
+            <i class="fas fa-chevron-left"></i><a href="/productCartDos">Volver</a>
         </section>
         <section class="contenedor-carrito">
             <p class="titular-carrito">Carrito de compras</p>
             <form  class= "contenedor-form" action="" method="POST">
                 <fieldset class="contenedor-item">
-                    <p class="titulo">2. DIRECCIÓN DE ENVÍO</p>
-                    <p class="subtitulo">Todos los datos son obligatorios</p>
+                    <p class="titulo">3. TIPO DE PAGO Y RESUMEN DE PEDIDO</p>
+                </fieldset>
+                <fieldset class="contenedor-item-pago">
+                    <legend class="titulo-input">Pagar con:</legend>
+                        <input type="radio" name="metododepago" value="credito" id="credito">
+                        <label class= "titulo-input" for="credito">Crédito</label>
+                        <input type="radio" name="metododepago" value="debito" id="debito">
+                        <label class= "titulo-input" for="debito">Débito</label>
                 </fieldset>
                 <fieldset class="contenedor-item">
-                    <label class="titulo-input" for="nombre">Nombre*</label>
-                    <input class="caja" type="text" name="nombre" id="nombre">
+                    <label class="titulo-input" for="numerotarjeta">Numero de tarjeta</label>
+                    <input class="caja" type="number" placeholder="xxxx xxxx xxxx xxxx" name="numerotarjeta" id="numerotarjeta">
                 </fieldset>
                 <fieldset class="contenedor-item">
-                    <label class="titulo-input" for="apellido">Apellido*</label>
-                    <input class="caja" type="text" name="apellido" id="apellido">
+                    <label class="titulo-input" for="vencimiento">Fecha de vencimiento*</label>
+                    <input class="caja" type="date" min="2021-08-01" max="2031-08-01" name="vencimiento" id="vencimiento">
                 </fieldset>
                 <fieldset class="contenedor-item">
-                    <label class="titulo-input"for="email">Dirección de correo electrónico*</label>
-                    <input class="caja" placeholder="p. ej. jordan@alleyoop.com" type="email" name="email" id="email">
+                    <label class="titulo-input"for="email">CVV (3 digitos)</label>
+                    <input class="caja" placeholder="xxx" type="email" name="email" id="email">
                 </fieldset>
+                <div class="resumen">
+                    <p class="titulo-input">Resumen del pedido</p>
+                    <div class="resumen-articulos">
+                        <p class="subtitulo-articulo">1 x Camiseta San Antonio Spurs</p>
+                        <p class="subtitulo-articulo">1 x Camiseta Chicago Bulls</p>
+                    </div>
+                </div>
+                <div class="contenedor-subtotal">
+                    <div>Subtotal</div>
+                    <div>
+                        <span>ARS $18.000</span>
+                    </div>
+                </div>
                 <fieldset class="contenedor-item">
-                    <label class="titulo-input"for="telefono">Teléfono*</label>
-                    <input class="caja" type="tel" name="telefono" id="telefono">
+                    <a href="/" class="boton-compra">PAGAR</a>
                 </fieldset>
-                <fieldset class="contenedor-item">
-                    <label class="titulo-input" for="codigopostal">Código Postal*</label>
-                    <input class="caja" type="text" name="codigopostal" id="codigopostal">
-                </fieldset>
-                <fieldset class="contenedor-item">
-                    <a href="/" class="boton-compra">IR A MÉTODO DE PAGO</a>
-                </fieldset>
-                
-                
             </form>
         </section>
     </main>

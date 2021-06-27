@@ -62,6 +62,13 @@ section a {
     margin-top: 5px;  
 }
 
+.subtitulo-articulo{
+    color: #9b9b9b;
+    font-weight: 600;
+    font-size: 12px;
+    align-self: flex-start;  
+}
+
 .contenedor-form {
     background-color: white;
     width: 60vw;
@@ -76,6 +83,60 @@ section a {
     border: none;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+}
+
+.contenedor-item-pago {
+    padding: 12px;
+    border: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.contenedor-item-foto {
+    padding: 0px 12px 20px 12px;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 20px;
+}
+
+.contenedor-propiedades-articulo {
+    margin-left: 15px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.contedor-cantidad {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenedor-item-delete {
+    margin-top: 5px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.select-cantidad{
+    width: 40% !important;
+    margin: 3px;
+}
+
+.fa-times{
+    color: grey;
+    font-size: 12px;
+    align-self: flex-end;
 }
 
 .caja {
@@ -88,6 +149,7 @@ section a {
     font-size: 12px;
     padding-left: 10px;
     border-width: 2px;
+    background-color: white !important;
 }
 
 .boton-compra {
@@ -111,6 +173,64 @@ section a {
     transition: background-color .2s ease,box-shadow .2s ease;
     width: 100%;
 }
-.titulo, .subtitulo {
+
+.titulo {
     text-align: center;
+    align-self: center;
+    margin-bottom: 15px;
+}
+
+.titulo-envio {
+    text-align: center;
+    align-self: center;
+}
+
+.subtitulo {
+    text-align: center;
+    align-self: center;
+    margin-bottom: 15px
+}
+
+.imagen_promocion {
+    width: 30%;
+    height: 30%;
+    border: solid;
+    border-color: #FF8200;
+    border-width: thin;
+}
+
+section a.titulo-articulo {
+    text-decoration: none;
+    color: black;
+    font-weight: thin;
+    font-size: 12px;
+}
+
+.precio {
+    text-align: right;
+    width: 100%;
+    font-size: 12px;
+}
+
+.contenedor-subtotal {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.resumen {
+    margin: 12px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.resumen-articulos {
+    border-bottom: 2px solid #eee;
 }
