@@ -128,7 +128,7 @@ main {
     }
 }
 
-@media (max-width:441px) {
+@media (max-width:650px) {
     .otra-desc:last-child {
         margin-bottom: 30px;
     }
