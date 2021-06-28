@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/productCart.css">
     <title>Alley Oop</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -28,7 +29,7 @@ rel="stylesheet">
             <section class="menu_header">
                 <a href="/">Home</a>
                 <a href="/tienda">Tienda</a>
-                <a href="/quienesSomos">Quienes somos</a>
+                
                 <a href="/contacto">Contacto</a>
             </section>
             <section class="icon_header">
@@ -40,7 +41,83 @@ rel="stylesheet">
             </section>
         </div>
     </header>
-    <main></main>
+    <main class="contenedor-main">
+        <section class="volver">
+            <i class="fas fa-chevron-left"></i><a href="/">Continuar comprando</a>
+        </section>
+        <section class="contenedor-carrito">
+            <p class="titular-carrito">Carrito de compras</p>
+            <form  class= "contenedor-form" action="" method="POST">
+                <fieldset class="contenedor-item">
+                    <p class="titulo">1. REVISA TU PEDIDO</p>
+                </fieldset>
+                <fieldset class="contenedor-item-delete">
+                    <i class="fas fa-times"></i>  
+                </fieldset>
+                <fieldset class="contenedor-item-foto">
+                    <img class="imagen_promocion" src="images/MJ-Bulls-frente.jpg" alt="">
+                    <div class="contenedor-propiedades-articulo">
+                        <p class="titulo-producto">Camiseta Chicago Bulls</p>
+                        <div>
+                            <p class="subtitulo-articulo">Color: Rojo</p>
+                            <p class="subtitulo-articulo">Equipo: Chicago Bulls</p>
+                        </div>
+                        <div class="contenedor-cantidad">
+                            <label class="subtitulo-articulo" for="cantidad">Cantidad:</label>
+                            <select class="caja select-cantidad" name="cantidad" id="cantidad">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                        <p class="precio">ARS $10.000</p>
+                    </div>
+                </fieldset>
+
+                <fieldset class="contenedor-item-foto">
+                    <img class="imagen_promocion" src="images/Duncan_SA_21_frente.jpg" alt="">
+                    <div class="contenedor-propiedades-articulo">
+                        <p class="titulo-producto">Camiseta San Antonio Spurs</p>
+                        <div>
+                            <p class="subtitulo-articulo">Color: Negro</p>
+                            <p class="subtitulo-articulo">Equipo: San Antonio Spurs</p>
+                        </div>
+                        <div class="contenedor-cantidad">
+                            <label class="subtitulo-articulo" for="cantidad">Cantidad:</label>
+                            <select class="caja select-cantidad" name="cantidad" id="cantidad">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                        <p class="precio">ARS $8.000</p>
+                    </div>
+                </fieldset>
+                <div class="contenedor-subtotal">
+                    <p class="subtotal">Subtotal</p>
+                    <p class="subtotal">ARS $18.000</p>
+                </div>
+               
+                <fieldset class="contenedor-item">
+                    <a href="/productCartDos" class="boton-compra">IR A DIRECCIÓN DE ENVÍO</a>
+                </fieldset>
+            </form>
+        </section>
+    </main>
     <footer>
         <a href="/">
             <img src="/images/alley-oop-logo.png" width="150px">
@@ -48,10 +125,9 @@ rel="stylesheet">
         <div class="menu_footer">
             <a href="/">Home</a>
             <a href="/tienda">Tienda</a>
-            <a href="/quienesSomos">Quienes somos</a>
+            
             <a href="/contacto">Contacto</a>
         </div>
     </footer>
 </body>
 </html>
-

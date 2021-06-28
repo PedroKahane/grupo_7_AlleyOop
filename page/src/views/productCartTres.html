@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/productCart.css">
+    <title>Alley Oop</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header_top">
+            <p>OFERTAS</p>
+        </div>
+        <div class="header_bottom">
+            <figure class="imagen_header">
+                <a href="/">
+                    <img class="logo_alley_oop" src="/images/alley-oop-logo.png" alt="" width="120px">
+                </a>
+            </figure>
+            <section class="menu_header">
+                <a href="/">Home</a>
+                <a href="/tienda">Tienda</a>
+                
+                <a href="/contacto">Contacto</a>
+            </section>
+            <section class="icon_header">
+                <a class="icon_a" href="/login"><i class="fas fa-user"></i></a>
+                <a class="icon_a" href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+                <div class="burger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </section>
+        </div>
+    </header>
+    <main class="contenedor-main">
+        <section class="volver">
+            <i class="fas fa-chevron-left"></i><a href="/productCartDos">Volver</a>
+        </section>
+        <section class="contenedor-carrito">
+            <p class="titular-carrito">Carrito de compras</p>
+            <form  class= "contenedor-form" action="" method="POST">
+                <fieldset class="contenedor-item">
+                    <p class="titulo">3. TIPO DE PAGO Y RESUMEN DE PEDIDO</p>
+                </fieldset>
+                <fieldset class="contenedor-item-pago">
+                    <legend class="titulo-input">Pagar con:</legend>
+                        <div>
+                            <input type="radio" name="metododepago" value="credito" id="credito">
+                            <label class= "titulo-input" for="credito">Crédito</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="metododepago" value="debito" id="debito">
+                            <label class= "titulo-input" for="debito">Débito</label>
+                        </div>
+                </fieldset>
+                <fieldset class="contenedor-item">
+                    <label class="titulo-input" for="numerotarjeta">Numero de tarjeta</label>
+                    <input class="caja" type="number" placeholder="xxxx xxxx xxxx xxxx" name="numerotarjeta" id="numerotarjeta">
+                </fieldset>
+                <fieldset class="contenedor-item">
+                    <label class="titulo-input" for="vencimiento">Fecha de vencimiento*</label>
+                    <input class="caja" type="date" min="2021-08-01" max="2031-08-01" name="vencimiento" id="vencimiento">
+                </fieldset>
+                <fieldset class="contenedor-item">
+                    <label class="titulo-input"for="email">CVV (3 digitos)</label>
+                    <input class="caja" placeholder="xxx" type="email" name="email" id="email">
+                </fieldset>
+                <div class="resumen">
+                    <p class="titulo-input">Resumen del pedido</p>
+                    <div class="resumen-articulos">
+                        <p class="subtitulo-articulo">1 x Camiseta Chicago Bulls</p>
+                        <p class="precio_articulo">ARS $10.000</p>
+                    </div>
+                    <div class="resumen-articulos">
+                        <p class="subtitulo-articulo">1 x Camiseta San Antonio Spurs</p>
+                        <p class="precio_articulo">ARS $8.000</p>
+                    </div>
+                    <div class="resumen-articulos">
+                        <p class="subtitulo-articulo">Costo de envío</p>
+                        <p class="precio_articulo">ARS $500</p>
+                    </div>
+                </div>
+                <div class="contenedor-subtotal">
+                    <p class="subtotal">Total</p>
+                    <p class="subtotal">ARS $18.500</p>
+                </div>
+                <fieldset class="contenedor-newsletter">
+                    <input type="checkbox" name="newsletter" checked>
+                    <label for="newsletter">¡Sí, quiero recibir información sobre nuevos lanzamientos y ofertas!</label>
+                </fieldset>
+                <fieldset class="contenedor-item">
+                    <a href="/" class="boton-compra">PAGAR</a>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <a href="/">
+            <img src="/images/alley-oop-logo.png" width="150px">
+        </a>
+        <div class="menu_footer">
+            <a href="/">Home</a>
+            <a href="/tienda">Tienda</a>
+            
+            <a href="/contacto">Contacto</a>
+        </div>
+    </footer>
+</body>
+</html>

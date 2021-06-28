@@ -42,7 +42,9 @@ header {
 .icon_header {
     margin: 0 30px;
     display: flex;
+    width: 190px;
     align-items: center;
+    justify-content: flex-end;
 }
 .fa-bars {
     font-size: 1.5em;
