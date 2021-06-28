@@ -35,14 +35,13 @@ header {
     display: none;
 }
 .icon_header a i {
-    font-size: 1.3em;
+    font-size: 1.7em;
     color: #FFFAFA;
     padding: 10px;
 }
 .icon_header {
     margin: 0 30px;
     display: flex;
-    width: 190px;
     align-items: center;
     justify-content: flex-end;
 }
@@ -58,7 +57,7 @@ header {
 }
 @media (min-width:1000px) {
     .logo_alley_oop {
-        width: 190px;
+        width: 160px;
     }
     .burger-menu {
         display: none;

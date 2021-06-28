@@ -25,10 +25,15 @@ main {
 .principal {
     display: flex;
 }
-.principal img {
+.producto_espalda, .producto_frente {
     width: 40%;
     height: auto;
     box-shadow: 0px 1px 5px rgb(170, 170, 170);
+    display: block;
+    transition: display 150ms;
+}
+.producto_espalda{
+    display: none;
 }
 .info-container{
     width: 60%;
@@ -70,8 +75,9 @@ main {
 }
 .otras-img-container {
     width: 45%;
+    display: flex;
 }
-.otras-img-container img {
+.frente, .espalda {
     width: 60px;
     height: 60px;
     margin: 10px 20px 10px 0px;
@@ -80,15 +86,17 @@ main {
 .espalda_principal{
     display: none;
 }
+.frente:hover .producto_frente {
+    display: none;
+}
 .espalda:hover, .frente:hover{
     border: 1px solid #000;
 }
 .contenedor{
     width: 100%;
 }
-.frente:hover .producto_frente{
-    display: none;
-}
+
+
 
 @media (max-width:799px) {
     main{
@@ -100,7 +108,9 @@ main {
     .principal{
         width: 100%;
     }
-
+    .frente:hover .producto_frente {
+        display: none;
+    }
     .info-container .carrito-buttom-detail{
         width: 60%;
         font-size: 15px;
@@ -116,14 +126,17 @@ main {
     .info-container .carrito-buttom-detail{
         width: 100% !important;
     }
-    .principal{
-        align-items: flex-end;
-    }
 }
 
 @media (max-width:441px) {
+    .otra-desc:last-child {
+        margin-bottom: 30px;
+    }
     main{
         width: 100%;
+    }
+    .frente:hover .producto_frente {
+        display: none;
     }
     .detalles_remera_container{
         width: 100%;
