@@ -127,7 +127,22 @@ main {
         width: 100% !important;
     }
     .principal {
-        align-items: flex-end;
+        align-items: center;
+    }
+    .info-container h2{
+        font-size: 1.4rem;
+        padding: 10px;
+    }
+    .info-container .carrito-buttom-detail {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .info-container .precio{
+        padding: 10px;
+        font-size: 15px;
+    }
+    .otra-desc{
+        padding-top: 10px;
     }
 }
 
