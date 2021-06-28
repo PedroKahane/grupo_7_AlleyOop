@@ -98,8 +98,8 @@ main {
 
 @media (max-width:1200px) {
     .principal img{
-        height: 300px;
-        width: 300px;
+        height: 250px;
+        width: 250px;
     }
 }
 @media (max-width:799px) {
