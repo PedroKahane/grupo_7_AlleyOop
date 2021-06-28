@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+html {
+      font-size: 62.5%;
+  }
+  
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100vh;
+}
+
+.detalles_remera_container {
+    width: 80%;
+}
+.principal {
+    display: flex;
+}
+.principal img {
+    width: 40%;
+    height: auto;
+    box-shadow: 0px 1px 5px rgb(170, 170, 170);
+}
+.info-container{
+    width: 60%;
+    margin-left: 20px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.info-container h2 {
+    font-size: 2.4rem;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(150, 150, 150, 0.726);
+}
+.info-container .precio {
+     font-size: 20px;
+    padding: 10px 0 10px 0;
+}
+.info-container .seleccion-talla label{
+    font-size: 1.6rem;
+}
+.info-container .carrito-buttom-detail {
+    background-color: #FF8200;
+    color: white;
+    border: none;
+    width: 300px;
+    font-size: 28px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 15px 0px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    text-align: center;
+
+}
+.info-container .otra-desc{
+    font-size: 1.6rem;
+    padding-top: 20px;
+}
+.otras-img-container {
+    width: 45%;
+}
+.otras-img-container img {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    box-shadow: 0px 1px 5px rgb(170, 170, 170);
+}
+
+.contenedor{
+    width: 100%;
+    max-width: 1500px;
+}
+
+@media (max-width:799px) {
+    main{
+        width: 100%;
+    }
+    .detalles_remera_container{
+        width: 100%;
+    }
+    .principal{
+        width: 100%;
+    }
+
+    .info-container .carrito-buttom-detail{
+        width: 80%;
+    }
+    
+    .principal img{
+        height: auto;
+    }
+
+
+}
