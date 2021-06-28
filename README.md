@@ -44,6 +44,10 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
 
     ___
 
++ ## ___Link del tablero de Trello:___
+
+    https://trello.com/b/ft3upNXD/alley-oop
+
 + ## ___Referentes___
     - [___Pan Danes___](https://www.pandanes.com.ar/)
         ![Pan Danes Tienda](/Capturas/Tienda_3.jpg)
