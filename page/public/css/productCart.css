@@ -18,11 +18,11 @@ html {
 }
 
 .volver {
-    margin: 0px 0px 0px 30px;
+    margin: 0px 0px 0px 5px;
 }
 
-p {
-    font-size: 16px;
+.titulo-producto {
+    font-size: 10px;
     font-weight: 500;
     color: #333;
 }
@@ -65,16 +65,14 @@ section a {
 .subtitulo-articulo{
     color: #9b9b9b;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 10px;
     align-self: flex-start;  
 }
 
 .contenedor-form {
     background-color: white;
-    width: 60vw;
-    max-width: 500px;
-    margin: auto;
-    padding: 20px;
+    width: 100vw;
+    padding: 15px;
     margin-bottom: 100px;
 }
 
@@ -162,7 +160,7 @@ section a {
     text-align: center;
     cursor: pointer;
     display: block;
-    font-size: 16px;
+    font-size: 8px;
     font-weight: 700;
     height: 50px;
     letter-spacing: 2px;
@@ -171,16 +169,20 @@ section a {
     text-decoration: none;
     text-transform: uppercase;
     transition: background-color .2s ease,box-shadow .2s ease;
-    width: 100%;
+    width: 75%;
+    max-width: 350px;
+    align-self: center;
 }
 
 .titulo {
+    font-size: 12px;
     text-align: center;
     align-self: center;
     margin-bottom: 15px;
 }
 
 .titulo-envio {
+    font-size: 12px;
     text-align: center;
     align-self: center;
 }
@@ -215,8 +217,9 @@ section a.titulo-articulo {
 .contenedor-subtotal {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
-    padding: 12px;
+    margin: 12px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #eee;
 }
 
 .resumen {
@@ -228,7 +231,7 @@ section a.titulo-articulo {
     align-items: flex-start;
     flex-grow: 1;
     border-bottom: 2px solid #eee; 
-    padding-bottom: 15px;
+    padding-bottom: 12px;
 }
 
 .resumen-articulos {
@@ -252,4 +255,33 @@ p.subtotal {
 .subtitulo-articulo {
     width: 70%;
     text-align: left;
+}
+
+.contenedor-newsletter {
+    display: flex;
+    border: none;
+    margin: 15px;
+    font-size: 12px;
+    color: #333;
+    align-items: baseline;
+    align-content: space-between;
+}
+
+@media (min-width: 361px) {
+    .contenedor-form{
+        width: 95vw;
+        max-width: 500px;
+    }
+    .boton-compra{
+        font-size: 10px;
+    }
+    .titulo-producto {
+        font-size: 12px;
+    }
+    .subtitulo-articulo{
+        font-size: 12px;
+    }
+    .titulo, .titulo-envio{
+        font-size: 16px;
+    }   
 }
