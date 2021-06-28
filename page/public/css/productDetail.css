@@ -58,7 +58,7 @@ main {
     background-color: #FF8200;
     color: white;
     border: none;
-    width: 300px;
+    max-width: 300px;
     font-size: 20px;
     font-weight: 600;
     text-decoration: none;
