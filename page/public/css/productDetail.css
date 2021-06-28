@@ -103,6 +103,7 @@ main {
     }
     .detalles_remera_container{
         width: 100%;
+        max-width: 900px;
     }
     .principal{
         width: 100%;
