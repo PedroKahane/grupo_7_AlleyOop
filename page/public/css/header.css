@@ -24,7 +24,7 @@ header {
 }
 .imagen_header {
     margin: 0px 30px;
-    display: none;
+    width: 80px;
 }
 .menu_header a {
     color: #FFFAFA;
