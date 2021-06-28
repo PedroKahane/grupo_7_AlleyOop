@@ -6,6 +6,7 @@
   }
 html {
       font-size: 62.5%;
+      background-color: #eee;
   }
   
 main {
@@ -18,6 +19,8 @@ main {
 
 .detalles_remera_container {
     width: 80%;
+    background-color: #ffffff;
+    padding: 60px;
 }
 .principal {
     display: flex;
@@ -77,10 +80,9 @@ main {
 
 .contenedor{
     width: 100%;
-    max-width: 1500px;
 }
 
-@media (max-width:799px) {
+@media (max-width:369px) {
     main{
         width: 100%;
     }
@@ -98,4 +100,6 @@ main {
     .principal img{
         height: auto;
     }
+
+
 }
