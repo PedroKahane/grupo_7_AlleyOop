@@ -126,6 +126,9 @@ main {
     .info-container .carrito-buttom-detail{
         width: 100% !important;
     }
+    .principal {
+        align-items: flex-end;
+    }
 }
 
 @media (max-width:650px) {
@@ -173,5 +176,8 @@ main {
     }
     .otras-img-container {
         width: auto;
+    }
+    .principal {
+        align-items: unset;
     }
 }
