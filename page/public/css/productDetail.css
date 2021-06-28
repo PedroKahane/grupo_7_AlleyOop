@@ -96,8 +96,12 @@ main {
     width: 100%;
 }
 
-
-
+@media (max-width:1200px) {
+    .principal img{
+        height: 300px;
+        width: 300px;
+    }
+}
 @media (max-width:799px) {
     main{
         width: 100%;
@@ -107,9 +111,6 @@ main {
     }
     .principal{
         width: 100%;
-    }
-    .frente:hover .producto_frente {
-        display: none;
     }
     .info-container .carrito-buttom-detail{
         width: 60%;
