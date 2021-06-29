@@ -2,7 +2,7 @@
   "name": "page",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "page/src/index.js",
   "scripts": {
     "start": "node page/src/index.js"
   },
