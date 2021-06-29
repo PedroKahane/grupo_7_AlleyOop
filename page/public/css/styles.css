@@ -77,8 +77,8 @@
     background-color: #FF8200;
     color: #FFFAFA;
     border: none;
-    width: 300px;
-    font-size: 22px;
+    max-width: 350px;
+    font-size: 14px;
     font-weight: 700;
     text-decoration: none;
     padding: 15px 0px;
@@ -204,7 +204,7 @@
         margin-top: 120px;
     }
     .boton_productos {
-        font-size: 24px;
+        font-size: 18px;
     } 
 }
 @media (min-width:1100px){

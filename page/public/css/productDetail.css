@@ -13,7 +13,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
     height: 100vh;
 }
 
@@ -41,6 +40,7 @@ main {
     margin-right: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 .info-container h2 {
     font-size: 2.4rem;

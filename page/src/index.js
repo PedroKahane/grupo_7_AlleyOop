@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-app.listen(4000,() => console.log("Server on http://localhost:4000"));
+app.listen(process.env.PORT || 4000, function() {
+    console.log("Servidor corriendo en puerto 4000");
+});
 
 
 
