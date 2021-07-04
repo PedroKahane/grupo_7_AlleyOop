@@ -12,7 +12,6 @@ app.listen(app.get("port"),() => console.log("server on http://localhost:" + app
 app.use(express.static(path.resolve(__dirname,"../public")));
 
 // App settings
-
 app.use(require('./routes/main'))
 
 
