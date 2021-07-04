@@ -40,7 +40,175 @@ rel="stylesheet">
             </section>
         </div>
     </header>
-    <main>
+    <main class="main_tienda">
+        <section class="background_home">
+            <div class="p_home">
+                <p class="title_background"> Las mejores camisetas<br>
+                    las encontras en
+                </p>
+                <p class="subtitle_background"> Alley-Oop</p>
+            </div>
+        </section>
+        <section class="contenedor_indice">
+            <span class="indice_camisetas">Filtrar por:</span>
+            <div class= "indice_superior">
+                <a href="/">Home</a>
+                <i class="fas fa-angle-double-right"></i>
+                <span class="indice_camisetas">Camisetas</span> 
+            </div>
+            <form class="contenedor-form" action="" method="POST">
+                <fieldset class="contenedor-item">
+                    <label class="titulo-input" for="orden_productos"></label>
+                    <select class="caja" name="orden_productos" id="orden_productos">
+                        <option value="destacado" selected>Destacado</option>
+                        <option value="mayormenor">Precio: Mayor a Menor</option>
+                        <option value="menormayor">Precio: Menor a Mayor</option>
+                        <option value="a-z">A - Z</option>
+                        <option value="z-a">Z - A</option>
+                        <option value="masvendidos">Más vendidos</option>
+                    </select>
+                </fieldset>
+            </form>
+        </section>
+        <section class="contenedor_tienda">
+            <div class="contenedor_filtros">
+                <form  class= "contenedor_form_filtro" action="" method="POST">
+                    <fieldset class="contenedor_titulo_filtro">
+                        <p class="titulo_filtro">Color</p>
+                        <i class="fas fa-times"></i>
+                    </fieldset>
+                    <fieldset class="contenedor_tipo_filtro">
+                        <div>
+                            <input type="checkbox" name="colores">
+                            <label class="texto_color" for="colores">Rojo</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="colores">
+                            <label class="texto_color" for="colores">Violeta</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="colores">
+                            <label class="texto_color" for="colores">Negro</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="colores">
+                            <label class="texto_color" for="colores">Verde</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="colores">
+                            <label class="texto_color" for="colores">Azul</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="colores">
+                            <label class="texto_color" for="colores">Amarillo</label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="contenedor_titulo_filtro">
+                        <p class="titulo_filtro">Talle</p>
+                        <i class="fas fa-times"></i>
+                    </fieldset>
+                    <fieldset class="contenedor_tipo_filtro">
+                        <div>
+                            <input type="checkbox" name="colores">
+                            <label class="texto_color" for="colores">S</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="colores">
+                            <label class="texto_color" for="colores">M</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="colores">
+                            <label class="texto_color" for="colores">L</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="colores">
+                            <label class="texto_color" for="colores">XL</label>
+                        </div>
+                    </fieldset>
+                </fieldset>
+                <fieldset class="contenedor_titulo_filtro">
+                    <p class="titulo_filtro">Precio</p>
+                    <i class="fas fa-times"></i>
+                </fieldset>
+                <fieldset class="contenedor_tipo_filtro">
+                    <div>
+                        <input type="checkbox" name="colores">
+                        <label class="texto_color" for="colores">Menor a $8.000</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="colores">
+                        <label class="texto_color" for="colores">$8.000 - $12.000</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="colores">
+                        <label class="texto_color" for="colores">Mayor a $12.000</label>
+                    </div>
+                </fieldset>
+                </form>
+            </div>
+            <div class="articulos_promocion">
+                <article class="articulo_destacado">
+                    <figure>
+                        <img class="imagen_promocion" src="images/Curry30_frente.jpg" alt="">
+                    </figure>
+                    <div class="precio_descuento">
+                        <p class="precio">$5000</p>
+                        <p class="descuento">30% OFF</p>
+                    </div>
+                    <p class="descripcion">Camiseta Golden State Warriors</p>
+                    <p class="jugador">Curry(30)</p>
+                    <div class="boton_articulo">
+                        <a class="boton-ver" href="/productDetail" id=""><i class="fas fa-eye"></i>  Ver más</a>
+                        <button class="boton-compra"><i class="fas fa-cart-plus"></i>  Comprar</button>
+                    </div>
+                </article>
+                <article class="articulo_destacado">
+                    <figure>
+                        <img class="imagen_promocion" src="images/Kobe_24_lakers_frente.jpg" alt="">
+                    </figure>
+                    <div class="precio_descuento">
+                        <p class="precio">$7500</p>
+                        <p class="descuento">20% OFF</p>
+                    </div>
+                    <p class="descripcion">Camiseta Los Angeles Lakers</p>
+                    <p class="jugador">Kobe Bryant(24)</p>
+                    <div class="boton_articulo">
+                        <a class="boton-ver" href="/productDetail" id=""><i class="fas fa-eye"></i>  Ver más</a>
+                        <button class="boton-compra"><i class="fas fa-cart-plus"></i>  Comprar</button>
+                    </div>
+                </article>
+                <article class="articulo_destacado">
+                    <figure>
+                        <img class="imagen_promocion" src="images/MJ-Bulls-frente.jpg" alt="">
+                    </figure>
+                    <div class="precio_descuento">
+                        <p class="precio">$6000</p>
+                        <p class="descuento">15% OFF</p>
+                    </div>
+                    <p class="descripcion">Camiseta Chicago Bulls</p>
+                    <p class="jugador">Jordan(23)</p>
+                    <div class="boton_articulo">
+                        <a class="boton-ver" href="/productDetail" id=""><i class="fas fa-eye"></i>  Ver más</a>
+                        <button class="boton-compra"><i class="fas fa-cart-plus"></i>  Comprar</button>
+                    </div>
+                </article>
+                <article class="articulo_destacado">
+                    <figure>
+                        <img class="imagen_promocion" src="images/Duncan_SA_21_frente.jpg" alt="">
+                    </figure>
+                    <div class="precio_descuento">
+                        <p class="precio">$6000</p>
+                        <p class="descuento">25% OFF</p>
+                    </div>
+                    <p class="descripcion">Camiseta San Antonio Spurs</p>
+                    <p class="jugador">Tim Duncan(21)</p>
+                    <div class="boton_articulo">
+                        <a class="boton-ver" href="/productDetail" id=""><i class="fas fa-eye"></i>  Ver más</a>
+                        <button class="boton-compra"><i class="fas fa-cart-plus"></i>  Comprar</button>
+                    </div>
+                </article>
+            </div>
+        </section>
   
     </main>
     <footer>

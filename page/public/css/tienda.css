@@ -5,3 +5,211 @@
     font-family: 'montserrat',sans-serif;
 }
 
+.main_tienda {
+    background-color: #FFFAFA;
+}
+
+.background_home {
+    background-image: url(/images/imagen_tienda.jpg);
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+.title_background {
+    font-size: 32px;
+    font-weight: 500;
+    color: #FFFAFA;
+    text-align: center;
+    margin: 0px 30px;
+}
+.subtitle_background{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+    color: #FFC100;
+    margin: 0px 30px;
+    
+}
+.p_home{
+    margin:10px;
+}
+
+.contenedor_indice {
+    background-color: #eee;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contenedor_tienda {
+    display: flex;
+}
+
+section a {
+    padding-left: 5px;
+    text-decoration: none;
+    color: grey;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.indice_camisetas {
+    padding-left: 5px;
+    text-decoration: none;
+    color: grey;
+    font-weight: bold;
+    font-size: 12px;
+    align-self: flex-start;
+    margin:auto;
+}
+
+.fa-angle-double-right{
+    color: grey;
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+.contenedor-item {
+    border: none;
+}
+
+.caja {
+    padding: 5px 10px 5px 10px;
+    border-radius: 8px;
+    border-style:solid;
+    border-color: #eee;
+    font-size: 12px;
+    border-width: 2px;
+    width: 70%;
+}
+
+.contenedor-form{
+    align-self: flex-end;
+}
+
+.indice_superior {
+    align-self: center;
+}
+
+.contenedor_filtros {
+    background-color: #eee;
+    width: 33vw;
+    height: 500px;
+    margin-top: 2vw;
+    max-width: 200px;
+
+}
+
+.contenedor_form_filtro {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor_titulo_filtro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 5px 0px 5px;
+    border-bottom: 2px solid #FFC100 !important;
+    border: #eee;
+    padding: 5px 0px;
+}
+
+.contenedor_tipo_filtro {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    margin: 10px 10px;
+
+}
+
+.titulo_filtro {
+    font-size: 12px;
+    font-weight: 700;
+    color: #333;
+}
+
+.fa-times{
+    color: grey;
+    font-size: 12px;
+}
+
+.texto_color {
+    color:#0A0903;
+    font-weight: 400;
+    font-size: 8px;
+}
+
+.articulos_promocion {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 67vw;
+}
+
+.descripcion {
+    height: 20px;
+    font-size: 12px;
+}
+
+.articulo_destacado {
+    width: 95vw;
+    margin: 2vw;
+    box-sizing: border-box;
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw;
+}
+.imagen_promocion {
+    width: 60vw;
+    height: 60vw;
+}
+
+.descuento {
+    color: #39b54a;
+    font-size: 14px;
+}
+
+.precio {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.jugador {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.precio_descuento {
+    display: flex;
+    align-items: center;
+}
+
+.boton-ver, .boton-compra {
+    color: #FFF;
+    font-weight:bold;
+    font-size: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 12px 18px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #FF8200;
+    box-shadow: 0px 17px 9px -15px rgb(0 0 0 / 50%);
+    margin: 15px 5px
+}
+
+.boton_articulo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
