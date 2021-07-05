@@ -40,7 +40,8 @@
     background-color: #eee;
     width: 100vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .contenedor_tienda {
@@ -55,17 +56,18 @@ section a {
     font-size: 12px;
 }
 
-.indice_camisetas {
-    padding-left: 5px;
-    text-decoration: none;
+.indice_camisetas span, .indice_superior span {
     color: grey;
     font-weight: bold;
     font-size: 12px;
-    align-self: flex-start;
+
+}
+.indice_camisetas{
     width: 33vw;
     max-width: 200px;
+    padding-left: 5px;
+    text-decoration: none;
 }
-
 .fa-angle-double-right{
     color: grey;
     font-size: 12px;
@@ -92,6 +94,7 @@ section a {
 
 .indice_superior {
     align-self: center;
+    display: none;
 }
 
 .contenedor_filtros {
@@ -149,7 +152,7 @@ section a {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 67vw;
+    width: 66%;
 }
 
 .descripcion {
@@ -169,10 +172,11 @@ section a {
     padding: 1vw;
 }
 .imagen_promocion {
-    width: 60vw;
-    height: 60vw;
+    width: 100%;
 }
-
+.articulo_destacado figure {
+    width: 95%;
+}
 .descuento {
     color: #39b54a;
     font-size: 14px;
@@ -214,4 +218,35 @@ section a {
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
+}
+@media (min-width:790px) {
+    .articulo_destacado{
+        width: 43%;
+    }
+    .indice_superior{
+        display: unset;
+    }
+    .articulos_promocion{
+        width: 100%;
+    }
+    .contenedor_filtros{
+        margin-left: 30px;
+    }
+    .margin_resposive{
+        margin-left: 30px;
+    }
+    .boton-ver,.boton-compra{
+        width: 40%;
+    }
+    .articulo_destacado:hover {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+}
+@media (min-width:1100px){
+    .articulo_destacado{
+        width: 26%;
+    }
+    .contenedor_filtros{
+        max-width: 300px;
+    }
 }
