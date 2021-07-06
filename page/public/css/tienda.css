@@ -141,7 +141,7 @@ section a {
 }
 
 .texto_color {
-    color:#0A0903;
+    color: #333;
     font-weight: 400;
     font-size: 8px;
 }
@@ -250,6 +250,9 @@ section a {
     .background_home{
         height: 250px;
     }
+    .texto_color{
+        font-size: 12px;
+    }
 }
 @media (min-width:1100px){
     .articulo_destacado{
@@ -270,5 +273,8 @@ section a {
     }
     .p_home{
         margin-left: 5%;
+    }
+    .texto_color{
+        font-size: 16px;
     }
 }
