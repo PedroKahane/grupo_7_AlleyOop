@@ -3,69 +3,36 @@
     <%- include ("includes/head") %>
 <body>
     <div class="contenedor">
-    <header>
-        <div class="header_top">
-            <p>OFERTAS</p>
-        </div>
-        <div class="header_bottom">
-            <figure class="imagen_header">
-                <a href="/">
-                    <img class="logo_alley_oop" src="/images/alley-oop-logo.png" alt="" width="120px">
-                </a>
-            </figure>
-            <section class="menu_header">
-                <a href="/">Home</a>
-                <a href="/tienda">Tienda</a>
-                
-                <a href="/contacto">Contacto</a>
-            </section>
-            <section class="icon_header">
-                <a class="icon_a" href="/login"><i class="fas fa-user"></i></a>
-                <a class="icon_a" href="/productCart"><i class="fas fa-shopping-cart"></i></a>
-                <div class="burger-menu">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </section>
-        </div>
-    </header>
-    <main>
-            <article class="detalles_remera_container">
-                <div class="principal">
-                    <img src="/images/Curry30_frente.jpg"  alt="Musculosa curry frente" class="producto_frente">
-                    <div class="info-container">
-                        <h2> Mosculosa Titular Golden State - Warriors 30 </h2>
-                        <p class="precio">ARG $4000</p>
-                        <div class="seleccion-talla">
-                            <label for="">Talle: </label>
-                            <select name="talla">
-                                <option value="XL">XL</option>
-                                <option value="L">L</option>
-                                <option value="M">M </option>
-                                <option value="S">S</option>
-                                <option value="XS">XS</option>
-                            </select>
+        <%- include ("includes/header") %>
+        <main>
+                <article class="detalles_remera_container">
+                    <div class="principal">
+                        <img src="/images/Curry30_frente.jpg"  alt="Musculosa curry frente" class="producto_frente">
+                        <div class="info-container">
+                            <h2> Mosculosa Titular Golden State - Warriors 30 </h2>
+                            <p class="precio">ARG $4000</p>
+                            <div class="seleccion-talla">
+                                <label for="">Talle: </label>
+                                <select name="talla">
+                                    <option value="XL">XL</option>
+                                    <option value="L">L</option>
+                                    <option value="M">M </option>
+                                    <option value="S">S</option>
+                                    <option value="XS">XS</option>
+                                </select>
+                            </div>
+                            <a href="/productCart" class="carrito-buttom-detail">AGREGAR AL CARRITO</a>
+                            <p class="otra-desc">Prenda para adultos Oficial de los Golden States.</p>
+                            <p class="otra-desc"> Musculosa del gran tirador Stephen Curry. Jugador destacado de los ultimos tiempos.  </p>
                         </div>
-                        <a href="/productCart" class="carrito-buttom-detail">AGREGAR AL CARRITO</a>
-                        <p class="otra-desc">Prenda para adultos Oficial de los Golden States.</p>
-                        <p class="otra-desc"> Musculosa del gran tirador Stephen Curry. Jugador destacado de los ultimos tiempos.  </p>
                     </div>
-                </div>
-                <div class="otras-img-container">
-                    <img src="/images/Curry30_frente.jpg" alt="Mosculosa curry frente" class="frente" >
-                    <img src="/images/Curry30_espalda.jpg" alt="Mosculosa curry espalda" class="espalda">
-                </div>
-            </article>
-    </main>
-    <footer>
-        <a href="/">
-            <img src="/images/alley-oop-logo.png" width="150px">
-        </a>
-        <div class="menu_footer">
-            <a href="/">Home</a>
-            <a href="/tienda">Tienda</a>            
-            <a href="/contacto">Contacto</a>
-        </div>
-    </footer>
+                    <div class="otras-img-container">
+                        <img src="/images/Curry30_frente.jpg" alt="Mosculosa curry frente" class="frente" >
+                        <img src="/images/Curry30_espalda.jpg" alt="Mosculosa curry espalda" class="espalda">
+                    </div>
+                </article>
+        </main>
+        <%- include ("includes/footer") %>
     </div>
 </body>
 </html>
