@@ -1,0 +1,27 @@
+[
+    {
+        "id":1,
+        "color": "azul",
+        "paleta": "rgb(46,36,185)"
+    },
+    {
+        "id":2,
+        "color": "Roja",
+        "paleta": "rgb(165,25,25)"
+    },
+    {
+        "id":3,
+        "color": "verde",
+        "paleta": "rgb(7,53,0)"
+    },
+    {
+        "id":4,
+        "color": "violeta",
+        "paleta": "rgb(39,0,99)"
+    },
+    {
+        "id":5,
+        "color": "negra",
+        "paleta": "rgb(15,15,15)"
+    }
+]

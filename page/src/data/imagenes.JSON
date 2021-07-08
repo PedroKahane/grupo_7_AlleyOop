@@ -1,0 +1,12 @@
+[
+    {
+        "id":1,
+        "ubicacion": "images/Curry30_frente.jpg",
+        "descripcion":"Camiseta 30 de Curry Golden State Warriors de frente"
+    },
+    {
+        "id":2,
+        "ubicacion": "images/Curry30_espalda.jpg",
+        "descripcion":"Camiseta 30 de Curry Golden State Warriors de espaldas"
+    }
+]

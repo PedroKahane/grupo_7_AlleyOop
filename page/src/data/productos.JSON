@@ -1,0 +1,15 @@
+[
+    {
+        "id":1,
+        "precio": 4000,
+        "descuento":20,
+        "equipo": 1,
+        "jugador": "Stephen Curry",
+        "color": 1,
+        "destacado": true,
+        "imagenes": [1,2],
+        "talles": [1,2,3,4,5],
+        "descripción": ["Prenda para adultos Oficial de los Golden States.",
+            "Musculosa del gran tirador Stephen Curry. Jugador destacado de los ultimos tiempos."]
+    }
+]

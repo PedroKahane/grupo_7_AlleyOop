@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "talle":"Extra-Small",
+        "abreviatura": "XS"
+    },
+    {
+        "id": 2,
+        "talle":"Small",
+        "abreviatura": "S"
+    },
+    {
+        "id": 3,
+        "talle":"Medium",
+        "abreviatura": "M"
+    },
+    {
+        "id": 4,
+        "talle":"Large",
+        "abreviatura": "L"
+    },
+    {
+        "id": 5,
+        "talle":"Extra-Large",
+        "abreviatura": "XL"
+    }
+]
