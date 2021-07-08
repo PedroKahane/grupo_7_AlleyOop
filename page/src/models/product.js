@@ -13,7 +13,7 @@ const model = {
     allWithExtra: function () {
         let productos = this.all();
         productos.map(element => {
-            element.equipos = equipos.one(element.category);
+            element.equipos = equipos.one(element.equipos);
             return element
         })
         return productos 
