@@ -13,7 +13,7 @@ app.use(express.static(path.resolve(__dirname,"../public")));
 
 // App settings
 app.use(require('./routes/main'))
+app.use(require('./routes/product'))
 app.set("view engine", "ejs");
 app.set("views",path.resolve(__dirname, "./views"))
-
 

@@ -112,6 +112,24 @@
                 </form>
             </div>
             <div class="articulos_promocion">
+                <% products.forEach(product => { %>
+                    <article class="articulo_destacado">
+                        <figure>
+                            <img class="imagen_promocion" src="<%= product.imagenFrente %> " alt="">
+                        </figure>
+                        <div class="precio_descuento">
+                            <p class="precio">$<%= product.precio %> </p>
+                            <p class="descuento"><%= product.descuento %>  % OFF</p>
+                        </div>
+                        <!--<p class="descripcion">Camiseta  </p>-->
+                        <p class="jugador"><%= product.jugador %> (<%= product.numeroCamiseta %> )</p>
+                        <div class="boton_articulo">
+                            <a class="boton-ver" href="/productDetail" id=""><i class="fas fa-eye"></i>  Ver más</a>
+                            <button class="boton-compra"><i class="fas fa-cart-plus"></i>  Comprar</button>
+                        </div>
+                    </article>
+                <% }) %>
+                <!--
                 <article class="articulo_destacado">
                     <figure>
                         <img class="imagen_promocion" src="images/Curry30_frente.jpg" alt="">
@@ -127,6 +145,7 @@
                         <button class="boton-compra"><i class="fas fa-cart-plus"></i>  Comprar</button>
                     </div>
                 </article>
+                -->
                 <article class="articulo_destacado">
                     <figure>
                         <img class="imagen_promocion" src="images/Kobe_24_lakers_frente.jpg" alt="">
