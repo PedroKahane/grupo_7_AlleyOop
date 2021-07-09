@@ -13,5 +13,50 @@
         "talles": [1,2,3,4,5],
         "descripción": ["Prenda para adultos Oficial de los Golden States.",
             "Musculosa del gran tirador Stephen Curry. Jugador destacado de los ultimos tiempos."]
-    }
+    },
+    {
+    "id":2,
+    "precio": 7500,
+    "descuento":20,
+    "equipos": 2,
+    "jugador": "Kobe Bryant",
+    "numeroCamiseta": 24,
+    "color": 4,
+    "destacado": true,
+    "imagenFrente": "images/Kobe_24_lakers_frente.jpg",
+    "imagenEspalda": "images/Kobe_24_lakers_espalda.jpg",
+    "talles": [1,2,3,5],
+    "descripción": ["Prenda para adultos Oficial de los Angeles Lakers.",
+        "Musculosa retro de Stephen Kobe Bryant. Jugador destacado de este siglo"]
+    },
+    {
+        "id":3,
+        "precio": 6000,
+        "descuento":15,
+        "equipos": 3,
+        "jugador": "Michael Jordan",
+        "numeroCamiseta": 23,
+        "color": 2,
+        "destacado": true,
+        "imagenFrente": "images/MJ-Bulls-frente.jpg",
+        "imagenEspalda": "images/MJ-Bulls-espalda.jpg",
+        "talles": [1,2,3,5],
+        "descripción": ["Prenda para adultos Oficial de los Chicago Bulls.",
+            "Musculosa retro de Stephen Michael Jordan. Considerado de los mejores jugadores de la historia"]
+        },
+        {
+            "id":4,
+            "precio": 5000,
+            "descuento":20,
+            "equipos": 4,
+            "jugador": "Tim Duncan",
+            "numeroCamiseta": 21,
+            "color": 5,
+            "destacado": true,
+            "imagenFrente": "images/Duncan_SA_21_frente.jpg",
+            "imagenEspalda": "images/Duncan_SA_21_espalda.jpg",
+            "talles": [1,2,3,5],
+            "descripción": ["Prenda para adultos Oficial de los San Antonio Spurs.",
+                "Musculosa retro de Stephen Tim Duncan. Pivot destacado de las ultimas dos decadas"]
+            }
 ]

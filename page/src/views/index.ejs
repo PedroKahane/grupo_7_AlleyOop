@@ -15,58 +15,24 @@
         <section class="productos_home">
             <p class="titulo_productos">Productos destacados:</p>
             <div class="articulos_promocion">
-                <a href="/productDetail">
-                    <article class="articulo_destacado">
-                        <figure>
-                            <img class="imagen_promocion" src="images/Curry30_frente.jpg" alt="">
-                        </figure>
-                        <div class="precio_descuento">
-                            <p class="precio">$4000</p>
-                            <p class="descuento">20% OFF</p>
-                        </div>
-                        <p class="descripcion">Camiseta Golden State Warriors</p>
-                        <p class="jugador">Curry(30)</p>
-                    </article>
-                </a>
-                <a href="/productDetail">
-                    <article class="articulo_destacado">
-                        <figure>
-                            <img class="imagen_promocion" src="images/Kobe_24_lakers_frente.jpg" alt="">
-                        </figure>
-                        <div class="precio_descuento">
-                            <p class="precio">$7500</p>
-                            <p class="descuento">20% OFF</p>
-                        </div>
-                        <p class="descripcion">Camiseta Los Angeles Lakers</p>
-                        <p class="jugador">Kobe Bryant(24)</p>
-                    </article>
-                </a>
-                <a href="/productDetail">
-                    <article class="articulo_destacado">
-                        <figure>
-                            <img class="imagen_promocion" src="images/MJ-Bulls-frente.jpg" alt="">
-                        </figure>
-                        <div class="precio_descuento">
-                            <p class="precio">$6000</p>
-                            <p class="descuento">15% OFF</p>
-                        </div>
-                        <p class="descripcion">Camiseta Chicago Bulls</p>
-                        <p class="jugador">Jordan(23)</p>
-                    </article>
-                </a>
-                <a href="/productDetail">
-                    <article class="articulo_destacado">
-                        <figure>
-                            <img class="imagen_promocion" src="images/Duncan_SA_21_frente.jpg" alt="">
-                        </figure>
-                        <div class="precio_descuento">
-                            <p class="precio">$6000</p>
-                            <p class="descuento">25% OFF</p>
-                        </div>
-                        <p class="descripcion">Camiseta San Antonio Spurs</p>
-                        <p class="jugador">Tim Duncan(21)</p>
-                    </article>
-                </a>
+                <% products.forEach(product => { %>
+                    <% if (product.destacado == true) { %>
+                     
+                        <a href="/productDetail">
+                            <article class="articulo_destacado">
+                                <figure>
+                                    <img class="imagen_promocion" src="<%= product.imagenFrente %>" alt="">
+                                </figure>
+                                <div class="precio_descuento">
+                                    <p class="precio">$<%= product.precio %></p>
+                                    <p class="descuento"><%= product.descuento %> % OFF</p>
+                                </div>
+                                <p class="descripcion">Camiseta <%= product.equipos.equipo %></p>
+                                <p class="jugador"><%= product.jugador %> (<%= product.numeroCamiseta %>)</p>
+                            </article>
+                        </a>
+                        <% } %>
+                <% }) %>
             </div>
             <div class="contenedor_boton">
                 <a class="boton_productos" href="/tienda">IR A LA TIENDA</a>

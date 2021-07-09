@@ -2,5 +2,17 @@
     {
         "id": 1,
         "equipo": "Golden State Warriors"
+    },
+    {
+        "id": 2,
+        "equipo":"Angeles Lakers"
+    },
+    {
+        "id": 3,
+        "equipo":"Chicago Bulls"
+    },
+    {
+        "id": 4,
+        "equipo":"San Antonio Spurs"
     }
 ]
