@@ -23,5 +23,10 @@
         "id":5,
         "color": "negra",
         "paleta": "rgb(15,15,15)"
+    },
+    {
+        "id":6,
+        "color": "amarilla",
+        "paleta": "rgb(255,255,0)"
     }
 ]
