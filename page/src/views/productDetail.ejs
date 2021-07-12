@@ -7,28 +7,27 @@
         <main>
                 <article class="detalles_remera_container">
                     <div class="principal">
-                        <img src="/images/Curry30_frente.jpg"  alt="Musculosa curry frente" class="producto_frente">
+                        <img src="/<%= product.imagenFrente %>"  alt="Musculosa curry frente" class="producto_frente">
                         <div class="info-container">
-                            <h2> Mosculosa Titular Golden State - Warriors 30 </h2>
-                            <p class="precio">ARG $4000</p>
+                            <h2> Mosculosa Titular <%= product.equipos.equipo %> (<%= product.numeroCamiseta %>)</h2>
+                            <p class="precio">$<%= product.precio %></p>
                             <div class="seleccion-talla">
                                 <label for="">Talle: </label>
                                 <select name="talla">
-                                    <option value="XL">XL</option>
-                                    <option value="L">L</option>
-                                    <option value="M">M </option>
-                                    <option value="S">S</option>
-                                    <option value="XS">XS</option>
+                                    <% product.talles.forEach(element => { %>
+                                    <option value="<%= element.abreviatura %>"><%= element.abreviatura %> </option>
+                                    <% }) %>
                                 </select>
                             </div>
                             <a href="/productCart" class="carrito-buttom-detail">AGREGAR AL CARRITO</a>
-                            <p class="otra-desc">Prenda para adultos Oficial de los Golden States.</p>
-                            <p class="otra-desc"> Musculosa del gran tirador Stephen Curry. Jugador destacado de los ultimos tiempos.  </p>
+                            <% product.descripción.forEach(element => { %>
+                            <p class="otra-desc"> <%= element %>  </p>
+                            <% }) %> 
                         </div>
                     </div>
                     <div class="otras-img-container">
-                        <img src="/images/Curry30_frente.jpg" alt="Mosculosa curry frente" class="frente" >
-                        <img src="/images/Curry30_espalda.jpg" alt="Mosculosa curry espalda" class="espalda">
+                        <img src="/<%= product.imagenFrente %>" alt="Mosculosa curry frente" class="frente" >
+                        <img src="/<%= product.imagenEspalda %>" alt="Mosculosa curry espalda" class="espalda">
                     </div>
                 </article>
         </main>

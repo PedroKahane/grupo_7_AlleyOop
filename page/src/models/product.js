@@ -33,6 +33,11 @@ const model = {
         let productos = this.all();
         let resultado = productos.find(producto => producto.id == id)
         return resultado;
+    },
+    oneWithExtra: function (id) {
+        let productos = this.allWithExtra();
+        let resultado = productos.find(producto => producto.id == id)
+        return resultado;
     }
 }
 

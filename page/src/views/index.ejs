@@ -18,7 +18,7 @@
                 <% products.forEach(product => { %>
                     <% if (product.destacado == true) { %>
                      
-                        <a href="/productDetail">
+                        <a href="/productDetail/<%= product.id %> ">
                             <article class="articulo_destacado">
                                 <figure>
                                     <img class="imagen_promocion" src="<%= product.imagenFrente %>" alt="">
