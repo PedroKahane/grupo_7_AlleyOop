@@ -125,7 +125,7 @@
                         <p class="descripcion">Camiseta <%= product.equipos.equipo %>  </p>
                         <p class="jugador"><%= product.jugador %> (<%= product.numeroCamiseta %>)</p>
                         <div class="boton_articulo">
-                            <a class="boton-ver" href="/productDetail" id=""><i class="fas fa-eye"></i>  Ver más</a>
+                            <a class="boton-ver" href="/productDetail/<%= product.id %> " id=""><i class="fas fa-eye"></i>  Ver más</a>
                             <button class="boton-compra"><i class="fas fa-cart-plus"></i>  Comprar</button>
                         </div>
                     </article>
