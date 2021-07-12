@@ -27,7 +27,7 @@
         "imagenEspalda": "images/Kobe_24_lakers_espalda.jpg",
         "talles": [1,2,3,5],
         "descripción": ["Prenda para adultos Oficial de Los Angeles Lakers.",
-            "Musculosa retro de Kobe Bryant. Jugador destacado de este siglo"]
+            "Musculosa retro de Kobe 'Black Mamba' Bryant. Jugador destacado de este siglo"]
     },
     {
         "id":3,
@@ -72,7 +72,7 @@
         "imagenEspalda": "images/giannis-bucks-espalda.jpg",
         "talles": [1,2,3,4,5],
         "descripción": ["Prenda para adultos Oficial de los Milwaukee Bucks",
-            "Musculosa del griego Giannis Antetokounmpo. Actual All-Star de la liga"]               
+            "Musculosa del griego Giannis 'The Greek Freak' Antetokounmpo. Nombrado MVP de la temporada en dos ocasiones y actual All-Star de la liga."]               
         },
         {
         "id":6,
@@ -102,7 +102,7 @@
         "imagenEspalda": "images/irving-boston-espalda.jpeg",
         "talles": [1,2,4],
         "descripción": ["Prenda para adultos Oficial de los Boston Celtics",
-            "Musculosa del . Actual All-Star de la liga"]               
+            "Musculosa de Kyrie Irving. En la temporada 2015/16 obtuvo primer anillo con Cleveland Cavaliers."]               
         },
         {
         "id":8,
@@ -117,7 +117,7 @@
         "imagenEspalda": "images/james-lakers-espalda.jpeg",
         "talles": [2,3,4],
         "descripción": ["Prenda para adultos Oficial de Los Angeles Lakers",
-            "Musculosa del . Actual All-Star de la liga"]               
+            "Musculosa de 'King James', campeon de la NBA en 4 ocasiones y considerado uno de los mejores jugadores de la historia."]               
         },
         {
         "id":9,
@@ -132,7 +132,7 @@
         "imagenEspalda": "images/mitchell-jazz-espalda.jpg",
         "talles": [1,3,5],
         "descripción": ["Prenda para adultos Oficial de los Utah Jazz",
-            "Musculosa del . Actual All-Star de la liga"]               
+            "Musculosa de Donovan 'Spida' Mitchell, estrella de los Jazz y joven promesa de la liga."]               
         },
         {
         "id":10,
@@ -147,7 +147,7 @@
         "imagenEspalda": "images/MG-spurs-espalda.jpeg",
         "talles": [1,2,3,4,5],
         "descripción": ["Prenda para adultos Oficial de los San Antonio Spurs",
-            "Musculosa del . Actual All-Star de la liga"]               
+            "Musculosa de 'Manu' Ginobili. Considerado por muchos especialistas, deportistas y entrenadores de este deporte como el mejor jugador de América Latina, uno de los cien mejores y más influyentes de la historia de la NBA. Campeón de la liga en 4 oportunidades."]               
         },
         {
         "id":11,
@@ -162,7 +162,7 @@
         "imagenEspalda": "images/WB-ocklahoma-espalda.jpeg",
         "talles": [2,3,5],
         "descripción": ["Prenda para adultos Oficial de los Ocklahoma Thunder",
-            "Musculosa del . Actual All-Star de la liga"]               
+            "Musculosa de 'Russ' Westbrook. Durante la temporada 2020/21 se convirtió en el jugador con más triples dobles de la historia, superando a Oscar Robertson."]               
         },
         {
         "id":12,
@@ -177,7 +177,7 @@
         "imagenEspalda": "images/drose-NY-espalda.jpeg",
         "talles": [2,3,4],
         "descripción": ["Prenda para adultos Oficial de los New York Knicks",
-            "Musculosa del . Actual All-Star de la liga"]               
+            "Musculosa de 'D-Rose' . Fue elegido en la primera posición del Draft de la NBA de 2008 por Chicago Bulls. En 2011, en su tercera temporada, y a la edad de 22 años y 191 días, fue nombrado el MVP más joven de la historia de la NBA."]               
         },
         {
         "id":13,
@@ -192,7 +192,7 @@
         "imagenEspalda": "images/lillard-portland-espalda.jpeg",
         "talles": [1,2,4],
         "descripción": ["Prenda para adultos Oficial de los Portland Trail Blazzers",
-            "Musculosa del . Actual All-Star de la liga"]               
+            "Musculosa de Damian 'Logo' Lillard . Una de las actuales estrellas de liga que recientemente entró al selecto grupo de los 10 jugadores con más triples en la historia de la NBA, superando la barrera de los 1,988 tiros de larga distancia convertidos por Jason Kidd."]               
         },
         {
         "id":14,
@@ -207,7 +207,7 @@
         "imagenEspalda": "images/butler-miami-espalda.jpeg",
         "talles": [1,2,4],
         "descripción": ["Prenda para adultos Oficial de los Miami Heat",
-            "Musculosa del . Actual All-Star de la liga"]               
+            "Musculosa de 'Jimmy G Buckets'. Campeón de conferencia Este en la temporada 2019/20 y elegido para jugar el NBA All-Star Game por quinta vez en su carrera."]               
         },
         {
         "id":15,
@@ -222,7 +222,7 @@
         "imagenEspalda": "images/thompson-warriors-espalda.jpeg",
         "talles": [1,2,3],
         "descripción": ["Prenda para adultos Oficial de los Golden State Warriors",
-            "Musculosa del . Actual All-Star de la liga"]               
+            "Musculosa de 'Killa Klay'. Es el jugador más joven en la historia del Baloncesto en ser campeón del mundo, campeón olímpico y campeón de la NBA."]               
         },
         {
         "id":16,
@@ -237,14 +237,14 @@
         "imagenEspalda": "images/malone-jazz-espalda.jpeg",
         "talles": [1,2,3],
         "descripción": ["Prenda para adultos Oficial de los Utah Jazz",
-            "Musculosa del . Actual All-Star de la liga"]               
+            "Musculosa de Karl 'The Mailman' Malone . Miembro del Basketball Hall of Fame que disputó 19 temporadas en la NBA, 18 de ellas en los Utah Jazz, donde formó, junto con el base John Stockton, una de las parejas más relevantes de la historia de la NBA."]               
         },
         {
         "id":17,
         "precio": 5000,
         "descuento":20,
         "equipos": 14,
-        "jugador": "Luca Doncic",
+        "jugador": "Luka Doncic",
         "numeroCamiseta": 77,
         "color": 3,
         "destacado": false,
@@ -252,7 +252,7 @@
         "imagenEspalda": "images/doncic-dallas-espalda.jpeg",
         "talles": [1,2,3,5],
         "descripción": ["Prenda para adultos Oficial de los Dallas Mavericks",
-            "Musculosa del . Actual All-Star de la liga"]               
+            "Musculosa de Luka Doncic. Dominó el básquet europeo a los 16 años y ganó todos los títulos internacionales, además de ser elegido el mejor del Viejo Continente, con 18. Es el sexto europeo elegido en el top-3 del Draft en toda la historia de la NBA."]               
         },
         {
         "id":18,
@@ -267,7 +267,7 @@
         "imagenEspalda": "images/mcgrady-raptors-espalda.jpeg",
         "talles": [1,2,5],
         "descripción": ["Prenda para adultos Oficial de los Toronto Raptors",
-            "Musculosa del . Actual All-Star de la liga"]               
+            "Musculosa de 'T-Mac'. Siete veces seleccionado para disputar el All-Star Game. Ha ganado dos veces el título de máximo anotador de la liga, en 2003 y 2004."]               
         }
 
 ]
