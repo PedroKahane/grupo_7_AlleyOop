@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "equipo": "Golden State Warriors"
+        "equipo":"Golden State Warriors"
     },
     {
         "id": 2,
@@ -14,5 +14,46 @@
     {
         "id": 4,
         "equipo":"San Antonio Spurs"
+    },
+    {
+        "id": 5,
+        "equipo":"Milwaukee Bucks"
+    },
+    {
+        "id": 6,
+        "equipo":"Houston Rockets"
+    },
+    {
+        "id": 7,
+        "equipo":"Utah Jazz"
+    },
+    {
+        "id": 8,
+        "equipo":"Ocklahoma Thunder"
+    },
+    {
+        "id": 9,
+        "equipo":"Boston Celtics"
+    },
+    {
+        "id": 10,
+        "equipo":"Miami Heat"
+    },
+    {
+        "id": 11,
+        "equipo":"Portland Trail Blazzers"
+    },
+    {
+        "id": 12,
+        "equipo":"New York Knicks"
+    },
+    {
+        "id": 13,
+        "equipo":"Toronto Raptors"
+    },
+    {
+        "id": 14,
+        "equipo":"Dallas Mavericks"
     }
 ]
+
