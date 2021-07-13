@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include ("includes/head") %>
+    <%- include ("../includes/head") %>
 <body>
-    <%- include ("includes/header") %>
+    <%- include ("../includes/header") %>
     <main class="main_tienda">
         <section class="background_home">
             <div class="p_home">
@@ -113,7 +113,7 @@
             </div>
             <div class="articulos_promocion">
                 <% products.forEach(product => { %>
-                <a href="/productDetail/<%= product.id %> ">
+                
                     <article class="articulo_destacado">
                         <figure>
                             <img class="imagen_promocion" src="<%= product.imagenFrente %>" alt="">
@@ -129,13 +129,13 @@
                             <button class="boton-compra"><i class="fas fa-cart-plus"></i>  Comprar</button>
                         </div>
                     </article>
-                </a>
+                
                 <% }) %>
             </div>
         </section>
   
     </main>
-    <%- include ("includes/footer") %>
+    <%- include ("../includes/footer") %>
 </body>
 </html>
 
