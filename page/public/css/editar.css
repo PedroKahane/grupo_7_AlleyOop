@@ -1,0 +1,111 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'montserrat',sans-serif;
+}
+
+html {
+    background-color: #eee;;
+}
+#main_edit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#edit-form{
+    border: 1px solid #0A0903;
+    border-radius: 20px;
+    margin: 10vh 2.5vw;
+    background-color: #ffffff;
+    max-width: 700px;
+    width: 100vw;
+}
+fieldset{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 5%;
+    width: 90%;
+}
+input, label, fieldset{
+    border: none;
+}
+input{
+    background-color: #ffffff;
+}
+.border{
+    border-radius: 30px;
+    border: 3px #ebebeb solid;
+    padding: 10px 20px;
+}
+label{
+    margin-left: 10px;
+}
+textarea, select{
+    resize: none;
+    border: 3px #ebebeb solid;
+    padding: 10px 20px;
+    border-radius: 30px;
+    width: 100%;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.margin_radio {
+    margin-right: 25px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+#radio{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#radio label{
+    margin: 3px;
+}
+.titulo{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+
+}
+.title_edit{
+    font-size: 26px;
+    text-align: center;
+    margin-top: 15px;
+}
+#submit{
+    width: 60%;
+    border: none;
+    color: #FFFAFA;
+    background-color: #39b54a;
+    padding: 5px 10px;
+    border-radius: 30px;
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+#button_flex{
+    display: flex;
+    align-items: center;
+}
+textarea{
+    height: 120px;
+    border-radius: 15px !important;
+    padding-top: 7px;
+}
+.width{
+    width: 100%;
+}
+@media (min-width:450px){
+    textarea{
+        height: unset;
+        border-radius: 30px !important;
+    }
+    #submit{
+        width: 35%;
+        font-size: 32px;
+    }
+}
+

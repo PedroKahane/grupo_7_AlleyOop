@@ -38,6 +38,27 @@ const model = {
         let productos = this.allWithExtra();
         let resultado = productos.find(producto => producto.id == id)
         return resultado;
+    },
+    edit: function (data,file,id) {
+        let productos = this.all();
+        let updated = this.one(id);
+        // eliminamos la imagen de la carpeta upload
+        fs.unlinkSync(path.resolve(__dirname,"../../public/uploads/products",updated.image))
+        productos.map(producto => {
+            if(producto.id == id ){
+                producto.precio = data.precio,
+                producto.descuento = data.descuento,
+                producto.equipo = parseInt(data.equipos),
+                producto.colors = data.colores.map(color => parseInt(color)),
+                producto.jugador = data.jugador,
+                producto.talle = data.talles.map(talle => parseInt(talle)),
+                producto.numero = data.numero
+                return producto
+            }
+            return producto
+        })
+        fs.writeFileSync(this.directory,JSON.stringify(productos,null,2));
+        return true;
     }
 }
 

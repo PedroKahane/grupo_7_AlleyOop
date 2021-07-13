@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ("../includes/head") %>
+<body>
+    <div class="contenedor">
+        <%- include ("../includes/header") %>
+        <main id="main_edit">
+            <form action="/product/update/<%= product.id %>?_method=PUT" method="post" id="edit-form" enctype="multipart/form-data">
+                <p class="title_edit">Editar camiseta de <%= product.jugador %> :</p>
+                <fieldset>
+                    <label for="precio" class="titulo">Precio:</label>
+                    <input type="number" name="precio" id="precio" value="<%= product.precio %>" class="border width">
+                </fieldset>
+                <fieldset>
+                    <label for="equipo" class="titulo">Equipo:</label>
+                    <select name="equipo" id="brand">
+                        <% equipos.forEach(equipo => { %>
+                            <% if (product.equipos == equipo.id) { %>
+                                <option value="<%= equipo.id %>" selected> <%= equipo.equipo %></option>
+                            <% } else { %>
+                                <option value="<%= equipo.id %>"> <%= equipo.equipo %></option>
+                            <% } %>
+                        <% }) %>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <label for="colors" class="titulo">Colors:</label>
+                    <select name="colors" id="colors" >
+                        <% colors.forEach(color => { %>
+                            <% if (product.color == color.id) { %>
+                                <option selected value="<%= color.id %>" ><%= color.color %></option>
+                            <% } else { %>
+                                <option value="<%= color.id %>"><%= color.color %></option>
+                            <% } %>
+                        <% }) %>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <label for="jugador" class="titulo">Jugador:</label>
+                    <input type="text" name="jugador" id="jugador" value="<%= product.jugador %>" class="border width">
+                </fieldset>
+                <fieldset>
+                    <label for="numero" class="titulo">Numero de camiseta:</label>
+                    <input type="numbre" name="numero" id="numero" value="<%= product.numeroCamiseta %>" class="border width">
+                </fieldset>
+                <fieldset>
+                    <label for="image" class="titulo">Imagen de frente:</label>
+                    <input class="margin_radio width" type="file" name="image" id="image">
+                </fieldset>
+                <fieldset>
+                    <label for="image" class="titulo">Imagen de espalda:</label>
+                    <input class="margin_radio width" type="file" name="image" id="image">
+                </fieldset>
+                <fieldset>
+                    <label for="destacado" class="titulo">Es destacado?</label>
+                    <select name="destacado" id="destacado">
+                        <% if (product.destacado == true) { %>
+                            <option value="destacado" selected>Destacado</option>
+                            <option value="noDestacado">No destacado</option>
+                        <% } else { %> 
+                            <option value="destacado" >Destacado</option>
+                            <option value="noDestacado" selected>No destacado</option>
+                        <% } %> 
+                    </select>
+                </fieldset>
+                <fieldset >
+                    <label for="Talle" class="titulo">Talles disponibles:</label>
+                        <div id="radio">
+                        <% talles.forEach(talle => { %>
+                            <% let match = product.talles.filter(talle => talle == talle.id) %>
+                            <% if (match.length > 0) { %>
+                                <div class="flex margin_radio">
+                                    <label for="<%= talle.id %>"><%= talle.talle %></label>
+                                    <input checked type="radio" name="<%= talle.id %>" id="<%= talle.id %>" >
+                                </div>
+                            <% } else { %>
+                                <div class="flex margin_radio">
+                                    <label for="<%= talle.id %>"><%= talle.talle %></label>
+                                    <input type="radio" name="<%= talle.id %>" id="<%= talle.id %>" >
+                                </div>
+                            <% } %>
+                        <% }) %>
+                    </div>
+                </fieldset>
+                <% let numero_descripcion = 0 %>  
+                <% product.descripción.forEach(element => { %>
+                    <% numero_descripcion = numero_descripcion + 1 %>  
+                    <fieldset>
+                        <label for="descripción<%= numero_descripcion %>" class="titulo">Descripción <%= numero_descripcion %> </label>
+                        <textarea type="text" name="descripción<%= numero_descripcion %>" id="descripción<%= numero_descripcion %>" ><%= element %></textarea>
+                    </fieldset>
+                <% }) %>
+                <fieldset id="button_flex">
+                    <button type="submit" id="submit">Send</button>
+                </fieldset>
+                </form> 
+        </main>
+        <%- include ("../includes/footer") %>
+    </div>
+</body>
+</html>
+
