@@ -13,27 +13,28 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    padding: 112px ;
 }
 
 .detalles_remera_container {
     width: 80%;
     background-color: #fff;
     padding: 60px;
+    max-width: 1000px;
 }
 .principal {
     display: flex;
 }
-.producto_espalda, .producto_frente {
+ .producto_frente {
     width: 40%;
     height: auto;
     box-shadow: 0px 1px 5px rgb(170, 170, 170);
     display: block;
     transition: display 150ms;
+    max-width: 340px;
+    max-height: 340px;
 }
-.producto_espalda{
-    display: none;
-}
+
 .info-container{
     width: 60%;
     margin-left: 20px;
@@ -95,8 +96,10 @@ main {
 .contenedor{
     width: 100%;
 }
-
-
+h2
+.precio, .otra-desc, .seleccion-talla label {
+    color: #868686;
+}
 @media (max-width:1200px) {
     main{
         width: 100%;
