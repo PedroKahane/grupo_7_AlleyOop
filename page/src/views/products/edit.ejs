@@ -12,8 +12,12 @@
                     <input type="number" name="precio" id="precio" value="<%= product.precio %>" class="border width">
                 </fieldset>
                 <fieldset>
+                    <label for="descuento" class="titulo">Descuento:</label>
+                    <input type="number" name="descuento" id="descuento" value="<%= product.descuento %>" class="border width">
+                </fieldset>
+                <fieldset>
                     <label for="equipo" class="titulo">Equipo:</label>
-                    <select name="equipo" id="brand">
+                    <select name="equipo" id="equipo">
                         <% equipos.forEach(equipo => { %>
                             <% if (product.equipos == equipo.id) { %>
                                 <option value="<%= equipo.id %>" selected> <%= equipo.equipo %></option>

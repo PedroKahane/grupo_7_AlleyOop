@@ -39,20 +39,20 @@ const model = {
         let resultado = productos.find(producto => producto.id == id)
         return resultado;
     },
-    edit: function (data,file,id) {
+    edit: function (data,id) {
         let productos = this.all();
         let updated = this.one(id);
         // eliminamos la imagen de la carpeta upload
-        fs.unlinkSync(path.resolve(__dirname,"../../public/uploads/products",updated.image))
         productos.map(producto => {
             if(producto.id == id ){
                 producto.precio = data.precio,
                 producto.descuento = data.descuento,
-                producto.equipo = parseInt(data.equipos),
-                producto.colors = data.colores.map(color => parseInt(color)),
+                producto.equipos = parseInt(data.equipo),
+                producto.color = parseInt(data.colors),
                 producto.jugador = data.jugador,
-                producto.talle = data.talles.map(talle => parseInt(talle)),
-                producto.numero = data.numero
+                producto.destacado = data.destacado,
+                producto.talles = data.talles.map(talle => parseInt(talle)),
+                producto.numeroCamiseta = data.numero
                 return producto
             }
             return producto
