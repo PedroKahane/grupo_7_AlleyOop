@@ -70,19 +70,12 @@
                 <fieldset >
                     <label for="Talle" class="titulo">Talles disponibles:</label>
                         <div id="radio">
+                                  
                         <% talles.forEach(talle => { %>
-                            <% let match = product.talles.filter(talle => talle == talle.id) %>
-                            <% if (match.length > 0) { %>
-                                <div class="flex margin_radio">
-                                    <label for="<%= talle.id %>"><%= talle.talle %></label>
-                                    <input checked type="radio" name="<%= talle.id %>" id="<%= talle.id %>" >
-                                </div>
-                            <% } else { %>
                                 <div class="flex margin_radio">
                                     <label for="<%= talle.id %>"><%= talle.talle %></label>
                                     <input type="radio" name="<%= talle.id %>" id="<%= talle.id %>" >
                                 </div>
-                            <% } %>
                         <% }) %>
                     </div>
                 </fieldset>

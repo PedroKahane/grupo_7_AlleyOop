@@ -47,13 +47,11 @@ const model = {
             if(producto.id == id ){
                 producto.precio = data.precio,
                 producto.descuento = data.descuento,
-                producto.equipos = parseInt(data.equipo),
-                producto.color = parseInt(data.colors),
+                producto.equipos = parseInt(data.equipos),
                 producto.jugador = data.jugador,
-                producto.destacado = data.destacado,
-                producto.talles = data.talles.map(talle => parseInt(talle)),
-                producto.numeroCamiseta = data.numero
-                return producto
+                producto.numeroCamiseta = data.numeroCamiseta,
+                producto.color = parseInt(data.color),
+                producto.destacado = data.destacado
             }
             return producto
         })
