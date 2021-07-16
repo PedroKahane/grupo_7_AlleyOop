@@ -52,6 +52,7 @@ const model = {
                 producto.numeroCamiseta = data.numeroCamiseta,
                 producto.color = parseInt(data.color),
                 producto.destacado = data.destacado
+                return producto
             }
             return producto
         })
