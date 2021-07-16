@@ -5,7 +5,7 @@
     <div class="contenedor">
         <%- include ("../includes/header") %>
         <main id="main_edit">
-            <form action="/product/update/<%= product.id %>?_method=PUT" method="post" id="edit-form" enctype="multipart/form-data">
+            <form action="/update/<%= product.id %>?_method=PUT" method="POST" id="edit-form" enctype="multipart/form-data">
                 <p class="title_edit">Editar camiseta de <%= product.jugador %> :</p>
                 <fieldset>
                     <label for="precio" class="titulo">Precio:</label>
@@ -69,15 +69,25 @@
                 </fieldset>
                 <fieldset >
                     <label for="Talle" class="titulo">Talles disponibles:</label>
-                        <div id="radio">
-                                  
+                        <div id="radio">      
                         <% talles.forEach(talle => { %>
-                                <div class="flex margin_radio">
-                                    <label for="<%= talle.id %>"><%= talle.talle %></label>
-                                    <input type="checkbox" name="talle" value="<%= talle.id %>" id="<%= talle.id %>" >
-                                </div>
+                            <% let talleDisponible = product.talles.filter(productTalle => productTalle == talle.id) %>
+                            <% let talleNoDisponible = product.talles.filter(productTalle => productTalle = talle.id) %>
+                            <% talleDisponible.forEach(element => { %>
+                                <% if (talle.id == talleDisponible) { %>
+                                    <div class="flex margin_radio">
+                                        <label for="<%= talle.id %>"><%= talle.talle %></label>
+                                        <input checked type="radio" name="<%= talle.id %>" id="<%= talle.id %>" >
+                                    </div>
+                                <% } else if(talle.id != talleDisponible) {%>
+                                    <div class="flex margin_radio">
+                                        <label for="<%= talle.id %>"><%= talle.talle %></label>
+                                        <input type="radio" name="<%= talle.id %>" id="<%= talle.id %>" >
+                                    </div>
+                                <% } %>
+                            <% }) %> 
                         <% }) %>
-                    </div>
+                        </div>
                 </fieldset>
                 <% let numero_descripcion = 0 %>  
                 <% product.descripción.forEach(element => { %>
