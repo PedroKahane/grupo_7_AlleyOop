@@ -12,14 +12,15 @@ app.listen(app.get("port"),() => console.log("server on http://localhost:" + app
 // App Access public
 app.use(express.static(path.resolve(__dirname,"../public")));
 
+
 /* View Engine */
 app.set("view engine", "ejs");
 app.set("views",path.resolve(__dirname, "./views"))
-/* Data Configuration */
 
+
+/* Data Configuration */
 app.use(express.urlencoded({extended:false})) // Not fund req.body
 app.use(method("_method")) // ?_method=PUT
-
 
 
 // Rutas

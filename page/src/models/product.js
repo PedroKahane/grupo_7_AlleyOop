@@ -39,6 +39,22 @@ const model = {
         let resultado = productos.find(producto => producto.id == id)
         return resultado;
     },
+    create: function (data,file) {
+        let productos = this.all();
+        let nuevo = {
+            id: productos.length > 0 ? productos[productos.length -1].id + 1: 1,
+            precio: data.precio,
+            descuento: data.descuento,
+            equipos: parseInt(data.equipos),
+            jugador: data.jugador,
+            numeroCamiseta: data.numeroCamiseta,
+            color: parseInt(data.color),
+            destacado: data.destacado
+        }    
+        productos.push(nuevo)
+        fs.writeFileSync(this.directory,JSON.stringify(productos,null,2));
+        return nuevo;    
+    },
     edit: function (data,id) {
         let productos = this.all();
         let updated = this.one(id);
