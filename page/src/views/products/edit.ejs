@@ -72,20 +72,17 @@
                         <div id="radio">      
                         <% talles.forEach(talle => { %>
                             <% let talleDisponible = product.talles.filter(productTalle => productTalle == talle.id) %>
-                            <% let talleNoDisponible = product.talles.filter(productTalle => productTalle = talle.id) %>
-                            <% talleDisponible.forEach(element => { %>
                                 <% if (talle.id == talleDisponible) { %>
                                     <div class="flex margin_radio">
                                         <label for="<%= talle.id %>"><%= talle.talle %></label>
-                                        <input checked type="radio" name="<%= talle.id %>" id="<%= talle.id %>" >
+                                        <input checked type="checkbox" name="<%= talle.id %>" id="<%= talle.id %>" >
                                     </div>
-                                <% } else if(talle.id != talleDisponible) {%>
+                                <% } else {%>
                                     <div class="flex margin_radio">
                                         <label for="<%= talle.id %>"><%= talle.talle %></label>
-                                        <input type="radio" name="<%= talle.id %>" id="<%= talle.id %>" >
+                                        <input type="checkbox" name="<%= talle.id %>" id="<%= talle.id %>" >
                                     </div>
                                 <% } %>
-                            <% }) %> 
                         <% }) %>
                         </div>
                 </fieldset>

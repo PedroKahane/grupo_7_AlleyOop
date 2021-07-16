@@ -16,13 +16,13 @@ const model = {
             element.equipos = equipos.one(element.equipos);
             return element
         })
-        productos.map(element => {
-            element.talles = element.talles.map(talle => {
-                talle = talleModel.one(talle)
-                return talle
-            })
-            return element
-        })
+        //productos.map(element => {
+            //element.talles = element.talles.map(talle => {
+              //  talle = talleModel.one(talle)
+                //return talle
+            //})
+            //return element
+        //})
         productos.map(element => {
             element.color = color.one(element.color);
             return element

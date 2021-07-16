@@ -7,7 +7,6 @@ router.get("/tienda", product.tienda);
 router.get("/create", product.create);
 router.get("/productDetail/:id", product.product);
 router.get("/edit/:id", product.edit);
-const product = require("../controllers/product")
 const multer = require('multer');
 let dest = multer.diskStorage({
     destination: function (req, file, cb) {
