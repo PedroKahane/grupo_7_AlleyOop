@@ -5,7 +5,7 @@
     font-family: 'montserrat',sans-serif;
   }
 html {
-      font-size: 62.5%;
+
       background-color: #eee;
   }
   
@@ -44,23 +44,23 @@ main {
     justify-content: center;
 }
 .info-container h2 {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     padding-bottom: 25px;
     border-bottom: 1px solid rgba(150, 150, 150, 0.726);
 }
 .info-container .precio {
-    font-size: 20px;
+    font-size: 14px;
     padding: 10px 0 10px 0;
 }
 .info-container .seleccion-talla label{
-    font-size: 1.6rem;
+    font-size: 1rem;
 }
 .info-container .carrito-buttom-detail {
     background-color: #FF8200;
     color: white;
     border: none;
     max-width: 300px;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 600;
     text-decoration: none;
     padding: 15px 0px;
@@ -71,7 +71,7 @@ main {
 
 }
 .info-container .otra-desc{
-    font-size: 1.6rem;
+    font-size: 1rem;
     padding-top: 20px;
 }
 .otras-img-container {
@@ -113,7 +113,7 @@ h2
     }
     .info-container .carrito-buttom-detail{
         width: 60%;
-        font-size: 15px;
+        font-size: 10px;
     }
     
     .principal img{
@@ -130,7 +130,7 @@ h2
         align-items: center;
     }
     .info-container h2{
-        font-size: 1.4rem;
+        font-size: 0.9rem;
         padding: 10px;
     }
     .info-container .carrito-buttom-detail {
@@ -139,7 +139,7 @@ h2
     }
     .info-container .precio{
         padding: 10px 0px;
-        font-size: 15px;
+        font-size: 10px;
     }
     .otra-desc{
         padding-top: 10px;
@@ -165,7 +165,7 @@ h2
 
     .info-container .carrito-buttom-detail{
         width: 60%;
-        font-size: 15px;
+        font-size: 10px;
     }
     
     .principal img{
@@ -177,10 +177,10 @@ h2
         margin: 0px;
     }
     .info-container h2 {
-        font-size: 2.0rem;
+        font-size: 1.4rem;
     }
     .otra-desc p{
-        font-size: 10px;
+        font-size: 7px;
     }
     .detalles_remera_container{
         padding: 10px
