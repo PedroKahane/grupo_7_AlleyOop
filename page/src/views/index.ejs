@@ -3,18 +3,18 @@
 <%- include ("includes/head") %>
 <body>
     <%- include ("includes/header") %>
-    <main class="main_home">
-        <section class="background_home">
+    <main id="main_home">
+        <section id="background_home">
             <div class="p_home">
-                <p class="title_background"> Heroes come and go,<br>
+                <p id="title_background"> Heroes come and go,<br>
                     but legends are forever
                 </p>
-                <p class="subtitle_background"> Kobe Bryant</p>
+                <p id="subtitle_background"> Kobe Bryant</p>
             </div>
         </section>
-        <section class="productos_home">
+        <section id="productos_home">
             <p class="titulo_productos">Productos destacados:</p>
-            <div class="articulos_promocion">
+            <div id="articulos_promocion">
                 <% products.forEach(product => { %>
                     <% if (product.destacado == true) { %>
                      
@@ -34,11 +34,11 @@
                         <% } %>
                 <% }) %>
             </div>
-            <div class="contenedor_boton">
+            <div id="contenedor_boton">
                 <a class="boton_productos" href="/tienda">IR A LA TIENDA</a>
             </div>
         </section>
-        <section class="banner_beneficios">
+        <section id="banner_beneficios">
             <div class="beneficio">
                 <i class="fas fa-truck"></i>
                 <p class="title_beneficio">ENVIO GRATIS</p>

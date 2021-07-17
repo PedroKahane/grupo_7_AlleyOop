@@ -1,12 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const product = require("../controllers/product");
-
-
-router.get("/tienda", product.tienda);
-router.get("/create", product.create);
-router.get("/productDetail/:id", product.product);
-router.get("/edit/:id", product.edit);
 const multer = require('multer');
 let dest = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -22,8 +16,12 @@ let dest = multer.diskStorage({
 const upload = multer({storage:dest});
 
 
+router.get("/tienda", product.tienda);
+router.get("/create", product.create);
+router.get("/productDetail/:id", product.product);
+router.get("/edit/:id", product.edit);
 
-router.get("/edit/:id",[upload.single("image")], product.edit)
+
 
 router.post("/save", product.save);
 router.put("/update/:id",product.update);

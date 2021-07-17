@@ -8,7 +8,7 @@
 html {
     background-color: #eee;;
 }
-.contacto {
+#contacto {
     width: 95vw;
     border: 1px solid #0A0903;
     border-radius: 20px;
@@ -32,7 +32,7 @@ html {
     margin-bottom: 5px;
     margin-left: 15px;
 }
-.title_contacto {
+#title_contacto {
     font-size: 26px;
     text-align: center;
     margin-top: 15px;
@@ -59,13 +59,13 @@ textarea{
     .submit {
         font-size: 22px;
     }
-    .contacto  {
+    #contacto  {
         width: 70vw;
         margin-left: 15vw;
     }
 }
 @media (min-width:950px){
-    .contacto {
+    #contacto {
         width: 40vw;
         margin-left: 30vw;
     }

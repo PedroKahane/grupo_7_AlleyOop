@@ -4,10 +4,10 @@
     box-sizing: border-box;
     font-family: 'montserrat',sans-serif;
 }
-.main_home {
+#main_home {
     background-color: #FFFAFA;
 }
-.background_home {
+#background_home {
     background-image: url(/images/basket_pelota.jpeg);
     height: 300px;
     background-size: cover;
@@ -17,13 +17,13 @@
     align-items: center;
     justify-content: center;
 }
-.title_background {
+#title_background {
     font-size: 32px;
     font-weight: 500;
     color: #FFFAFA;
     text-align: center;
 }
-.subtitle_background{
+#subtitle_background{
     text-align: center;
     font-size: 16px;
     font-weight: 900;
@@ -69,7 +69,7 @@
 .jugador {
     font-weight: 600;
 }
-.articulos_promocion {
+#articulos_promocion {
     display: flex;
     flex-direction: column;
 }
@@ -89,12 +89,12 @@
     text-align: center;
 
 }
-.contenedor_boton {
+#contenedor_boton {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.banner_beneficios {
+#banner_beneficios {
     background-color: #676666;
     display: flex;
     flex-direction: column;
@@ -103,7 +103,7 @@
     margin: 60px 0px;
     padding: 20px
 }
-.banner_beneficios i {
+#banner_beneficios i {
     font-size: 2em;
     color: #FFFAFA;
 }
@@ -128,13 +128,13 @@
 .boton_productos {
     font-size: 16px;
 } 
-.articulos_promocion article{
+#articulos_promocion article{
     transition: all 650ms;
 }
-.articulos_promocion article:hover{
+#articulos_promocion article:hover{
     transform: scale(1.2)
 }
-.articulos_promocion a{
+#articulos_promocion a{
     text-decoration: none;
     color: #0A0903;
 }
@@ -153,7 +153,7 @@
         width: 40vw;
         height: 40vw;
     }
-    .articulos_promocion {
+    #articulos_promocion {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -167,7 +167,7 @@
         padding: 10px 20px;
         width: 350px;
     }
-    .banner_beneficios{
+    #banner_beneficios{
         flex-direction: row;
     }
     .beneficio{
@@ -198,13 +198,13 @@
         width: 15vw;
         height: 15vw;
     }
-    .articulos_promocion {
+    #articulos_promocion {
         justify-content: space-around;
     }
     .precio_descuento p {
         margin:5px;
     }
-    .productos_home {
+    #productos_home {
         padding: 80px 6vw;
     }
     .titulo_productos {

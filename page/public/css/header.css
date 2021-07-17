@@ -3,19 +3,19 @@ header {
     display: flex;
     flex-direction: column;
 }
-.header_top {
+#header_top {
     height: 40px;
     background-color: #FFEAAE;
     display:flex;
     align-items: center;
     justify-content: center;
 }
-.header_top p {
+#header_top p {
     color: #0A0903;
     font-size: 20px;
     text-align: center;
 }
-.header_bottom {
+#header_bottom {
     display: flex;
     justify-content: space-between;
     background-color: #0A0903;
@@ -26,7 +26,7 @@ header {
     margin: 0px 30px;
     width: 80px;
 }
-.menu_header a {
+#menu_header a {
     color: #FFFAFA;
     text-decoration: none;
     padding: 20px;
@@ -34,12 +34,12 @@ header {
     font-weight: bold;
     display: none;
 }
-.icon_header a i {
+#icon_header a i {
     font-size: 1.7em;
     color: #FFFAFA;
     padding: 10px;
 }
-.icon_header {
+#icon_header {
     margin: 0 30px;
     display: flex;
     align-items: center;
@@ -62,7 +62,7 @@ header {
     .burger-menu {
         display: none;
     }
-    .menu_header a {
+    #menu_header a {
         display: unset;
     }
 }

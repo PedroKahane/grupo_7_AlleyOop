@@ -5,7 +5,7 @@
     font-family: 'montserrat',sans-serif;
 }
 
-.section_login {
+#section_login {
     display: flex;
     align-items: center;
     justify-content: center;
