@@ -3,15 +3,15 @@
     <%- include ("includes/head") %>
 <body>
     <%- include ("includes/header") %>
-    <main class="contenedor-main">
-        <section class="volver">
+    <main>
+        <section id="volver">
             <i class="fas fa-chevron-left"></i><a href="/productCartDos">Volver</a>
         </section>
-        <section class="contenedor-carrito">
-            <p class="titular-carrito">Carrito de compras</p>
-            <form  class= "contenedor-form" action="" method="POST">
+        <section id="contenedor-carrito">
+            <p id="titular-carrito">Carrito de compras</p>
+            <form  id= "contenedor-form" action="" method="POST">
                 <fieldset class="contenedor-item">
-                    <p class="titulo">3. TIPO DE PAGO Y RESUMEN DE PEDIDO</p>
+                    <p id="titulo">3. TIPO DE PAGO Y RESUMEN DE PEDIDO</p>
                 </fieldset>
                 <fieldset class="contenedor-item-pago">
                     <legend class="titulo-input">Pagar con:</legend>
@@ -51,11 +51,11 @@
                         <p class="precio_articulo">ARS $500</p>
                     </div>
                 </div>
-                <div class="contenedor-subtotal">
+                <div id="contenedor-subtotal">
                     <p class="subtotal">Total</p>
                     <p class="subtotal">ARS $18.500</p>
                 </div>
-                <fieldset class="contenedor-newsletter">
+                <fieldset id="contenedor-newsletter">
                     <input type="checkbox" name="newsletter" checked>
                     <label for="newsletter">¡Sí, quiero recibir información sobre nuevos lanzamientos y ofertas!</label>
                 </fieldset>

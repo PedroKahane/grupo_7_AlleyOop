@@ -9,7 +9,7 @@ html {
     background-color: #eee;
 }
 
-.contenedor-carrito {
+#contenedor-carrito {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -17,7 +17,7 @@ html {
     justify-content: center;
 }
 
-.volver {
+#volver {
     margin: 0px 0px 0px 5px;
 }
 
@@ -40,7 +40,7 @@ section a {
     font-size: 12px;
 }
 
-.titular-carrito {
+#titular-carrito {
     font-size: 22px;
     font-weight: 700;
     margin: auto;
@@ -55,13 +55,6 @@ section a {
     color: #333;
 }
 
-.subtitulo{
-    color: #9b9b9b;
-    font-weight: 600;
-    font-size: 12px;
-    margin-top: 5px;  
-}
-
 .subtitulo-articulo{
     color: #9b9b9b;
     font-weight: 600;
@@ -71,7 +64,7 @@ section a {
     text-align: left;  
 }
 
-.contenedor-form {
+#contenedor-form {
     background-color: white;
     width: 100vw;
     padding: 15px;
@@ -176,23 +169,27 @@ section a {
     align-self: center;
 }
 
-.titulo {
+#titulo {
     font-size: 12px;
     text-align: center;
     align-self: center;
     margin-bottom: 15px;
 }
 
-.titulo-envio {
+#titulo-envio {
     font-size: 12px;
     text-align: center;
     align-self: center;
 }
 
-.subtitulo {
+#subtitulo {
     text-align: center;
     align-self: center;
-    margin-bottom: 15px
+    margin-bottom: 15px;
+    color: #9b9b9b;
+    font-weight: 600;
+    font-size: 12px;
+    margin-top: 5px;
 }
 
 .imagen_promocion {
@@ -216,7 +213,7 @@ section a.titulo-articulo {
     font-size: 12px;
 }
 
-.contenedor-subtotal {
+#contenedor-subtotal {
     display: flex;
     justify-content: space-between;
     margin: 12px;
@@ -251,11 +248,11 @@ p.subtotal {
 }
 .precio_articulo{
     text-align: right;
-    font-size: 12px;
-    width: 30%;
+    font-size: 10px;
+    width: 100%;
 }
 
-.contenedor-newsletter {
+#contenedor-newsletter {
     display: flex;
     border: none;
     margin: 15px;
@@ -266,7 +263,7 @@ p.subtotal {
 }
 
 @media (min-width: 361px) {
-    .contenedor-form{
+    #contenedor-form{
         width: 95vw;
         max-width: 500px;
     }
@@ -279,7 +276,7 @@ p.subtotal {
     .subtitulo-articulo{
         font-size: 12px;
     }
-    .titulo, .titulo-envio{
+    #titulo, .titulo-envio{
         font-size: 16px;
     }   
 }

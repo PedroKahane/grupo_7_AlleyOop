@@ -3,25 +3,23 @@
     <%- include ("../includes/head") %>
 <body>
     <%- include ("../includes/header") %>
-    <main class="main_tienda">
-        <section class="background_home">
-            <div class="p_home">
-                <p class="title_background"> Las mejores camisetas<br>
-                    las encontras en
-                </p>
-                <p class="subtitle_background"> Alley-Oop</p>
+    <main id="main_tienda">
+        <section id="background_home">
+            <div id="p_home">
+                <p id="title_background"> Las mejores camisetas<br>las encontras en</p>
+                <p id="subtitle_background"> Alley-Oop</p>
             </div>
         </section>
-        <section class="contenedor_indice">
+        <section id="contenedor_indice">
             <div class="indice_camisetas margin_resposive">
                 <span >Filtrar por:</span>
             </div>
-            <div class= "indice_superior">
+            <div id= "indice_superior">
                 <a href="/">Home</a>
                 <i class="fas fa-angle-double-right"></i>
                 <span class="indice_camisetas">Camisetas</span> 
             </div>
-            <form class="contenedor-form" action="" method="POST">
+            <form id="contenedor-form" action="" method="POST">
                 <fieldset class="contenedor-item">
                     <label class="titulo-input" for="orden_productos"></label>
                     <select class="caja" name="orden_productos" id="orden_productos">
@@ -35,9 +33,9 @@
                 </fieldset>
             </form>
         </section>
-        <section class="contenedor_tienda">
-            <div class="contenedor_filtros">
-                <form  class= "contenedor_form_filtro" action="" method="POST">
+        <section id="contenedor_tienda">
+            <div id="contenedor_filtros">
+                <form  id= "contenedor_form_filtro" action="" method="POST">
                     <fieldset class="contenedor_titulo_filtro">
                         <p class="titulo_filtro">Color</p>
                         <i class="fas fa-times"></i>
@@ -111,7 +109,7 @@
                 </fieldset>
                 </form>
             </div>
-            <div class="articulos_promocion">
+            <div id="articulos_promocion">
                 <% products.forEach(product => { %>
                 
                     <article class="articulo_destacado">
