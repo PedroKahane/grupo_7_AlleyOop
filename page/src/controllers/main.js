@@ -6,7 +6,7 @@ module.exports = {
     contacto:(req,res) => res.render("contacto",{styles:"contacto.css"}),
     login:(req,res) => res.render("users/login",{styles:"login.css"}),
     register:(req,res) => res.render("users/register",{styles:"login.css"}),
-    productCart:(req,res) => res.render("productCart",{styles:"productCart.css"}),
-    productCartDos:(req,res) => res.render("productCartDos",{styles:"productCart.css"}),
-    productCartTres:(req,res) => res.render("productCartTres",{styles:"productCart.css"})
+    productCart:(req,res) => res.render("carrito/productCart",{styles:"productCart.css"}),
+    productCartDos:(req,res) => res.render("carrito/productCartDos",{styles:"productCart.css"}),
+    productCartTres:(req,res) => res.render("carrito/productCartTres",{styles:"productCart.css"})
 }

@@ -14,7 +14,7 @@ module.exports = {
     },
     edit:(req,res) => res.render("products/edit",{styles:"editar.css",product:product.one(req.params.id),colors: color.all(),talles:talle.all(),equipos: equipos.all()}),
     update: (req,res) =>{
-        res.send(req.query)
+        res.send(req.body)
         // let idUpdated = req.params.id ? req.params.id : req.body.id
         // let result = product.edit(req.body,idUpdated)
         // return result ? res.redirect("/productDetail/"+idUpdated) : res.status(500).send("error en la carga") 
