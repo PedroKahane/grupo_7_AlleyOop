@@ -4,19 +4,19 @@
 <body>
     <%- include ("includes/header") %>
     <main id="main_home">
-        <section id="background_home">
+        <section class="background_home">
             <div class="p_home">
-                <p id="title_background"> Heroes come and go,<br>
+                <p class="title_background"> Heroes come and go,<br>
                     but legends are forever
                 </p>
-                <p id="subtitle_background"> Kobe Bryant</p>
+                <p class="subtitle_background"> Kobe Bryant</p>
             </div>
         </section>
         <section id="productos_home">
             <p class="titulo_productos">Productos destacados:</p>
             <div id="articulos_promocion">
                 <% products.forEach(product => { %>
-                    <% if (product.destacado == true) { %>
+                    <% if (product.destacado == true || product.destacado == "true") { %>
                      
                         <a href="/productDetail/<%= product.id %> ">
                             <article class="articulo_destacado">

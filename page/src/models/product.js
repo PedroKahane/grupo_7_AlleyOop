@@ -55,19 +55,24 @@ const model = {
         fs.writeFileSync(this.directory,JSON.stringify(productos,null,2));
         return nuevo;    
     },
-    edit: function (data,id) {
+    edit: function (data,files,id) {
         let productos = this.all();
         let updated = this.one(id);
         // eliminamos la imagen de la carpeta upload
+        //fs.unlinkSync(path.resolve(__dirname,"../../public/",updated.imagenFrente))
+        //fs.unlinkSync(path.resolve(__dirname,"../../public/",updated.imagenEspalda))
         productos.map(producto => {
             if(producto.id == id ){
                 producto.precio = data.precio,
                 producto.descuento = data.descuento,
-                producto.equipos = parseInt(data.equipos),
+                producto.equipos = parseInt(data.equipo),
                 producto.jugador = data.jugador,
-                producto.numeroCamiseta = data.numeroCamiseta,
-                producto.color = parseInt(data.color),
+                producto.numeroCamiseta = data.numero,
+                producto.color = parseInt(data.colors),
+                producto.imagenFrente = "images/" + files[0].filename,
+                producto.imagenEspalda = "images/" + files[1].filename,
                 producto.destacado = data.destacado
+                producto.descripción = [data.descripción1, data.descripción2]
                 return producto
             }
             return producto

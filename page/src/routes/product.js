@@ -2,12 +2,11 @@ const express = require('express');
 const router = express.Router();
 const product = require("../controllers/product");
 const multer = require('multer');
+const path = require('path')
 let dest = multer.diskStorage({
     destination: function (req, file, cb) {
         let extension = path.extname(file.originalname);
-        if(extension.indexOf("jpg") > 0){
-            cb(null, path.resolve(__dirname,"../../public/uploads","products"))
-        }
+        cb(null, path.resolve(__dirname,"../../public/","images"))
     },
     filename: function (req, file, cb) {
         cb(null, file.fieldname + '-' + Date.now()+ path.extname(file.originalname))
@@ -24,7 +23,7 @@ router.get("/edit/:id", product.edit);
 
 
 router.post("/save", product.save);
-router.put("/update/:id",product.update);
+router.put("/update/:id",[upload.any()],product.update);
 
 
 module.exports = router

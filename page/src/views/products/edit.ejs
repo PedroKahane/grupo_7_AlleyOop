@@ -5,7 +5,7 @@
     <div class="contenedor">
         <%- include ("../includes/header") %>
         <main id="main_edit">
-            <form action="/update/<%= product.id %>?_method=PUT" method="POST" id="edit-form">
+            <form action="/update/<%= product.id %>?_method=PUT" method="POST" id="edit-form" enctype="multipart/form-data">
                 <p class="title_edit">Editar camiseta de <%= product.jugador %> :</p>
                 <fieldset>
                     <label for="precio" class="titulo">Precio:</label>
@@ -58,12 +58,12 @@
                 <fieldset>
                     <label for="destacado" class="titulo">Es destacado?</label>
                     <select name="destacado" id="destacado">
-                        <% if (product.destacado == true) { %>
-                            <option value="destacado" selected>Destacado</option>
-                            <option value="noDestacado">No destacado</option>
+                        <% if (product.destacado == true || product.destacado == "true") { %>
+                            <option value=true selected>true</option>
+                            <option value=false>false</option>
                         <% } else { %> 
-                            <option value="destacado" >Destacado</option>
-                            <option value="noDestacado" selected>No destacado</option>
+                            <option value=true >true</option>
+                            <option value=false selected>false</option>
                         <% } %> 
                     </select>
                 </fieldset>
