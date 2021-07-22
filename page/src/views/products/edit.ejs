@@ -75,12 +75,12 @@
                                 <% if (talle.id == talleDisponible) { %>
                                     <div class="flex margin_radio">
                                         <label for="<%= talle.id %>"><%= talle.talle %></label>
-                                        <input checked type="checkbox" name="<%= talle.id %>" id="<%= talle.id %>" >
+                                        <input checked type="checkbox" value="<%= talle.id %>" id="<%= talle.id %>" name="talles">
                                     </div>
                                 <% } else {%>
                                     <div class="flex margin_radio">
                                         <label for="<%= talle.id %>"><%= talle.talle %></label>
-                                        <input type="checkbox" name="<%= talle.id %>" id="<%= talle.id %>" >
+                                        <input type="checkbox" value="<%= talle.id %>" id="<%= talle.id %>" name="talles">
                                     </div>
                                 <% } %>
                         <% }) %>

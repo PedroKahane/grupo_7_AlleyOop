@@ -58,9 +58,15 @@ const model = {
     edit: function (data,files,id) {
         let productos = this.all();
         let updated = this.one(id);
+        let imagenFrente = path.resolve(__dirname,"../../public/",updated.imagenFrente)
+        let imagenEspalda = path.resolve(__dirname,"../../public/",updated.imagenEspalda)
         // eliminamos la imagen de la carpeta upload
-        //fs.unlinkSync(path.resolve(__dirname,"../../public/",updated.imagenFrente))
-        //fs.unlinkSync(path.resolve(__dirname,"../../public/",updated.imagenEspalda))
+        if(fs.existsSync(imagenFrente)) {
+            fs.unlinkSync(imagenFrente)
+        }
+        if(fs.existsSync(imagenEspalda)) {
+            fs.unlinkSync(imagenEspalda)
+        }
         productos.map(producto => {
             if(producto.id == id ){
                 producto.precio = data.precio,
@@ -72,6 +78,7 @@ const model = {
                 producto.imagenFrente = "images/" + files[0].filename,
                 producto.imagenEspalda = "images/" + files[1].filename,
                 producto.destacado = data.destacado
+                producto.talles = data.talles.map(talle => parseInt(talle))
                 producto.descripción = [data.descripción1, data.descripción2]
                 return producto
             }

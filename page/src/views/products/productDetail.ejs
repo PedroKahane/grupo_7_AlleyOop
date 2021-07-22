@@ -23,6 +23,10 @@
                             <% product.descripción.forEach(element => { %>
                             <p class="otra-desc"> <%= element %>  </p>
                             <% }) %> 
+                            <div class="flex">
+                                <a href="/edit/<%= product.id %>" id="buton_edit"> EDITAR</a>
+                                <a href="" id="buton_delete"> ELIMINAR</a>
+                            </div>
                         </div>
                     </div>
                     <div class="otras-img-container">

@@ -100,9 +100,42 @@ h2
 .precio, .otra-desc, .seleccion-talla label {
     color: #868686;
 }
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+#buton_edit{
+    background-color: #4eaefd;
+    color: white;
+    border: none;
+    max-width: 200px;
+    width: 45%;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 15px 0px;
+    margin: 30px 10px 20px 10px;
+    border-radius: 30px;
+    text-align: center;  
+}
+#buton_delete{
+    background-color: #d82e2e;
+    color: white;
+    border: none;
+    max-width: 200px;
+    width: 45%;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 15px 0px;
+    margin: 30px 10px 20px 10px;
+    border-radius: 30px;
+    text-align: center; 
+}
 @media (max-width:1200px) {
     main{
         width: 100%;
+        padding: 30px;
     }
     .detalles_remera_container{
         width: 100%;
@@ -152,6 +185,7 @@ h2
     }
     main{
         width: 100%;
+        padding: 0px;
     }
     .frente:hover .producto_frente {
         display: none;
