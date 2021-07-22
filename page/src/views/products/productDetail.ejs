@@ -7,7 +7,13 @@
         <main>
                 <article class="detalles_remera_container">
                     <div class="principal">
-                        <img src="/<%= product.imagenFrente %>"  alt="Musculosa curry frente" class="producto_frente">
+                        <div id="derecha_detail">
+                            <img id="producto_principal" src="/<%= product.imagenFrente %>"  alt="Musculosa curry frente" class="producto_frente">
+                            <div class="otras-img-container">
+                                <img src="/<%= product.imagenFrente %>" alt="Mosculosa curry frente" class="frente" >
+                                <img src="/<%= product.imagenEspalda %>" alt="Mosculosa curry espalda" class="espalda">
+                            </div>
+                        </div>
                         <div class="info-container">
                             <h2> Musculosa Titular <%= product.equipos.equipo %> (<%= product.numeroCamiseta %>)</h2>
                             <p class="precio">$<%= product.precio %></p>
@@ -28,10 +34,6 @@
                                 <a href="" id="buton_delete"> ELIMINAR</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="otras-img-container">
-                        <img src="/<%= product.imagenFrente %>" alt="Mosculosa curry frente" class="frente" >
-                        <img src="/<%= product.imagenEspalda %>" alt="Mosculosa curry espalda" class="espalda">
                     </div>
                 </article>
         </main>

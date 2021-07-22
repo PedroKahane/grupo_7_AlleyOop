@@ -8,7 +8,9 @@ html {
       font-size: 62.5%;
       background-color: #eee;
   }
-  
+  #derecha_detail{
+      width: 50%;
+  }
 main {
     display: flex;
     justify-content: center;
@@ -25,8 +27,7 @@ main {
 .principal {
     display: flex;
 }
- .producto_frente {
-    width: 40%;
+ #producto_principal {
     height: auto;
     box-shadow: 0px 1px 5px rgb(170, 170, 170);
     display: block;
@@ -77,6 +78,10 @@ main {
 .otras-img-container {
     width: 45%;
     display: flex;
+}
+.otras-img-container img{
+    width: 60px;
+    height:60px;
 }
 .frente, .espalda {
     width: 60px;
@@ -149,7 +154,7 @@ h2
         font-size: 15px;
     }
     
-    .principal img{
+    #producto_principal{
         height: 250px;
         width: 250px;
     }
@@ -202,7 +207,7 @@ h2
         font-size: 15px;
     }
     
-    .principal img{
+    #producto_principal{
         height: 90vw;
         width: 90vw;
     }
