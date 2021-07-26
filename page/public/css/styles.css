@@ -57,14 +57,14 @@
     align-items: center;
 }
 .precio_descuento p {
-    margin:  5px 20px;
+    margin:  5px;
     font-weight: 600;
 }
 .descuento {
     color: #39b54a;
 }
 .precio {
-    font-size: 28px;
+    font-size: 18px;
 }
 .jugador {
     font-weight: 600;
@@ -181,10 +181,17 @@
     .title_background {
         font-size: 42px;
     }
+    .precio_descuento p {
+        margin:  5px 25px;
+        font-weight: 600;
+    }
     .subtitle_background{
         font-size: 26px;
         margin: 20px;
         padding-right: 90px;
+    }
+    .precio {
+        font-size: 28px;
     }
     .p_home {
     width: 600px;
