@@ -67,18 +67,19 @@
   },
   {
     "id": 4,
-    "precio": 5000,
-    "descuento": 20,
+    "precio": "5000",
+    "descuento": "20",
     "equipos": 4,
     "jugador": "Tim Duncan",
-    "numeroCamiseta": 21,
+    "numeroCamiseta": "21",
     "color": 5,
-    "destacado": true,
-    "imagenFrente": "Duncan_SA_21_frente.jpg",
-    "imagenEspalda": "Duncan_SA_21_espalda.jpg",
+    "destacado": "true",
+    "imagenFrente": "image-1627332614655.jpg",
+    "imagenEspalda": "image-1627332614657.jpg",
     "talles": [
       1,
       2,
+      3,
       5
     ],
     "descripción": [
@@ -194,21 +195,20 @@
   },
   {
     "id": 10,
-    "precio": 6000,
-    "descuento": 15,
+    "precio": "6000",
+    "descuento": "15",
     "equipos": 4,
     "jugador": "Manu Ginobili",
-    "numeroCamiseta": 20,
+    "numeroCamiseta": "20",
     "color": 5,
-    "destacado": false,
-    "imagenFrente": "MG-spurs-frente.jpeg",
-    "imagenEspalda": "MG-spurs-espalda.jpeg",
+    "destacado": "false",
+    "imagenFrente": "image-1627332726721.jpeg",
+    "imagenEspalda": "image-1627332726722.jpeg",
     "talles": [
       1,
       2,
       3,
-      4,
-      5
+      4
     ],
     "descripción": [
       "Prenda para adultos Oficial de los San Antonio Spurs",
@@ -384,5 +384,4 @@
       "Musculosa de 'T-Mac'. Siete veces seleccionado para disputar el All-Star Game. Ha ganado dos veces el título de máximo anotador de la liga, en 2003 y 2004."
     ]
   }
-
 ]

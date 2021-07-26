@@ -65,8 +65,8 @@ const model = {
     edit: function (data,files,id) {
         let productos = this.all();
         let updated = this.one(id);
-        let imagenFrente = path.resolve(__dirname,"../../public/",updated.imagenFrente)
-        let imagenEspalda = path.resolve(__dirname,"../../public/",updated.imagenEspalda)
+        let imagenFrente = path.resolve(__dirname,"../../public/uploads",updated.imagenFrente)
+        let imagenEspalda = path.resolve(__dirname,"../../public/uploads",updated.imagenEspalda)
         // eliminamos la imagen de la carpeta upload
         if(fs.existsSync(imagenFrente)) {
             fs.unlinkSync(imagenFrente)
