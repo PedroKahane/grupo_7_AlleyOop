@@ -74,12 +74,11 @@
     "numeroCamiseta": "21",
     "color": 5,
     "destacado": "true",
-    "imagenFrente": "image-1627332614655.jpg",
-    "imagenEspalda": "image-1627332614657.jpg",
+    "imagenFrente": "image-1627341862823.jpg",
+    "imagenEspalda": "image-1627341862825.jpg",
     "talles": [
       1,
       2,
-      3,
       5
     ],
     "descripción": [
@@ -202,13 +201,14 @@
     "numeroCamiseta": "20",
     "color": 5,
     "destacado": "false",
-    "imagenFrente": "image-1627332726721.jpeg",
-    "imagenEspalda": "image-1627332726722.jpeg",
+    "imagenFrente": "image-1627341876258.jpeg",
+    "imagenEspalda": "image-1627341876258.jpeg",
     "talles": [
       1,
       2,
       3,
-      4
+      4,
+      5
     ],
     "descripción": [
       "Prenda para adultos Oficial de los San Antonio Spurs",

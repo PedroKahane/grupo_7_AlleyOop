@@ -1,5 +1,20 @@
 [
     {
-        
-    }
+         "id":1,
+        "firstName": "Pedro",
+        "lastName": "Kahane",
+        "email": "pedrokahane@gmail.com",
+        "password": "pepito1234",
+        "category": "admim",
+        "image":""
+    },
+    {
+        "id":2,
+       "firstName": "Pedro",
+       "lastName": "Kahane",
+       "email": "pedrokahane@gmail.com",
+       "password": "pepito1234",
+       "category": "admim",
+       "image":""
+   }
 ]
