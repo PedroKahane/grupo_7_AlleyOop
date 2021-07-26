@@ -82,8 +82,8 @@ const model = {
                 producto.jugador = data.jugador,
                 producto.numeroCamiseta = data.numero,
                 producto.color = parseInt(data.colors),
-                producto.imagenFrente = "" + files[0].filename,
-                producto.imagenEspalda = "" + files[1].filename,
+                producto.imagenFrente = files[0].filename,
+                producto.imagenEspalda = files[1].filename,
                 producto.destacado = data.destacado,
                 producto.talles = data.talles.map(talle => parseInt(talle)),
                 producto.descripción = [data.descripción1, data.descripción2]
