@@ -39,17 +39,24 @@ const model = {
         let resultado = productos.find(producto => producto.id == id)
         return resultado;
     },
-    create: function (data,file) {
+    create: function (data,archivos) {
         let productos = this.all();
+        let imagenDefault = null;
+        let imagenFrente = archivos != undefined ? archivos.find(archivo => archivo.fieldname == 'frente') : imagenDefault;
+        let imagenEspalda = archivos != undefined ? archivos.find(archivo => archivo.fieldname == 'espalda') : imagenDefault;
         let nuevo = {
             id: productos.length > 0 ? productos[productos.length -1].id + 1: 1,
             precio: data.precio,
             descuento: data.descuento,
-            equipos: parseInt(data.equipos),
+            equipos: parseInt(data.equipo),
             jugador: data.jugador,
             numeroCamiseta: data.numeroCamiseta,
-            color: parseInt(data.color),
-            destacado: data.destacado
+            color: parseInt(data.colors),
+            destacado: data.destacado,
+            imagenFrente: imagenFrente != null ? imagenFrente.filename : imagenDefault,
+            imagenEspalda: imagenEspalda != null ? imagenEspalda.filename : imagenDefault,
+            talles: data.talles.map(talle => parseInt(talle)),
+            descripción: data.descripciones,
         }    
         productos.push(nuevo)
         fs.writeFileSync(this.directory,JSON.stringify(productos,null,2));
@@ -75,10 +82,10 @@ const model = {
                 producto.jugador = data.jugador,
                 producto.numeroCamiseta = data.numero,
                 producto.color = parseInt(data.colors),
-                producto.imagenFrente = "images/" + files[0].filename,
-                producto.imagenEspalda = "images/" + files[1].filename,
-                producto.destacado = data.destacado
-                producto.talles = data.talles.map(talle => parseInt(talle))
+                producto.imagenFrente = "" + files[0].filename,
+                producto.imagenEspalda = "" + files[1].filename,
+                producto.destacado = data.destacado,
+                producto.talles = data.talles.map(talle => parseInt(talle)),
                 producto.descripción = [data.descripción1, data.descripción2]
                 return producto
             }

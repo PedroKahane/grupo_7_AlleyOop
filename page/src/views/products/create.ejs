@@ -42,12 +42,12 @@
                     <input type="numbre" name="numero" id="numero" value="" class="border width">
                 </fieldset>
                 <fieldset>
-                    <label for="image" class="titulo">Imagen de frente:</label>
-                    <input class="margin_radio width" type="file" name="image" id="image">
+                    <label for="frente" class="titulo">Imagen de frente:</label>
+                    <input class="margin_radio width" type="file" name="frente" id="frente">
                 </fieldset>
                 <fieldset>
-                    <label for="image" class="titulo">Imagen de espalda:</label>
-                    <input class="margin_radio width" type="file" name="image" id="image">
+                    <label for="espalda" class="titulo">Imagen de espalda:</label>
+                    <input class="margin_radio width" type="file" name="espalda" id="espalda">
                 </fieldset>
                 <fieldset>
                     <label for="destacado" class="titulo">Es destacado?</label>
@@ -62,18 +62,18 @@
                         <% talles.forEach(talle => { %>
                                 <div class="flex margin_radio">
                                     <label for="<%= talle.id %>"><%= talle.talle %></label>
-                                    <input type="checkbox" name="talle" id="<%= talle.id %>" >
+                                    <input type="checkbox" name="talles" id="<%= talle.id %>" value="<%= talle.id %>" >
                                 </div>
                         <% }) %>
                     </div>
                 </fieldset>  
                 <fieldset>
-                    <label for="descripción" class="titulo">Descripción 1</label>
-                    <textarea type="text" name="descripción" id="descripción" ></textarea>
+                    <label for="descripcion1" class="titulo">Descripción 1</label>
+                    <textarea type="text" name="descripciones" id="descripcion1" ></textarea>
                 </fieldset>
                 <fieldset>
-                    <label for="descripción" class="titulo">Descripción 2</label>
-                    <textarea type="text" name="descripción" id="descripción" ></textarea>
+                    <label for="descripcion2" class="titulo">Descripción 2</label>
+                    <textarea type="text" name="descripciones" id="descripcion2" ></textarea>
                 </fieldset>
                 <fieldset id="button_flex">
                     <button type="submit" id="submit">Send</button>

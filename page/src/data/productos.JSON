@@ -8,8 +8,8 @@
     "numeroCamiseta": 30,
     "color": 1,
     "destacado": true,
-    "imagenFrente": "images/Curry30_frente.jpg",
-    "imagenEspalda": "images/Curry30_espalda.jpg",
+    "imagenFrente": "Curry30_frente.jpg",
+    "imagenEspalda": "Curry30_espalda.jpg",
     "talles": [
       1,
       2,
@@ -31,8 +31,8 @@
     "numeroCamiseta": "24",
     "color": 4,
     "destacado": "true",
-    "imagenFrente": "images/image-1626979807469.jpg",
-    "imagenEspalda": "images/image-1626979807471.jpg",
+    "imagenFrente": "image-1626979807469.jpg",
+    "imagenEspalda": "image-1626979807471.jpg",
     "talles": [
       1,
       2,
@@ -53,8 +53,8 @@
     "numeroCamiseta": 23,
     "color": 2,
     "destacado": true,
-    "imagenFrente": "images/MJ-Bulls-frente.jpg",
-    "imagenEspalda": "images/MJ-Bulls-espalda.jpg",
+    "imagenFrente": "MJ-Bulls-frente.jpg",
+    "imagenEspalda": "MJ-Bulls-espalda.jpg",
     "talles": [
       1,
       2,
@@ -74,8 +74,8 @@
     "numeroCamiseta": 21,
     "color": 5,
     "destacado": true,
-    "imagenFrente": "images/Duncan_SA_21_frente.jpg",
-    "imagenEspalda": "images/Duncan_SA_21_espalda.jpg",
+    "imagenFrente": "Duncan_SA_21_frente.jpg",
+    "imagenEspalda": "Duncan_SA_21_espalda.jpg",
     "talles": [
       1,
       2,
@@ -95,8 +95,8 @@
     "numeroCamiseta": "34",
     "color": 3,
     "destacado": "false",
-    "imagenFrente": "images/image-1626979682414.jpg",
-    "imagenEspalda": "images/image-1626979682418.jpg",
+    "imagenFrente": "image-1626979682414.jpg",
+    "imagenEspalda": "image-1626979682418.jpg",
     "talles": [
       1,
       4,
@@ -116,8 +116,8 @@
     "numeroCamiseta": 13,
     "color": 2,
     "destacado": false,
-    "imagenFrente": "images/harden-rockets-frente.jpeg",
-    "imagenEspalda": "images/harden-rockets-espalda.jpeg",
+    "imagenFrente": "harden-rockets-frente.jpeg",
+    "imagenEspalda": "harden-rockets-espalda.jpeg",
     "talles": [
       1,
       2,
@@ -138,8 +138,8 @@
     "numeroCamiseta": 11,
     "color": 3,
     "destacado": false,
-    "imagenFrente": "images/irving-boston-frente.jpeg",
-    "imagenEspalda": "images/irving-boston-espalda.jpeg",
+    "imagenFrente": "irving-boston-frente.jpeg",
+    "imagenEspalda": "irving-boston-espalda.jpeg",
     "talles": [
       1,
       2,
@@ -159,8 +159,8 @@
     "numeroCamiseta": 23,
     "color": 6,
     "destacado": false,
-    "imagenFrente": "images/james-lakers-frente.jpeg",
-    "imagenEspalda": "images/james-lakers-espalda.jpeg",
+    "imagenFrente": "james-lakers-frente.jpeg",
+    "imagenEspalda": "james-lakers-espalda.jpeg",
     "talles": [
       2,
       3,
@@ -180,8 +180,8 @@
     "numeroCamiseta": 45,
     "color": 6,
     "destacado": false,
-    "imagenFrente": "images/mitchell-jazz-frente.jpg",
-    "imagenEspalda": "images/mitchell-jazz-espalda.jpg",
+    "imagenFrente": "mitchell-jazz-frente.jpg",
+    "imagenEspalda": "mitchell-jazz-espalda.jpg",
     "talles": [
       1,
       3,
@@ -201,8 +201,8 @@
     "numeroCamiseta": 20,
     "color": 5,
     "destacado": false,
-    "imagenFrente": "images/MG-spurs-frente.jpeg",
-    "imagenEspalda": "images/MG-spurs-espalda.jpeg",
+    "imagenFrente": "MG-spurs-frente.jpeg",
+    "imagenEspalda": "MG-spurs-espalda.jpeg",
     "talles": [
       1,
       2,
@@ -224,8 +224,8 @@
     "numeroCamiseta": 0,
     "color": 1,
     "destacado": false,
-    "imagenFrente": "images/WB-ocklahoma-frente.jpeg",
-    "imagenEspalda": "images/WB-ocklahoma-espalda.jpeg",
+    "imagenFrente": "WB-ocklahoma-frente.jpeg",
+    "imagenEspalda": "WB-ocklahoma-espalda.jpeg",
     "talles": [
       2,
       3,
@@ -245,8 +245,8 @@
     "numeroCamiseta": 4,
     "color": 1,
     "destacado": false,
-    "imagenFrente": "images/drose-NY-frente.jpeg",
-    "imagenEspalda": "images/drose-NY-espalda.jpeg",
+    "imagenFrente": "drose-NY-frente.jpeg",
+    "imagenEspalda": "drose-NY-espalda.jpeg",
     "talles": [
       2,
       3,
@@ -266,8 +266,8 @@
     "numeroCamiseta": 0,
     "color": 5,
     "destacado": false,
-    "imagenFrente": "images/lillard-portland-frente.jpg",
-    "imagenEspalda": "images/lillard-portland-espalda.jpeg",
+    "imagenFrente": "lillard-portland-frente.jpg",
+    "imagenEspalda": "lillard-portland-espalda.jpeg",
     "talles": [
       1,
       2,
@@ -287,8 +287,8 @@
     "numeroCamiseta": 22,
     "color": 2,
     "destacado": false,
-    "imagenFrente": "images/butler-miami-frente.jpeg",
-    "imagenEspalda": "images/butler-miami-espalda.jpeg",
+    "imagenFrente": "butler-miami-frente.jpeg",
+    "imagenEspalda": "butler-miami-espalda.jpeg",
     "talles": [
       1,
       2,
@@ -308,8 +308,8 @@
     "numeroCamiseta": 11,
     "color": 6,
     "destacado": false,
-    "imagenFrente": "images/thompson-warriors-frente.jpeg",
-    "imagenEspalda": "images/thompson-warriors-espalda.jpeg",
+    "imagenFrente": "thompson-warriors-frente.jpeg",
+    "imagenEspalda": "thompson-warriors-espalda.jpeg",
     "talles": [
       1,
       2,
@@ -329,8 +329,8 @@
     "numeroCamiseta": 32,
     "color": 4,
     "destacado": false,
-    "imagenFrente": "images/malone-jazz-frente.jpeg",
-    "imagenEspalda": "images/malone-jazz-espalda.jpeg",
+    "imagenFrente": "malone-jazz-frente.jpeg",
+    "imagenEspalda": "malone-jazz-espalda.jpeg",
     "talles": [
       1,
       2,
@@ -350,8 +350,8 @@
     "numeroCamiseta": 77,
     "color": 3,
     "destacado": false,
-    "imagenFrente": "images/doncic-dallas-frente.jpeg",
-    "imagenEspalda": "images/doncic-dallas-espalda.jpeg",
+    "imagenFrente": "doncic-dallas-frente.jpeg",
+    "imagenEspalda": "doncic-dallas-espalda.jpeg",
     "talles": [
       1,
       2,
@@ -372,8 +372,8 @@
     "numeroCamiseta": 1,
     "color": 4,
     "destacado": false,
-    "imagenFrente": "images/mcgrady-raptors-frente.jpeg",
-    "imagenEspalda": "images/mcgrady-raptors-espalda.jpeg",
+    "imagenFrente": "mcgrady-raptors-frente.jpeg",
+    "imagenEspalda": "mcgrady-raptors-espalda.jpeg",
     "talles": [
       1,
       2,
@@ -384,4 +384,5 @@
       "Musculosa de 'T-Mac'. Siete veces seleccionado para disputar el All-Star Game. Ha ganado dos veces el título de máximo anotador de la liga, en 2003 y 2004."
     ]
   }
+
 ]

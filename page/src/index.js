@@ -19,7 +19,7 @@ app.set("views",path.resolve(__dirname, "./views"))
 
 
 /* Data Configuration */
-app.use(express.urlencoded({extended:false})) // Not fund req.body
+app.use(express.urlencoded({extended:true})) // Not fund req.body
 app.use(method("_method")) // ?_method=PUT
 
 

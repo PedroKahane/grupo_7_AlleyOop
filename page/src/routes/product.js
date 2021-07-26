@@ -6,7 +6,7 @@ const path = require('path')
 let dest = multer.diskStorage({
     destination: function (req, file, cb) {
         let extension = path.extname(file.originalname);
-        cb(null, path.resolve(__dirname,"../../public/","images"))
+        cb(null, path.resolve(__dirname,"../../public/","uploads"))
     },
     filename: function (req, file, cb) {
         cb(null, file.fieldname + '-' + Date.now()+ path.extname(file.originalname))
@@ -21,8 +21,7 @@ router.get("/productDetail/:id", product.product);
 router.get("/edit/:id", product.edit);
 
 
-
-router.post("/save", product.save);
+router.post("/save", [upload.any()],product.save);
 router.put("/update/:id",[upload.any()],product.update);
 
 
