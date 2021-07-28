@@ -15,16 +15,16 @@ app.use(express.static(path.resolve(__dirname,"../public")));
 
 /* View Engine */
 app.set("view engine", "ejs");
-app.set("views",path.resolve(__dirname, "./views"))
+app.set("views",path.resolve(__dirname, "./views"));
 
 
 /* Data Configuration */
-app.use(express.urlencoded({extended:true})) // Not fund req.body
-app.use(method("_method")) // ?_method=PUT
+app.use(express.urlencoded({extended:true})); // Not fund req.body
+app.use(method("_method")); // ?_method=PUT o ?_method=DELETE
 
 
 // Rutas
-app.use(require('./routes/main'))
-app.use(require('./routes/product'))
+app.use(require('./routes/main'));
+app.use(require('./routes/product'));
 
 

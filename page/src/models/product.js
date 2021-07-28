@@ -93,6 +93,26 @@ const model = {
         })
         fs.writeFileSync(this.directory,JSON.stringify(productos,null,2));
         return true;
+    },
+    delete: function (id) {
+        let productos = this.all();
+        let deleted = this.one(id);
+        // eliminamos la imagen de la carpeta upload
+
+        let existImagenFrente = fs.existsSync(path.resolve(__dirname,"../../public/uploads",deleted.imagenFrente));
+        let existImagenEspalda = fs.existsSync(path.resolve(__dirname,"../../public/uploads",deleted.imagenEspalda));
+        
+        if(existImagenFrente && deleted.imagenFrente.indexOf("default") != 0){
+        fs.unlinkSync(path.resolve(__dirname,"../../public/uploads",deleted.imagenFrente));
+        }
+        if(existImagenEspalda && deleted.imagenEspalda.indexOf("default") != 0){
+        fs.unlinkSync(path.resolve(__dirname,"../../public/uploads",deleted.imagenEspalda));
+        }
+
+        // filtarmos el producto que deaseamos eliminar
+        productos = productos.filter(producto => producto.id != deleted.id )
+        fs.writeFileSync(this.directory,JSON.stringify(productos,null,2));
+        return true;
     }
 }
 
