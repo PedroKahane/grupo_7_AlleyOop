@@ -23,6 +23,7 @@ router.get("/edit/:id", product.edit);
 
 router.post("/save", [upload.any()],product.save);
 router.put("/update/:id",[upload.any()],product.update);
+router.delete('/delete/:id', product.delete);
 
 
 module.exports = router
