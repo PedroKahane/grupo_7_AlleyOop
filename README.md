@@ -21,7 +21,7 @@ Nuestra marca está destinada a un público de aficionados, de entre 15 y 35 añ
     - __Sebastián Salvat__
 
         ```
-        Tengo 30 años, me apasionan los deportes y la tecnología. 
+        Tengo 30 años, me apasionan los deportes y la tecnología. .
         En 2020 terminé mis estudios de Comunicación Digital en UCA y actualmente me desempeño en el área 
         del marketing digital como freelancer trabajando para agencias del rubro. Me intriga y entusiasma
         el mundo de la programación, por eso es que aspiro a poder trabajar y seguir formandome en ello.
