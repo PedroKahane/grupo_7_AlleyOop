@@ -34,14 +34,14 @@
                             <% }) %> 
                             <div class="flex">
                                 <a href="/edit/<%= product.id %>" class="buton_edit destkop"> EDITAR</a>
-                                <form action="/delete/<%= product.id %>?_method=DELETE" method="post">
+                                <form action="/delete/<%= product.id %>?_method=DELETE" method="post" class="buton_delete destkop">
                                     <input type="hidden" name="id" value="<%= product.id %>">
-                                    <button type="submit" class="buton_delete destkop">ELIMINAR</button>
+                                    <button type="submit" class="button_eliminar">ELIMINAR</button>
                                 </form>
                                 <a href="/edit/<%= product.id %>" class="buton_edit celular"> <i class="fas fa-pencil-alt"></i></a>
-                                <form action="/delete<%= product.id %>?_method=DELETE" method="post">
+                                <form action="/delete<%= product.id %>?_method=DELETE" method="post" class="buton_delete celular">
                                     <input type="hidden" name="id" value="<%= product.id %>">
-                                    <button type="submit" class="buton_delete celular"><i class="fas fa-trash-alt"></i></button>
+                                    <button type="submit" class="button_eliminar"><i class="fas fa-trash-alt"></i></button>
                                 </form>
                             </div>
                         </div>
