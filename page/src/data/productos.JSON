@@ -343,23 +343,24 @@
   },
   {
     "id": 17,
-    "precio": 5000,
-    "descuento": 20,
+    "precio": "5000",
+    "descuento": "20",
     "equipos": 14,
     "jugador": "Luka Doncic",
-    "numeroCamiseta": 77,
+    "numeroCamiseta": "77",
     "color": 3,
-    "destacado": false,
-    "imagenFrente": "doncic-dallas-frente.jpeg",
-    "imagenEspalda": "doncic-dallas-espalda.jpeg",
+    "destacado": "false",
+    "imagenFrente": "frente-1627519749482.jpeg",
+    "imagenEspalda": "espalda-1627519749486.jpeg",
     "talles": [
       1,
       2,
       3,
+      4,
       5
     ],
     "descripción": [
-      "Prenda para adultos Oficial de los Dallas Mavericks",
+      "Prenda para adultos Oficial de los Dallas Mavericks.",
       "Musculosa de Luka Doncic. Dominó el básquet europeo a los 16 años y ganó todos los títulos internacionales, además de ser elegido el mejor del Viejo Continente, con 18. Es el sexto europeo elegido en el top-3 del Draft en toda la historia de la NBA."
     ]
   },
