@@ -3,8 +3,6 @@ const router = express.Router();
 const main = require("../controllers/main")
 
 router.get("/", main.index)
-router.get("/login", main.login)
-router.get("/register", main.register)
 router.get("/productCart", main.productCart)
 router.get("/productCartDos", main.productCartDos)
 router.get("/productCartTres", main.productCartTres)

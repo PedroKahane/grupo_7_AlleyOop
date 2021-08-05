@@ -26,5 +26,6 @@ app.use(method("_method")); // ?_method=PUT o ?_method=DELETE
 // Rutas
 app.use(require('./routes/main'));
 app.use(require('./routes/product'));
+app.use("/user",require("./routes/user"))
 
 
