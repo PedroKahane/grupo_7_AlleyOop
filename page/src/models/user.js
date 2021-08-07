@@ -16,3 +16,6 @@ module.exports = {
     return this.all().find(user => user.email == email)
   }
 }
+
+const hash = bcrypt.hashSync("pepito123", 10)
+console.log(hash)

@@ -12,9 +12,19 @@
                     <a class="menu_user border active" href="/user/login"> LOG-IN</a>
                     <a class="menu_user" href="/user/register"> REGISTRATE</a>
                 </div>
-                <form  class="form_login" action="">
-                    <input type="text" name="user" id="user" placeholder="Escribi tu nombre de usuario o correo">
+                <form form action="/user/access" method="post" class="form_login" action="">
+                    <input type="text" name="email" id="email" placeholder="Escribi tu correo electronico">
+                    <% if (locals.errors && errors.email) { %>
+                        <p class="feedback">
+                          <%= errors.email.msg %> 
+                        </p>
+                      <% } %>
                     <input type="password" name="password" id="password" placeholder="Escribi tu contaseña">
+                    <% if (locals.errors && errors.password) { %>
+                        <p class="feedback">
+                          <%= errors.password.msg %> 
+                        </p>
+                      <% } %>
                     <button class="button_login" type="submit"> Ingresar</button>
                     <p class="login_href">No tenes cuenta, <a href="/user/register">REGISTRATE</a></p>
                 </form>
