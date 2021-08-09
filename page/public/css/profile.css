@@ -1,0 +1,150 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'montserrat',sans-serif;
+}
+.titulo_principal{
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+}
+main{
+    height: 700px;
+    margin: 50px 100px;
+    padding: 15px;
+    background-color: #ebebeb;
+}
+    
+.content{
+    display: flex;
+    height: 90%;
+    align-items: center;
+}
+
+fieldset{
+    display: flex;
+    align-items: flex-start;
+    margin: 25px 5%;
+    width: 90%;
+    flex-direction: column;
+}
+input, label, fieldset{
+    border: none;
+}
+.border{
+    border-radius: 30px;
+    border: 3px #ebebeb solid;
+    padding: 10px 20px;
+}
+label{
+    margin-left: 10px;
+}
+.titulo{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    width: 80px;
+    margin-right: 10px;
+
+}
+#submit{
+    width: 75%;
+    border: none;
+    color: #FFFAFA;
+    background-color: #39b54a;
+    padding: 5px 10px;
+    border-radius: 30px;
+    margin-bottom: 25px;
+    font-size: 22px;
+    margin-top: 15px;
+    margin-left: 12.5%;
+}
+.lado_derecho{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    margin-top: 10%;
+    flex-direction: column;
+    align-items:flex-end;
+    margin-right: 20px;
+}
+.lado_derecho img{
+    height: 70%;
+}
+.title_img{
+    font-size: 26px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.width{
+    width: 100%;
+}
+form{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    margin-top: 10%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+}
+.imagen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formularios{
+    height: 70%;
+    width: 50%;
+}
+@media (max-width: 1400px) {
+    .formularios{
+        width: 95%;
+    }
+    
+}
+@media (max-width: 1000px){
+    .content{
+        flex-direction: column;
+    }
+    main{
+        height: unset;
+    }
+    .lado_derecho{
+        align-items: unset; 
+        margin-right: 0px;
+        width: 100%;
+    }
+    .lado_derecho img{
+        width: 50%;
+    }
+    form{
+        width: 80%;
+        margin-left: 0px;
+    }
+    .title_img{
+        width: 100%;
+    }
+    main{
+        margin: 40px
+    }
+}
+@media (max-width: 500px){
+    .titulo_principal{
+        font-size: 22px;
+    }
+    .title_img{
+        font-size: 18px;
+    }
+    form{
+        width: 100%;
+    }
+    main{
+        margin: 10px
+    }
+    .lado_derecho img{
+        width: 75%;
+    }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ("../includes/head") %>
+<body>
+    <%- include ("../includes/header") %>
+    <main>
+        <p class="titulo_principal">INFORMACION DE TU PERFIL:</p>
+        <section class="content">
+            <section class="lado_derecho">
+                <article class="imagen">
+                    <p class="title_img">Imagen de Perfil:</p>
+                    <img src="/uploads/users/<%= user.image%>" alt="">
+                </article>
+            </section>
+            <form  action="/user/update?method=PUT" method="post">
+                <p class="title_img">Editar información de Perfil:</p>
+                <section class="formularios">
+                    <fieldset>
+                        <label for="firstName" class="titulo">Nombre:</label>
+                        <input type="text" name="firstName" id="firstName" value="<%= user.firstName %>" class="border width">
+                    </fieldset>
+                    <fieldset>
+                        <label for="lastName" class="titulo">Apellido:</label>
+                        <input type="text" name="lastName" id="lastName" value="<%= user.lastName %>" class="border width">
+                    </fieldset>
+                    <fieldset>
+                        <label for="email" class="titulo">Correo:</label>
+                        <input type="text" name="email" id="email" value="<%= user.email %>" class="border width">
+                    </fieldset>
+                    <fieldset id="button_flex">
+                        <button type="submit" id="submit">Send</button>
+                    </fieldset>
+                </section>
+            </form>
+        </section>
+    </main>
+    <%- include ("../includes/footer") %>
+</body>
+</html>

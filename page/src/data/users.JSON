@@ -1,20 +1,20 @@
 [
     {
-         "id":1,
+        "id":1,
         "firstName": "Pedro",
         "lastName": "Kahane",
         "email": "pedrokahane@gmail.com",
         "password": "$2b$10$JsuUaPODhDqXJzgQ/1d4Z.Ohy./knHgjd4Ulk2rBNk1tqgibmGi6i",
         "category": "admim",
-        "image":""
+        "image":"Default.png"
     },
     {
         "id":2,
-       "firstName": "Pedro",
-       "lastName": "Kahane",
-       "email": "pedrokahane@gmail.com",
-       "password": "pepito123",
-       "category": "admim",
-       "image":""
+        "firstName": "Pedro",
+        "lastName": "Kahane",
+        "email": "pedrokahane@gmail.com",
+        "password": "pepito123",
+        "category": "admim",
+        "image":"default.png"
    }
 ]

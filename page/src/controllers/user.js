@@ -28,5 +28,10 @@ module.exports = {
                     },
                 }, styles:"login.css"
         })
+    },
+    profile:(req,res) => res.render("users/profile",{styles:"profile.css", user: req.session.userLogged}),
+    logout: (req,res) =>{
+        req.session.destroy();
+        return res.redirect("/")
     }
   }
