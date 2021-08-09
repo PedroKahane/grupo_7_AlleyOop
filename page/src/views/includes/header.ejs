@@ -15,7 +15,14 @@
             <a href="/create">Ingresar un producto</a>
         </section>
         <section id="icon_header">
-            <a class="icon_a" href="user/login"><i class="fas fa-user"></i></a>
+            <% if (locals.isLogged) { %>
+                <a id="a_img_log" href="/user/profile">
+                    <img src="/uploads/users/<%= locals.userLogged.image %> " alt="" height="32px" width="32px" id="image_perfil">
+                    <p> Bienvenido <%= locals.userLogged.firstName %> </p>
+                </a>
+            <% } else { %>
+                <a class="icon_a" href="/user/login"><i class="fas fa-user"></i></a>
+            <% } %>
             <a class="icon_a" href="/productCart"><i class="fas fa-shopping-cart"></i></a>
             <div class="burger-menu">
                 <i class="fas fa-bars"></i>

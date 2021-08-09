@@ -50,6 +50,18 @@ header {
     padding: 10px;
     color: #FFFAFA;
 }
+#image_perfil{
+    border-radius: 100%;
+    margin-right: 10px;
+}
+#a_img_log{
+    height: 32px;
+    margin-top: 3px;
+    display: flex;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+}
 @media (min-width:361px) {
     .imagen_header {
         display: unset;

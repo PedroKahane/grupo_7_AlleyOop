@@ -3,6 +3,8 @@ const app = express();
 const path = require('path');
 const method = require('method-override');
 const session = require('express-session')
+const isLogged = require("./middlewares/userLogged")
+
 
 
 // App server
@@ -14,6 +16,7 @@ app.use(session({
     resave: false,
     saveUninitialized:false,
 }))
+app.use(isLogged)
 // App Access public
 app.use(express.static(path.resolve(__dirname,"../public")));
 
