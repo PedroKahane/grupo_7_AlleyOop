@@ -4,7 +4,7 @@ const multer = require("multer");
 const path = require("path");
 const router = express.Router();
 const controller = require("../controllers/user");
-const isLogged = require("../middlewares/logged");
+const validLoggin = require("../middlewares/validLoggin");
 const validLogin = require("../middlewares/validLoggin");
 
 const storage = multer.diskStorage({
@@ -17,9 +17,9 @@ const storage = multer.diskStorage({
   });
   let upload = multer({ storage: storage })
   
-  router.get("/login",controller.login)
-  router.get("/register",controller.register)
+  router.get("/login" ,validLoggin, controller.login)
+  router.get("/register" ,validLoggin,controller.register)
 
-  router.post("/access",validLogin,controller.access)
+  router.post("/access",controller.access)
 
   module.exports = router

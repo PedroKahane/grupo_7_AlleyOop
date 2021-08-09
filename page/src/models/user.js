@@ -17,5 +17,3 @@ module.exports = {
   }
 }
 
-const hash = bcrypt.hashSync("pepito123", 10)
-console.log(hash)
