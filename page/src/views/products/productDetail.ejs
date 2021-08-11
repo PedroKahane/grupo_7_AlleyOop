@@ -32,6 +32,7 @@
                             <% product.descripción.forEach(element => { %>
                             <p class="otra-desc"> <%= element %>  </p>
                             <% }) %> 
+                            <% if (locals.userLogged && locals.userLogged.admin) { %>
                             <div class="flex">
                                 <a href="/edit/<%= product.id %>" class="buton_edit destkop"> EDITAR</a>
                                 <form action="/delete/<%= product.id %>?_method=DELETE" method="post" class="buton_delete destkop">
@@ -44,6 +45,7 @@
                                     <button type="submit" class="button_eliminar"><i class="fas fa-trash-alt"></i></button>
                                 </form>
                             </div>
+                            <% } %> 
                         </div>
                     </div>
                 </article>

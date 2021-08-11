@@ -12,7 +12,9 @@
             <a href="/">Home</a>
             <a href="/tienda">Tienda</a>
             <a href="/contacto">Contacto</a>
-            <a href="/create">Ingresar un producto</a>
+            <% if (locals.userLogged && locals.userLogged.admin) { %>
+                <a href="/create">Ingresar un producto</a>
+            <% } %> 
         </section>
         <section id="icon_header">
             <% if (locals.isLogged) { %>

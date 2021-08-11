@@ -118,6 +118,7 @@ form{
     text-align: center;
     font-size: 22px;
     font-weight: 700;
+    cursor: pointer;
 }
 .formulario_logout{
     margin: 0px;
