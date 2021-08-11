@@ -25,6 +25,7 @@ header {
 .imagen_header {
     margin: 0px 30px;
     width: 80px;
+    display: none;
 }
 #menu_header a {
     color: #FFFAFA;
@@ -53,6 +54,7 @@ header {
 #image_perfil{
     border-radius: 100%;
     margin-right: 10px;
+    border: 1px solid #FFC100;
 }
 #a_img_log{
     height: 32px;
@@ -62,8 +64,14 @@ header {
     color: white;
     align-items: center;
 }
-@media (min-width:361px) {
+.bienvenida_logged{
+    display: none;
+}
+@media (min-width:421px) {
     .imagen_header {
+        display: unset;
+    }
+    .bienvenida_logged{
         display: unset;
     }
 }

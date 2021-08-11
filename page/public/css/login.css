@@ -93,6 +93,24 @@
 .login_href {
     font-size: 16px
 }
+.label_recordar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-left: 15px;
+}
+.check_remember{
+    display: flex;
+    width: 15px !important;
+    height: 15px;
+    margin: 0px 5px 0px 0px !important;
+    border-radius: 100% !important;
+}
+.label_recordar p {
+    font-size: 16px;
+}
+
 @media (max-width:450px) {
     .login {
         width: 100%;
