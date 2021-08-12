@@ -48,7 +48,7 @@
     display: flex;
 }
 
-section a {
+#a_home {
     padding-left: 5px;
     text-decoration: none;
     color: grey;

@@ -14,6 +14,19 @@ module.exports = {
   },
   findByEmail: function (email){
     return this.all().find(user => user.email == email)
+  },
+  update:function(data,id){
+    let users = this.all();
+    users.map(user => {
+      if(user.id == id){
+        user.firstName = data.firstName,
+        user.lastName = data.lastName
+        user.email = data.email;
+        return user
+      }
+      return user
+    });
+    this.write(users)
   }
 }
 

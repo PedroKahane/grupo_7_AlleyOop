@@ -20,8 +20,10 @@ const storage = multer.diskStorage({
   router.get("/login" ,validLoggin, controller.login)
   router.get("/register" ,validLoggin,controller.register)
   router.get("/profile" ,authMiddleware,controller.profile)
-  
+  router.put("/update",authMiddleware,controller.update);
   router.get("/logout", controller.logout)
   router.post("/access",controller.access)
+
+
 
   module.exports = router

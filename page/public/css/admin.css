@@ -24,13 +24,7 @@
     display: flex;
 }
 
-section a {
-    padding-left: 5px;
-    text-decoration: none;
-    color: grey;
-    font-weight: bold;
-    font-size: 12px;
-}
+
 #title_admin{
     font-size: 18px;
     padding: 25px;
@@ -219,6 +213,7 @@ section a {
     color: white;
     font-weight: 600;
     border: none;
+    cursor: pointer;
 }
 .buton_edit{
     background-color: #4eaefd;

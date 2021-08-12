@@ -37,7 +37,15 @@ module.exports = {
         })
     },
     profile:(req,res) => {
-        res.render("users/profile",{styles:"profile.css", user: req.session.userLogged})},
+        res.render("users/profile",{styles:"profile.css", user: req.session.userLogged})
+    },
+    update: (req,res) => {
+        userModel.update(req.body,null);
+        delete req.session.user;
+        let user = userModel.findByEmail(req.body.email);
+        req.session.user = user;
+        return res.redirect("/")
+    },    
     logout: (req,res) =>{
         req.session.destroy();
         res.clearCookie('userEmail')
