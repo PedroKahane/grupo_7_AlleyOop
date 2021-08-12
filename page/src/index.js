@@ -38,5 +38,5 @@ app.use(method("_method")); // ?_method=PUT o ?_method=DELETE
 app.use(require('./routes/main'));
 app.use(require('./routes/product'));
 app.use("/user",require("./routes/user"))
-
+app.use("/admin",require("./routes/admin"))
 
