@@ -40,10 +40,14 @@ module.exports = {
         res.render("users/profile",{styles:"profile.css", user: req.session.userLogged})
     },
     update: (req,res) => {
-        return res.send(req.body)
-        let result = product.update(req.body,req.session.user.id)
-        return result ? res.redirect("/profile") : res.status(500).send("Error en la carga") 
-    },    
+        let result = userModel.update(req.body,req.session.userLogged.id)
+        return  res.redirect("/") 
+    },
+    avatar: (req,res) => {
+        return res.send(req.file)
+        let result = userModel.avatar(req.file,req.session.userLogged.id)
+        return  res.redirect("/") 
+    },   
     logout: (req,res) =>{
         req.session.destroy();
         res.clearCookie('userEmail')

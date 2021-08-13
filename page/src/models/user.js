@@ -27,6 +27,17 @@ module.exports = {
       return user
     });
     this.write(users)
+  },
+  avatar:function(file,id){
+    let users = this.all();
+    users.map(user => {
+      if(user.id == id){
+        user.image = file.filename
+        return user
+      }
+      return user
+    });
+    this.write(users)
   }
 }
 

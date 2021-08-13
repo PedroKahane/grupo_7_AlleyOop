@@ -127,6 +127,43 @@ form{
     display: flex;
     align-items: center;
 }
+#imagen_form{
+    margin: 0;
+    width: 100%;
+}
+#imagen_form fieldset {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#imagen_form fieldset label {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+#send_foto{
+    width: 40%;
+    border: none;
+    color: #FFFAFA;
+    background-color: #39b54a;
+    padding: 5px 10px;
+    border-radius: 30px;
+    margin-bottom: 25px;
+    font-size: 22px;
+    margin-left: 30%;
+    margin-top: 8px;
+}
+#image{
+    width: 50%;
+    padding: 5px;
+}
+#fieldset_image{
+    margin: 10px;
+}
 @media (max-width: 1400px) {
     .formularios{
         width: 95%;
