@@ -24,19 +24,20 @@
   },
   {
     "id": 2,
-    "precio": "7000",
+    "precio": "6000",
     "descuento": "15",
     "equipos": 2,
     "jugador": "Kobe Bryant",
     "numeroCamiseta": "24",
     "color": 4,
     "destacado": "true",
-    "imagenFrente": "image-1626979807469.jpg",
-    "imagenEspalda": "image-1626979807471.jpg",
+    "imagenFrente": "frente-1628866664648.jpg",
+    "imagenEspalda": "espalda-1628866664652.jpg",
     "talles": [
       1,
       2,
       3,
+      4,
       5
     ],
     "descripción": [

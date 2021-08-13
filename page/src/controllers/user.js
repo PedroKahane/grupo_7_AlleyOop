@@ -40,11 +40,9 @@ module.exports = {
         res.render("users/profile",{styles:"profile.css", user: req.session.userLogged})
     },
     update: (req,res) => {
-        userModel.update(req.body,null);
-        delete req.session.user;
-        let user = userModel.findByEmail(req.body.email);
-        req.session.user = user;
-        return res.redirect("/")
+        return res.send(req.body)
+        let result = product.update(req.body,req.session.user.id)
+        return result ? res.redirect("/profile") : res.status(500).send("Error en la carga") 
     },    
     logout: (req,res) =>{
         req.session.destroy();

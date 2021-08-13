@@ -31,7 +31,7 @@ header {
     color: #FFFAFA;
     text-decoration: none;
     padding: 20px;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     display: none;
 }
@@ -67,12 +67,18 @@ header {
 .bienvenida_logged{
     display: none;
 }
+#header_bottom{
+    justify-content: flex-start;
+}
 @media (min-width:421px) {
     .imagen_header {
         display: unset;
     }
     .bienvenida_logged{
         display: unset;
+    }
+    #header_bottom{
+        justify-content:space-between;
     }
 }
 @media (min-width:1000px) {
