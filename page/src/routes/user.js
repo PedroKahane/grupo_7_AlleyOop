@@ -1,4 +1,3 @@
-
 const express = require("express");
 const multer = require("multer");
 const path = require("path");
@@ -9,10 +8,10 @@ const authMiddleware = require("../middlewares/authMiddleware")
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, path.resolve(__dirname,"../../public/images/uploads","users"))
+      cb(null, path.resolve(__dirname,"../../public/uploads/","users"))
     },
     filename: function (req, file, cb) {
-      cb(null, file.fieldname + '-' + Date.now())
+      cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
     }
   });
   let upload = multer({ storage: storage })
@@ -21,7 +20,8 @@ const storage = multer.diskStorage({
   router.get("/register" ,validLoggin,controller.register)
   router.get("/profile" ,authMiddleware,controller.profile)
   router.put("/update",authMiddleware,controller.update);
-  router.put("/avatar", [upload.single()],controller.avatar);
+  router.put("/avatar", [upload.single("image")],controller.avatar);
+  router.put("/avatarDefault",controller.avatarDefault);
   router.get("/logout", controller.logout)
   router.post("/access",controller.access)
 

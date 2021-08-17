@@ -44,10 +44,13 @@ module.exports = {
         return  res.redirect("/") 
     },
     avatar: (req,res) => {
-        return res.send(req.file)
         let result = userModel.avatar(req.file,req.session.userLogged.id)
         return  res.redirect("/") 
-    },   
+    },
+    avatarDefault: (req,res) => {
+        let result = userModel.avatarDefault(req.session.userLogged.id)
+        return  res.redirect("/") 
+    },    
     logout: (req,res) =>{
         req.session.destroy();
         res.clearCookie('userEmail')
