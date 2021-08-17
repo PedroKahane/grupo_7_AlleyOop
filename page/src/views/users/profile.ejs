@@ -9,7 +9,9 @@
             <section class="lado_derecho">
                 <article class="imagen">
                     <p class="title_img">Imagen de Perfil:</p>
-                    <img src="/uploads/users/<%= user.image%>" alt="">
+                    <figure id="figure_profile">
+                        <img src="/uploads/users/<%= user.image%>" alt="">
+                    </figure>
                     <form id="imagen_form" action="" method="POST">
                         <fieldset id="fieldset_image">
                             <label for="">Cambiar imagen:</label>
