@@ -17,6 +17,7 @@ const upload = multer({storage:dest});
 
 
 router.get("/tienda", product.tienda);
+router.get("/filter", product.colors);
 router.get("/create",userAdmin, product.create);
 router.get("/productDetail/:id", product.product);
 router.get("/edit/:id",userAdmin, product.edit);

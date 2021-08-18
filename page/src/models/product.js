@@ -39,6 +39,9 @@ const model = {
         let resultado = productos.find(producto => producto.id == id)
         return resultado;
     },
+    findByColors: function (color){
+        return this.all().filter(product => product.color == color)
+    },
     create: function (data,archivos) {
         let productos = this.all();
         let imagenDefault = null;

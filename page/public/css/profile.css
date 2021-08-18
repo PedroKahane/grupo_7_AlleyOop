@@ -19,7 +19,8 @@ main{
 .content{
     display: flex;
     height: 75%;
-    align-items: center;
+    align-items: flex-end;
+    margin-top: 35px;
 }
 
 fieldset{
@@ -82,10 +83,9 @@ label{
     width: 100%;
 }
 form{
-    width: 50%;
     height: 100%;
+    width: 50%;
     display: flex;
-    margin-top: 10%;
     flex-direction: column;
     align-items: flex-start;
     margin-left: 20px;
@@ -152,7 +152,7 @@ form{
     background-color: #39b54a;
     padding: 5px 10px;
     border-radius: 30px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     font-size: 22px;
     margin-left: 30%;
     margin-top: 8px;
@@ -164,11 +164,43 @@ form{
 #fieldset_image{
     margin: 10px;
 }
+#figure_profile{
+    height: 250px;
+    width: 250px;
+}
+#figure_profile img{
+    height: 250px;
+    width: 250px;
+}
+#delete_form{
+    background-color: #d82e2e;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    padding: 10px 0px;
+    margin: 5px;
+    border-radius: 100%;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+}
+#delete_foto{
+    background-color: #d82e2e;
+    color: white;
+    font-weight: 600;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+.flex{
+    display: flex;
+}
 @media (max-width: 1400px) {
     .formularios{
         width: 95%;
     }
-    
 }
 @media (max-width: 1000px){
     .content{
@@ -212,9 +244,18 @@ form{
     .lado_derecho img{
         width: 75%;
     }
+   
 }
-@media (max-width: 250px){
+@media (max-width: 320px){
     .imagen img {
         border: 2px solid #FFC100
+    }
+    #figure_profile{
+        height: 70vw;
+        width: 70vw;
+    }
+    #figure_profile img{
+        height: 70vw;
+        width: 70vw;
     }
 }

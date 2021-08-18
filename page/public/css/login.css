@@ -4,20 +4,34 @@
     box-sizing: border-box;
     font-family: 'montserrat',sans-serif;
 }
-
+.flex{
+    display: flex;
+    width: 100%;
+}
 #section_login {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #FFFAFA;
+    background-image: url(https://d7lju56vlbdri.cloudfront.net/var/ezwebin_site/storage/images/_aliases/img_1col/noticias/los-partidos-de-baloncesto-imitan-a-la-naturaleza/5662878-1-esl-MX/Los-partidos-de-baloncesto-imitan-a-la-naturaleza.jpg);
+    background-size: cover;
 }
 .login {
-    background-color: #c9c9c9;
+    background-color:rgba(201, 201, 201, 0.8);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 450px;
+    margin: 145px 0px;
+    border-radius:70px;
+}
+.register{
+    background-color:rgba(201, 201, 201, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
     margin: 145px 0px;
     border-radius:70px;
 }
@@ -48,7 +62,7 @@
 .active {
     border-bottom: 2px solid #0A0903;
 }
-.form_login {
+.form_login, .form_register {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,6 +77,14 @@
     border: none;
     margin: 20px 0px;
     width: 100%;
+}
+.form_register input {
+    box-sizing: border-box;
+    border-radius: 30px;
+    padding: 11px 20px;
+    border: none;
+    margin: 20px;
+    width: 50%;
 }
 .button_login {
     margin-top: 30px;
@@ -87,6 +109,10 @@
     background-color: #0a0903 ;
 }
 .login img {
+    margin-top:  40px;
+    margin-bottom: 40px;
+}
+.register img {
     margin-top:  40px;
     margin-bottom: 40px;
 }

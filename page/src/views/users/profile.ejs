@@ -9,14 +9,20 @@
             <section class="lado_derecho">
                 <article class="imagen">
                     <p class="title_img">Imagen de Perfil:</p>
-                    <img src="/uploads/users/<%= user.image%>" alt="">
-                    <form id="imagen_form" action="" method="POST">
+                    <figure id="figure_profile">
+                        <img src="/uploads/users/<%= user.image%>" alt="">
+                    </figure>
+                    <form id="delete_form" action="/user/avatarDefault?_method=PUT" method="POST">
+                        <input type="hidden" name="id" value="<%= user.id %>">
+                        <button id="delete_foto" type="submit"><i class="fas fa-trash-alt"></i></button>
+                    </form>
+                    <form id="imagen_form" action="/user/avatar?_method=PUT" method="POST" enctype="multipart/form-data">
                         <fieldset id="fieldset_image">
                             <label for="">Cambiar imagen:</label>
-                            <input type="file" name="image" id="image"  class="border width">
+                            <input type="file" name="image" id="image" class="border width">
+                            <input type="hidden">
                         </fieldset>
-                            <button id="send_foto" type="submit">Enviar</button>
-
+                        <button id="send_foto" type="submit">Save</button>
                     </form>
                 </article>
             </section>

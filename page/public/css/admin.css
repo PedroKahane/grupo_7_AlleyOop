@@ -6,7 +6,7 @@
 }
 
 #main_tienda {
-    background-color: #FFFAFA;
+    background-color: #ffe9a4;
 }
 #p_home{
     margin:10px;
@@ -127,8 +127,6 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 95%;
-    margin-left: 2.5%;
 }
 
 .descripcion {
@@ -140,12 +138,13 @@
     width: 95vw;
     margin: 2vw;
     box-sizing: border-box;
-    background-color: #e8e8e8;
+    background-color: #FFFAFA;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 1vw;
+    max-width: 360px;
 }
 .imagen_promocion {
     width: 100%;
@@ -172,7 +171,7 @@
     display: flex;
     align-items: center;
 }
-
+.fa, .fas    {font-size: 20px;}
 .boton-ver, .boton-compra {
     color: #FFF;
     font-weight: bold;
@@ -255,15 +254,12 @@
         width: 43%;
     }
     #title_admin{
-        font-size: 32px;
+        font-size: 48px;
     }
 }
 @media (min-width:790px) {
     #indice_superior{
         display: unset;
-    }
-    #articulos_promocion{
-        width: 100%;
     }
     #contenedor_filtros{
         margin-left: 30px;
@@ -293,6 +289,7 @@
 @media (min-width:1100px){
     .articulo_destacado{
         width: 26%;
+        height: 510px;
     }
     #contenedor_filtros{
         max-width: 300px;

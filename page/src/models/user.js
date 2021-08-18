@@ -30,9 +30,30 @@ module.exports = {
   },
   avatar:function(file,id){
     let users = this.all();
+    let updated = this.one(id)
+    let imagenFrente = path.resolve(__dirname,"../../public/uploads/users",updated.image)
+    if(fs.existsSync(imagenFrente) && updated.image != "Default.png") {
+      fs.unlinkSync(imagenFrente)
+    }
     users.map(user => {
       if(user.id == id){
         user.image = file.filename
+        return user
+      }
+      return user
+    });
+    this.write(users)
+  },
+  avatarDefault: function(id){
+    let users = this.all();
+    let updated = this.one(id)
+    let imagenFrente = path.resolve(__dirname,"../../public/uploads/users",updated.image)
+    if(fs.existsSync(imagenFrente) && updated.image != "Default.png") {
+      fs.unlinkSync(imagenFrente)
+    }
+    users.map(user => {
+      if(user.id == id){
+        user.image = "Default.png"
         return user
       }
       return user

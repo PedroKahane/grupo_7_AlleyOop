@@ -22,5 +22,8 @@ module.exports = {
     delete: (req,res) => {
         let result = product.delete(req.params.id);
         return result == true ? res.redirect("/tienda") : res.status(500).send("Error en la carga")
-    }
+    },
+    colors: (req,res) => {
+        return res.render("products/tienda", {styles:"tienda.css", products: product.findByColors(req.query.colores)})
+    },
 }

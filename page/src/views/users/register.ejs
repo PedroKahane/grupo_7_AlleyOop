@@ -5,26 +5,32 @@
     <%- include ("../includes/header") %>
     <main>
         <section id="section_login">
-            <div class="login">
+            <div class="register">
                 <img src="/images/alley-oop-logo_fondoBlanco.png" alt="" width="300px">
                 <p class="title_login">Registrate:</p>
                 <div class="a_login_register">
                     <a class="menu_user border " href="/user/login"> LOG-IN</a>
                     <a class="menu_user active" href="/user/register"> REGISTRATE</a>
                 </div>
-                <form  class="form_login" action="">
-                    <input type="text" name="correo" id="correo" placeholder="Correo electronico">
-                    <input type="text" name="user" id="user" placeholder="Elegi un nombre de usuario">
-                    <input type="text" name="firstName" id="firstName" placeholder="Nombre">
-                    <input type="text" name="lastName" id="lastName" placeholder="Apellido">
-                    <input type="password" name="password" id="password" placeholder="Escribi tu contaseña">
-                    <input type="password" name="RepeatPassword" id="RepeatPassword" placeholder="Repeti contraseña">
+                <form  class="form_register" action="">
+                    <div class="flex">
+                        <input type="text" name="correo" id="correo" placeholder="Correo electronico">
+                        <input type="text" name="user" id="user" placeholder="Elegi un nombre de usuario">
+                    </div>
+                    <div class="flex">
+                        <input type="text" name="firstName" id="firstName" placeholder="Nombre">
+                        <input type="text" name="lastName" id="lastName" placeholder="Apellido">
+                    </div>
+                    <div class="flex">
+                        <input type="password" name="password" id="password" placeholder="Escribi tu contaseña">
+                        <input type="password" name="RepeatPassword" id="RepeatPassword" placeholder="Repeti contraseña">
+                    </div>
+                    
                     <button class="button_login" type="submit"> Registrate</button>
                     <p class="login_href">Ya tenes cuenta, <a href="/user/login">INGRESA</a></p>
                 </form>
             </div>
         </section>
     </main>
-    <%- include ("../includes/footer") %>
 </body>
 </html>
