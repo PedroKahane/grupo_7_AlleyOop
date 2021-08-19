@@ -12,18 +12,33 @@
                     <a class="menu_user border " href="/user/login"> LOG-IN</a>
                     <a class="menu_user active" href="/user/register"> REGISTRATE</a>
                 </div>
-                <form  class="form_register" action="">
+                <% if (locals.errors) { %>
+                    <% for( let oneError in errors ) { %>
+                        <p><%= errors[oneError].msg %> </p>
+                    <% } %>
+                <% } %>
+                <form  method="POST" class="form_register" action="/user/register" enctype="multipart/form-data">
                     <div class="flex">
                         <input type="text" name="correo" id="correo" placeholder="Correo electronico">
-                        <input type="text" name="user" id="user" placeholder="Elegi un nombre de usuario">
+                        <input type="text" name="userName" id="userName" placeholder="Elegi un nombre de usuario">
                     </div>
+                    <% if (locals.errors && errors.correo) { %>
+                        <div class="flex">
+                            <p class="error"><% errors.correo.msg %></p>
+                        </div>
+                    <% } %>
+                    <% if (locals.errors && errors.userName) { %>
+                        <div class="flex">
+                            <p class="error"><% errors.userName.msg %></p>
+                        </div>
+                    <% } %>
                     <div class="flex">
                         <input type="text" name="firstName" id="firstName" placeholder="Nombre">
                         <input type="text" name="lastName" id="lastName" placeholder="Apellido">
                     </div>
                     <div class="flex">
                         <input type="password" name="password" id="password" placeholder="Escribi tu contaseña">
-                        <input type="password" name="RepeatPassword" id="RepeatPassword" placeholder="Repeti contraseña">
+                        <input type="file" name="avatar">
                     </div>
                     
                     <button class="button_login" type="submit"> Registrate</button>

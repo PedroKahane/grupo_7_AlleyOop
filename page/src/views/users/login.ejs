@@ -12,7 +12,7 @@
                     <a class="menu_user border active" href="/user/login"> LOG-IN</a>
                     <a class="menu_user" href="/user/register"> REGISTRATE</a>
                 </div>
-                <form form action="/user/access" method="post" class="form_login" action="">
+                <form action="/user/access" method="post" class="form_login">
                     <input type="text" name="email" id="email" placeholder="Escribi tu correo electronico">
                     <% if (locals.errors && errors.email) { %>
                         <p class="feedback">
