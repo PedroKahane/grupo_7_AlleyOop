@@ -73,6 +73,9 @@ main {
     text-align: center;
 
 }
+#formulario_carrito{
+    width: 100%;
+}
 .info-container .otra-desc{
     font-size: 1rem;
     padding-top: 20px;

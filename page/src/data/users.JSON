@@ -6,7 +6,14 @@
     "email": "pedrokahane@gmail.com",
     "password": "$2b$10$JsuUaPODhDqXJzgQ/1d4Z.Ohy./knHgjd4Ulk2rBNk1tqgibmGi6i",
     "admin": true,
-    "image": "MJ.jpg"
+    "image": "image-1629387912818.jpg",
+    "compras": {
+      "equipos": "Golden State Warriors",
+      "color": "azul",
+      "imagenFrente": "Curry30_frente.jpg",
+      "precio": 4000,
+      "camiseta_id": 1
+    }
   },
   {
     "id": 2,
@@ -15,6 +22,13 @@
     "email": "pepekahane@yahoo.com.ar",
     "password": "$2b$10$JsuUaPODhDqXJzgQ/1d4Z.Ohy./knHgjd4Ulk2rBNk1tqgibmGi6i",
     "admin": false,
-    "image": "image-1629293798971.jpg"
+    "image": "image-1629293798971.jpg",
+    "compras": {
+      "camiseta_id": 3,
+      "equipos": "Chicago Bulls",
+      "color": "Roja",
+      "imagenFrente": "MJ-Bulls-frente.jpg",
+      "precio": 6000
+    }
   }
 ]

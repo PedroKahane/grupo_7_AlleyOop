@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "nombre": "Hola",
+    "apellido": "hola",
+    "email": "pedrokahane@alleyoop.com",
+    "telefono": 1135859804,
+    "direccion": "calle falsa 123",
+    "localidad": "CABA",
+    "provincia": "CABA",
+    "codigo postal": 1234,
+    "numerotarjeta": 1432545895211234,
+    "vencimiento": "14/25",
+    "cvv": 154,
+    "productoId": 12,
+    "cantidad": 1
+  },
+  {
+    "id": 2,
+    "productoId": "1",
+    "cantidad": "1",
+    "nombre": "Pedro",
+    "apellido": "Kahane",
+    "email": "pepekahane@yahoo.com.ar",
+    "telefono": "1521",
+    "direccion": "calle 123",
+    "localidad": "Caba",
+    "provincia": "bsas",
+    "codigopostal": "1427"
+  },
+  {
+    "id": 3,
+    "productoId": "1",
+    "cantidad": "5",
+    "precio": "4000",
+    "precioTotal": 20000
+  },
+  {
+    "id": 4,
+    "productoId": "3",
+    "cantidad": "3",
+    "precio": "6000",
+    "precioTotal": 18000
+  },
+  {
+    "id": 5,
+    "productoId": "3",
+    "cantidad": "2",
+    "precio": "6000",
+    "precioTotal": 12000
+  },
+  {
+    "id": 6,
+    "productoId": "3",
+    "cantidad": "1",
+    "precio": "6000",
+    "precioTotal": 6000,
+    "nombre": "Santiago",
+    "apellido": "Kahane",
+    "email": "noak2003@gmail.com",
+    "telefono": "01145513163",
+    "direccion": "Teodoro Garcia",
+    "localidad": "Caba",
+    "provincia": "sf",
+    "codigopostal": "1427",
+    "metododepago": "credito",
+    "numerotarjeta": "145892321525",
+    "vencimiento": "2025-06-12",
+    "cvv": "$2b$10$ELy13GJmEW3tNW8wNSoZbuJod/M7yJA8WXcE63rYc1yqb6Ouc1w5."
+  }
+]

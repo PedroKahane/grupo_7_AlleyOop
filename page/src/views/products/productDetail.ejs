@@ -26,8 +26,10 @@
                                     <% }) %>
                                 </select>
                             </div>
-                            <div class="flex_center">   
-                                <a href="/productCart" class="carrito-buttom-detail">AGREGAR AL CARRITO</a>
+                            <div class="flex_center">  
+                                <form action="/agregarCarrito/<%= product.id %> " id="formulario_carrito" method="POST">
+                                    <button type="submit" class="carrito-buttom-detail">AGREGAR AL CARRITO</button>
+                                </form> 
                             </div>
                             <% product.descripción.forEach(element => { %>
                             <p class="otra-desc"> <%= element %>  </p>

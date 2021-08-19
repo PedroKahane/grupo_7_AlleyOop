@@ -12,63 +12,51 @@
         </section>
         <section id="contenedor_indice">
             <div class="indice_camisetas margin_resposive">
-                <span >Filtrar por:</span>
+                <span class="span_margin">Filtrar por:</span>
             </div>
             <div id= "indice_superior">
                 <a id="a_home" href="/">Home</a>
                 <i class="fas fa-angle-double-right"></i>
                 <span class="indice_camisetas">Camisetas</span> 
             </div>
-            <form id="contenedor-form" action="" method="POST">
-                <fieldset class="contenedor-item">
-                    <label class="titulo-input" for="orden_productos"></label>
-                    <select class="caja" name="orden_productos" id="orden_productos">
-                        <option value="destacado" selected>Destacado</option>
-                        <option value="mayormenor">Precio: Mayor a Menor</option>
-                        <option value="menormayor">Precio: Menor a Mayor</option>
-                        <option value="a-z">A - Z</option>
-                        <option value="z-a">Z - A</option>
-                        <option value="masvendidos">Más vendidos</option>
-                    </select>
-                </fieldset>
-            </form>
         </section>
         <section id="contenedor_tienda">
             <div id="contenedor_filtros">
-                <form  id= "contenedor_form_filtro" action="/colors" method="GET">
+                <form  id= "contenedor_form_filtro" action="/filter" method="GET">
                     <fieldset class="contenedor_titulo_filtro">
                         <p class="titulo_filtro">Color</p>
-                        <i class="fas fa-times"></i>
                     </fieldset>
                     <fieldset class="contenedor_tipo_filtro">
                         <div>
                             <input type="checkbox" name="colores" value="1">
-                            <label class="texto_color" for="colores">Rojo</label>
+                            <label class="texto_color" for="colores">Azul</label>
                         </div>
                         <div>
                             <input type="checkbox" name="colores" value="2">
-                            <label class="texto_color" for="colores">Violeta</label>
+                            <label class="texto_color" for="colores">Rojo</label>
                         </div>
                         <div>
                             <input type="checkbox" name="colores" value="3">
-                            <label class="texto_color" for="colores">Negro</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" name="colores" value="4">
                             <label class="texto_color" for="colores">Verde</label>
                         </div>
                         <div>
+                            <input type="checkbox" name="colores" value="4">
+                            <label class="texto_color" for="colores">Violeta</label>
+                        </div>
+                        <div>
                             <input type="checkbox" name="colores" value="5">
-                            <label class="texto_color" for="colores">Azul</label>
+                            <label class="texto_color" for="colores">Negra</label>
                         </div>
                         <div>
                             <input type="checkbox" name="colores" value="6">
                             <label class="texto_color" for="colores">Amarillo</label>
                         </div>
                     </fieldset>
+                    <input type="submit" value="Filtrar">
+                </form>
+                    <!--
                     <fieldset class="contenedor_titulo_filtro">
                         <p class="titulo_filtro">Talle</p>
-                        <i class="fas fa-times"></i>
                     </fieldset>
                     <fieldset class="contenedor_tipo_filtro">
                         <div>
@@ -89,30 +77,29 @@
                         </div>
                     </fieldset>
                 </fieldset>
-                <fieldset class="contenedor_titulo_filtro">
-                    <p class="titulo_filtro">Precio</p>
-                    <i class="fas fa-times"></i>
-                </fieldset>
-                <fieldset class="contenedor_tipo_filtro">
-                    <div>
-                        <input type="checkbox" name="colores">
-                        <label class="texto_color" for="colores">Menor a $8.000</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="colores">
-                        <label class="texto_color" for="colores">$8.000 - $12.000</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="colores">
-                        <label class="texto_color" for="colores">Mayor a $12.000</label>
-                    </div>
-                </fieldset>
-                <input type="submit" value="Enviar">
+                
+                <form action="/precio" method="GET">
+                    <fieldset class="contenedor_titulo_filtro">
+                        <p class="titulo_filtro">Precio</p>
+                    </fieldset>
+                    <fieldset class="contenedor_tipo_filtro">
+                        <div>
+                            <input type="checkbox" name="min" value="(0,4500)">
+                            <label class="texto_color" for="min">Menor a $4.500</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="max" value="(4500,35000)">
+                            <label class="texto_color" for="max">Mayor a $4.500</label>
+                        </div>
+                    </fieldset>
+                    <input type="submit" value="Filtrar por color">
                 </form>
+                -->
+                
             </div>
             <div id="articulos_promocion">
-                <% products.forEach(product => { %>
-                
+                <% products.forEach(colors => { %>
+                    <% colors.forEach(product => { %>
                     <article class="articulo_destacado">
                         <figure>
                             <img class="imagen_promocion" src="/uploads/<%= product.imagenFrente %>" alt="">
@@ -128,7 +115,7 @@
                             <button class="boton-compra"><i class="fas fa-cart-plus"></i>  Comprar</button>
                         </div>
                     </article>
-                
+                    <% }) %>
                 <% }) %>
             </div>
         </section>
