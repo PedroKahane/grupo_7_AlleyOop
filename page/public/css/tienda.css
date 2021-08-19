@@ -221,6 +221,9 @@ input[type=submit]{
     width: 80px;
     text-align: center;
 }
+#filtrar{
+    cursor: pointer;
+}
 
 .boton_articulo {
     display: flex;
@@ -228,7 +231,9 @@ input[type=submit]{
     justify-content: space-around;
     width: 100%;
 }
-
+.boton-compra{
+    cursor: pointer;
+}
 @media (min-width:790px) {
     .articulo_destacado{
         width: 43%;
@@ -247,9 +252,6 @@ input[type=submit]{
     }
     #margin_resposive{
         margin-left: 30px;
-    }
-    .boton-ver,.boton-compra{
-        width: 40%;
     }
     .articulo_destacado:hover {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
