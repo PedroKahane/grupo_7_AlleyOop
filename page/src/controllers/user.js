@@ -1,4 +1,5 @@
 const userModel = require("../models/user");
+const productModel = require("../models/product");
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcrypt');
 
@@ -55,5 +56,9 @@ module.exports = {
         req.session.destroy();
         res.clearCookie('userEmail')
         return res.redirect("/")
+    },
+    comprarProducto : (req,res) => {
+        result = userModel.comprarProducto(productModel.oneWithExtra(req.params.id),req.session.userLogged.id)
+        return res.redirect("/productCart")
     }
   }

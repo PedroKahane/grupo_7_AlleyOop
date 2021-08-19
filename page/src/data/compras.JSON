@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "nombre": "Hola",
+    "apellido": "hola",
+    "email": "pedrokahane@alleyoop.com",
+    "telefono": 1135859804,
+    "direccion": "calle falsa 123",
+    "localidad": "CABA",
+    "provincia": "CABA",
+    "codigo postal": 1234,
+    "numerotarjeta": 1432545895211234,
+    "vencimiento": "14/25",
+    "cvv": 154,
+    "productoId": 12,
+    "cantidad": 1
+  },
+  {
+    "id": 2,
+    "productoId": "1",
+    "cantidad": "1"
+  }
+]
