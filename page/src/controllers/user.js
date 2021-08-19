@@ -9,12 +9,11 @@ module.exports = {
     },
     processRegister: (req, res) => {
         const resultValidation = validationResult(req);
-        
-        //return res.send(resultValidation.isEmpty());
 
         if (!resultValidation.isEmpty()) {
             return res.render('users/register', {styles:"login.css", errors: resultValidation.mapped()});
         }
+
     },
     register:(req,res) => res.render("users/register",{styles:"login.css"}),
     access: (req,res) => {
