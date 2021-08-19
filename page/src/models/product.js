@@ -40,7 +40,28 @@ const model = {
         return resultado;
     },
     findByColors: function (color){
-        return this.all().filter(product => product.color == color)
+        return this.allWithExtra().filter(product => product.color.id == color)
+    },
+    filterByColors: function (colores){
+        let color = []
+        if(isNaN(colores)){
+        return colores.map(color => 
+            this.findByColors(color)
+        )}
+        else{
+            color.push(colores)
+            return color.map(color => 
+                this.findByColors(color)
+            )
+        }
+    },
+    filtrarPorPrecio: function(num,minOmax){
+        if(minOmax == "max"){
+            return this.allWithExtra().filter(product => product.precio <= num)
+        } else if(minOmax == "min"){
+        return this.allWithExtra().filter(
+            product => product.precio >= num
+        )}
     },
     create: function (data,archivos) {
         let productos = this.all();

@@ -3,6 +3,7 @@ const product = require("../models/product")
 const color = require('../models/color');
 const talle = require('../models/talles');
 const equipos = require('../models/equipos');
+const { filterColors } = require("../models/product");
 
 module.exports = {
     tienda:(req,res) => res.render("products/tienda", {styles:"tienda.css", products: product.allWithExtra()}),
@@ -24,6 +25,6 @@ module.exports = {
         return result == true ? res.redirect("/tienda") : res.status(500).send("Error en la carga")
     },
     colors: (req,res) => {
-        return res.render("products/tienda", {styles:"tienda.css", products: product.findByColors(req.query.colores)})
+        return res.render("products/filter", {styles:"tienda.css", products: product.filterByColors(req.query.colores)})
     },
 }
