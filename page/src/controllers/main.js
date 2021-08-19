@@ -10,6 +10,7 @@ module.exports = {
     productCart:(req,res) => res.render("carrito/productCart",{styles:"productCart.css", user: user.one(req.session.userLogged.id), }),
     productCartDos:(req,res) => res.render("carrito/productCartDos",{styles:"productCart.css", compras: comprasModel.one(comprasModel.ultimoId())}),
     productCartTres:(req,res) => res.render("carrito/productCartTres",{styles:"productCart.css",user: user.one(req.session.userLogged.id), compras: comprasModel.one(comprasModel.ultimoId())}),
+    compraExitosa:(req,res) => res.render("carrito/compraExitosa",{styles:"compraExitosa.css",}),
     productCartpaso: (req,res) => {
         result = comprasModel.productCart(req.body)
         return res.redirect("/productCartDos")

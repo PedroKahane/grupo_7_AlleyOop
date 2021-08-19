@@ -1,0 +1,74 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'montserrat',sans-serif;
+}
+
+#main_compra{
+    height: 80vh;
+    background-color: #FF8200;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#gracias{
+    font-size: 64px;
+    text-align: center;
+    padding: 25px 20px;
+    color: whitesmoke;
+    font-weight: 800;
+}
+#envio{
+    font-size: 48px;
+    text-align: center;
+    font-weight: 800;
+}
+#home{
+    background-color: whitesmoke;
+    color: #0A0903;
+    border: none;
+    max-width: 550px;
+    font-size: 32px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 15px 30px;
+    margin-top: 30px;
+    box-shadow: 0 27px 15px -17px rgb(0 0 0 / 30%), 0 2px 4px rgb(0 0 0 / 30%);
+    margin-bottom: 30px;
+    border-radius: 40px;
+}
+.align_center{
+    display: flex;
+    justify-content: center;
+}
+@media (max-width: 789px) {
+    #gracias{
+        font-size: 48px;
+    }
+    #envio{
+        font-size: 32px;
+    }
+}
+@media (max-width: 420px){
+    #gracias{
+        font-size: 32px;
+    }
+    #envio{
+        font-size: 22px;
+    }
+    #home{
+        font-size: 22px;
+    }
+}
+@media (max-width: 220px){
+    #gracias{
+        font-size: 22px;
+    }
+    #envio{
+        font-size: 16px;
+    }
+    #home{
+        font-size: 16px;
+    }
+}
