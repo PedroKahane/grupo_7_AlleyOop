@@ -43,16 +43,10 @@
                     </div>
                 </fieldset>
                 
-                <fieldset class="contenedor-item-delete">
-                    <i class="fas fa-times"></i>  
-                </fieldset>
-                <div id="contenedor-subtotal">
-                    <p class="subtotal">Subtotal</p>
-                    <p class="subtotal">ARS $<%= user.compras.precio %></p>
-                </div>
                 <fieldset class="contenedor-item">
                     <input type="hidden" name="id" value="<%= user.compras.camiseta_id %>">
-                    <button type="submit"  class="boton-compra">IR A DIRECCIÓN DE ENVÍO</a>
+                    <input type="hidden" name="precio" value="<%= user.compras.precio %>">
+                    <button type="submit"  class="boton-compra">IR A DIRECCIÓN DE ENVÍO</button>
                 </fieldset>
             </form>
         </section>

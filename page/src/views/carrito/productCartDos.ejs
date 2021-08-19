@@ -9,7 +9,7 @@
         </section>
         <section id="contenedor-carrito">
             <p id="titular-carrito">Carrito de compras</p>
-            <form  id= "contenedor-form" action="" method="POST">
+            <form  id= "contenedor-form" action="/productCartDos?_method=PUT" method="POST">
                 <fieldset class="contenedor-item">
                     <p id="titulo-envio">2. DIRECCIÓN DE ENVÍO</p>
                     <p id="subtitulo">Todos los datos son obligatorios</p>
@@ -72,7 +72,8 @@
                     <input class="caja" type="text" name="codigopostal" id="codigopostal" required>
                 </fieldset>
                 <fieldset class="contenedor-item">
-                    <a href="/productCartTres" class="boton-compra">IR A MÉTODO DE PAGO</a>
+                    <input type="hidden" name="id" value="<%= compras.id %> ">
+                    <button type="submit" class="boton-compra">IR A MÉTODO DE PAGO</button>
                 </fieldset>
             </form>
         </section>
