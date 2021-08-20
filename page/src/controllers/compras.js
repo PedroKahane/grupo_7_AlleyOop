@@ -11,7 +11,7 @@ module.exports = {
     productCartTres:(req,res) => res.render("carrito/productCartTres",{styles:"productCart.css",compras: comprasModel.oneWithExtra(comprasModel.ultimoId()) }),
     compraExitosa:(req,res) => res.render("carrito/compraExitosa",{styles:"compraExitosa.css",}),
     productCartpaso: (req,res) => {
-        result = comprasModel.productCart(req.body)
+        result = comprasModel.productCart(req.body, req.body.id)
         return res.redirect("/compras/productCartDos")
     },
     productCartpasoDos: (req,res) => {
