@@ -12,7 +12,11 @@ module.exports = {
         const resultValidation = validationResult(req);
 
         if (!resultValidation.isEmpty()) {
-            return res.render('users/register', {styles:"login.css", errors: resultValidation.mapped()});
+            return res.render('users/register', {
+                styles:"login.css", 
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            });
         }
 
     },

@@ -12,33 +12,55 @@
                     <a class="menu_user border " href="/user/login"> LOG-IN</a>
                     <a class="menu_user active" href="/user/register"> REGISTRATE</a>
                 </div>
-                <% if (locals.errors) { %>
-                    <% for( let oneError in errors ) { %>
-                        <p><%= errors[oneError].msg %> </p>
-                    <% } %>
-                <% } %>
+
                 <form  method="POST" class="form_register" action="/user/register" enctype="multipart/form-data">
                     <div class="flex">
-                        <input type="text" name="correo" id="correo" placeholder="Correo electronico">
-                        <input type="text" name="userName" id="userName" placeholder="Elegi un nombre de usuario">
-                    </div>
-                    <% if (locals.errors && errors.correo) { %>
-                        <div class="flex">
-                            <p class="error"><% errors.correo.msg %></p>
+                        <div class="flex_column"><input type="text" name="correo" id="correo" value="<%= locals.oldData ? oldData.correo : null %>"  placeholder="Correo electronico">
+                            <% if (locals.errors && errors.correo) { %>
+                                <p class="error"> 
+                                    <%= errors.correo.msg %> 
+                                </p>
+                            <% } %>
                         </div>
-                    <% } %>
-                    <% if (locals.errors && errors.userName) { %>
-                        <div class="flex">
-                            <p class="error"><% errors.userName.msg %></p>
+                        <div class="flex_column"><input type="text" name="userName" id="userName" value="<%= locals.oldData ? oldData.userName : null %>" placeholder="Elegi un nombre de usuario">
+                            <% if (locals.errors && errors.userName) { %>
+                                <p class="error"> 
+                                    <%= errors.userName.msg %> 
+                                </p>
+                            <% } %>
                         </div>
-                    <% } %>
-                    <div class="flex">
-                        <input type="text" name="firstName" id="firstName" placeholder="Nombre">
-                        <input type="text" name="lastName" id="lastName" placeholder="Apellido">
                     </div>
                     <div class="flex">
-                        <input type="password" name="password" id="password" placeholder="Escribi tu contaseña">
-                        <input type="file" name="avatar">
+                        <div class="flex_column"><input type="text" name="firstName" id="firstName" value="<%= locals.oldData ? oldData.firstName : null %>" placeholder="Nombre">
+                                <% if (locals.errors && errors.firstName) { %>
+                                    <p class="error"> 
+                                        <%= errors.firstName.msg %> 
+                                    </p>
+                                <% } %>
+                        </div>
+                        <div class="flex_column"><input type="text" name="lastName" id="lastName" value="<%= locals.oldData ? oldData.lastName : null %>" placeholder="Apellido">
+                            <% if (locals.errors && errors.lastName) { %>
+                                <p class="error"> 
+                                    <%= errors.lastName.msg %> 
+                                </p>
+                            <% } %>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="flex_column"><input type="password" name="password" id="password" placeholder="Escribi tu contaseña">
+                            <% if (locals.errors && errors.password) { %>
+                                <p class="error"> 
+                                    <%= errors.password.msg %> 
+                                </p>
+                            <% } %>
+                        </div>
+                        <div class="flex_column"><input type="file" name="avatar">
+                            <% if (locals.errors && errors.avatar) { %>
+                                <p class="error"> 
+                                    <%= errors.avatar.msg %> 
+                                </p>
+                            <% } %>
+                        </div>
                     </div>
                     
                     <button class="button_login" type="submit"> Registrate</button>
