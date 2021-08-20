@@ -18,6 +18,13 @@ module.exports = {
                 oldData: req.body
             });
         }
+        let userToCreate = {
+            ...req.body,
+            password: bcrypt.hashSync(req.body.password, 10),
+            image: req.file.filename
+        }
+        userModel.create(userToCreate);
+        return res.send('Ok, se guardo el usuario');
 
     },
     register:(req,res) => res.render("users/register",{styles:"login.css"}),

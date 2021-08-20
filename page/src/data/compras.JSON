@@ -73,5 +73,48 @@
     "vencimiento": "2027-12-25",
     "cvv": "$2b$10$uHCTeVF2k.ggJhiEIXs5HeccyW11S9p3ETz.jRu0erMbkkymgOyTO",
     "newsletter": "on"
+  },
+  {
+    "id": 5,
+    "productoId": "1",
+    "userId": 1,
+    "nombre": "sebastian",
+    "apellido": "salvat",
+    "email": "salvatsebastian41@gmail.com",
+    "telefono": "1560555003",
+    "direccion": "urquiza",
+    "localidad": "buenos aires",
+    "provincia": "bsas",
+    "codigopostal": "1641",
+    "estadoProducto": "Confirmado",
+    "metododepago": "credito",
+    "numerotarjeta": "8",
+    "vencimiento": "2021-08-12",
+    "cvv": "$2b$10$wSMJrbpFqZauN4GBnrnfVefgr6/L1A8kHU69eV6P1zqFOB3X2GQh2",
+    "newsletter": "on"
+  },
+  {
+    "id": 6,
+    "productoId": "1",
+    "userId": 2,
+    "nombre": "sebastian",
+    "apellido": "salvat",
+    "email": "salvatsebastian41@gmail.com",
+    "telefono": "1560555003",
+    "direccion": "urquiza",
+    "localidad": "buenos aires",
+    "provincia": "bsas",
+    "codigopostal": "1641",
+    "estadoProducto": "Confirmado",
+    "metododepago": "debito",
+    "numerotarjeta": "4",
+    "vencimiento": "2021-08-18",
+    "cvv": "$2b$10$E9x0BpcqRSaXK1Caqrm6duB0SvBC9WjxHPm/ePYLH2w80gJ1GpeKK",
+    "newsletter": "on"
+  },
+  {
+    "id": 7,
+    "productoId": "1",
+    "userId": 2
   }
 ]

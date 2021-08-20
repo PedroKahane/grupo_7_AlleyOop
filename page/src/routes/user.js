@@ -22,7 +22,7 @@ const storage = multer.diskStorage({
     body('firstName').notEmpty().withMessage('Tenés que ingresar un nombre'),
     body('lastName').notEmpty().withMessage('Tenés que ingresar un apellido'),
     body('userName').notEmpty().withMessage('Tenés que ingresar un nombre de usuario'),
-    body('correo').notEmpty().withMessage('Tenés que ingresar un correo electrónico').bail()
+    body('email').notEmpty().withMessage('Tenés que ingresar un correo electrónico').bail()
                   .isEmail().withMessage('Debes ingresar un formato de correo válido'),
     body('password').notEmpty().withMessage('Tenés que ingresar una contraseña'),
     body('avatar').custom((value, { req }) => {
@@ -39,7 +39,7 @@ const storage = multer.diskStorage({
       }
 
       return true;
-      
+
     })
   ];
   

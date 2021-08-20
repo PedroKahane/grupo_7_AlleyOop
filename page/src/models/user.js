@@ -59,6 +59,39 @@ module.exports = {
       return user
     });
     this.write(users)
-  }
-}
+  },
+  findByPk: function (id) {
+    let allUsers = this.all();
+    let userFound = allUsers.find(oneUser => oneUser.id === id);
+    return userFound
+  },
+  findByField: function (field, text) {
+    let allUsers = this.all();
+    let userFound = allUsers.find(oneUser => oneUser[field] === text);
+    return userFound
+  },
+  create: function (userData) {
+    let allUsers = this.all();
+    let newUser = {
+      id: this.generateId(),
+      ...userData
+    }
+    allUsers.push(newUser);
+    fs.writeFileSync(this.dir, JSON.stringify(allUsers, null, " "));
+    return newUser;
 
+
+  },
+  generateId: function() {
+    let allUsers = this.all();
+    let lastUser = allUsers.pop();
+    if (lastUser) {
+      return lastUser.id + 1;
+    }
+    return 1;
+
+  }
+
+
+
+}

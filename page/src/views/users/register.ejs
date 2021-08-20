@@ -15,10 +15,10 @@
 
                 <form  method="POST" class="form_register" action="/user/register" enctype="multipart/form-data">
                     <div class="flex">
-                        <div class="flex_column"><input type="text" name="correo" id="correo" value="<%= locals.oldData ? oldData.correo : null %>"  placeholder="Correo electronico">
-                            <% if (locals.errors && errors.correo) { %>
+                        <div class="flex_column"><input type="text" name="email" id="email" value="<%= locals.oldData ? oldData.email : null %>"  placeholder="Correo electronico">
+                            <% if (locals.errors && errors.email) { %>
                                 <p class="error"> 
-                                    <%= errors.correo.msg %> 
+                                    <%= errors.email.msg %> 
                                 </p>
                             <% } %>
                         </div>
