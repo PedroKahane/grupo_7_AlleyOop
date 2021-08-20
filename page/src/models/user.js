@@ -15,21 +15,6 @@ module.exports = {
   findByEmail: function (email){
     return this.all().find(user => user.email == email)
   },
-  comprarProducto : function(data, id){
-    let users = this.all();
-    users.map(user => {
-      if(user.id == id){
-        user.compras.camiseta_id = data.id
-        user.compras.equipos = data.equipos.equipo,
-        user.compras.color = data.color.color,
-        user.compras.imagenFrente = data.imagenFrente,
-        user.compras.precio = data.precio
-        return user
-      }
-      return user
-    })
-    this.write(users)
-  },
   update:function(data,id){
     let users = this.all();
     users.map(user => {

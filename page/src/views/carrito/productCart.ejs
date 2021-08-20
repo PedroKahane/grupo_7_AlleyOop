@@ -9,7 +9,7 @@
         </section>
         <section id="contenedor-carrito">
             <p id="titular-carrito">Carrito de compras</p>
-            <form  id= "contenedor-form" action="/productCart" method="POST">
+            <form  id= "contenedor-form" action="/compras/productCart" method="POST">
                 <fieldset class="contenedor-item">
                     <p id="titulo">1. REVISA TU PEDIDO</p>
                 </fieldset>
@@ -17,12 +17,12 @@
                     <i class="fas fa-times"></i>  
                 </fieldset>
                 <fieldset class="contenedor-item-foto">
-                    <img class="imagen_promocion" src="/uploads/<%= user.compras.imagenFrente %>" alt="">
+                    <img class="imagen_promocion" src="/uploads/<%= compras.productoId.imagenFrente %>" alt="">
                     <div class="contenedor-propiedades-articulo">
-                        <p class="titulo-producto">Camiseta <%= user.compras.equipos %> </p>
+                        <p class="titulo-producto">Camiseta <%= compras.productoId.equipos.equipo %> </p>
                         <div>
-                            <p class="subtitulo-articulo">Color: <%= user.compras.color %></p>
-                            <p class="subtitulo-articulo">Equipo: <%= user.compras.equipos %></p>
+                            <p class="subtitulo-articulo">Color: <%= compras.productoId.color.color %></p>
+                            <p class="subtitulo-articulo">Equipo: <%= compras.productoId.equipos.equipo %></p>
                         </div>
                         <div class="contenedor-cantidad">
                             <label class="subtitulo-articulo" for="cantidad">Cantidad:</label>
@@ -39,13 +39,13 @@
                                 <option value="10">10</option>
                             </select>
                         </div>
-                        <p class="precio">ARS <%= user.compras.precio %></p>
+                        <p class="precio">ARS <%= compras.productoId.precio %></p>
                     </div>
                 </fieldset>
                 
                 <fieldset class="contenedor-item">
-                    <input type="hidden" name="id" value="<%= user.compras.camiseta_id %>">
-                    <input type="hidden" name="precio" value="<%= user.compras.precio %>">
+                    <input type="hidden" name="id" value="<%= compras.productoId.id %>">
+                    <input type="hidden" name="precio" value="<%= compras.productoId.precio %>">
                     <button type="submit"  class="boton-compra">IR A DIRECCIÓN DE ENVÍO</button>
                 </fieldset>
             </form>
