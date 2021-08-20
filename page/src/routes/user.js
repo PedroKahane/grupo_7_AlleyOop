@@ -22,8 +22,25 @@ const storage = multer.diskStorage({
     body('firstName').notEmpty().withMessage('Tenés que ingresar un nombre'),
     body('lastName').notEmpty().withMessage('Tenés que ingresar un apellido'),
     body('userName').notEmpty().withMessage('Tenés que ingresar un nombre de usuario'),
-    body('correo').notEmpty().withMessage('Tenés que ingresar un correo electrónico'),
-    body('password').notEmpty().withMessage('Tenés que ingresar una contraseña')
+    body('correo').notEmpty().withMessage('Tenés que ingresar un correo electrónico').bail()
+                  .isEmail().withMessage('Debes ingresar un formato de correo válido'),
+    body('password').notEmpty().withMessage('Tenés que ingresar una contraseña'),
+    body('avatar').custom((value, { req }) => {
+      let file = req.file;
+      let acceptedExtensions = ['.jpg', '.png', '.gif'];
+
+      if (!file) {
+        throw new Error('Tenés que subir una imagen');
+      } else {
+        let fileExtension = path.extname(file.originalname);
+        if (!acceptedExtensions.includes(fileExtension)) {
+          throw new Error(`Las extensiones permitidas son ${acceptedExtensions.join(', ')}`);
+        }
+      }
+
+      return true;
+      
+    })
   ];
   
   router.get("/login" ,validLoggin, controller.login);
