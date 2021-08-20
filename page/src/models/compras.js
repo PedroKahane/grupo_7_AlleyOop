@@ -1,6 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 const bcrypt = require("bcrypt");
+const user = require('./user');
+const producto = require('./product');
 module.exports = {
     directory : path.resolve(__dirname,"../data","compras.JSON"),
     write: function(data){
@@ -9,22 +11,51 @@ module.exports = {
     all: function (){
       return JSON.parse(fs.readFileSync(this.directory))
     },
+    allWithExtra: function () {
+        let compras = this.all()
+        compras.map(element => {
+            element.productoId = producto.oneWithExtra(element.productoId);
+            return element
+        })
+        compras.map(element => {
+            element.userId = user.one(element.userId);
+            return element
+        })
+        return compras
+    },
     one: function(id){
       return this.all().find(user => user.id == id);
     },
-    productCart: function (data) {
+    oneWithExtra: function (id) {
+        let compras = this.allWithExtra();
+        let resultado = compras.find(compra => compra.id == id)
+        return resultado;
+    },
+    comprarProducto : function(idProducto, iduser){
         let compras = this.all();
         let nuevo = {
             id: compras.length > 0 ? compras[compras.length -1].id + 1: 1,
-            productoId : data.id,
-            cantidad : data.cantidad,
-            precio : data.precio,
-            precioTotal: parseInt((data.precio * data.cantidad))
+            productoId : idProducto,
+            userId: iduser,
         }    
         compras.push(nuevo)
         this.write(compras);
-        return nuevo;    
+        return nuevo;   
     },
+    productCart: function (data, id) {
+        let compras = this.all();
+        compras.map(compra => {
+          if(compra.id == id){
+            compra.precio = data.precio,
+            compra.cantidad = data.cantidad,
+            compra.PrecioTotal = parseInt((data.cantidad * data.precio))
+            compra.estadoProducto = "paso 1"
+            return user
+          }
+          return user
+        })
+        this.write(compras)
+      },
     productoCartDos : function (data, id){
         let compras = this.all();;
         compras.map(compra => {
@@ -37,6 +68,7 @@ module.exports = {
                 compra.localidad = data.localidad,
                 compra.provincia = data.provincia,
                 compra.codigopostal = data.codigopostal
+                compra.estadoProducto = "paso 2"
                 return compra
             }
             return compra
@@ -51,7 +83,9 @@ module.exports = {
                 compra.metododepago = data.metododepago,
                 compra.numerotarjeta = data.numerotarjeta,
                 compra.vencimiento = data.vencimiento,
-                compra.cvv = bcrypt.hashSync(data.cvv,10)
+                compra.cvv = bcrypt.hashSync(data.cvv,10),
+                compra.newsletter = data.newsletter,
+                compra.estadoProducto = "Confirmado"
             }
             return compra
         })

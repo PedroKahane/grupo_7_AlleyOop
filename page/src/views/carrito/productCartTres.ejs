@@ -5,11 +5,11 @@
     <%- include ("../includes/header") %>
     <main>
         <section id="volver">
-            <i class="fas fa-chevron-left"></i><a id="section_a" href="/productCartDos">Volver</a>
+            <i class="fas fa-chevron-left"></i><a id="section_a" href="/compras/productCartDos">Volver</a>
         </section>
         <section id="contenedor-carrito">
             <p id="titular-carrito">Carrito de compras</p>
-            <form  id= "contenedor-form" action="/productCartTres?_method=PUT" method="POST">
+            <form  id= "contenedor-form" action="/compras/productCartTres?_method=PUT" method="POST">
                 <fieldset class="contenedor-item">
                     <p id="titulo">3. TIPO DE PAGO Y RESUMEN DE PEDIDO</p>
                 </fieldset>
@@ -34,12 +34,12 @@
                 </fieldset>
                 <fieldset class="contenedor-item">
                     <label class="titulo-input"for="cvv">CVV (3 digitos)</label>
-                    <input class="caja" placeholder="xxx" type="number" name="cvv" id="cvv">
+                    <input class="caja" placeholder="xxx" type="password" name="cvv" id="cvv">
                 </fieldset>
                 <div class="resumen">
                     <p class="titulo-input">Resumen del pedido</p>
                     <div class="resumen-articulos">
-                        <p class="subtitulo-articulo"><%= compras.cantidad %>  x <%= user.compras.equipos %></p>
+                        <p class="subtitulo-articulo"><%= compras.cantidad %>  x <%= compras.productoId.equipos.equipo %></p>
                         <p class="precio_articulo">ARS $<%= compras.precio %></p>
                     </div>
                 </div>

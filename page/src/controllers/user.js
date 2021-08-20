@@ -75,8 +75,4 @@ module.exports = {
         res.clearCookie('userEmail')
         return res.redirect("/")
     },
-    comprarProducto : (req,res) => {
-        result = userModel.comprarProducto(productModel.oneWithExtra(req.params.id),req.session.userLogged.id)
-        return res.redirect("/productCart")
-    }
   }

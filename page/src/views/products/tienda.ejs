@@ -107,7 +107,7 @@
                         <p class="jugador"><%= product.jugador %> (<%= product.numeroCamiseta %>)</p>
                         <div class="boton_articulo">
                             <a class="boton-ver" href="/productDetail/<%= product.id %> " id=""><i class="fas fa-eye"></i>  Ver más</a>
-                            <form action="/agregarCarrito/<%= product.id %> " id="formulario_carrito" method="POST">
+                            <form action="/compras/agregarCarrito/<%= product.id %> " id="formulario_carrito" method="POST">
                                 <button class="boton-compra"><i class="fas fa-cart-plus"></i>  Comprar</button>
                             </form>
                         </div>

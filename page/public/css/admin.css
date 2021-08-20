@@ -5,309 +5,53 @@
     font-family: 'montserrat',sans-serif;
 }
 
-#main_tienda {
-    background-color: #ffe9a4;
-}
-#p_home{
-    margin:10px;
-}
 
-#contenedor_indice {
-    background-color: #eee;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#contenedor_tienda {
-    display: flex;
-}
-
-
-#title_admin{
-    font-size: 18px;
-    padding: 25px;
-    font-weight: 700;
-    text-align: center;
-}
-.indice_camisetas span, #indice_superior span {
-    color: grey;
-    font-weight: bold;
-    font-size: 12px;
-
-}
-.indice_camisetas{
-    width: 33vw;
-    max-width: 200px;
-    padding-left: 5px;
-    text-decoration: none;
-}
-.fa-angle-double-right{
-    color: grey;
-    font-size: 12px;
-    padding-left: 5px;
-}
-
-.contenedor-item {
-    border: none;
-}
-
-.caja {
-    padding: 5px 10px 5px 10px;
-    border-radius: 8px;
-    border-style:solid;
-    border-color: #eee;
-    font-size: 12px;
-    border-width: 2px;
-    width: 70%;
-}
-
-#contenedor-form{
-    align-self: flex-end;
-}
-
-#indice_superior {
-    align-self: center;
-    display: none;
-}
-
-#contenedor_filtros {
-    background-color: #eee;
-    width: 33vw;
-    height: 500px;
-    margin-top: 2vw;
-    max-width: 200px;
-
-}
-
-#contenedor_form_filtro {
+#divisor_main{
+    height: 100%;
+    margin: 5%;
     display: flex;
     flex-direction: column;
 }
-
-.contenedor_titulo_filtro {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 10px 5px 0px 5px;
-    border-bottom: 2px solid #FFC100 !important;
-    border: #eee;
-    padding: 5px 0px;
-}
-
-.contenedor_tipo_filtro {
-    display: flex;
-    flex-direction: column;
-    border: none;
-    margin: 10px 10px;
-
-}
-
-.titulo_filtro {
-    font-size: 12px;
-    font-weight: 700;
-    color: #333;
-}
-
-.fa-times{
-    color: grey;
-    font-size: 12px;
-}
-
-.texto_color {
-    color: #333333;
-    font-weight: 500;
-    font-size: 8px;
-}
-
-#articulos_promocion {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-.descripcion {
-    height: 20px;
-    font-size: 12px;
-}
-
-.articulo_destacado {
-    width: 95vw;
-    margin: 2vw;
-    box-sizing: border-box;
-    background-color: #FFFAFA;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1vw;
-    max-width: 360px;
-}
-.imagen_promocion {
-    width: 100%;
-}
-.articulo_destacado figure {
-    width: 95%;
-}
-.descuento {
-    color: #39b54a;
-    font-size: 14px;
-}
-
-.precio {
-    font-size: 18px;
-    margin-right: 10px;
-}
-
-.jugador {
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.precio_descuento {
-    display: flex;
-    align-items: center;
-}
-.fa, .fas    {font-size: 20px;}
-.boton-ver, .boton-compra {
-    color: #FFF;
-    font-weight: bold;
-    font-size: 8px;
-    text-transform: uppercase;
+.button_admin{
     text-decoration: none;
-    padding: 10px 12px;
-    border: 0;
-    border-radius: 8px;
-    background-color: #FF8200;
-    box-shadow: 0px 12px 9px -9px rgb(0 0 0 / 50%);
-    margin: 15px 5px;
-    width: 80px;
-    text-align: center;
-}
-
-.boton_articulo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
-}
-.buton_delete{
-    background-color: #d82e2e;
-    color: white;
     border: none;
-    width: 50px;
-    height: 50px;
-    text-decoration: none;
-    padding: 15px 0px;
-    margin: 30px 10px 20px 10px;
-    border-radius: 100%;
-    text-align: center; 
-    cursor: pointer;
-}
-.button_eliminar{
-    background-color: #d82e2e;
-    color: white;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-}
-.buton_edit{
-    background-color: #4eaefd;
-    color: white;
-    border: none;
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-    font-weight: 600;
-    text-decoration: none;
-    padding: 15px 0px;
-    margin: 30px 10px 20px 10px;
-    border-radius: 100%;
-    text-align: center;  
-}
-.sumar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 300px;
-}
-.background_plus{
-    background-color: #90FA71;
-    border-radius: 20px;
-}
-.background_plus i{
-    color: #FFFAFA;
+    background-color: #FF8200 ;
     font-size: 48px;
+    width: 95%;
+    margin:  2.5%;
     padding: 30px;
-}
-#p_creacion{
-    font-size: 18px;
-    margin-bottom: 35px;
+    color: #0A0903;
+    border-radius: 35px;
     text-align: center;
-    font-weight: 700;
 }
-@media (min-width:440px){
-    .articulo_destacado{
-        width: 43%;
-    }
-    #title_admin{
-        font-size: 48px;
-    }
+#titulo_admin{
+    font-size: 64px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 100px;
+    color: #0A0903;
 }
-@media (min-width:790px) {
-    #indice_superior{
-        display: unset;
-    }
-    #contenedor_filtros{
-        margin-left: 30px;
-    }
-    #margin_resposive{
-        margin-left: 30px;
-    }
-    .boton-ver,.boton-compra{
-        width: 40%;
-    }
-    .articulo_destacado:hover {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
-    #title_background {
-        font-size: 24px;
-    }
-    #subtitle_background{
-        font-size: 28px;
-    }
-    #background_home{
-        height: 250px;
-    }
-    .texto_color{
-        font-size: 12px;
-    }
-}
-@media (min-width:1100px){
-    .articulo_destacado{
-        width: 26%;
-        height: 510px;
-    }
-    #contenedor_filtros{
-        max-width: 300px;
-    }
-    #title_background {
+@media (max-width:1000px){
+    .button_admin{
         font-size: 32px;
     }
-    #subtitle_background{
-        font-size: 38px;
+    #titulo_admin{
+        font-size: 42px;
     }
-    #background_home{
-        height: 300px;
-        background-position: center;
+} 
+@media (max-width:681px){
+    .button_admin{
+        font-size: 24px;
     }
-    #p_home{
-        margin-left: 5%;
+    #titulo_admin{
+        font-size: 32px;
     }
-    .texto_color{
+} 
+@media (max-width:381px){
+    .button_admin{
         font-size: 16px;
     }
-}
+    #titulo_admin{
+        font-size: 22px;
+    }
+} 

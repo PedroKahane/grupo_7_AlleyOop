@@ -13,7 +13,7 @@
             <a href="/tienda">Tienda</a>
             <a href="/contacto">Contacto</a>
             <% if (locals.userLogged && locals.userLogged.admin) { %>
-                <a href="/admin/index">Administrar</a>
+                <a href="/admin/admin">Administrar</a>
             <% } %> 
         </section>
         <section id="icon_header">
@@ -25,7 +25,6 @@
             <% } else { %>
                 <a class="icon_a" href="/user/login"><i class="fas fa-user"></i></a>
             <% } %>
-            <a class="icon_a" href="/productCart"><i class="fas fa-shopping-cart"></i></a>
             <div class="burger-menu">
                 <i class="fas fa-bars"></i>
             </div>

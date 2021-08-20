@@ -19,15 +19,7 @@ module.exports = {
   // Create Register
   getData: function (){
     return JSON.parse(fs.readFileSync(this.dir, 'utf-8'));
-  }/* ,
-  generateId: function () {
-    let allUsers = this.all();
-    let lastUser = allUsers.pop();
-    if (lastUser) {
-      return lastUser.id + 1;
-    }
-    return 1;
-  } */,
+  },
   create: function (userData) {
     let allUsers = this.all();
     newUser = {
@@ -54,21 +46,6 @@ module.exports = {
     let allUsers = this.all();
     let userFound = allUsers.find(oneUser => oneUser[field] === text);
     return userFound
-  },
-  comprarProducto : function(data, id){
-    let users = this.all();
-    users.map(user => {
-      if(user.id == id){
-        user.compras.camiseta_id = data.id
-        user.compras.equipos = data.equipos.equipo,
-        user.compras.color = data.color.color,
-        user.compras.imagenFrente = data.imagenFrente,
-        user.compras.precio = data.precio
-        return user
-      }
-      return user
-    })
-    this.write(users)
   },
   update:function(data,id){
     let users = this.all();
