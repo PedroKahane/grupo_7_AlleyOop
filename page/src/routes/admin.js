@@ -4,6 +4,10 @@ const controller = require("../controllers/admin");
 const userAdmin = require('../middlewares/userAdmin')
 
 
-router.get("/index" ,userAdmin, controller.index)
+
+
+router.get("/admin" ,userAdmin, controller.admin)
+router.get("/products" ,userAdmin, controller.products)
+router.get("/ventas" ,userAdmin, controller.ventas)
 
 module.exports = router
