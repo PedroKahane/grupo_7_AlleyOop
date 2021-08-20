@@ -54,5 +54,24 @@
     "vencimiento": "2027-02-25",
     "cvv": "$2b$10$RqehPlMgzkTQXb12KU2LNO57RYxGMVA1opTYEwcQSBOI7EbdWw54a",
     "newsletter": "on"
+  },
+  {
+    "id": 4,
+    "productoId": "8",
+    "userId": 1,
+    "nombre": "Pedro",
+    "apellido": "Kahane",
+    "email": "pepekahane@yahoo.com.ar",
+    "telefono": "245123468",
+    "direccion": "calle 123",
+    "localidad": "Caba",
+    "provincia": "rn",
+    "codigopostal": "1422",
+    "estadoProducto": "Confirmado",
+    "metododepago": "credito",
+    "numerotarjeta": "454684135435465",
+    "vencimiento": "2027-12-25",
+    "cvv": "$2b$10$uHCTeVF2k.ggJhiEIXs5HeccyW11S9p3ETz.jRu0erMbkkymgOyTO",
+    "newsletter": "on"
   }
 ]
