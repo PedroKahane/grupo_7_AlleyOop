@@ -18,12 +18,6 @@ module.exports = {
                 oldData: req.body
             });
         }
-        let userToCreate = {
-            ...req.body,
-            image: req.file.filename
-        }
-        userModel.create(userToCreate);
-        return res.send('Ok, se guardo el usuario');
 
     },
     register:(req,res) => res.render("users/register",{styles:"login.css"}),
@@ -35,7 +29,7 @@ module.exports = {
                 req.session.userLogged = userToLogin
                 
                 if(req.body.rememeber_user){
-                    res.cookie('userEmail', req.body.correo, {maxAge : 1000* 60 *60 * 24 * 4 })
+                    res.cookie('userEmail', req.body.email, {maxAge : 1000* 60 *60 * 24 * 4 })
                 }
                 return res.redirect('/')
             }
