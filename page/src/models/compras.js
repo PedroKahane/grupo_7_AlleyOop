@@ -43,18 +43,19 @@ module.exports = {
         return nuevo;   
     },
     productCart: function (data, id) {
-        let compras = this.all();
+        let compras = this.all();;
         compras.map(compra => {
-          if(compra.id == id){
-            compra.precio = data.precio,
-            compra.cantidad = data.cantidad,
-            compra.PrecioTotal = parseInt((data.cantidad * data.precio))
-            compra.estadoProducto = "paso 1"
-            return user
-          }
-          return user
+            if(compra.id == id ){
+                compra.precio = data.precio,
+                compra.cantidad = data.cantidad,
+                compra.PrecioTotal = parseInt((data.cantidad * data.precio))
+                compra.estadoProducto = "paso 1"
+                return compra
+            }
+            return compra
         })
         this.write(compras)
+        return true;
       },
     productoCartDos : function (data, id){
         let compras = this.all();;

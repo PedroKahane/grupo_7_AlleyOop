@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ("../includes/head") %>
+<body>
+    <%- include ("../includes/header") %>
+    <main id="main_tienda">
+        <p id="title_admin">ADMINISTRAR PRODUCTOS:</p>
+        <div id="articulos_promocion">
+            <% compras.forEach(compra => { %>
+                <article class="articulo_destacado">
+                    <figure>
+                        <img class="imagen_promocion" src="/uploads/<%= compra.productoId.imagenFrente %>" alt="">
+                    </figure>
+                    <div class="precio_descuento">
+                        <p class="precio">$<%= compra.PrecioTotal %> </p>
+                    </div>
+                    <p class="descripcion">Cliente <%= compra.nombre %> <%= compra.apellido %> </p>
+                    <p class="descripcion">Forma de pago: <%= compra.metododepago %></p>
+                    <p class="descripcion">Direccion: <%= compra.direccion %></p>
+                    <p class="descripcion">localidad: <%= compra.localidad %></p>
+                    <p class="descripcion">Codigo postal: <%= compra.codigopostal %></p>
+
+                    <div class="boton_articulo">
+                        <form action="">
+                            <select name="estado" id="">
+                                <option value="Confirmado">Confirmado</option>
+                                <option value="En proceso de envio">En proceso de envio</option>
+                                <option value="Cancelado">Cancelado</option>
+                                <option value="Finalizado">Finalizado</option>
+                            </select>
+                        </form>
+                    </div>
+                </article>        
+            <% }) %>
+        </div>
+    </main>
+    <%- include ("../includes/footer") %>
+</body>
+</html>
