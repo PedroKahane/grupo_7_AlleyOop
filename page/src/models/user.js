@@ -15,6 +15,46 @@ module.exports = {
   findByEmail: function (email){
     return this.all().find(user => user.email == email)
   },
+
+  // Create Register
+  getData: function (){
+    return JSON.parse(fs.readFileSync(this.dir, 'utf-8'));
+  }/* ,
+  generateId: function () {
+    let allUsers = this.all();
+    let lastUser = allUsers.pop();
+    if (lastUser) {
+      return lastUser.id + 1;
+    }
+    return 1;
+  } */,
+  create: function (userData) {
+    let allUsers = this.all();
+    newUser = {
+      id: allUsers.length > 0 ? allUsers[allUsers.length -1].id + 1: 1,
+      ...userData
+    }
+    allUsers.push(newUser);
+    this.write(allUsers);
+    return newUser;
+
+  },
+  delete: function(id) {
+    let allUsers = this.all();
+    let finalUsers = allUsers.filter(oneUser => oneUser.id !== id);
+    this.write(finalUsers);
+
+  },
+  findByPk: function (id) {
+    let allUsers = this.all();
+    let userFound = allUsers.find(oneUser => oneUser.id === id);
+    return userFound
+  },
+  findByField: function (field, text) {
+    let allUsers = this.all();
+    let userFound = allUsers.find(oneUser => oneUser[field] === text);
+    return userFound
+  },
   comprarProducto : function(data, id){
     let users = this.all();
     users.map(user => {
@@ -76,4 +116,3 @@ module.exports = {
     this.write(users)
   }
 }
-
