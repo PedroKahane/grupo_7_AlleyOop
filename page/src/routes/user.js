@@ -51,8 +51,6 @@ const storage = multer.diskStorage({
   router.put("/avatarDefault",controller.avatarDefault);
   router.get("/logout", controller.logout);
   router.post("/access",controller.access);
-
-  // Procesar el registro
   router.post("/register", upload.single("avatar"),validations, controller.processRegister);
 
 

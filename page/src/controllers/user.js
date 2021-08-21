@@ -18,13 +18,29 @@ module.exports = {
                 oldData: req.body
             });
         }
+
+        let userInDB = userModel.findByField('email', req.body.email);
+
+        if(userInDB) {
+            return res.render('users/register', {
+              errors: {
+                  email: {
+                      msg: 'Este mail ya está registrado'
+                  }
+              },
+              oldData: req.body,
+              styles:"login.css"   
+            });
+        }
+
         let userToCreate = {
             ...req.body,
             password: bcrypt.hashSync(req.body.password, 10),
             image: req.file.filename
         }
-        userModel.create(userToCreate);
-        return res.send('Ok, se guardo el usuario');
+        
+        let userCreated = userModel.create(userToCreate);
+        return res.redirect('/user/login');
 
     },
     register:(req,res) => res.render("users/register",{styles:"login.css"}),
