@@ -2,9 +2,9 @@
   "name": "page",
   "version": "1.0.0",
   "description": "",
-  "main": "page/src/index.js",
+  "main": "npm run start",
   "scripts": {
-    "start": "node page/src/index.js"
+    "start": "npm run start"
   },
   "author": "",
   "license": "ISC",
