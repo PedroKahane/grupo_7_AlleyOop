@@ -116,7 +116,7 @@
     "precio": "6000",
     "cantidad": "3",
     "PrecioTotal": 18000,
-    "estadoProducto": "Confirmado",
+    "estadoProducto": "En proceso de envio",
     "nombre": "Manu",
     "apellido": "Ginobili",
     "email": "manug@hotmail.com",

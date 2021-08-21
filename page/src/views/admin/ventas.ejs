@@ -18,14 +18,15 @@
                         <img class="imagen_promocion" src="/uploads/<%= compra.productoId.imagenFrente %>" alt="">
                     </figure>
                     <div id="contenedor_descripciones">
-                        <p class="descripcion"><span>Camiseta:</span> <%= compra.productoId.jugador %></p>
-                        <p class="descripcion"><span>equipo:</span><%= compra.productoId.equipos.equipo %> </p>
-                        <p class="descripcion"><span>Venta total:</span> $<%= compra.PrecioTotal %> </p>
-                        <p class="descripcion"><span>Cliente:</span> <%= compra.nombre %> <%= compra.apellido %> </p>
-                        <p class="descripcion"><span>Forma de pago:</span> <%= compra.metododepago %></p>
-                        <p class="descripcion"><span>Direccion:</span> <%= compra.direccion %></p>
-                        <p class="descripcion"><span>localidad:</span> <%= compra.localidad %></p>
-                        <p class="descripcion"><span>Codigo postal:</span> <%= compra.codigopostal %></p>
+                        <p class="descripcion"><span>Camiseta: </span> <%= compra.productoId.jugador %></p>
+                        <p class="descripcion"><span>Equipo: </span><%= compra.productoId.equipos.equipo %> </p>
+                        <p class="descripcion"><span>Cant. de camisetas: </span> <%= compra.cantidad %> </p>
+                        <p class="descripcion"><span>Venta total: </span> $<%= compra.PrecioTotal %> </p>
+                        <p class="descripcion"><span>Cliente: </span> <%= compra.nombre %> <%= compra.apellido %> </p>
+                        <p class="descripcion"><span>Forma de pago: </span> <%= compra.metododepago %></p>
+                        <p class="descripcion"><span>Direccion: </span> <%= compra.direccion %></p>
+                        <p class="descripcion"><span>Localidad: </span> <%= compra.localidad %></p>
+                        <p class="descripcion"><span>Codigo postal: </span> <%= compra.codigopostal %></p>
                         <p class="descripcion"><span>Estado: </span> <%= compra.estadoProducto %></p>
                         
                     </div>

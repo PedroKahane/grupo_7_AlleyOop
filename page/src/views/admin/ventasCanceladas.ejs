@@ -14,8 +14,8 @@
             <% compras.forEach(compra => { %>
                 <% if (compra.estadoProducto == "Cancelado") { %>
                 <article class="articulo_destacado article_cancelado">
-                    <p class="titulo_cancel_finish"> Camiseta: <%= compra.productoId.jugador %> - <%= compra.productoId.equipos.equipo %> </p>
                     <div>
+                        <p class="titulo_cancel_finish"> Camiseta: <%= compra.productoId.jugador %> - <%= compra.productoId.equipos.equipo %>(Cantidad: <%= compra.cantidad %>) </p>
                         <p class="descripcion"><span>Venta total:</span> $<%= compra.PrecioTotal %> </p>
                         <p class="descripcion"><span>Cliente:</span> <%= compra.nombre %> <%= compra.apellido %> </p>
                         <p class="descripcion"><span>Forma de pago:</span> <%= compra.metododepago %></p>
