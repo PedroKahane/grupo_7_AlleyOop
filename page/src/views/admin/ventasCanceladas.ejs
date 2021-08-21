@@ -6,20 +6,19 @@
     <main id="main_tienda">
         <p id="title_admin">ADMINISTRAR PRODUCTOS:</p>
         <div class="a_menu_ventas">
-            <a class="menu_user active_process" href="/admin/ventas"> <p>EN PROCESO </p><i class="fas fa-truck"></i></a>
+            <a class="menu_user status" href="/admin/ventas"> <p>EN PROCESO </p><i class="fas fa-truck"></i></a>
             <a class="menu_user finish" href="/admin/ventasFinalizadas"> <p>FINALIZADOS </p><i class="fas fa-check"></i></a>
-            <a class="menu_user cancel" href="/admin/ventasCanceladas"> <p> CANCELADOS </p><i class="fas fa-times"></i></a>
+            <a class="menu_user cancel active_cancel" href="/admin/ventasCanceladas"> <p> CANCELADOS </p><i class="fas fa-times"></i></a>
         </div>
         <div id="articulos_promocion">
             <% compras.forEach(compra => { %>
                 <% if (compra.estadoProducto == "Confirmado" || compra.estadoProducto == "En proceso de envio") { %>
-                <article class="articulo_destacado">
+                <article class="articulo_destacado article_cancelado">
                     <figure id="figure_ventas">
                         <img class="imagen_promocion" src="/uploads/<%= compra.productoId.imagenFrente %>" alt="">
                     </figure>
                     <div>
-                        <p class="descripcion"><span>Camiseta:</span> <%= compra.productoId.jugador %></p>
-                        <p class="descripcion"><span>equipo:</span><%= compra.productoId.equipos.equipo %> </p>
+                        <p class="descripcion"><span>Camiseta:</span> <%= compra.productoId.jugador %> - <%= compra.productoId.equipos.equipo %> </p>
                         <p class="descripcion"><span>Venta total:</span> $<%= compra.PrecioTotal %> </p>
                         <p class="descripcion"><span>Cliente:</span> <%= compra.nombre %> <%= compra.apellido %> </p>
                         <p class="descripcion"><span>Forma de pago:</span> <%= compra.metododepago %></p>
@@ -28,15 +27,8 @@
                         <p class="descripcion"><span>Codigo postal:</span> <%= compra.codigopostal %></p>
                     </div>
                     <div class="flex_column">
-                        <form action="" class="flex_column">
-                            <select name="estado" id="select">
-                                <option value="Confirmado">Confirmado</option>
-                                <option value="En proceso de envio">En proceso de envio</option>
-                                <option value="Cancelado">Cancelado</option>
-                                <option value="Finalizado">Finalizado</option>
-                            </select>
-                            <button type="submit" id="enviar_estado">Enviar</button>
-                        </form>
+                        <p class="titulo_cancelado">El estado de la ventas es: <span> <%= compra.estadoProducto %> </span></p>
+                        <i class="fas fa-times cruz_cancelada"> </i>
                     </div>
                 </article>
                 <% } %>  

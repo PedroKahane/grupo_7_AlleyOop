@@ -4,3 +4,174 @@
     box-sizing: border-box;
     font-family: 'montserrat',sans-serif;
 }
+#main_tienda{
+    background-color: #FFC100;
+}
+
+#title_admin{
+    font-size: 32px;
+    color: black;
+    text-align: center;
+    font-weight: 600;
+    padding: 15px;
+}
+.articulo_destacado{
+    width: 45%;
+    margin: 20px 2.5%;
+    border-radius: 15px;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:  25px;
+
+}
+#figure_ventas{
+    height: 150px;
+    margin: 0px 10px 10px;
+}
+.imagen_promocion{
+    height: 100%;
+}
+.flex{
+    display: flex;
+}
+.descripcion span, .titulo_cancelado span{
+    font-weight: 700;
+}
+.descripcion{
+    margin-bottom: 5px;
+}
+#enviar_estado{
+    width: 50%;
+    border: none;
+    color: #FFFAFA;
+    background-color: #39b54a;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 16px;
+    margin-top: 8px;
+}
+.flex_column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#articulos_promocion{
+    display: flex;
+    flex-wrap: wrap;
+}
+.a_menu_ventas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu_user{
+    background-color: #FFFAFA;
+    padding: 10px 20px;
+    width: 30vw;
+    font-weight: 600;
+    font-size: 22px;
+    color: #0A0903;
+    text-align: center;
+    text-decoration: none;
+    transition: all 1050ms;
+}
+.active_process{
+    background-color: #4eaefd;
+    color: white;
+}
+.active_cancel{
+    background-color: #d82e2e;
+    color: white;
+}
+.active_finish{
+    background-color: #39b54a;
+    color: white;
+}
+.finish:hover{
+    background-color: #39b54a;
+    color: white;
+}
+.cancel:hover{
+    background-color: #d82e2e;
+    color: white;
+}
+.status:hover{
+    background-color: #4eaefd;
+    color: white;
+}
+.titulo_cancelado{
+    font-size: 22px;
+}
+.cruz_cancelada{
+    font-size: 48px;
+    background-color: #d82e2e;
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    color: whitesmoke;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+#select{
+    width: 140px;
+    border-radius: 10px;
+    border: none;
+}
+.tic_terminado{
+    font-size: 48px;
+    background-color: #39b54a;
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    color: whitesmoke;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width:1000px) {
+    #figure_ventas{
+        margin: 10px 10px 10px 0px;
+    }
+    .articulo_destacado{
+        justify-content: center;
+    }
+}
+@media (max-width:640px){
+    .menu_user{
+        font-size: 14px;
+        width: 33vw;
+    }
+    #figure_ventas{
+        margin: 0px;
+    }
+
+    .titulo_cancelado{
+        font-size: 18px;
+        margin-top: 5px;
+    }
+    .cruz_cancelada, .tic_terminado{
+        margin-top: 5px;
+    }
+}
+@media (max-width:440px){
+    .menu_user p {
+        display: none;
+    }
+    .imagen_promocion{
+        height: auto;
+        width: 100%;
+    }
+    #figure_ventas{
+        display: none;
+    }
+}
