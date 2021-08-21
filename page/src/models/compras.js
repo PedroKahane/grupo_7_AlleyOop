@@ -93,6 +93,17 @@ module.exports = {
         this.write(compras)
         return true;
     },
+    cambioStatus: function (data, id){
+        let compras = this.all();;
+        compras.map(compra => {
+            if(compra.id == id ){
+                compra.estadoProducto = data.estadoProducto
+            }
+            return compra
+        })
+        this.write(compras)
+        return true;
+    },
     ultimoId : function(){
         let compras = this.all();
         return compras[compras.length -1].id

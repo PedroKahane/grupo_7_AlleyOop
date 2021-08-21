@@ -12,13 +12,10 @@
         </div>
         <div id="articulos_promocion">
             <% compras.forEach(compra => { %>
-                <% if (compra.estadoProducto == "Confirmado" || compra.estadoProducto == "En proceso de envio") { %>
+                <% if (compra.estadoProducto == "Finalizado" ) { %>
                 <article class="articulo_destacado article_cancelado">
-                    <figure id="figure_ventas">
-                        <img class="imagen_promocion" src="/uploads/<%= compra.productoId.imagenFrente %>" alt="">
-                    </figure>
+                    <p class="titulo_cancel_finish"> Camiseta: <%= compra.productoId.jugador %> - <%= compra.productoId.equipos.equipo %> </p>
                     <div>
-                        <p class="descripcion"><span>Camiseta:</span> <%= compra.productoId.jugador %> - <%= compra.productoId.equipos.equipo %> </p>
                         <p class="descripcion"><span>Venta total:</span> $<%= compra.PrecioTotal %> </p>
                         <p class="descripcion"><span>Cliente:</span> <%= compra.nombre %> <%= compra.apellido %> </p>
                         <p class="descripcion"><span>Forma de pago:</span> <%= compra.metododepago %></p>
@@ -26,7 +23,7 @@
                         <p class="descripcion"><span>localidad:</span> <%= compra.localidad %></p>
                         <p class="descripcion"><span>Codigo postal:</span> <%= compra.codigopostal %></p>
                     </div>
-                    <div class="flex_column">
+                    <div class="flex_column center">
                         <p class="titulo_cancelado">El estado de la ventas es: <span> <%= compra.estadoProducto %> </span></p>
                         <i class="fas fa-check tic_terminado"> </i>
                     </div>

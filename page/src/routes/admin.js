@@ -11,5 +11,6 @@ router.get("/products" ,userAdmin, controller.products)
 router.get("/ventas" ,userAdmin, controller.ventas)
 router.get("/ventasCanceladas" ,userAdmin, controller.ventasCanceladas)
 router.get("/ventasFinalizadas" ,userAdmin, controller.ventasFinalizadas)
+router.put("/cambiarStatus/:id" ,userAdmin, controller.cambiarStatus)
 
 module.exports = router

@@ -17,7 +17,7 @@
                     <figure id="figure_ventas">
                         <img class="imagen_promocion" src="/uploads/<%= compra.productoId.imagenFrente %>" alt="">
                     </figure>
-                    <div>
+                    <div id="contenedor_descripciones">
                         <p class="descripcion"><span>Camiseta:</span> <%= compra.productoId.jugador %></p>
                         <p class="descripcion"><span>equipo:</span><%= compra.productoId.equipos.equipo %> </p>
                         <p class="descripcion"><span>Venta total:</span> $<%= compra.PrecioTotal %> </p>
@@ -26,12 +26,19 @@
                         <p class="descripcion"><span>Direccion:</span> <%= compra.direccion %></p>
                         <p class="descripcion"><span>localidad:</span> <%= compra.localidad %></p>
                         <p class="descripcion"><span>Codigo postal:</span> <%= compra.codigopostal %></p>
+                        <p class="descripcion"><span>Estado: </span> <%= compra.estadoProducto %></p>
+                        
                     </div>
                     <div class="flex_column">
-                        <form action="" class="flex_column">
-                            <select name="estado" id="select">
-                                <option value="Confirmado">Confirmado</option>
-                                <option value="En proceso de envio">En proceso de envio</option>
+                        <form action="/admin/cambiarStatus/<%= compra.id %>?_method=PUT" method="POST" class="flex_column">
+                            <select name="estadoProducto" id="select">
+                                <% if (compra.estadoProducto == "Confirmado") { %>
+                                    <option value="Confirmado" selected>Confirmado</option>
+                                    <option value="En proceso de envio">En proceso de envio</option>
+                                <% } else if(compra.estadoProducto == "En proceso de envio") { %>
+                                    <option value="Confirmado">Confirmado</option>
+                                    <option value="En proceso de envio" selected>En proceso de envio</option>
+                                <% } %>
                                 <option value="Cancelado">Cancelado</option>
                                 <option value="Finalizado">Finalizado</option>
                             </select>
