@@ -68,7 +68,7 @@ module.exports = {
         return res.render('users/login', {
                 errors: {
                     email:{
-                        msg: 'Las credenciales son inválidas'
+                        msg: 'Las credenciales son Invalidas'
                     },
                 }, styles:"login.css"
         })

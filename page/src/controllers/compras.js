@@ -2,7 +2,7 @@ const user = require("../models/user")
 const comprasModel = require("../models/compras");
 
 
-;
+
 
 module.exports = {
     productCart:(req,res) => {

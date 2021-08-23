@@ -21,9 +21,13 @@
                             <div class="seleccion-talla">
                                 <label for="">Talle: </label>
                                 <select name="talla">
-                                    <% product.talles.forEach(element => { %>
-                                    <option value="<%= element.abreviatura %>"><%= element.abreviatura %> </option>
-                                    <% }) %>
+                                    <% if (Array.isArray(product.talles)) { %>
+                                        <% product.talles.forEach(element => { %>
+                                            <option value="<%= element.abreviatura %>"><%= element.abreviatura %> </option>
+                                            <% }) %>
+                                    <% } else {%>
+                                        <option value="<%= product.talles.abreviatura %>"><%= product.talles.abreviatura %> </option>
+                                    <% } %>
                                 </select>
                             </div>
                             <div class="flex_center">  
