@@ -116,7 +116,7 @@
     "precio": "6000",
     "cantidad": "3",
     "PrecioTotal": 18000,
-    "estadoProducto": "Confirmado",
+    "estadoProducto": "Finalizado",
     "nombre": "Manu",
     "apellido": "Ginobili",
     "email": "manug@hotmail.com",
@@ -129,5 +129,19 @@
     "numerotarjeta": "145896321456978",
     "vencimiento": "2029-01-12",
     "cvv": "$2b$10$PN./WHxK5jZVc7KxfOlwgOyqKiieJu3bnK8k/e6W483p1A888UoWG"
+  },
+  {
+    "id": 7,
+    "productoId": "1",
+    "userId": 4
+  },
+  {
+    "id": 8,
+    "productoId": "2",
+    "userId": 4,
+    "precio": "6000",
+    "cantidad": "6",
+    "PrecioTotal": 36000,
+    "estadoProducto": "paso 1"
   }
 ]
