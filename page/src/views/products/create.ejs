@@ -17,8 +17,8 @@
                 </fieldset>
                 <fieldset>
                     <label for="equipo" class="titulo">Equipo:</label>
-                    <select name="equipo" id="equipo">
-                            <option value="default" selected>Elegí el equipo:</option>
+                    <select name="equipo" id="equipo" required>
+                            <option value="" selected>Elegí el equipo:</option>
                         <% equipos.forEach(equipo => { %>
                             <option value="<%= equipo.id %>"> <%= equipo.equipo %></option>
                         <% }) %>
@@ -26,8 +26,8 @@
                 </fieldset>
                 <fieldset>
                     <label for="colors" class="titulo">Colors:</label>
-                    <select name="colors" id="colors" >
-                        <option value="default" selected>Elegí el color:</option>
+                    <select name="colors" id="colors" required>
+                        <option value="" selected>Elegí el color:</option>
                         <% colors.forEach(color => { %>
                             <option value="<%= color.id %>"><%= color.color %></option>
                         <% }) %>

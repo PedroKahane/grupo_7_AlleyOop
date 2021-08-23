@@ -15,13 +15,13 @@
                 <form action="/user/access" method="post" class="form_login">
                     <input type="text" name="email" id="email" placeholder="Escribi tu correo electronico">
                     <% if (locals.errors && errors.email) { %>
-                        <p class="feedback">
+                        <p class="error_login">
                           <%= errors.email.msg %> 
                         </p>
                       <% } %>
                     <input type="password" name="password" id="password" placeholder="Escribi tu contaseña">
                     <% if (locals.errors && errors.password) { %>
-                        <p class="feedback">
+                        <p class="error_login">
                           <%= errors.password.msg %> 
                         </p>
                       <% } %>

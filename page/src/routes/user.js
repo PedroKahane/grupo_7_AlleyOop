@@ -21,11 +21,13 @@ const storage = multer.diskStorage({
   const validations = [
     body('firstName').notEmpty().withMessage('Tenés que ingresar un nombre'),
     body('lastName').notEmpty().withMessage('Tenés que ingresar un apellido'),
-    body('userName').notEmpty().withMessage('Tenés que ingresar un nombre de usuario'),
+    body('userName').notEmpty().withMessage('Tenés que ingresar un nombre de usuario').bail()
+                    .isLength({min:6, max:12}).withMessage('Debe contener entre 6 y 12 caracteres'),
     body('email').notEmpty().withMessage('Tenés que ingresar un correo electrónico').bail()
                   .isEmail().withMessage('Debes ingresar un formato de correo válido'),
-    body('password').notEmpty().withMessage('Tenés que ingresar una contraseña'),
-    body('avatar').custom((value, { req }) => {
+    body('password').notEmpty().withMessage('Tenés que ingresar una contraseña').bail()
+                    .isLength({min:6, max:12}).withMessage('Debe contener entre 6 y 12 caracteres'),
+    body('image').custom((value, { req }) => {
       let file = req.file;
       let acceptedExtensions = ['.jpg', '.png', '.gif'];
 
@@ -46,12 +48,12 @@ const storage = multer.diskStorage({
   router.get("/login" ,validLoggin, controller.login);
   router.get("/register" ,validLoggin,controller.register);
   router.get("/profile" ,authMiddleware,controller.profile);
-  router.put("/update",authMiddleware,controller.update);
-  router.put("/avatar", [upload.single("image")],controller.avatar);
+  router.put("/update",authMiddleware, controller.update);
+  router.put("/avatar", [upload.single("image")], controller.avatar);
   router.put("/avatarDefault",controller.avatarDefault);
   router.get("/logout", controller.logout);
   router.post("/access",controller.access);
-  router.post("/register", upload.single("avatar"),validations, controller.processRegister);
+  router.post("/register", upload.single("image"),validations, controller.processRegister);
 
 
 
