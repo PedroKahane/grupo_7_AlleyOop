@@ -19,17 +19,17 @@ const upload = multer({storage:dest});
 // Validaciones con express-validator
 const validations = [
     body('precio').notEmpty().withMessage('Tenés que ingresar un Precio').bail()
-                    .isNumeric().withMessage('Deebe ser un numero'),
+                    .isNumeric().withMessage('Deebe ser un número'),
     body('descuento').notEmpty().withMessage('Tenés que ingresar el descuento que tiene el producto').bail()
-                    .isNumeric().withMessage('Deebe ser un numero'),
+                    .isNumeric().withMessage('Deebe ser un número'),
     body('equipo').notEmpty().withMessage('Tenés que ingresar un equipo'),
     body('colors').notEmpty().withMessage('Tenés que ingresar un color de camiseta'),
     body('jugador').notEmpty().withMessage('Tenés que ingresar un nombre de jugador'),
     body('numeroCamiseta').notEmpty().withMessage('Tenés que ingresar el numero de camiseta del jugador').bail()
-                    .isNumeric().withMessage('Deebe ser un numero'),
+                    .isNumeric().withMessage('Debe ser un número'),
     body('frente').custom((value, { req }) => {
       let file = req.files[0];
-      let acceptedExtensions = ['.jpg', '.png', '.gif'];
+      let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
 
       if (!file) {
         throw new Error('Tenés que subir una imagen');
@@ -59,7 +59,7 @@ const validations = [
         return true;
   
       }),
-      body('talles').notEmpty().withMessage('Tenés que ingresar minimo 2 talles').bail()
+      body('talles').notEmpty().withMessage('Tenés que ingresar minimo 1 talle').bail()
   ];
 
 router.get("/tienda", product.tienda);

@@ -77,12 +77,34 @@ module.exports = {
         res.render("users/profile",{styles:"profile.css", user: req.session.userLogged})
     },
     update: (req,res) => {
+         const resultValidation = validationResult(req);
+
+         if (!resultValidation.isEmpty()) {
+            return res.render('users/profile', {
+                styles:"profile.css", 
+                user: req.session.userLogged, 
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            });
+        } 
+        //return res.send(req.body)
         let result = userModel.update(req.body,req.session.userLogged.id)
-        return  res.redirect("/") 
+        return  res.redirect("/user/profile")
     },
     avatar: (req,res) => {
+        const resultValidation = validationResult(req);
+
+        if (!resultValidation.isEmpty()) {
+            return res.render('users/profile', {
+                styles:"profile.css", 
+                user: req.session.userLogged, 
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            });
+        }
+        
         let result = userModel.avatar(req.file,req.session.userLogged.id)
-        return  res.redirect("/") 
+        return  res.redirect("/user/profile") 
     },
     avatarDefault: (req,res) => {
         let result = userModel.avatarDefault(req.session.userLogged.id)
