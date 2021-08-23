@@ -116,7 +116,11 @@
     "precio": "6000",
     "cantidad": "3",
     "PrecioTotal": 18000,
+<<<<<<< HEAD
     "estadoProducto": "Finalizado",
+=======
+    "estadoProducto": "En proceso de envio",
+>>>>>>> e659ea298068d39b5bc0ba357d88aba5a5c5415a
     "nombre": "Manu",
     "apellido": "Ginobili",
     "email": "manug@hotmail.com",

@@ -36,7 +36,8 @@ module.exports = {
         let userToCreate = {
             ...req.body,
             password: bcrypt.hashSync(req.body.password, 10),
-            image: req.file.filename
+            image: req.file.filename,
+            admin: String(req.body.email).includes("@alleyoop") ? true: false
         }
         
         let userCreated = userModel.create(userToCreate);

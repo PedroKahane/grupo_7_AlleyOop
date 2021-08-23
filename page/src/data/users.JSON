@@ -2,6 +2,10 @@
  {
   "id": 1,
   "firstName": "Pedro ",
+<<<<<<< HEAD
+=======
+  "userName": "pedro",
+>>>>>>> e659ea298068d39b5bc0ba357d88aba5a5c5415a
   "lastName": "Kahane",
   "email": "pedrokahane@gmail.com",
   "password": "$2b$10$JsuUaPODhDqXJzgQ/1d4Z.Ohy./knHgjd4Ulk2rBNk1tqgibmGi6i",
@@ -11,6 +15,10 @@
  {
   "id": 2,
   "firstName": "Pedro",
+<<<<<<< HEAD
+=======
+  "userName": "Pedro",
+>>>>>>> e659ea298068d39b5bc0ba357d88aba5a5c5415a
   "lastName": "Kahane",
   "email": "pepekahane@yahoo.com.ar",
   "password": "$2b$10$JsuUaPODhDqXJzgQ/1d4Z.Ohy./knHgjd4Ulk2rBNk1tqgibmGi6i",
@@ -24,6 +32,31 @@
   "firstName": "sebastian",
   "lastName": "salvat",
   "password": "$2b$10$/LvRNfVdtHDA2ZBdtcXhm.YYuDhfCXY0gO/IX9cjdQ.PBdVGmbkZq",
+<<<<<<< HEAD
   "image": "image-1629583304913.jpg"
+=======
+  "image": "image-1629583304913.jpg",
+  "admin": false
+ },
+ {
+  "id": 4,
+  "email": "pedrokahane@alleyoop.com",
+  "userName": "pedro200",
+  "firstName": "Pedro",
+  "lastName": "Kahane",
+  "password": "$2b$10$Gvq9r4UiQiFLMnkpZTXrk.MUzFGLZ7.irrkt33tDv3hZfm02Q1CBK",
+  "image": "avatar-1629584516636.jpg",
+  "admin": true
+ },
+ {
+  "id": 5,
+  "email": "pedrokahane@gmail.com.ar",
+  "userName": "CURRY",
+  "firstName": "pedro",
+  "lastName": "Kahane",
+  "password": "$2b$10$ZHfns5Xd3sxjGu908xkuIOLs4fpxmgGCGzyEnRxDTZfTFtxgPfxoC",
+  "image": "avatar-1629584647967.jpg",
+  "admin": false
+>>>>>>> e659ea298068d39b5bc0ba357d88aba5a5c5415a
  }
 ]
