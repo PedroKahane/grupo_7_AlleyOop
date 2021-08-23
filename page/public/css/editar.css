@@ -98,6 +98,11 @@ textarea{
 .width{
     width: 100%;
 }
+.error{
+    margin-left: 10px;
+    color: rgb(255, 0, 0);
+    font-size: 12px;
+}
 @media (min-width:450px){
     textarea{
         height: unset;

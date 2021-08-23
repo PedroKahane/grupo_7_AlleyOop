@@ -1,6 +1,7 @@
 
 const product = require("../models/product")
 const color = require('../models/color');
+const { validationResult } = require('express-validator');
 const talle = require('../models/talles');
 const equipos = require('../models/equipos');
 const compras = require('../models/compras');
@@ -15,19 +16,28 @@ module.exports = {
         const resultValidation = validationResult(req);
 
         if (!resultValidation.isEmpty()) {
-            return res.render('products/create', {
-                styles:"ventas.css", 
+            return res.render("products/create", {
+                styles:"editar.css",
                 errors: resultValidation.mapped(),
                 oldData: req.body,
-                compras: compras.comprasPorUsuario(req.session.userLogged.id)
+                product:product.one(req.params.id),colors:color.all(),talles:talle.all(),equipos: equipos.all()
             });
         }
-        // return res.send({data: req.body, archivos: req.files})
         let result = product.create(req.body,req.files)
         return result ? res.redirect("/productDetail/"+result.id) : res.send("Error al cargar la información") 
     },
     edit:(req,res) => res.render("products/edit",{styles:"editar.css",product:product.one(req.params.id),colors: color.all(),talles:talle.all(),equipos: equipos.all()}),
     update: (req,res) =>{
+        const resultValidation = validationResult(req);
+
+        if (!resultValidation.isEmpty()) {
+            return res.render( "products/edit", {
+                styles:"editar.css", 
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+                product:product.one(req.params.id),colors: color.all(),talles:talle.all(),equipos: equipos.all()
+            });
+        }
         let idUpdated = req.params.id ? req.params.id : req.body.id
         let result = product.edit(req.body, req.files,idUpdated)
         return result ? res.redirect("/productDetail/"+idUpdated) : res.status(500).send("Error en la carga") 

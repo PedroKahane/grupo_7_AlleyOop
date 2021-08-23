@@ -68,6 +68,7 @@ const model = {
         let imagenDefault = null;
         let imagenFrente = archivos != undefined ? archivos.find(archivo => archivo.fieldname == 'frente') : imagenDefault;
         let imagenEspalda = archivos != undefined ? archivos.find(archivo => archivo.fieldname == 'espalda') : imagenDefault;
+        talles = [data.talles]
         let nuevo = {
             id: productos.length > 0 ? productos[productos.length -1].id + 1: 1,
             precio: data.precio,
@@ -79,7 +80,7 @@ const model = {
             destacado: data.destacado,
             imagenFrente: imagenFrente != null ? imagenFrente.filename : imagenDefault,
             imagenEspalda: imagenEspalda != null ? imagenEspalda.filename : imagenDefault,
-            talles: data.talles.map(talle => parseInt(talle)),
+            talles: Array.isArray(data.talles) ? data.talles.map(talle => parseInt(talle)) : talles,
             descripción: data.descripciones,
         }    
         productos.push(nuevo)

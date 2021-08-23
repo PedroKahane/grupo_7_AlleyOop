@@ -9,11 +9,21 @@
                 <p class="title_edit">Editar camiseta de <%= product.jugador %> :</p>
                 <fieldset>
                     <label for="precio" class="titulo">Precio:</label>
-                    <input type="number" name="precio" id="precio" value="<%= product.precio %>" class="border width">
+                    <input type="number" name="precio" id="precio" value="<%= locals.oldData ? oldData.precio : product.precio  %>"  class="border width">
+                    <% if (locals.errors && errors.precio) { %>
+                        <p class="error"> 
+                            <%= errors.precio.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset>
                     <label for="descuento" class="titulo">Descuento:</label>
-                    <input type="number" name="descuento" id="descuento" value="<%= product.descuento %>" class="border width">
+                    <input type="number" name="descuento" id="descuento"  value="<%= locals.oldData ? oldData.descuento : product.descuento %>" class="border width">
+                    <% if (locals.errors && errors.descuento) { %>
+                        <p class="error"> 
+                            <%= errors.descuento.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset>
                     <label for="equipo" class="titulo">Equipo:</label>
@@ -26,6 +36,11 @@
                             <% } %>
                         <% }) %>
                     </select>
+                    <% if (locals.errors && errors.equipo) { %>
+                        <p class="error"> 
+                            <%= errors.equipo.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset>
                     <label for="colors" class="titulo">Colors:</label>
@@ -38,22 +53,47 @@
                             <% } %>
                         <% }) %>
                     </select>
+                    <% if (locals.errors && errors.colors) { %>
+                        <p class="error"> 
+                            <%= errors.colors.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset>
                     <label for="jugador" class="titulo">Jugador:</label>
-                    <input type="text" name="jugador" id="jugador" value="<%= product.jugador %>" class="border width">
+                    <input type="text" name="jugador" id="jugador" value="<%= locals.oldData ? oldData.jugador : product.jugador %>" class="border width">
+                    <% if (locals.errors && errors.jugador) { %>
+                        <p class="error"> 
+                            <%= errors.jugador.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset>
-                    <label for="numero" class="titulo">Numero de camiseta:</label>
-                    <input type="numbre" name="numero" id="numero" value="<%= product.numeroCamiseta %>" class="border width">
+                    <label for="numeroCamiseta" class="titulo">Numero de camiseta:</label>
+                    <input type="numbre" name="numeroCamiseta" id="numeroCamiseta" value="<%= locals.oldData ? oldData.numero : product.numeroCamiseta %>" class="border width">
+                    <% if (locals.errors && errors.numeroCamiseta) { %>
+                        <p class="error"> 
+                            <%= errors.numeroCamiseta.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset>
                     <label for="frente" class="titulo">Imagen de frente:</label>
                     <input class="margin_radio width" type="file" name="frente" id="frente">
+                    <% if (locals.errors && errors.frente) { %>
+                        <p class="error"> 
+                            <%= errors.frente.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset>
                     <label for="espalda" class="titulo">Imagen de espalda:</label>
                     <input class="margin_radio width" type="file" name="espalda" id="espalda">
+                    <% if (locals.errors && errors.espalda) { %>
+                        <p class="error"> 
+                            <%= errors.espalda.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset>
                     <label for="destacado" class="titulo">Es destacado?</label>
@@ -66,6 +106,11 @@
                             <option value=false selected>false</option>
                         <% } %> 
                     </select>
+                    <% if (locals.errors && errors.talles) { %>
+                        <p class="error"> 
+                            <%= errors.talles.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset >
                     <label for="Talle" class="titulo">Talles disponibles:</label>

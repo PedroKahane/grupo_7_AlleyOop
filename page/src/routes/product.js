@@ -23,13 +23,12 @@ const validations = [
     body('descuento').notEmpty().withMessage('Tenés que ingresar el descuento que tiene el producto').bail()
                     .isNumeric().withMessage('Deebe ser un numero'),
     body('equipo').notEmpty().withMessage('Tenés que ingresar un equipo'),
-    body('colors').notEmpty().withMessage('Tenés que ingresar un equipo'),
+    body('colors').notEmpty().withMessage('Tenés que ingresar un color de camiseta'),
     body('jugador').notEmpty().withMessage('Tenés que ingresar un nombre de jugador'),
-    body('numero').notEmpty().withMessage('Tenés que ingresar el numero de camiseta del jugador').bail()
+    body('numeroCamiseta').notEmpty().withMessage('Tenés que ingresar el numero de camiseta del jugador').bail()
                     .isNumeric().withMessage('Deebe ser un numero'),
-    body('Talle').isLength({min: 2}).withMessage('Tenés que ingresar minimo 2 talles'),
     body('frente').custom((value, { req }) => {
-      let file = req.file;
+      let file = req.files[0];
       let acceptedExtensions = ['.jpg', '.png', '.gif'];
 
       if (!file) {
@@ -45,8 +44,8 @@ const validations = [
 
     }),
     body('espalda').custom((value, { req }) => {
-        let file = req.file;
-        let acceptedExtensions = ['.jpg', '.png', '.gif'];
+        let file = req.files[1];
+        let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
   
         if (!file) {
           throw new Error('Tenés que subir una imagen');
@@ -60,8 +59,7 @@ const validations = [
         return true;
   
       }),
-      body('descripcion1').notEmpty().withMessage('Tenés que ingresar una descripcion'),
-      body('descripcion2').notEmpty().withMessage('Tenés que ingresar una 2da descripcion(Para referencias anda al detalle del producto)'),
+      body('talles').notEmpty().withMessage('Tenés que ingresar minimo 2 talles').bail()
   ];
 
 router.get("/tienda", product.tienda);

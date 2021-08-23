@@ -9,45 +9,93 @@
                 <p class="title_edit">Crear nueva camiseta</p>
                 <fieldset>
                     <label for="precio" class="titulo">Precio:</label>
-                    <input type="number" name="precio" id="precio" value="" class="border width">
+                    <input type="number" name="precio" id="precio" value="<%= locals.oldData ? oldData.precio : null %>" class="border width">
+                    <% if (locals.errors && errors.precio) { %>
+                        <p class="error"> 
+                            <%= errors.precio.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset>
                     <label for="descuento" class="titulo">Descuento:</label>
-                    <input type="number" name="descuento" id="descuento" value="" class="border width">
+                    <input type="number" name="descuento" id="descuento" value="<%= locals.oldData ? oldData.descuento : null %>" class="border width">
+                    <% if (locals.errors && errors.descuento) { %>
+                        <p class="error"> 
+                            <%= errors.descuento.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset>
                     <label for="equipo" class="titulo">Equipo:</label>
-                    <select name="equipo" id="equipo" required>
+                    <select name="equipo" id="equipo" >
+                        <% if (locals.oldData && oldData.equipo) { %>
+                            <option value="<%= oldData.equipo %> " selected>Elegí el equipo:</option>
+                        <% } else { %>
                             <option value="" selected>Elegí el equipo:</option>
+                        <% } %>
                         <% equipos.forEach(equipo => { %>
                             <option value="<%= equipo.id %>"> <%= equipo.equipo %></option>
                         <% }) %>
                     </select>
+                    <% if (locals.errors && errors.equipo) { %>
+                        <p class="error"> 
+                            <%= errors.equipo.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset>
                     <label for="colors" class="titulo">Colors:</label>
-                    <select name="colors" id="colors" required>
-                        <option value="" selected>Elegí el color:</option>
+                    <select name="colors" id="colors" >
+                        <% if (locals.oldData && oldData.colors) { %>
+                            <option value="<%= oldData.colors %> " selected>Elegí el equipo:</option>
+                        <% } else { %>
+                            <option value="" selected>Elegí el equipo:</option>
+                        <% } %>
                         <% colors.forEach(color => { %>
                             <option value="<%= color.id %>"><%= color.color %></option>
                         <% }) %>
                     </select>
+                    <% if (locals.errors && errors.colors) { %>
+                        <p class="error"> 
+                            <%= errors.colors.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset>
                     <label for="jugador" class="titulo">Jugador:</label>
-                    <input type="text" name="jugador" id="jugador" value="" class="border width">
+                    <input type="text" name="jugador" id="jugador" value="<%= locals.oldData ? oldData.jugador : null %>" class="border width">
+                    <% if (locals.errors && errors.jugador) { %>
+                        <p class="error"> 
+                            <%= errors.jugador.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset>
-                    <label for="numero" class="titulo">Numero de camiseta:</label>
-                    <input type="numbre" name="numero" id="numero" value="" class="border width">
+                    <label for="numeroCamiseta" class="titulo">Numero de camiseta:</label>
+                    <input type="number" name="numeroCamiseta" id="numeroCamiseta" value="<%= locals.oldData ? oldData.numeroCamiseta : null %>" class="border width">
+                    <% if (locals.errors && errors.numeroCamiseta) { %>
+                        <p class="error"> 
+                            <%= errors.numeroCamiseta.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset>
                     <label for="frente" class="titulo">Imagen de frente:</label>
                     <input class="margin_radio width" type="file" name="frente" id="frente" >
+                    <% if (locals.errors && errors.frente) { %>
+                        <p class="error"> 
+                            <%= errors.frente.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset>
                     <label for="espalda" class="titulo">Imagen de espalda:</label>
                     <input class="margin_radio width" type="file" name="espalda" id="espalda">
+                    <% if (locals.errors && errors.espalda) { %>
+                        <p class="error"> 
+                            <%= errors.espalda.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset>
                     <label for="destacado" class="titulo">Es destacado?</label>
@@ -66,19 +114,24 @@
                                 </div>
                         <% }) %>
                     </div>
+                    <% if (locals.errors && errors.talles) { %>
+                        <p class="error"> 
+                            <%= errors.talles.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>  
                 <fieldset>
                     <label for="descripcion1" class="titulo">Descripción 1</label>
-                    <textarea type="text" name="descripciones" id="descripcion1" ></textarea>
+                    <textarea type="text" name="descripciones" id="descripcion1" value="<%= locals.oldData ? oldData.descripciones[0] : null %>"></textarea>
                 </fieldset>
                 <fieldset>
                     <label for="descripcion2" class="titulo">Descripción 2</label>
-                    <textarea type="text" name="descripciones" id="descripcion2" ></textarea>
+                    <textarea type="text" name="descripciones" id="descripcion2" value="<%= locals.oldData ? oldData.descripciones[1] : null %>"></textarea>
                 </fieldset>
                 <fieldset id="button_flex">
                     <button type="submit" id="submit">Send</button>
                 </fieldset>
-                </form> 
+            </form> 
         </main>
         <%- include ("../includes/footer") %>
     </div>
