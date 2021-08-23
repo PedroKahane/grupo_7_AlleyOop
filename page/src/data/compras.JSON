@@ -193,5 +193,14 @@
     "numerotarjeta": "5468465654678546854",
     "vencimiento": "2021-12-12",
     "cvv": "$2b$10$zdu7Z3mv67S.rcwJ91iXZeamccwcp8u/Z0KTgQ8mlfHH8sQcuu1PG"
+  },
+  {
+    "id": 10,
+    "productoId": "2",
+    "userId": 1,
+    "precio": "6000",
+    "cantidad": "1",
+    "PrecioTotal": 6000,
+    "estadoProducto": "paso 1"
   }
 ]

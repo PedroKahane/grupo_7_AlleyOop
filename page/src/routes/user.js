@@ -29,7 +29,7 @@ const storage = multer.diskStorage({
                     .isLength({min:6, max:12}).withMessage('Debe contener entre 6 y 12 caracteres'),
     body('image').custom((value, { req }) => {
       let file = req.file;
-      let acceptedExtensions = ['.jpg', '.png', '.gif'];
+      let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
 
       if (!file) {
         throw new Error('Tenés que subir una imagen');
