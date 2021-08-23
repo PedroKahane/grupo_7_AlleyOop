@@ -4,15 +4,9 @@
 <body>
     <%- include ("../includes/header") %>
     <main id="main_tienda">
-        <p id="title_admin">ADMINISTRAR VENTAS:</p>
-        <div class="a_menu_ventas">
-            <a class="menu_user status" href="/admin/ventas"> <p>EN PROCESO </p><i class="fas fa-truck"></i></a>
-            <a class="menu_user finish active_finish" href="/admin/ventasFinalizadas"> <p>FINALIZADOS </p><i class="fas fa-check"></i></a>
-            <a class="menu_user cancel " href="/admin/ventasCanceladas"> <p> CANCELADOS </p><i class="fas fa-times"></i></a>
-        </div>
+        <p id="titulo_Compras">MIS COMPRAS:</p>
         <div id="articulos_promocion">
             <% compras.forEach(compra => { %>
-                <% if (compra.estadoProducto == "Finalizado" ) { %>
                 <article class="articulo_destacado">
                     <section class="flex">
                         <a href="/productDetail/<%= compra.productoId.id %> ">
@@ -26,15 +20,27 @@
                             <p class="descripcion"><span>Cliente: </span> <%= compra.nombre %> <%= compra.apellido %> </p>
                             <p class="descripcion"><span>Forma de pago: </span> <%= compra.metododepago %></p>
                             <p class="descripcion"><span>Direccion: </span> <%= compra.direccion %>-<%= compra.localidad %>(CP: <%= compra.codigopostal %>)</p>
-                            <p class="descripcion"><span>Estado: </span> <%= compra.estadoProducto %></p>        
+                            <div class="flex center">
+                                <p class="descripcion margin_top"><span>Estado: </span> <%= compra.estadoProducto %></p>
+                            <% if (compra.estadoProducto == "Finalizado") { %>
+                                <i class="fas fa-check tic_compras"> </i>
+                            <% } else if(compra.estadoProducto == "Cancelado") { %>
+                                <i class="fas fa-times cancel_compras"> </i>
+                            <% } else if(compra.estadoProducto == "Confirmado") { %>
+                                <i class="far fa-calendar-check confirmado_compras"></i>
+                            <% } else if(compra.estadoProducto == "En proceso de envio") { %>
+                                <i class="fas fa-truck envio_compras"></i>
+                            <% } %>
+                            </div>
                         </div>
                     </section>
-                    <div class="flex_column center">
-                        <p class="titulo_cancelado">El estado de la ventas es: <span> <%= compra.estadoProducto %> </span></p>
-                        <i class="fas fa-check tic_terminado"> </i>
+                    <div class="flex_column botones_compras">
+                        <a class="boton_compras" href="/productDetail/<%= compra.productoId.id %>  ">VER EL PRODUCTO</a>
+                        <form action="/compras/agregarCarrito/<%= compra.productoId.id %>" id="formulario_carrito" method="POST">
+                            <button type="submit" class="boton_compras">VOLVER A COMPRAR</button>
+                        </form> 
                     </div>
-                </article>
-                <% } %>  
+                </article> 
             <% }) %>
         </div>
     </main>

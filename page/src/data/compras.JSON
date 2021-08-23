@@ -50,7 +50,7 @@
     "precio": "5000",
     "cantidad": "3",
     "PrecioTotal": 15000,
-    "estadoProducto": "Cancelado",
+    "estadoProducto": "En proceso de envio",
     "nombre": "Juan",
     "apellido": "perex",
     "email": "pepe@hotmail.com",
@@ -116,7 +116,11 @@
     "precio": "6000",
     "cantidad": "3",
     "PrecioTotal": 18000,
+<<<<<<< HEAD
     "estadoProducto": "En proceso de envio",
+=======
+    "estadoProducto": "Finalizado",
+>>>>>>> 050322a3eaf5d01a73814de1ba6d3e910844b232
     "nombre": "Manu",
     "apellido": "Ginobili",
     "email": "manug@hotmail.com",
@@ -129,6 +133,7 @@
     "numerotarjeta": "145896321456978",
     "vencimiento": "2029-01-12",
     "cvv": "$2b$10$PN./WHxK5jZVc7KxfOlwgOyqKiieJu3bnK8k/e6W483p1A888UoWG"
+<<<<<<< HEAD
   },
   {
     "id": 7,
@@ -146,5 +151,7 @@
     "localidad": "buenos aires",
     "provincia": "bsas",
     "codigopostal": "1641"
+=======
+>>>>>>> 050322a3eaf5d01a73814de1ba6d3e910844b232
   }
 ]

@@ -3,12 +3,14 @@ const product = require("../models/product")
 const color = require('../models/color');
 const talle = require('../models/talles');
 const equipos = require('../models/equipos');
+const compras = require('../models/compras');
 const { filterColors, filterByColors } = require("../models/product");
 
 module.exports = {
     tienda:(req,res) => res.render("products/tienda", {styles:"tienda.css", products: product.allWithExtra()}),
     product:(req,res) => res.render("products/productDetail",{styles:"productDetail.css", product: product.oneWithExtra(req.params.id)}),
     create: (req,res) => res.render("products/create",{styles:"editar.css",product:product.one(req.params.id),colors:color.all(),talles:talle.all(),equipos: equipos.all()}),
+    misCompras: (req,res) => res.render("products/misCompras",{styles:"ventas.css", compras: compras.comprasPorUsuario(req.session.userLogged.id) }),
     save: (req,res) => {
         // return res.send({data: req.body, archivos: req.files})
         let result = product.create(req.body,req.files)

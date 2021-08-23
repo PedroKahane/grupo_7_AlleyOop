@@ -4,6 +4,7 @@ const product = require("../controllers/product");
 const multer = require('multer');
 const path = require('path')
 const userAdmin = require("../middlewares/userAdmin")
+const authMiddleware = require("../middlewares/authMiddleware")
 let dest = multer.diskStorage({
     destination: function (req, file, cb) {
         let extension = path.extname(file.originalname);
@@ -21,6 +22,7 @@ router.get("/filter", product.colors);
 router.get("/create",userAdmin, product.create);
 router.get("/productDetail/:id", product.product);
 router.get("/edit/:id",userAdmin, product.edit);
+router.get("/misCompras",authMiddleware, product.misCompras);
 
 
 router.post("/save", [upload.any()],product.save);

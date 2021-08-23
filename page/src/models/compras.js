@@ -107,5 +107,9 @@ module.exports = {
     ultimoId : function(){
         let compras = this.all();
         return compras[compras.length -1].id
+    },
+    comprasPorUsuario: function(id) {
+        let compras = this.allWithExtra()
+        return compras.filter(compra => compra.userId.id == id)
     }
 }
