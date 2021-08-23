@@ -16,60 +16,87 @@
                 </fieldset>
                 <fieldset class="contenedor-item">
                     <label class="titulo-input" for="nombre">Nombre*</label>
-                    <input class="caja" type="text" name="nombre" id="nombre" required>
+                    <input class="caja" type="text" name="nombre" id="nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
+                    <% if (locals.errors && errors.nombre) { %>
+                        <p class="error"> 
+                            <%= errors.nombre.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset class="contenedor-item">
                     <label class="titulo-input" for="apellido">Apellido*</label>
-                    <input class="caja" type="text" name="apellido" id="apellido" required>
+                    <input class="caja" type="text" name="apellido" id="apellido" value="<%= locals.oldData ? oldData.apellido : null %>">
+                    <% if (locals.errors && errors.apellido) { %>
+                        <p class="error"> 
+                            <%= errors.apellido.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset class="contenedor-item">
                     <label class="titulo-input"for="email">Dirección de correo electrónico*</label>
-                    <input class="caja" placeholder="p. ej. jordan@alleyoop.com" type="email" name="email" id="email" required>
+                    <input class="caja" placeholder="p. ej. jordan@alleyoop.com" name="email" id="email" value="<%= locals.oldData ? oldData.email : null %>">
+                    <% if (locals.errors && errors.email) { %>
+                        <p class="error"> 
+                            <%= errors.email.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset class="contenedor-item">
                     <label class="titulo-input"for="telefono">Teléfono*</label>
-                    <input class="caja" type="tel" name="telefono" id="telefono" required>
+                    <input class="caja" type="tel" name="telefono" id="telefono" value="<%= locals.oldData ? oldData.telefono : null %>">
+                    <% if (locals.errors && errors.telefono) { %>
+                        <p class="error"> 
+                            <%= errors.telefono.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset class="contenedor-item">
                     <label class="titulo-input"for="direccion">Dirección de envío*</label>
-                    <input class="caja" type="text" name="direccion" id="direccion" placeholder="p. ej. Calle Scottie Pippen 1996" required>
+                    <input class="caja" type="text" name="direccion" id="direccion" placeholder="p. ej. Calle Scottie Pippen 1996" value="<%= locals.oldData ? oldData.direccion : null %>">
+                    <% if (locals.errors && errors.direccion) { %>
+                        <p class="error"> 
+                            <%= errors.direccion.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset class="contenedor-item">
                     <label class="titulo-input" for="localidad">Localidad*</label>
-                    <input class="caja" type="text" name="localidad" id="localidad" required>
+                    <input class="caja" type="text" name="localidad" id="localidad" value="<%= locals.oldData ? oldData.localidad : null %>">
+                    <% if (locals.errors && errors.localidad) { %>
+                        <p class="error"> 
+                            <%= errors.localidad.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset class="contenedor-item">
                     <label class="titulo-input" for="provincia">Provincia*</label>
-                    <select class="caja" name="provincia" id="provincia" required>
+                    <select class="caja" name="provincia" id="provincia">
                         <option value="" selected>Elegí tu provincia</option>
-                        <option value="bsas">Provincia de Buenos Aires</option>
-                        <option value="cat">Provincia de Catamarca</option>
-                        <option value="cor">Provincia de Córdoba</option>
-                        <option value="Ctes">Provincia de Corrientes</option>
-                        <option value="er">Provincia de Entre Ríos</option>
-                        <option value="for">Provincia de Formosa</option>
-                        <option value="jj">Provincia de Jujuy</option>
-                        <option value="pam">Provincia de La Pampa</option>
-                        <option value="rio">Provincia de La Rioja</option>
-                        <option value="men">Provincia de Mendoza</option>
-                        <option value="mis">Provincia de Misiones</option>
-                        <option value="neu">Provincia de Neuquén</option>
-                        <option value="rn">Provincia de Río Negro</option>
-                        <option value="sal">Provincia de Salta</option>
-                        <option value="sj">Provincia de San Juan</option>
-                        <option value="sl">Provincia de San Luis</option>
-                        <option value="sc">Provincia de Santa Cruz</option>
-                        <option value="sf">Provincia de Santa Fe</option>
-                        <option value="sde">Provincia de Santiago del Estero</option>
-                        <option value="tdf">Provincia de Tierra del Fuego, Antártida e islas del Atlántico Sur</option>
-                        <option value="tuc">Provincia de Tucumán</option>
-                        <option value="cha">Provincia del Chaco</option>
-                        <option value="chu">Provincia del Chubut</option>
+                        <% 
+                            let provincias = ['Buenos Aires', 'Corrientes', 'Córdoba','Catamarca', 'Entre Ríos', 'Formosa', 'Jujuy', 'La Pampa', 'La Rioja', 'Mendoza', 'Misiones', 'Neuquén', 'Río Negro', 'Salta', 'San Juan', 'San Luis', 'Santa Cruz', 'Santa Fé', 'Santiago del Estero', 'Tierra del Fuego, Antártida e islas del Atlántico Sur', 'Tucumán', 'Chaco', 'Chubut' ];
+                        %> 
+                        <% for (const oneProvincia of provincias) { %>
+                            <option
+                                value="<%= oneProvincia %>"
+                                <%= locals.oldData && (oneProvincia === oldData.provincia) ? 'selected' : null %>
+                            > <%= oneProvincia %> 
+                            </option>
+                            <% } %>
                     </select>
+                    <% if (locals.errors && errors.provincia) { %>
+                        <p class="error"> 
+                            <%= errors.provincia.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset class="contenedor-item">
                     <label class="titulo-input" for="codigopostal">Código Postal*</label>
-                    <input class="caja" type="text" name="codigopostal" id="codigopostal" required>
+                    <input class="caja" type="text" name="codigopostal" id="codigopostal" value="<%= locals.oldData ? oldData.codigopostal : null %>">
+                    <% if (locals.errors && errors.codigopostal) { %>
+                        <p class="error"> 
+                            <%= errors.codigopostal.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset class="contenedor-item">
                     <input type="hidden" name="id" value="<%= compras.id %> ">

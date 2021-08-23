@@ -15,26 +15,52 @@
                 </fieldset>
                 <fieldset class="contenedor-item-pago">
                     <legend class="titulo-input">Pagar con:</legend>
+                    <div class= "flex_column">
+                    <div class= "flex">
                         <div>
                             <input type="radio" name="metododepago" value="credito" id="credito">
                             <label class= "titulo-input" for="credito">Crédito</label>
+                        
                         </div>
                         <div>
                             <input type="radio" name="metododepago" value="debito" id="debito">
                             <label class= "titulo-input" for="debito">Débito</label>
                         </div>
+                    </div>
+                    <% if (locals.errors && errors.metododepago) { %>
+                        <p class="error"> 
+                            <%= errors.metododepago.msg %> 
+                        </p>
+                    <% } %>
+                </div>
+                        
                 </fieldset>
                 <fieldset class="contenedor-item">
                     <label class="titulo-input" for="numerotarjeta">Numero de tarjeta</label>
                     <input class="caja" type="number" placeholder="xxxx xxxx xxxx xxxx" name="numerotarjeta" id="numerotarjeta">
+                    <% if (locals.errors && errors.numerotarjeta) { %>
+                        <p class="error"> 
+                            <%= errors.numerotarjeta.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset class="contenedor-item">
                     <label class="titulo-input" for="vencimiento">Fecha de vencimiento*</label>
                     <input class="caja" type="date" min="2021-08-01" max="2031-08-01" name="vencimiento" id="vencimiento">
+                    <% if (locals.errors && errors.vencimiento) { %>
+                        <p class="error"> 
+                            <%= errors.vencimiento.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <fieldset class="contenedor-item">
                     <label class="titulo-input"for="cvv">CVV (3 digitos)</label>
                     <input class="caja" placeholder="xxx" type="password" name="cvv" id="cvv">
+                    <% if (locals.errors && errors.cvv) { %>
+                        <p class="error"> 
+                            <%= errors.cvv.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
                 <div class="resumen">
                     <p class="titulo-input">Resumen del pedido</p>

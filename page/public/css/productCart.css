@@ -261,7 +261,23 @@ p.subtotal {
     align-items: baseline;
     align-content: space-between;
 }
+.error {
+    color: rgb(255, 0, 0);
+    font-size: 12px;
+}
 
+.flex {
+    display: flex;
+    justify-content: center;
+}
+.flex div {
+    margin: 0px 40px;
+}
+.flex_column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
 @media (min-width: 361px) {
     #contenedor-form{
         width: 95vw;
