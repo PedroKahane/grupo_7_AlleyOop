@@ -116,11 +116,7 @@
     "precio": "6000",
     "cantidad": "3",
     "PrecioTotal": 18000,
-<<<<<<< HEAD
-    "estadoProducto": "Finalizado",
-=======
     "estadoProducto": "En proceso de envio",
->>>>>>> e659ea298068d39b5bc0ba357d88aba5a5c5415a
     "nombre": "Manu",
     "apellido": "Ginobili",
     "email": "manug@hotmail.com",
@@ -137,15 +133,18 @@
   {
     "id": 7,
     "productoId": "1",
-    "userId": 4
-  },
-  {
-    "id": 8,
-    "productoId": "2",
-    "userId": 4,
-    "precio": "6000",
-    "cantidad": "6",
-    "PrecioTotal": 36000,
-    "estadoProducto": "paso 1"
+    "userId": 3,
+    "precio": "4000",
+    "cantidad": "3",
+    "PrecioTotal": 12000,
+    "estadoProducto": "paso 2",
+    "nombre": "sebastian",
+    "apellido": "salvat",
+    "email": "salvatsebastian41@gmail.com",
+    "telefono": "1560555003",
+    "direccion": "urquiza",
+    "localidad": "buenos aires",
+    "provincia": "bsas",
+    "codigopostal": "1641"
   }
 ]

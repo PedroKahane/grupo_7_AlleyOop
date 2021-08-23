@@ -146,7 +146,12 @@
     flex-direction: column;
     width: 50%;
 }
-
+.error_login {
+    color: rgb(255, 0, 0);
+    font-size: 12px;
+    align-self: self-start;
+    margin-left: 20px;
+}
 
 @media (max-width:450px) {
     .login {
