@@ -4,7 +4,7 @@
 <body>
     <%- include ("../includes/header") %>
     <main id="main_tienda">
-        <p id="title_admin">ADMINISTRAR PRODUCTOS:</p>
+        <p id="title_admin">ADMINISTRAR VENTAS:</p>
         <div class="a_menu_ventas">
             <a class="menu_user status" href="/admin/ventas"> <p>EN PROCESO </p><i class="fas fa-truck"></i></a>
             <a class="menu_user finish" href="/admin/ventasFinalizadas"> <p>FINALIZADOS </p><i class="fas fa-check"></i></a>
@@ -13,21 +13,28 @@
         <div id="articulos_promocion">
             <% compras.forEach(compra => { %>
                 <% if (compra.estadoProducto == "Cancelado") { %>
-                <article class="articulo_destacado article_cancelado">
-                    <div>
-                        <p class="titulo_cancel_finish"> Camiseta: <%= compra.productoId.jugador %> - <%= compra.productoId.equipos.equipo %>(Cantidad: <%= compra.cantidad %>) </p>
-                        <p class="descripcion"><span>Venta total:</span> $<%= compra.PrecioTotal %> </p>
-                        <p class="descripcion"><span>Cliente:</span> <%= compra.nombre %> <%= compra.apellido %> </p>
-                        <p class="descripcion"><span>Forma de pago:</span> <%= compra.metododepago %></p>
-                        <p class="descripcion"><span>Direccion:</span> <%= compra.direccion %></p>
-                        <p class="descripcion"><span>localidad:</span> <%= compra.localidad %></p>
-                        <p class="descripcion"><span>Codigo postal:</span> <%= compra.codigopostal %></p>
-                    </div>
-                    <div class="flex_column center">
-                        <p class="titulo_cancelado">El estado de la ventas es: <span> <%= compra.estadoProducto %> </span></p>
-                        <i class="fas fa-times cruz_cancelada"> </i>
-                    </div>
-                </article>
+                    <article class="articulo_destacado">
+                        <section class="flex">
+                            <a href="/productDetail/<%= compra.productoId.id %> ">
+                                <figure id="figure_ventas">
+                                    <img class="imagen_promocion" src="/uploads/<%= compra.productoId.imagenFrente %>" alt="">
+                                </figure>
+                            </a>
+                            <div id="contenedor_descripciones">
+                                <p class="descripcion"><span>Camiseta: </span> <%= compra.productoId.jugador %>-<%= compra.productoId.equipos.equipo %></p>
+                                <p class="descripcion"><span>Precio: </span> $<%= compra.PrecioTotal %>(Cant. de camisetas: <%= compra.cantidad %>) </p>
+                                <p class="descripcion"><span>Cliente: </span> <%= compra.nombre %> <%= compra.apellido %> </p>
+                                <p class="descripcion"><span>Forma de pago: </span> <%= compra.metododepago %></p>
+                                <p class="descripcion"><span>Direccion: </span> <%= compra.direccion %>-<%= compra.localidad %>(CP: <%= compra.codigopostal %>)</p>
+                                <p class="descripcion"><span>Estado: </span> <%= compra.estadoProducto %></p>
+                                
+                            </div>
+                        </section>
+                        <div class="flex_column center">
+                            <p class="titulo_cancelado">El estado de la ventas es: <span> <%= compra.estadoProducto %> </span></p>
+                            <i class="fas fa-times cruz_cancelada"> </i>
+                        </div>
+                    </article>
                 <% } %>  
             <% }) %>
         </div>

@@ -50,7 +50,7 @@
     "precio": "5000",
     "cantidad": "3",
     "PrecioTotal": 15000,
-    "estadoProducto": "Cancelado",
+    "estadoProducto": "En proceso de envio",
     "nombre": "Juan",
     "apellido": "perex",
     "email": "pepe@hotmail.com",

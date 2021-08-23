@@ -15,6 +15,9 @@
             <% if (locals.userLogged && locals.userLogged.admin) { %>
                 <a href="/admin/admin">Administrar</a>
             <% } %> 
+            <% if (locals.isLogged) { %>
+                <a href="/misCompras">Mis compras</a>
+            <% } %> 
         </section>
         <section id="icon_header">
             <% if (locals.isLogged) { %>
