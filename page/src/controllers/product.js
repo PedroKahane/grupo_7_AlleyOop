@@ -12,6 +12,16 @@ module.exports = {
     create: (req,res) => res.render("products/create",{styles:"editar.css",product:product.one(req.params.id),colors:color.all(),talles:talle.all(),equipos: equipos.all()}),
     misCompras: (req,res) => res.render("products/misCompras",{styles:"ventas.css", compras: compras.comprasPorUsuario(req.session.userLogged.id) }),
     save: (req,res) => {
+        const resultValidation = validationResult(req);
+
+        if (!resultValidation.isEmpty()) {
+            return res.render('products/create', {
+                styles:"ventas.css", 
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+                compras: compras.comprasPorUsuario(req.session.userLogged.id)
+            });
+        }
         // return res.send({data: req.body, archivos: req.files})
         let result = product.create(req.body,req.files)
         return result ? res.redirect("/productDetail/"+result.id) : res.send("Error al cargar la información") 
