@@ -21,6 +21,11 @@
                             <label for="">Cambiar imagen:</label>
                             <input type="file" name="image" id="image" class="border width">
                             <input type="hidden">
+                            <% if (locals.errors && errors.image) { %>
+                                <p class="error"> 
+                                    <%= errors.image.msg %>
+                                </p>
+                            <% } %>
                         </fieldset>
                         <button id="send_foto" type="submit">Save</button>
                     </form>
@@ -31,15 +36,30 @@
                 <section class="formularios">
                     <fieldset>
                         <label for="firstName" class="titulo">Nombre:</label>
-                        <input type="text" name="firstName" id="firstName" value="<%= user.firstName %>" class="border width">
+                        <input type="text" name="firstName" id="firstName" value="<%= locals.oldData ? oldData.firstName : user.firstName %>" class="border width">
+                        <% if (locals.errors && errors.firstName) { %>
+                            <p class="error"> 
+                                <%= errors.firstName.msg %> 
+                            </p>
+                        <% } %>
                     </fieldset>
                     <fieldset>
                         <label for="lastName" class="titulo">Apellido:</label>
-                        <input type="text" name="lastName" id="lastName" value="<%= user.lastName %>" class="border width">
+                        <input type="text" name="lastName" id="lastName" value="<%= locals.oldData ? oldData.lastName : user.lastName %>" class="border width">
+                        <% if (locals.errors && errors.lastName) { %>
+                            <p class="error"> 
+                                <%= errors.lastName.msg %> 
+                            </p>
+                        <% } %>
                     </fieldset>
                     <fieldset>
                         <label for="email" class="titulo">Correo:</label>
-                        <input type="text" name="email" id="email" value="<%= user.email %>" class="border width">
+                        <input type="text" name="email" id="email" value="<%= locals.oldData ? oldData.email : user.email %>" class="border width">
+                        <% if (locals.errors && errors.email) { %>
+                            <p class="error"> 
+                                <%= errors.email.msg %> 
+                            </p>
+                        <% } %>
                     </fieldset>
                     <fieldset id="button_flex">
                         <button type="submit" id="submit">Send</button>

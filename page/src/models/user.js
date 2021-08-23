@@ -22,6 +22,7 @@ module.exports = {
         user.firstName = data.firstName,
         user.lastName = data.lastName
         user.email = data.email;
+        //user.password = bcrypt.hashSync(data.password, 10);
         return user
       }
       return user

@@ -202,5 +202,14 @@
     "cantidad": "1",
     "PrecioTotal": 6000,
     "estadoProducto": "paso 1"
+  },
+  {
+    "id": 11,
+    "productoId": "1",
+    "userId": 3,
+    "precio": "4000",
+    "cantidad": "1",
+    "PrecioTotal": 4000,
+    "estadoProducto": "paso 1"
   }
 ]

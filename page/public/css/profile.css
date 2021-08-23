@@ -45,7 +45,7 @@ label{
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 5px;
-    width: 80px;
+    width: 200px;
     margin-right: 10px;
 
 }
@@ -196,6 +196,11 @@ form{
 }
 .flex{
     display: flex;
+}
+.error {
+    margin-left: 20px;
+    color: rgb(255, 0, 0);
+    font-size: 12px;
 }
 @media (max-width: 1400px) {
     .formularios{
