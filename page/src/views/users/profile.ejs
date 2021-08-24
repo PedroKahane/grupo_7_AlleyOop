@@ -78,7 +78,15 @@
                             </p>
                         <% } %>
                     </fieldset>
-                    
+                    <fieldset>
+                        <label for="repeatPasword" class="titulo">Cambiar contraseña:</label>
+                        <input type="password" name="repeatPasword" id="repeatPasword" value="" class="border width">
+                        <% if (errors.repeatPasword) { %>
+                            <p class="error"> 
+                                <%= errors.repeatPasword.msg %> 
+                            </p>
+                        <% } %>
+                    </fieldset>
                     <fieldset id="button_flex" class="submit_fieldset">
                         <button type="submit" id="submit">Send</button>
                     </fieldset>

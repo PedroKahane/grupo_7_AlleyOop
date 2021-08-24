@@ -101,9 +101,18 @@ module.exports = {
                errors: resultValidation.mapped(),
            });
        } 
+       if(req.body.password != req.body.repeatPasword){
+        return res.render('users/profile', {
+            styles:"profile.css", 
+            user: req.session.userLogged, 
+            errors: {
+                repeatPasword: 'Las contraseñas no coinciden'
+            },
+        });
+    }
        //return res.send(req.body)
-       let result = userModel.forgotPassword(req.body,req.session.userLogged.id)
-       return  res.redirect("/")
+       //let result = userModel.forgotPassword(req.body,req.session.userLogged.id)
+       //return  res.redirect("/")
    },
     avatar: (req,res) => {
         const resultValidation = validationResult(req);
