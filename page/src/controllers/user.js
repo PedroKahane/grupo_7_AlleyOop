@@ -89,7 +89,7 @@ module.exports = {
         } 
         //return res.send(req.body)
         let result = userModel.update(req.body,req.session.userLogged.id)
-        return  res.redirect("/user/profile")
+        return  res.redirect("/")
     },
     forgotPassword: (req,res) => {
         const resultValidation = validationResult(req);
@@ -99,12 +99,11 @@ module.exports = {
                styles:"profile.css", 
                user: req.session.userLogged, 
                errors: resultValidation.mapped(),
-               oldData: req.body
            });
        } 
        //return res.send(req.body)
        let result = userModel.forgotPassword(req.body,req.session.userLogged.id)
-       return  res.redirect("/user/profile")
+       return  res.redirect("/")
    },
     avatar: (req,res) => {
         const resultValidation = validationResult(req);

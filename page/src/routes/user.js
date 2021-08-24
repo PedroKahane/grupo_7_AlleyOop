@@ -70,13 +70,14 @@ const storage = multer.diskStorage({
     body('password').notEmpty().withMessage('Tenés que ingresar una contraseña').bail()
     .isLength({min:6, max:12}).withMessage('Debe contener entre 6 y 12 caracteres')
 
+
   ];
   router.get("/login" ,validLoggin, controller.login);
   router.get("/register" ,validLoggin,controller.register);
   router.get("/profile" ,authMiddleware, controller.profile);
   router.put("/update",[authMiddleware,validacionesProfile], controller.update);
   router.put("/avatar", [upload.single("image")],validacionesAvatar, controller.avatar);
-  router.put("/forgotPasswordd", [authMiddleware, validationsPassword], controller.forgotPassword)
+  router.put("/forgotPassword", [authMiddleware, validationsPassword], controller.forgotPassword)
   router.put("/avatarDefault",controller.avatarDefault);
   router.get("/logout", controller.logout);
   router.post("/access",controller.access);
