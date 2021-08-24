@@ -50,7 +50,7 @@
     "precio": "5000",
     "cantidad": "3",
     "PrecioTotal": 15000,
-    "estadoProducto": "En proceso de envio",
+    "estadoProducto": "Cancelado",
     "nombre": "Juan",
     "apellido": "perex",
     "email": "pepe@hotmail.com",
@@ -210,6 +210,37 @@
     "precio": "4000",
     "cantidad": "1",
     "PrecioTotal": 4000,
+    "estadoProducto": "paso 1"
+  },
+  {
+    "id": 12,
+    "productoId": "1",
+    "userId": 1,
+    "precio": "4000",
+    "cantidad": "3",
+    "PrecioTotal": 12000,
+    "estadoProducto": "En proceso de envio",
+    "nombre": "sebastian",
+    "apellido": "salvat",
+    "email": "salvatsebastian41@gmail.com",
+    "telefono": "1560555003",
+    "direccion": "urquiza123",
+    "localidad": "buenos aires",
+    "provincia": "Buenos Aires",
+    "codigopostal": "1641",
+    "metododepago": "credito",
+    "numerotarjeta": "1111111111111111",
+    "vencimiento": "2021-08-07",
+    "cvv": "$2b$10$iv3wG7KmDL9YVIuGbnTSuuavja9fPBwSVPqCDkYAIj2HNygeoRnHO",
+    "newsletter": "on"
+  },
+  {
+    "id": 13,
+    "productoId": "7",
+    "userId": 1,
+    "precio": "5000",
+    "cantidad": "1",
+    "PrecioTotal": 5000,
     "estadoProducto": "paso 1"
   }
 ]
