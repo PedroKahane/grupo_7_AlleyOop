@@ -61,7 +61,24 @@
                             </p>
                         <% } %>
                     </fieldset>
-                    <fieldset id="button_flex">
+                    <fieldset id="button_flex" class="submit_fieldset">
+                        <button type="submit" id="submit">Send</button>
+                    </fieldset>
+                </section>
+            </form>
+            <form  action="/user/update?_method=PUT" method="POST">
+                <p class="title_img">Editar tu contraseña:</p>
+                <section class="formularios">
+                    <fieldset>
+                        <label for="password" class="titulo">Cambiar contraseña:</label>
+                        <input type="password" name="password" id="password" value="" class="border width">
+                        <% if (locals.errors && errors.password) { %>
+                            <p class="error"> 
+                                <%= errors.password.msg %> 
+                            </p>
+                        <% } %>
+                    </fieldset>
+                    <fieldset id="button_flex" class="submit_fieldset">
                         <button type="submit" id="submit">Send</button>
                     </fieldset>
                 </section>

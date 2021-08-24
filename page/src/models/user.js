@@ -29,6 +29,17 @@ module.exports = {
     });
     this.write(users)
   },
+  forgotPassword:function(data,id){
+    let users = this.all();
+    users.map(user => {
+      if(user.id == id){
+        user.password = bcrypt.hashSync(data.password, 10);
+        return user
+      }
+      return user
+    });
+    this.write(users)
+  },
   avatar:function(file,id){
     let users = this.all();
     let updated = this.one(id)

@@ -21,13 +21,38 @@ const storage = multer.diskStorage({
   const validations = [
     body('firstName').notEmpty().withMessage('Tenés que ingresar un nombre'),
     body('lastName').notEmpty().withMessage('Tenés que ingresar un apellido'),
-    body('userName').notEmpty().withMessage('Tenés que ingresar un nombre de usuario'),
+    body('userName').notEmpty().withMessage('Tenés que ingresar un nombre de usuario').bail()
+                    .isLength({min:6, max:12}).withMessage('Debe contener entre 6 y 12 caracteres'),
     body('email').notEmpty().withMessage('Tenés que ingresar un correo electrónico').bail()
                   .isEmail().withMessage('Debes ingresar un formato de correo válido'),
-    body('password').notEmpty().withMessage('Tenés que ingresar una contraseña'),
-    body('avatar').custom((value, { req }) => {
+    body('password').notEmpty().withMessage('Tenés que ingresar una contraseña').bail()
+                    .isLength({min:6, max:12}).withMessage('Debe contener entre 6 y 12 caracteres'),
+    body('image').custom((value, { req }) => {
       let file = req.file;
-      let acceptedExtensions = ['.jpg', '.png', '.gif'];
+      let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
+      if (!file) {
+        throw new Error('Tenés que subir una imagen');
+      } else {
+        let fileExtension = path.extname(file.originalname);
+        if (!acceptedExtensions.includes(fileExtension)) {
+          throw new Error(`Las extensiones permitidas son ${acceptedExtensions.join(', ')}`);
+        }
+      }
+      return true;
+    })
+  ];
+  const validacionesProfile = [
+    body('firstName').notEmpty().withMessage('Tenés que ingresar un nombre'),
+    body('lastName').notEmpty().withMessage('Tenés que ingresar un apellido'),
+    body('email').notEmpty().withMessage('Tenés que ingresar un correo electrónico').bail()
+                  .isEmail().withMessage('Debes ingresar un formato de correo válido'),
+
+  ];
+
+  const validacionesAvatar = [
+    body('image').custom((value, { req }) => {
+      let file = req.file;
+      let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
 
       if (!file) {
         throw new Error('Tenés que subir una imagen');
@@ -37,17 +62,21 @@ const storage = multer.diskStorage({
           throw new Error(`Las extensiones permitidas son ${acceptedExtensions.join(', ')}`);
         }
       }
-
       return true;
-
     })
   ];
-  
+
+  const validationsPassword = [
+    body('password').notEmpty().withMessage('Tenés que ingresar una contraseña').bail()
+    .isLength({min:6, max:12}).withMessage('Debe contener entre 6 y 12 caracteres')
+
+  ];
   router.get("/login" ,validLoggin, controller.login);
   router.get("/register" ,validLoggin,controller.register);
-  router.get("/profile" ,authMiddleware,controller.profile);
-  router.put("/update",authMiddleware,controller.update);
-  router.put("/avatar", [upload.single("image")],controller.avatar);
+  router.get("/profile" ,authMiddleware, controller.profile);
+  router.put("/update",[authMiddleware,validacionesProfile], controller.update);
+  router.put("/avatar", [upload.single("image")],validacionesAvatar, controller.avatar);
+  router.put("/forgotPasswordd", [authMiddleware, validationsPassword], controller.forgotPassword)
   router.put("/avatarDefault",controller.avatarDefault);
   router.get("/logout", controller.logout);
   router.post("/access",controller.access);

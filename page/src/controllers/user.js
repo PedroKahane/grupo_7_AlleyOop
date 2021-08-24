@@ -91,6 +91,21 @@ module.exports = {
         let result = userModel.update(req.body,req.session.userLogged.id)
         return  res.redirect("/user/profile")
     },
+    forgotPassword: (req,res) => {
+        const resultValidation = validationResult(req);
+
+        if (!resultValidation.isEmpty()) {
+           return res.render('users/profile', {
+               styles:"profile.css", 
+               user: req.session.userLogged, 
+               errors: resultValidation.mapped(),
+               oldData: req.body
+           });
+       } 
+       //return res.send(req.body)
+       let result = userModel.forgotPassword(req.body,req.session.userLogged.id)
+       return  res.redirect("/user/profile")
+   },
     avatar: (req,res) => {
         const resultValidation = validationResult(req);
 
