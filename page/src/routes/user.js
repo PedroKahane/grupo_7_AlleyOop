@@ -30,9 +30,7 @@ const storage = multer.diskStorage({
     body('image').custom((value, { req }) => {
       let file = req.file;
       let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
-      if (!file) {
-        throw new Error('Tenés que subir una imagen');
-      } else {
+      if (file != undefined) {
         let fileExtension = path.extname(file.originalname);
         if (!acceptedExtensions.includes(fileExtension)) {
           throw new Error(`Las extensiones permitidas son ${acceptedExtensions.join(', ')}`);
