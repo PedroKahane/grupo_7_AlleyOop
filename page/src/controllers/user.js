@@ -1,14 +1,19 @@
-const userModel = require("../models/user");
+//const userModel = require("../models/user");
 const productModel = require("../models/product");
 const { validationResult } = require('express-validator');
+const sequelize = require('sequelize')
 const bcrypt = require('bcrypt');
+let db = require("../database/models")
+const {Op} = sequelize
+const {like} = Op
 
 module.exports = {
     login:(req,res) => 
     {
         res.render("users/login",{styles:"login.css"})
     },
-    processRegister: (req, res) => {
+    processRegister: async (req, res) => {
+        
         const resultValidation = validationResult(req);
 
         if (!resultValidation.isEmpty()) {
@@ -34,19 +39,32 @@ module.exports = {
             });
         }
 
-        let userToCreate = {
-            ...req.body,
-            password: bcrypt.hashSync(req.body.password, 10),
-            image: req.file != undefined ? req.file.filename : "Default.png",
-            admin: String(req.body.email).includes("@alleyoop") ? true: false
+        try{
+            db.User.create( {
+                email : req.body.email,
+                first_name: req.body.firstName,
+                last_name: req.body.lastName,
+                user_name:req.body.userName,
+                password: bcrypt.hashSync(req.body.password, 10),
+                image: req.file != undefined ? req.file.filename : "Default.png",
+                admin: String(req.body.email).includes("@alleyoop") ? 1 : 0
+            })
+            return res.redirect('/user/login');
+
+        } catch(error){
+            return res.send(error)
         }
-        let userCreated = userModel.create(userToCreate);
-        return res.redirect('/user/login');
+        
+    
 
     },
     register:(req,res) => res.render("users/register",{styles:"login.css"}),
-    access: (req,res) => {
-        let userToLogin = userModel.findByEmail(req.body.email)
+    access: async (req,res) => {
+            let userToLogin = await db.User.findOne({
+                where: {
+                    email: req.body.email
+                }
+            })
         if(userToLogin) {
             let passwordHash = bcrypt.compareSync(req.body.password, userToLogin.password)
             if(passwordHash){

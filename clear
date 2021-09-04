@@ -1,0 +1,279 @@
+[33mcommit d1d99cbf451a032291b265b43088319a90fec337[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: c90c578 bcb66e5
+Author: pedroKahane <pedrok@datosclaros.com>
+Date:   Sat Sep 4 14:52:21 2021 -0300
+
+    Merge branch 'main' of https://github.com/PedroKahane/grupo_7_AlleyOop
+
+[33mcommit c90c578e66c0b74e546f9b05709b0225f8e71d14[m
+Author: pedroKahane <pedrok@datosclaros.com>
+Date:   Sat Sep 4 14:52:01 2021 -0300
+
+    config sequelize
+
+[33mcommit bcb66e54b5ab2211d750a5ed3d28f5515d9bec93[m
+Merge: 1d40239 cab90c1
+Author: sebastiansalvat <sebastianestebansalvat@gmail.com>
+Date:   Sat Sep 4 14:45:21 2021 -0300
+
+    actualizacion
+
+[33mcommit 1d4023907aad78dd9a4ff36ee4f5a30ee1692a50[m
+Author: sebastiansalvat <sebastianestebansalvat@gmail.com>
+Date:   Sat Sep 4 14:43:58 2021 -0300
+
+    comentario
+
+[33mcommit cab90c1bbad9f53091610f38aad22d69faf524e0[m
+Author: PedroKahane <pedrok@datosclaros.com>
+Date:   Thu Aug 26 11:16:13 2021 -0300
+
+    agregue imagen default en register
+
+[33mcommit 863de53a08a15c5c4b859f301ad17afb243b05bb[m
+Author: PedroKahane <pedrok@datosclaros.com>
+Date:   Thu Aug 26 11:15:42 2021 -0300
+
+    agregue imagen default en register
+
+[33mcommit 1991312e65883527d5f66775e00d803afba9d009[m
+Author: pedroKahane <pedrok@datosclaros.com>
+Date:   Tue Aug 24 19:53:25 2021 -0300
+
+    confirma contraseña
+
+[33mcommit fe9dec30f97f50bcc9c7a509c5af225107ef06f5[m
+Author: pedroKahane <pedrok@datosclaros.com>
+Date:   Tue Aug 24 19:42:51 2021 -0300
+
+    pruebas profile
+
+[33mcommit aefb4d73f643aedf2f8678381e723cdb66fb875f[m
+Author: pedroKahane <pedrok@datosclaros.com>
+Date:   Tue Aug 24 15:25:35 2021 -0300
+
+    agregue cambiar contraseña
+
+[33mcommit bab99a0172ea12dd24916b1eb3f057343b8a1168[m
+Author: pedroKahane <pedrok@datosclaros.com>
+Date:   Tue Aug 24 12:39:04 2021 -0300
+
+    validaciones profile
+
+[33mcommit 61a54858c18976f8618a120aa559872a13f3fc85[m
+Author: sebastiansalvat <sebastianestebansalvat@gmail.com>
+Date:   Tue Aug 24 12:21:45 2021 -0300
+
+    actualizaciones
+
+[33mcommit 8129d7c11688fc828b1b53136f3b07d870938ae1[m
+Author: pedroKahane <pedrok@datosclaros.com>
+Date:   Tue Aug 24 12:03:43 2021 -0300
+
+    cambios en css
+
+[33mcommit ed3a61d4f85ef281fdcb7b39801eca9490c17c5a[m
+Merge: 59095e2 61b72b9
+Author: pedroKahane <pedrok@datosclaros.com>
+Date:   Mon Aug 23 18:43:56 2021 -0300
+
+    Merge branch 'main' of https://github.com/PedroKahane/grupo_7_AlleyOop
+
+[33mcommit 59095e29ddb7d41f0672d23af915301b31081338[m
+Author: pedroKahane <pedrok@datosclaros.com>
+Date:   Mon Aug 23 18:43:52 2021 -0300
+
+    cambios en usuarios
+
+[33mcommit 61b72b9157fd699874000f4bad1706e1bd6b408b[m
+Author: sebastiansalvat <sebastianestebansalvat@gmail.com>
+Date:   Mon Aug 23 18:37:05 2021 -0300
+
+    correcciones
+
+[33mcommit 83c69729aa96c9efa707bf7bb82e3270836e748b[m
+Author: sebastiansalvat <sebastianestebansalvat@gmail.com>
+Date:   Mon Aug 23 16:56:58 2021 -0300
+
+    correcciones
+
+[33mcommit 68ac4f0ce15bd9c0637025d153792f645f0fe21a[m
+Merge: 0c51d26 291e53a
+Author: sebastiansalvat <sebastianestebansalvat@gmail.com>
+Date:   Mon Aug 23 15:00:33 2021 -0300
+
+    validaciones carrito
+
+[33mcommit 0c51d260a75b8fd0d7353420a0166b20be3bdd87[m
+Author: sebastiansalvat <sebastianestebansalvat@gmail.com>
+Date:   Mon Aug 23 14:59:49 2021 -0300
+
+    validaciones carrito
+
+[33mcommit 291e53a1ad9d6beb32f9a0f422f9974b53d49c4e[m
+Author: pedroKahane <pedrok@datosclaros.com>
+Date:   Mon Aug 23 14:18:41 2021 -0300
+
+    carrito
+
+[33mcommit 7e4e3276eca92fe5bfa98283e451c17c04ee989d[m
+Author: pedroKahane <pedrok@datosclaros.com>
+Date:   Mon Aug 23 14:13:55 2021 -0300
+
+    agregue validaciones products
+
+[33mcommit 7bb5e1e5c244920ca3eac4ec5901fb3ca0a8ffdd[m
+Author: pedroKahane <pedrok@datosclaros.com>
+Date:   Mon Aug 23 12:14:52 2021 -0300
+
+    pestaña mis compras
+
+[33mcommit 0e003e5edd29dde0e7ca04dc527affca81ab0eb9[m
+Merge: 8f13f04 a2cb63e
+Author: pedroKahane <pedrok@datosclaros.com>
+Date:   Mon Aug 23 12:13:21 2021 -0300
+
+    Merge branch 'main' of https://github.com/PedroKahane/grupo_7_AlleyOop
+
+[33mcommit 8f13f0439515f36da3d2d94db9dcecb98102635a[m
+Author: pedroKahane <pedrok@datosclaros.com>
+Date:   Mon Aug 23 12:13:11 2021 -0300
+
+    pestaña mis compras
+
+[33mcommit a2cb63ec457f251dc8c06b0d06fe8dabc3635b84[m
+Merge: 5eb26df 050322a
+Author: sebastiansalvat <sebastianestebansalvat@gmail.com>
+Date:   Mon Aug 23 12:06:17 2021 -0300
+
+    actualizacion
+
+[33mcommit 5eb26df4981ad3819dc30cc7a27c178ba04c6c80[m
+Author: sebastiansalvat <sebastianestebansalvat@gmail.com>
+Date:   Mon Aug 23 12:03:24 2021 -0300
+
+    act
+
+[33mcommit 050322a3eaf5d01a73814de1ba6d3e910844b232[m
+Merge: 19881e0 889f56c
+Author: pedroKahane <pedrok@datosclaros.com>
+Date:   Mon Aug 23 11:54:31 2021 -0300
+
+    pestaña mis compras
+
+[33mcommit 19881e07426ad5d928999fce53167a9b2b76104b[m
+Author: pedroKahane <pedrok@datosclaros.com>
+Date:   Mon Aug 23 11:53:18 2021 -0300
+
+    pestaña mis compras
+
+[33mcommit 889f56c6481d03462721368c801712a4a759e562[m
+Merge: 9caf666 e659ea2
+Author: sebastiansalvat <sebastianestebansalvat@gmail.com>
+Date:   Mon Aug 23 10:28:40 2021 -0300
+
+    actualizacion
+
+[33mcommit 9caf666b4ea645cca7294865dbec06ed22c4cdbc[m
+Author: sebastiansalvat <sebastianestebansalvat@gmail.com>
+Date:   Mon Aug 23 10:26:15 2021 -0300
+
+    actualizacion
+
+[33mcommit e659ea298068d39b5bc0ba357d88aba5a5c5415a[m
+Author: pedroKahane <pedrok@datosclaros.com>
+Date:   Sat Aug 21 19:44:08 2021 -0300
+
+    Heroku
+
+[33mcommit 39defa3bf251565a364577614051ef138a3820ff[m
+Author: pedroKahane <pedrok@datosclaros.com>
+Date:   Sat Aug 21 19:39:32 2021 -0300
+
+    Procfile
+
+[33mcommit be9126bb3f753c07a156353fdb5d95df9e898dec[m
+Author: pedroKahane <pedrok@datosclaros.com>
+Date:   Sat Aug 21 19:34:00 2021 -0300
+
+    Procfile
+
+[33mcommit 60cc9db640c00c1378a5d2224e7772c54d80973e[m
+Author: pedroKahane <pedrok@datosclaros.com>
+Date:   Sat Aug 21 19:27:31 2021 -0300
+
+    admin en register y mismo nombre de imagen en register que en profile
+
+[33mcommit c81f66868b34a29f5a3a3d1a5aea160e9d75f88b[m
+Author: pedroKahane <pedrok@datosclaros.com>
+Date:   Sat Aug 21 19:17:14 2021 -0300
+
+    agregue detalles en ventas
+
+[33mcommit 268ff65acabc58edaefb3de75cb5633b735767bf[m
+Author: sebastiansalvat <sebastianestebansalvat@gmail.com>
+Date:   Sat Aug 21 19:03:55 2021 -0300
+
+    Register terminado
+
+[33mcommit 00f8b1f209d72839c5178f2312b7e4759eacde82[m
+Author: PedroKahane <pedrok@datosclaros.com>
+Date:   Sat Aug 21 14:00:21 2021 -0300
+
+    modificaciones css
+
+[33mcommit fffc09923f6b4241b34ecd52066fc0556a68b9c9[m
+Author: PedroKahane <pedrok@datosclaros.com>
+Date:   Fri Aug 20 22:41:17 2021 -0300
+
+    primer boceto admin
+
+[33mcommit e40005d7a47acf09d59f0ea57383016202960694[m
+Merge: 2a226e6 b8a507c
+Author: sebastiansalvat <sebastianestebansalvat@gmail.com>
+Date:   Fri Aug 20 16:54:53 2021 -0300
+
+    actualizacion
+
+[33mcommit 2a226e67597fded7b0a91c463da747928209deda[m
+Author: sebastiansalvat <sebastianestebansalvat@gmail.com>
+Date:   Fri Aug 20 16:52:12 2021 -0300
+
+    Create de usuarios 01
+
+[33mcommit b8a507cdd7a4752b356cd80437d921334daaa7e0[m
+Author: PedroKahane <pedrok@datosclaros.com>
+Date:   Fri Aug 20 16:07:08 2021 -0300
+
+    info en pestaña ventas, falta el diseño
+
+[33mcommit 3e6ec4057c5d6bf9a7e1dd0b7cef8b8dfa17a5e8[m
+Author: PedroKahane <pedrok@datosclaros.com>
+Date:   Fri Aug 20 14:57:00 2021 -0300
+
+    soluciones problema
+
+[33mcommit 9237dd29bdb99f521597f2b405364171a5208474[m
+Author: PedroKahane <pedrok@datosclaros.com>
+Date:   Fri Aug 20 14:52:41 2021 -0300
+
+    volvimos atras por errores en login
+
+[33mcommit c6cb13e12d5fcc17a682fb89a88be4c38d8ed332[m
+Merge: 5bb71be 1d3053d
+Author: sebastiansalvat <sebastianestebansalvat@gmail.com>
+Date:   Fri Aug 20 14:28:13 2021 -0300
+
+    actualizacion
+
+[33mcommit 5bb71be6336498de5ea811b80f7a959e7454a73e[m
+Author: sebastiansalvat <sebastianestebansalvat@gmail.com>
+Date:   Fri Aug 20 14:25:09 2021 -0300
+
+    prueba create register
+
+[33mcommit 1d3053da4a77a6e9323ddbd56ec44fde96e7bd37[m
+Author: PedroKahane <pedrok@datosclaros.com>
+Date:   Fri Aug 20 13:15:59 2021 -0300
+
+    estructura 

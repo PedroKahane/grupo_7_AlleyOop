@@ -23,7 +23,7 @@
             <% if (locals.isLogged) { %>
                 <a id="a_img_log" href="/user/profile">
                     <img src="/uploads/users/<%= locals.userLogged.image %> " alt="" height="32px" width="32px" id="image_perfil">
-                    <p class="bienvenida_logged"> Bienvenido <%= locals.userLogged.firstName %> </p>
+                    <p class="bienvenida_logged"> Bienvenido <%= locals.userLogged.first_name %> </p>
                 </a>
             <% } else { %>
                 <a class="icon_a" href="/user/login"><i class="fas fa-user"></i></a>
