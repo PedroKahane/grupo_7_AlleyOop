@@ -12,6 +12,7 @@ module.exports = {
         const resultValidation = validationResult(req);
 
         if (!resultValidation.isEmpty()) {
+            // eliminar imagen
             return res.render('users/register', {
                 styles:"login.css", 
                 errors: resultValidation.mapped(),
@@ -36,10 +37,9 @@ module.exports = {
         let userToCreate = {
             ...req.body,
             password: bcrypt.hashSync(req.body.password, 10),
-            image: req.file.filename,
+            image: req.file != undefined ? req.file.filename : "Default.png",
             admin: String(req.body.email).includes("@alleyoop") ? true: false
         }
-        
         let userCreated = userModel.create(userToCreate);
         return res.redirect('/user/login');
 

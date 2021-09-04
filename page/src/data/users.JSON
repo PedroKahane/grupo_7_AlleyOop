@@ -1,52 +1,62 @@
 [
-  {
-    "id": 1,
-    "firstName": "Pedro ",
-    "userName": "pedro",
-    "lastName": "Kahane",
-    "email": "pedrokahane@gmail.com",
-    "password": "$2b$10$JsuUaPODhDqXJzgQ/1d4Z.Ohy./knHgjd4Ulk2rBNk1tqgibmGi6i",
-    "admin": true,
-    "image": "image-1629473837768.jpg"
-  },
-  {
-    "id": 2,
-    "firstName": "Pedro",
-    "userName": "Pedro",
-    "lastName": "Kahane",
-    "email": "pepekahane@yahoo.com.ar",
-    "password": "$2b$10$JsuUaPODhDqXJzgQ/1d4Z.Ohy./knHgjd4Ulk2rBNk1tqgibmGi6i",
-    "admin": false,
-    "image": "image-1629293798971.jpg"
-  },
-  {
-    "id": 3,
-    "email": "salvatsebastian41@gmail.com",
-    "userName": "seba",
-    "firstName": "sebastian",
-    "lastName": "Salvat",
-    "password": "$2b$10$/LvRNfVdtHDA2ZBdtcXhm.YYuDhfCXY0gO/IX9cjdQ.PBdVGmbkZq",
-    "image": "image-1629750817486.jpg",
-    "admin": false
-  },
-  {
-    "id": 4,
-    "email": "pedrokahane@alleyoop.com",
-    "userName": "pedro200",
-    "firstName": "Pedro",
-    "lastName": "Kahane",
-    "password": "$2b$10$fSOXZPpNgUde5pQsB4tVeepaWTimSkx0qSH1BaHK935H/Ywr4ZpXC",
-    "image": "image-1629819499591.jpg",
-    "admin": true
-  },
-  {
-    "id": 5,
-    "email": "pedrokahane@outlook.com.ar",
-    "userName": "CURRY",
-    "firstName": "pedro",
-    "lastName": "Kahane",
-    "password": "$2b$10$ZHfns5Xd3sxjGu908xkuIOLs4fpxmgGCGzyEnRxDTZfTFtxgPfxoC",
-    "image": "avatar-1629584647967.jpg",
-    "admin": false
-  }
+ {
+  "id": 1,
+  "firstName": "Pedro ",
+  "userName": "pedro",
+  "lastName": "Kahane",
+  "email": "pedrokahane@gmail.com",
+  "password": "$2b$10$JsuUaPODhDqXJzgQ/1d4Z.Ohy./knHgjd4Ulk2rBNk1tqgibmGi6i",
+  "admin": true,
+  "image": "image-1629473837768.jpg"
+ },
+ {
+  "id": 2,
+  "firstName": "Pedro",
+  "userName": "Pedro",
+  "lastName": "Kahane",
+  "email": "pepekahane@yahoo.com.ar",
+  "password": "$2b$10$JsuUaPODhDqXJzgQ/1d4Z.Ohy./knHgjd4Ulk2rBNk1tqgibmGi6i",
+  "admin": false,
+  "image": "image-1629293798971.jpg"
+ },
+ {
+  "id": 3,
+  "email": "salvatsebastian41@gmail.com",
+  "userName": "seba",
+  "firstName": "sebastian",
+  "lastName": "Salvat",
+  "password": "$2b$10$/LvRNfVdtHDA2ZBdtcXhm.YYuDhfCXY0gO/IX9cjdQ.PBdVGmbkZq",
+  "image": "image-1629750817486.jpg",
+  "admin": false
+ },
+ {
+  "id": 4,
+  "email": "pedrokahane@alleyoop.com",
+  "userName": "pedro200",
+  "firstName": "Pedro",
+  "lastName": "Kahane",
+  "password": "$2b$10$fSOXZPpNgUde5pQsB4tVeepaWTimSkx0qSH1BaHK935H/Ywr4ZpXC",
+  "image": "image-1629819499591.jpg",
+  "admin": true
+ },
+ {
+  "id": 5,
+  "email": "pedrokahane@outlook.com.ar",
+  "userName": "CURRY",
+  "firstName": "pedro",
+  "lastName": "Kahane",
+  "password": "$2b$10$ZHfns5Xd3sxjGu908xkuIOLs4fpxmgGCGzyEnRxDTZfTFtxgPfxoC",
+  "image": "avatar-1629584647967.jpg",
+  "admin": false
+ },
+ {
+  "id": 6,
+  "email": "pedrokahane@ayopu.com",
+  "userName": "pedro200",
+  "firstName": "Pedro",
+  "lastName": "Kahane",
+  "password": "$2b$10$BWB2WgB3Y7.4.m85jpk3g.QnvL7TEQXEkfGFgfdO7.zpzSAcSIEWG",
+  "image": "Default.png",
+  "admin": false
+ }
 ]
