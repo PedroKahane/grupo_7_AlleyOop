@@ -54,12 +54,8 @@
                                 </p>
                             <% } %>
                         </div>
-                        <div class="flex_column"><input type="file" name="image">
-                            <% if (locals.errors && errors.image) { %>
-                                <p class="error"> 
-                                    <%= errors.image.msg %> 
-                                </p>
-                            <% } %>
+                        <div class="flex_column">
+                            <input type="file" name="image">
                         </div>
                     </div>
                     

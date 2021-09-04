@@ -37,10 +37,9 @@ module.exports = {
         let userToCreate = {
             ...req.body,
             password: bcrypt.hashSync(req.body.password, 10),
-            image: req.file.filename,
+            image: req.file != undefined ? req.file.filename : "Default.png",
             admin: String(req.body.email).includes("@alleyoop") ? true: false
         }
-        
         let userCreated = userModel.create(userToCreate);
         return res.redirect('/user/login');
 
@@ -90,8 +89,31 @@ module.exports = {
         } 
         //return res.send(req.body)
         let result = userModel.update(req.body,req.session.userLogged.id)
-        return  res.redirect("/user/profile")
+        return  res.redirect("/")
     },
+    forgotPassword: (req,res) => {
+        const resultValidation = validationResult(req);
+
+        if (!resultValidation.isEmpty()) {
+           return res.render('users/profile', {
+               styles:"profile.css", 
+               user: req.session.userLogged, 
+               errors: resultValidation.mapped(),
+           });
+       } 
+       if(req.body.password != req.body.repeatPasword){
+        return res.render('users/profile', {
+            styles:"profile.css", 
+            user: req.session.userLogged, 
+            errors: {
+                repeatPasword: {
+                    msg: 'Las contraseñas no coinciden'}
+            },
+        });
+    }
+       let result = userModel.forgotPassword(req.body,req.session.userLogged.id)
+       return  res.redirect("/")
+   },
     avatar: (req,res) => {
         const resultValidation = validationResult(req);
 

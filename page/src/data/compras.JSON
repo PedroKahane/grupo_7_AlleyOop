@@ -72,7 +72,7 @@
     "precio": "5000",
     "cantidad": "1",
     "PrecioTotal": 5000,
-    "estadoProducto": "Confirmado",
+    "estadoProducto": "Finalizado",
     "nombre": "Pedro ",
     "apellido": "Gonzalez",
     "email": "pepekahane@yahoo.com.ar",
@@ -242,5 +242,27 @@
     "cantidad": "1",
     "PrecioTotal": 5000,
     "estadoProducto": "paso 1"
+  },
+  {
+    "id": 14,
+    "productoId": "2",
+    "userId": 4,
+    "precio": "6000",
+    "cantidad": "2",
+    "PrecioTotal": 12000,
+    "estadoProducto": "Confirmado",
+    "nombre": "Pedro",
+    "apellido": "Kahane",
+    "email": "pepekahane@yahoo.com.ar",
+    "telefono": "1158590789",
+    "direccion": "calle123",
+    "localidad": "Caba",
+    "provincia": "San Juan",
+    "codigopostal": "1422",
+    "metododepago": "credito",
+    "numerotarjeta": "1234567890123456",
+    "vencimiento": "2025-05-12",
+    "cvv": "$2b$10$4PxYb.7BoVYBDOrXp0tpquM09deKdSNSGVPyv6ZPcNhsuqRNUAcp.",
+    "newsletter": "on"
   }
 ]
