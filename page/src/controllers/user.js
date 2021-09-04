@@ -3,7 +3,8 @@ const productModel = require("../models/product");
 const { validationResult } = require('express-validator');
 const sequelize = require('sequelize')
 const bcrypt = require('bcrypt');
-let db = require("../database/models")
+let db = require("../database/models");
+const { promiseImpl } = require("ejs");
 const {Op} = sequelize
 const {like} = Op
 
@@ -107,8 +108,21 @@ module.exports = {
             });
         } 
         //return res.send(req.body)
-        let result = userModel.update(req.body,req.session.userLogged.id)
-        return  res.redirect("/")
+        try{
+            db.User.update( {
+                email : req.body.email,
+                first_name: req.body.firstName,
+                last_name: req.body.lastName,
+            }, {
+                where: {
+                    id: req.session.userLogged.id
+                }
+            })
+            return res.redirect('/');
+
+        } catch(error){
+            return res.send(error)
+        }
     },
     forgotPassword: (req,res) => {
         const resultValidation = validationResult(req);
@@ -130,8 +144,19 @@ module.exports = {
             },
         });
     }
-       let result = userModel.forgotPassword(req.body,req.session.userLogged.id)
-       return  res.redirect("/")
+    try{
+        db.User.update( {
+            password: bcrypt.hashSync(req.body.password, 10),
+        }, {
+            where: {
+                id: req.session.userLogged.id
+            }
+        })
+        return res.redirect('/');
+
+    } catch(error){
+        return res.send(error)
+    }
    },
     avatar: (req,res) => {
         const resultValidation = validationResult(req);
@@ -145,12 +170,34 @@ module.exports = {
             });
         }
         
-        let result = userModel.avatar(req.file,req.session.userLogged.id)
-        return  res.redirect("/user/profile") 
+        try{
+            db.User.update( {
+                image: req.file != undefined ? req.file.filename : "Default.png",
+            }, {
+                where: {
+                    id: req.session.userLogged.id
+                }
+            })
+            return res.redirect('/');
+    
+        } catch(error){
+            return res.send(error)
+        }
     },
     avatarDefault: (req,res) => {
-        let result = userModel.avatarDefault(req.session.userLogged.id)
-        return  res.redirect("/") 
+        try{
+            db.User.update( {
+                image:  "Default.png",
+            }, {
+                where: {
+                    id: req.session.userLogged.id
+                }
+            })
+            return res.redirect('/');
+    
+        } catch(error){
+            return res.send(error)
+        }
     },    
     logout: (req,res) =>{
         req.session.destroy();
