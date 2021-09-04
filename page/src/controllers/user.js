@@ -60,11 +60,12 @@ module.exports = {
     },
     register:(req,res) => res.render("users/register",{styles:"login.css"}),
     access: async (req,res) => {
-            let userToLogin = await db.User.findOne({
-                where: {
-                    email: req.body.email
-                }
-            })
+        let userToLogin = await db.User.findOne({
+            where: {
+                email: req.body.email
+            }
+        })
+        
         if(userToLogin) {
             let passwordHash = bcrypt.compareSync(req.body.password, userToLogin.password)
             if(passwordHash){
