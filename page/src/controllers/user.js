@@ -12,6 +12,7 @@ module.exports = {
         const resultValidation = validationResult(req);
 
         if (!resultValidation.isEmpty()) {
+            // eliminar imagen
             return res.render('users/register', {
                 styles:"login.css", 
                 errors: resultValidation.mapped(),
