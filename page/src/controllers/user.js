@@ -3,7 +3,7 @@ const productModel = require("../models/product");
 const { validationResult } = require('express-validator');
 const sequelize = require('sequelize')
 const bcrypt = require('bcrypt');
-let db = require("../database/models");
+let db = require("../database/models/index");
 const { promiseImpl } = require("ejs");
 const {Op} = sequelize
 const {like} = Op
@@ -26,7 +26,7 @@ module.exports = {
             });
         }
 
-        let userInDB = userModel.findByField('email', req.body.email);
+        /*let userInDB = userModel.findByField('email', req.body.email);
 
         if(userInDB) {
             return res.render('users/register', {
@@ -39,7 +39,7 @@ module.exports = {
               styles:"login.css"   
             });
         }
-
+        */
         try{
             db.User.create( {
                 email : req.body.email,
