@@ -20,7 +20,7 @@ module.exports = {
 
         if (!resultValidation.isEmpty()) {
             if(req.file){
-                let imagenFrente = path.resolve(__dirname,"../../public/uploads/users",req.file.filename)
+                let imagenFrente = path.resolve(__dirname,"../../public/uploads/users/",req.file.filename)
                 if(fs.existsSync(imagenFrente) && req.file.filename != "Default.png") {
                     fs.unlinkSync(imagenFrente)
                 }
@@ -31,21 +31,55 @@ module.exports = {
                 oldData: req.body
             });
         }
-
-        /*let userInDB = userModel.findByField('email', req.body.email);
-
-        if(userInDB) {
-            return res.render('users/register', {
-              errors: {
-                  email: {
-                      msg: 'Este mail ya está registrado'
-                  }
-              },
-              oldData: req.body,
-              styles:"login.css"   
-            });
+        try {
+            let userInDB = await db.User.findOne(
+                {
+                    where: { 
+                        email: req.body.email
+                    }
+                })
+                if(userInDB) {
+                    let imagenFrente = path.resolve(__dirname,"../../public/uploads/users/",req.file.filename)
+                    if(fs.existsSync(imagenFrente) && req.file.filename != "Default.png") {
+                        fs.unlinkSync(imagenFrente)
+                    }
+                    return res.render('users/register', {
+                      errors: {
+                          email: {
+                              msg: 'Este mail ya está registrado'
+                          }
+                      },
+                      oldData: req.body,
+                      styles:"login.css"   
+                    });
+                }
+        } catch (error) {
+            console.log(error)
         }
-        */
+        try {
+            let userInDB = await db.User.findOne(
+                {
+                    where: { 
+                        user_name: req.body.userName
+                    }
+                })
+                if(userInDB) {
+                    if(fs.existsSync(imagenFrente) && req.file.filename != "Default.png") {
+                        fs.unlinkSync(imagenFrente)
+                    }
+                    return res.render('users/register', {
+                      errors: {
+                        userName: {
+                              msg: 'Este nombre de usuario ya existe, pruebe con otro'
+                          }
+                      },
+                      oldData: req.body,
+                      styles:"login.css"   
+                    });
+                }
+        } catch (error) {
+            console.log(error)
+        }
         try{
             db.User.create( {
                 email : req.body.email,
@@ -72,7 +106,6 @@ module.exports = {
                 email: req.body.email
             }
         })
-        
         if(userToLogin) {
             let passwordHash = bcrypt.compareSync(req.body.password, userToLogin.password)
             if(passwordHash){
