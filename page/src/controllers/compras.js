@@ -1,6 +1,11 @@
 const user = require("../models/user")
 const comprasModel = require("../models/compras");
 const { validationResult } = require('express-validator');
+const sequelize = require('sequelize')
+const bcrypt = require('bcrypt');
+let db = require("../database/models/index");
+const {Op} = sequelize
+const {like} = Op
 
 module.exports = {
     productCart:(req,res) => {

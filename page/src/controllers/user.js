@@ -1,10 +1,11 @@
 //const userModel = require("../models/user");
-const productModel = require("../models/product");
+//const productModel = require("../models/product");
 const { validationResult } = require('express-validator');
+const path = require('path')
+const fs = require('fs')
 const sequelize = require('sequelize')
 const bcrypt = require('bcrypt');
 let db = require("../database/models/index");
-const { promiseImpl } = require("ejs");
 const {Op} = sequelize
 const {like} = Op
 
@@ -18,7 +19,12 @@ module.exports = {
         const resultValidation = validationResult(req);
 
         if (!resultValidation.isEmpty()) {
-            // eliminar imagen
+            if(req.file){
+                let imagenFrente = path.resolve(__dirname,"../../public/uploads/users",req.file.filename)
+                if(fs.existsSync(imagenFrente) && req.file.filename != "Default.png") {
+                    fs.unlinkSync(imagenFrente)
+                }
+            }
             return res.render('users/register', {
                 styles:"login.css", 
                 errors: resultValidation.mapped(),
@@ -168,6 +174,11 @@ module.exports = {
                 errors: resultValidation.mapped(),
                 oldData: req.body
             });
+        } else{
+            let imagenFrente = path.resolve(__dirname,"../../public/uploads/users",req.session.userLogged.image)
+            if(fs.existsSync(imagenFrente) && req.session.userLogged.image != "Default.png") {
+              fs.unlinkSync(imagenFrente)
+            }
         }
         
         try{
@@ -185,6 +196,10 @@ module.exports = {
         }
     },
     avatarDefault: (req,res) => {
+    let imagenFrente = path.resolve(__dirname,"../../public/uploads/users",req.session.userLogged.image)
+    if(fs.existsSync(imagenFrente) && req.session.userLogged.image != "Default.png") {
+      fs.unlinkSync(imagenFrente)
+    }
         try{
             db.User.update( {
                 image:  "Default.png",
