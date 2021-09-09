@@ -1,10 +1,11 @@
 //const userModel = require("../models/user");
-const productModel = require("../models/product");
+//const productModel = require("../models/product");
 const { validationResult } = require('express-validator');
+const path = require('path')
+const fs = require('fs')
 const sequelize = require('sequelize')
 const bcrypt = require('bcrypt');
 let db = require("../database/models/index");
-const { promiseImpl } = require("ejs");
 const {Op} = sequelize
 const {like} = Op
 
@@ -18,28 +19,67 @@ module.exports = {
         const resultValidation = validationResult(req);
 
         if (!resultValidation.isEmpty()) {
-            // eliminar imagen
+            if(req.file){
+                let imagenFrente = path.resolve(__dirname,"../../public/uploads/users/",req.file.filename)
+                if(fs.existsSync(imagenFrente) && req.file.filename != "Default.png") {
+                    fs.unlinkSync(imagenFrente)
+                }
+            }
             return res.render('users/register', {
                 styles:"login.css", 
                 errors: resultValidation.mapped(),
                 oldData: req.body
             });
         }
-
-        /*let userInDB = userModel.findByField('email', req.body.email);
-
-        if(userInDB) {
-            return res.render('users/register', {
-              errors: {
-                  email: {
-                      msg: 'Este mail ya está registrado'
-                  }
-              },
-              oldData: req.body,
-              styles:"login.css"   
-            });
+        try {
+            let userInDB = await db.User.findOne(
+                {
+                    where: { 
+                        email: req.body.email
+                    }
+                })
+                if(userInDB) {
+                    let imagenFrente = path.resolve(__dirname,"../../public/uploads/users/",req.file.filename)
+                    if(fs.existsSync(imagenFrente) && req.file.filename != "Default.png") {
+                        fs.unlinkSync(imagenFrente)
+                    }
+                    return res.render('users/register', {
+                      errors: {
+                          email: {
+                              msg: 'Este mail ya está registrado'
+                          }
+                      },
+                      oldData: req.body,
+                      styles:"login.css"   
+                    });
+                }
+        } catch (error) {
+            console.log(error)
         }
-        */
+        try {
+            let userInDB = await db.User.findOne(
+                {
+                    where: { 
+                        user_name: req.body.userName
+                    }
+                })
+                if(userInDB) {
+                    if(fs.existsSync(imagenFrente) && req.file.filename != "Default.png") {
+                        fs.unlinkSync(imagenFrente)
+                    }
+                    return res.render('users/register', {
+                      errors: {
+                        userName: {
+                              msg: 'Este nombre de usuario ya existe, pruebe con otro'
+                          }
+                      },
+                      oldData: req.body,
+                      styles:"login.css"   
+                    });
+                }
+        } catch (error) {
+            console.log(error)
+        }
         try{
             db.User.create( {
                 email : req.body.email,
@@ -66,7 +106,6 @@ module.exports = {
                 email: req.body.email
             }
         })
-        
         if(userToLogin) {
             let passwordHash = bcrypt.compareSync(req.body.password, userToLogin.password)
             if(passwordHash){
@@ -168,6 +207,11 @@ module.exports = {
                 errors: resultValidation.mapped(),
                 oldData: req.body
             });
+        } else{
+            let imagenFrente = path.resolve(__dirname,"../../public/uploads/users",req.session.userLogged.image)
+            if(fs.existsSync(imagenFrente) && req.session.userLogged.image != "Default.png") {
+              fs.unlinkSync(imagenFrente)
+            }
         }
         
         try{
@@ -185,6 +229,10 @@ module.exports = {
         }
     },
     avatarDefault: (req,res) => {
+    let imagenFrente = path.resolve(__dirname,"../../public/uploads/users",req.session.userLogged.image)
+    if(fs.existsSync(imagenFrente) && req.session.userLogged.image != "Default.png") {
+      fs.unlinkSync(imagenFrente)
+    }
         try{
             db.User.update( {
                 image:  "Default.png",

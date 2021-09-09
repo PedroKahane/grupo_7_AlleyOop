@@ -94,7 +94,7 @@
     "precio": "6000",
     "cantidad": "2",
     "PrecioTotal": 12000,
-    "estadoProducto": "Confirmado",
+    "estadoProducto": "En proceso de envio",
     "nombre": "Juan",
     "apellido": "Perez",
     "email": "juanperez@gmail.com",
