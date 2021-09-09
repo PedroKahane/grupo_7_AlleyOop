@@ -8,7 +8,13 @@ const {like} = Op
 
 module.exports = {
     admin: async(req,res) => { 
-        res.render("admin/admin",{styles:"admin.css"})
+        try {
+            let user = await db.User.findByPk(1)
+            res.send(products)
+        } catch (error) {
+            
+        }
+        //res.render("admin/admin",{styles:"admin.css"})
     },
         
     products:(req,res) => res.render("admin/products",{styles:"adminProduct.css",products: product.allWithExtra()}),
@@ -17,8 +23,8 @@ module.exports = {
     ventasFinalizadas:(req,res) =>  res.render("admin/ventasFinalizadas",{styles:"ventas.css",compras: compras.allWithExtra()}),
     cambiarStatus : async (req,res) => {
         
-        //result = compras.cambioStatus(req.body,req.params.id)
-        //return res.redirect("/admin/ventas")
+        result = compras.cambioStatus(req.body,req.params.id)
+        return res.redirect("/admin/ventas")
     }
 }
 
