@@ -43,11 +43,23 @@ module.exports = function(sequelize, DataTypes) {
         colors_id: {
             type: DataTypes.INTEGER,
             allowNull: false
-        },
+        }
     },{
         tableName: "products",
         tiemstamps: false
     
-    })
+    });
+    
+    Product.associate = function(models) {
+        Pelicula.belogsTo(models.Color, {
+            foreignKey: "colors_id"
+        });
+        Pelicula.belongsToMany(models.Talle, {
+            through: "product_talles",
+            foreignKey: "product_id",
+            otherKey: "talles_id",
+            timestamps: false
+        });
+    }
     return Product
 };
