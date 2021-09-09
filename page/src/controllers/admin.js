@@ -17,8 +17,8 @@ module.exports = {
     ventasFinalizadas:(req,res) =>  res.render("admin/ventasFinalizadas",{styles:"ventas.css",compras: compras.allWithExtra()}),
     cambiarStatus : async (req,res) => {
         
-        //result = compras.cambioStatus(req.body,req.params.id)
-        //return res.redirect("/admin/ventas")
+        result = compras.cambioStatus(req.body,req.params.id)
+        return res.redirect("/admin/ventas")
     }
 }
 
