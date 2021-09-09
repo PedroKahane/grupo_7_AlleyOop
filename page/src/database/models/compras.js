@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    const Compras= sequelize.define("Compras", {
+    const Compras= sequelize.define("compras", {
             id: {
                 type: DataTypes.INTEGER,
                 primaryKey: true,
@@ -14,6 +14,10 @@ module.exports = function(sequelize, DataTypes) {
                 type: DataTypes.INTEGER,
                 allowNull: false,
             },
+            estado_producto:{
+                type: DataTypes.INTEGER,
+                defaultValue: 0
+            },
             product_id:{
                 type: DataTypes.BIGINT(10),
             },
@@ -23,16 +27,10 @@ module.exports = function(sequelize, DataTypes) {
     },{
         tableName: "compras",
         tiemstamps: false
-    });
-
-    Compras.asociate = function(models){
+    })
+    Compras.associate = function(models){
         Compras.belongsTo(models.User, {
-            as: "User",
-            foreignKey: "user_id"
-        }),
-        Compras.belongsTo(models.productos, {
-            as: "products",
-            foreignKey: "user_id"
+            foreignKey: "user_id",
         })
     }
     return Compras

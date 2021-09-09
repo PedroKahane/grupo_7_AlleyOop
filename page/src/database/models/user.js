@@ -40,17 +40,14 @@ module.exports = function(sequelize, DataTypes) {
         tiemstamps: false
     });
 
-    User.asociate = function(models){
+    User.associate = function(models){
         User.hasMany(models.compras, {
-            as: "Compras",
-            foreignKey: "user_id"
-        }),
-        User.hasMany(models.entrega_compra, {
-            as: "entrega_compra",
             foreignKey: "user_id"
         }),
         User.hasMany(models.metodo_de_pago, {
-            as: "metodo_de_pago",
+            foreignKey: "user_id"
+        }),
+        User.hasMany(models.entrega, {
             foreignKey: "user_id"
         })
     }

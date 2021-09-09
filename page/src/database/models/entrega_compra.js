@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    const entrega_compra= sequelize.define("entrega_compra", {
+    const entrega_compra= sequelize.define("entrega", {
             id: {
                 type: DataTypes.INTEGER,
                 primaryKey: true,
@@ -28,9 +28,8 @@ module.exports = function(sequelize, DataTypes) {
         tiemstamps: false
     });
 
-    entrega_compra.asociate = function(models){
+    entrega_compra.associate = function(models){
         entrega_compra.belongsTo(models.User, {
-            as: "User",
             foreignKey: "user_id"
         })
     }
