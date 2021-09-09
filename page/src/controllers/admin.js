@@ -8,7 +8,13 @@ const {like} = Op
 
 module.exports = {
     admin: async(req,res) => { 
-        res.render("admin/admin",{styles:"admin.css"})
+        try {
+            let user = await db.User.findByPk(1)
+            res.send(products)
+        } catch (error) {
+            
+        }
+        //res.render("admin/admin",{styles:"admin.css"})
     },
         
     products:(req,res) => res.render("admin/products",{styles:"adminProduct.css",products: product.allWithExtra()}),
