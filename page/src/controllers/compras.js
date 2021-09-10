@@ -46,7 +46,16 @@ module.exports = {
         return res.redirect("/compras/compraExitosa")
     },
     comprarProducto : (req,res) => {
-        result = comprasModel.comprarProducto(req.params.id,req.session.userLogged.id)
-        return res.redirect("/compras/productCart")
+        try{
+            db.User.create( {
+                product_id : req.params.id,
+                user_id: req.session.userLogged.id,
+            })
+            return res.redirect("/compras/productCart");
+
+        } catch(error){
+            return res.send(error)
+        }
+        
     }
 }
