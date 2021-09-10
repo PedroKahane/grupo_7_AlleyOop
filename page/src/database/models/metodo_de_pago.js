@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    const metodo_de_pago= sequelize.define("metodo_de_pago", {
+    const metodo_de_pago= sequelize.define("metodo", {
             id: {
                 type: DataTypes.INTEGER,
                 primaryKey: true,
@@ -27,7 +27,12 @@ module.exports = function(sequelize, DataTypes) {
 
     metodo_de_pago.associate = function(models){
         metodo_de_pago.belongsTo(models.User, {
+            as: "user",
             foreignKey: "user_id"
+        })
+        metodo_de_pago.hasMany(models.compras, {
+            as: "compras",
+            foreignKey: "metodo_id"
         })
     }
     return metodo_de_pago

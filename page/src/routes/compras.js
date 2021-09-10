@@ -6,14 +6,9 @@ const compras = require("../controllers/compras")
 
 // Validaciones con express-validator
 const validacionesDos = [
-    body('nombre').notEmpty().withMessage('Tenés que ingresar un nombre'),
-    body('apellido').notEmpty().withMessage('Tenés que ingresar un apellido'),
-    body('email').notEmpty().withMessage('Tenés que ingresar un correo electrónico').bail()
-                  .isEmail().withMessage('Debes ingresar un formato de correo válido'),
     body('telefono').notEmpty().withMessage('Tenés que ingresar un numero telefónico').bail()
                     .isMobilePhone().withMessage('Tiene que ser un numero de telefono válido'),
-    body('direccion').notEmpty().withMessage('Tenés que ingresar una direccion de envío').bail()
-                    .isAlphanumeric().withMessage('Tenés que ingresar una dirección correcta'),
+    body('direccion').notEmpty().withMessage('Tenés que ingresar una direccion de envío').bail(),
     body('localidad').notEmpty().withMessage('Tenés que ingresar una localidad'),
     body('provincia').notEmpty().withMessage('Tenés que ingresar una provincia'),
     body('codigopostal').notEmpty().withMessage('Tenés que ingresar un código postal').bail()
