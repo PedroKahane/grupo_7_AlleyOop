@@ -51,13 +51,13 @@ module.exports = function(sequelize, DataTypes) {
     });
     
     Product.associate = function(models) {
-        Pelicula.belogsTo(models.Color, {
+        Product.belongsTo(models.Color, {
             foreignKey: "colors_id"
         });
-        Pelicula.hasMany(models.compras, {
+        Product.hasMany(models.compras, {
             foreignKey: "product_id"
         });
-        Pelicula.belongsToMany(models.Talle, {
+        Product.belongsToMany(models.Talle, {
             through: "product_talles",
             foreignKey: "product_id",
             otherKey: "talles_id",

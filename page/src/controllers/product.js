@@ -6,22 +6,33 @@ const talle = require('../models/talles');
 const equipos = require('../models/equipos');
 const compras = require('../models/compras');
 const { filterColors, filterByColors } = require("../models/product");
+const path = require('path')
+const fs = require('fs')
+const sequelize = require('sequelize')
+const db = require("../database/models/index");
+const {Op} = sequelize
+const {like} = Op
 
 module.exports = {
     tienda:(req,res) => res.render("products/tienda", {styles:"tienda.css", products: product.allWithExtra()}),
     product:(req,res) => res.render("products/productDetail",{styles:"productDetail.css", product: product.oneWithExtra(req.params.id)}),
     create: (req,res) => res.render("products/create",{styles:"editar.css",product:product.one(req.params.id),colors:color.all(),talles:talle.all(),equipos: equipos.all()}),
     misCompras: (req,res) => res.render("products/misCompras",{styles:"ventas.css", compras: compras.comprasPorUsuario(req.session.userLogged.id) }),
-    save: (req,res) => {
+    save: async (req,res) => {
         const resultValidation = validationResult(req);
 
         if (!resultValidation.isEmpty()) {
-            return res.render("products/create", {
-                styles:"editar.css",
-                errors: resultValidation.mapped(),
-                oldData: req.body,
-                product:product.one(req.params.id),colors:color.all(),talles:talle.all(),equipos: equipos.all()
-            });
+            try {
+                return res.render("products/create", {
+                    styles:"editar.css",
+                    errors: resultValidation.mapped(),
+                    oldData: req.body,
+                    colors: await db.Color.findAll(),
+                    talles: await db.Talle.findAll()
+                });
+            } catch (error) {
+                res.send(error)
+            }
         }
         let result = product.create(req.body,req.files)
         return result ? res.redirect("/productDetail/"+result.id) : res.send("Error al cargar la información") 
