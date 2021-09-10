@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        avrebiatura:{
+        abreviatura:{
             type: DataTypes.STRING,
             allowNull: false,
         }
