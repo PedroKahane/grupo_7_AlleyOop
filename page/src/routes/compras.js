@@ -36,8 +36,10 @@ router.get("/productCartTres",authMiddleware, compras.productCartTres)
 router.get("/compraExitosa",authMiddleware, compras.compraExitosa)
 router.post("/agregarCarrito/:id",authMiddleware,compras.comprarProducto);
 router.post("/productCart", authMiddleware, compras.productCartpaso)
-router.put("/productCartDos", [authMiddleware,validacionesDos], compras.productCartpasoDos)
-router.put("/productCartTres", [authMiddleware,validacionesTres], compras.productCartpasoTres)
+router.put("/productCartDos" , compras.productCartpasoDos)
+router.post("/nuevaDireccion", [authMiddleware,validacionesDos], compras.nuevaDireccion)
+router.post("/agregarTarjeta",[authMiddleware,validacionesTres], compras.agregarTarjeta)
+router.put("/productCartTres", [authMiddleware], compras.productCartpasoTres)
 
 
 module.exports = router

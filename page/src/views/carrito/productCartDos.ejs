@@ -9,7 +9,7 @@
         </section>
         <section id="contenedor-carrito">
             <p id="titular-carrito">Carrito de compras</p>
-            <form id= "contenedor-form" action="/compras/productCartDosVieja?_method=PUT" method="POST">
+            <form id= "contenedor-form" action="/compras/productCartDos?_method=PUT" method="POST">
                 <p id="titulo-envio" class="margin-bottom">2. SELECCIONAR UNA <span class="strong"> DIRECCION YA UTILIZADA</span></p>
                 <label class="titulo-input" for="codigopostal">Elegir Direccion</label>
                 <select class="caja margin-bottom" name="direccion" id="direccion"> 
@@ -21,7 +21,7 @@
                     <button type="submit" class="boton-compra">IR A MÉTODO DE PAGO</button>
                 </fieldset>
             </form>
-            <form  id= "contenedor-form" action="/compras/productCartDos?_method=PUT" method="POST">
+            <form  id= "contenedor-form" action="/compras/nuevaDireccion" method="POST">
                 <fieldset class="contenedor-item">
                     <p id="titulo-envio">2. DIRECCIÓN DE ENVÍO <span class="strong"> NUEVA</span></p>
                     <p id="subtitulo">Todos los datos son obligatorios</p>

@@ -27,7 +27,7 @@ module.exports = function(sequelize, DataTypes) {
 
     metodo_de_pago.associate = function(models){
         metodo_de_pago.belongsTo(models.User, {
-            as: "user",
+            as: "User",
             foreignKey: "user_id"
         })
         metodo_de_pago.hasMany(models.compras, {

@@ -9,7 +9,30 @@
         </section>
         <section id="contenedor-carrito">
             <p id="titular-carrito">Carrito de compras</p>
-            <form  id= "contenedor-form" action="/compras/productCartTres?_method=PUT" method="POST">
+            <form id= "contenedor-form" action="/compras/productCartTres?_method=PUT" method="POST">
+                <p id="titulo-envio" class="margin-bottom">2. SELECCIONAR UNA <span class="strong"> TARJETA YA UTILIZADA</span></p>
+                <label class="titulo-input" for="codigopostal">Elegir Tarjeta</label>
+                <select class="caja margin-bottom" name="metodo" id="direccion"> 
+                <% tarjetas.forEach(tarjeta => { %>
+                        <option value="<%= tarjeta.id %>">Tarjeta: <%= tarjeta.numero_tarjeta%>(<%= tarjeta.metodo_de_pago %>)</option>
+                <% }) %>
+                </select>
+                <div class="resumen">
+                    <p class="titulo-input">Resumen del pedido</p>
+                    <div class="resumen-articulos">
+                        <p class="subtitulo-articulo"><%= compras.cantidad %>  x <%= compras.product.equipo %></p>
+                        <p class="precio_articulo">ARS $<%= compras.product.precio %></p>
+                    </div>
+                </div>
+                <div id="contenedor-subtotal">
+                    <p class="subtotal">Total</p>
+                    <p class="subtotal">ARS $<%= compras.precio_total %></p>
+                </div>
+                <fieldset class="contenedor-item">
+                    <button type="submit" class="boton-compra">PAGAR</button>
+                </fieldset>
+            </form>
+            <form  id= "contenedor-form" action="/compras/agregarTarjeta" method="POST">
                 <fieldset class="contenedor-item">
                     <p id="titulo">3. TIPO DE PAGO Y RESUMEN DE PEDIDO</p>
                 </fieldset>
@@ -62,24 +85,9 @@
                         </p>
                     <% } %>
                 </fieldset>
-                <div class="resumen">
-                    <p class="titulo-input">Resumen del pedido</p>
-                    <div class="resumen-articulos">
-                        <p class="subtitulo-articulo"><%= compras.cantidad %>  x <%= compras.productoId.equipos.equipo %></p>
-                        <p class="precio_articulo">ARS $<%= compras.precio %></p>
-                    </div>
-                </div>
-                <div id="contenedor-subtotal">
-                    <p class="subtotal">Total</p>
-                    <p class="subtotal">ARS $<%= compras.PrecioTotal %></p>
-                </div>
-                <fieldset id="contenedor-newsletter">
-                    <input type="checkbox" name="newsletter" checked>
-                    <label for="newsletter">¡Sí, quiero recibir información sobre nuevos lanzamientos y ofertas!</label>
-                </fieldset>
                 <fieldset class="contenedor-item">
                     <input type="hidden" name="id" value="<%= compras.id %> ">
-                    <button type="submit" class="boton-compra">PAGAR</button>
+                    <button type="submit" class="boton-compra">AGREGAR TARJETA</button>
                 </fieldset>
             </form>
         </section>
