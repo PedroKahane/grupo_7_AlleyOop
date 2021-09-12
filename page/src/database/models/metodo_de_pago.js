@@ -9,7 +9,8 @@ module.exports = function(sequelize, DataTypes) {
                 type: DataTypes.STRING
             },
             numero_tarjeta:{
-                type: DataTypes.INTEGER
+                type: DataTypes.INTEGER,
+                defaultvalue: null
             },
             vencimiento:{
                 type: DataTypes.DATE

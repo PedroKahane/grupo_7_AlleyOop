@@ -7,37 +7,40 @@
         <p id="titulo_Compras">MIS COMPRAS:</p>
         <div id="articulos_promocion">
             <% compras.forEach(compra => { %>
-                <% if (compra.estadoProducto == "Finalizado" || compra.estadoProducto == "Cancelado" || compra.estadoProducto == "Confirmado" || compra.estadoProducto == "En proceso de envio") { %>
+                <% if (compra.estado_producto >= 3) { %>
                 <article class="articulo_destacado">
                     <section class="flex">
-                        <a href="/productDetail/<%= compra.productoId.id %> ">
+                        <a href="/productDetail/<%= compra.product.id %> ">
                             <figure id="figure_ventas">
-                                <img class="imagen_promocion" src="/uploads/<%= compra.productoId.imagenFrente %>" alt="">
+                                <img class="imagen_promocion" src="/uploads/<%= compra.product.imagen_frente %>" alt="">
                             </figure>
                         </a>
                         <div id="contenedor_descripciones">
-                            <p class="descripcion"><span>Camiseta: </span> <%= compra.productoId.jugador %>-<%= compra.productoId.equipos.equipo %></p>
-                            <p class="descripcion"><span>Precio: </span> $<%= compra.PrecioTotal %>(Cant. de camisetas: <%= compra.cantidad %>) </p>
-                            <p class="descripcion"><span>Cliente: </span> <%= compra.nombre %> <%= compra.apellido %> </p>
-                            <p class="descripcion"><span>Forma de pago: </span> <%= compra.metododepago %></p>
-                            <p class="descripcion"><span>Direccion: </span> <%= compra.direccion %>-<%= compra.localidad %>(CP: <%= compra.codigopostal %>)</p>
+                            <p class="descripcion"><span>Camiseta: </span> <%= compra.product.jugador %>-<%= compra.product.equipo %></p>
+                            <p class="descripcion"><span>Precio: </span> $<%= compra.precio_total %>(Cant. de camisetas: <%= compra.cantidad %>) </p>
+                            <p class="descripcion"><span>Cliente: </span> <%= compra.User.first_name %> <%= compra.User.last_name %> </p>
+                            <p class="descripcion"><span>Forma de pago: </span> <%= compra.metodo.metodo_de_pago %></p>
+                            <p class="descripcion"><span>Direccion: </span> <%= compra.entrega.direccion %>-<%= compra.entrega.localidad %>(CP: <%= compra.entrega.codigo_postal %>)</p>
                             <div class="flex center">
-                                <p class="descripcion margin_top"><span>Estado: </span> <%= compra.estadoProducto %></p>
-                            <% if (compra.estadoProducto == "Finalizado") { %>
+                            <% if (compra.estado_producto == 10) { %>
+                                <p class="descripcion margin_top"><span>Estado: </span> Finalizado</p>
                                 <i class="fas fa-check tic_compras"> </i>
-                            <% } else if(compra.estadoProducto == "Cancelado") { %>
+                            <% } else if(compra.estado_producto == 9) { %>
+                                <p class="descripcion margin_top"><span>Estado: </span> Cancelado</p>
                                 <i class="fas fa-times cancel_compras"> </i>
-                            <% } else if(compra.estadoProducto == "Confirmado") { %>
+                            <% } else if(compra.estado_producto == 3) { %>
+                                <p class="descripcion margin_top"><span>Estado: </span> Confirmado</p>
                                 <i class="far fa-calendar-check confirmado_compras"></i>
-                            <% } else if(compra.estadoProducto == "En proceso de envio") { %>
+                            <% } else if(compra.estado_producto == 4) { %>
+                                <p class="descripcion margin_top"><span>Estado: </span> En proceso de envio</p>
                                 <i class="fas fa-truck envio_compras"></i>
                             <% } %>
                             </div>
                         </div>
                     </section>
                     <div class="flex_column botones_compras">
-                        <a class="boton_compras" href="/productDetail/<%= compra.productoId.id %>  ">VER EL PRODUCTO</a>
-                        <form action="/compras/agregarCarrito/<%= compra.productoId.id %>" id="formulario_carrito" method="POST">
+                        <a class="boton_compras" href="/productDetail/<%= compra.product.id %>  ">VER EL PRODUCTO</a>
+                        <form action="/compras/agregarCarrito/<%= compra.product.id %>" id="formulario_carrito" method="POST">
                             <button type="submit" class="boton_compras">VOLVER A COMPRAR</button>
                         </form> 
                     </div>

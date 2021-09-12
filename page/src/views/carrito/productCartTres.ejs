@@ -10,7 +10,7 @@
         <section id="contenedor-carrito">
             <p id="titular-carrito">Carrito de compras</p>
             <form id= "contenedor-form" action="/compras/productCartTres?_method=PUT" method="POST">
-                <p id="titulo-envio" class="margin-bottom">2. SELECCIONAR UNA <span class="strong"> TARJETA YA UTILIZADA</span></p>
+                <p id="titulo-envio" class="margin-bottom">3. TIPO DE PAGO Y RESUMEN DE PEDIDO</span></p>
                 <label class="titulo-input" for="codigopostal">Elegir Tarjeta</label>
                 <select class="caja margin-bottom" name="metodo" id="direccion"> 
                 <% tarjetas.forEach(tarjeta => { %>
@@ -34,7 +34,7 @@
             </form>
             <form  id= "contenedor-form" action="/compras/agregarTarjeta" method="POST">
                 <fieldset class="contenedor-item">
-                    <p id="titulo">3. TIPO DE PAGO Y RESUMEN DE PEDIDO</p>
+                    <p id="titulo">3. Agregar una tarjeta a tu cuenta</p>
                 </fieldset>
                 <fieldset class="contenedor-item-pago">
                     <legend class="titulo-input">Pagar con:</legend>

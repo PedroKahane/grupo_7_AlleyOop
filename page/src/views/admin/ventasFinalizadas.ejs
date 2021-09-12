@@ -12,25 +12,25 @@
         </div>
         <div id="articulos_promocion">
             <% compras.forEach(compra => { %>
-                <% if (compra.estadoProducto == "Finalizado" ) { %>
+                <% if (compra.estado_producto == 10) { %>
                 <article class="articulo_destacado">
                     <section class="flex">
-                        <a href="/productDetail/<%= compra.productoId.id %> ">
+                        <a href="/productDetail/<%= compra.product_id %> ">
                             <figure id="figure_ventas">
-                                <img class="imagen_promocion" src="/uploads/<%= compra.productoId.imagenFrente %>" alt="">
+                                <img class="imagen_promocion" src="/uploads/<%= compra.product.imagen_frente %>" alt="">
                             </figure>
                         </a>
                         <div id="contenedor_descripciones">
-                            <p class="descripcion"><span>Camiseta: </span> <%= compra.productoId.jugador %>-<%= compra.productoId.equipos.equipo %></p>
+                            <p class="descripcion"><span>Camiseta: </span> <%= compra.product.jugador %>-<%= compra.product.equipo %></p>
                             <p class="descripcion"><span>Precio: </span> $<%= compra.PrecioTotal %>(Cant. de camisetas: <%= compra.cantidad %>) </p>
-                            <p class="descripcion"><span>Cliente: </span> <%= compra.nombre %> <%= compra.apellido %> </p>
-                            <p class="descripcion"><span>Forma de pago: </span> <%= compra.metododepago %></p>
-                            <p class="descripcion"><span>Direccion: </span> <%= compra.direccion %>-<%= compra.localidad %>(CP: <%= compra.codigopostal %>)</p>
-                            <p class="descripcion"><span>Estado: </span> <%= compra.estadoProducto %></p>        
+                            <p class="descripcion"><span>Cliente: </span> <%= compra.User.first_name %> <%= compra.User.last_name %> </p>
+                            <p class="descripcion"><span>Forma de pago: </span> <%= compra.metodo.metodo_de_pago %></p>
+                            <p class="descripcion"><span>Direccion: </span> <%= compra.entrega.direccion %>-<%= compra.entrega.localidad %>(CP: <%= compra.entrega.codigopostal %>)</p>
+                            <p class="descripcion"><span>Estado: </span> Finalizado</p>        
                         </div>
                     </section>
                     <div class="flex_column center">
-                        <p class="titulo_cancelado">El estado de la ventas es: <span> <%= compra.estadoProducto %> </span></p>
+                        <p class="titulo_cancelado">El estado de la ventas es: <span> Finalizado </span></p>
                         <i class="fas fa-check tic_terminado"> </i>
                     </div>
                 </article>

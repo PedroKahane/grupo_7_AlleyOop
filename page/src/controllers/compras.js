@@ -104,13 +104,7 @@ module.exports = {
                 telefono: req.body.telefono,
                 user_id: req.session.userLogged.id
             })
-            direccion = await db.entrega.findAll(
-                {include: ['User'],
-                where: { 
-                    user_id: req.session.userLogged.id
-                } 
-            })
-            res.render("carrito/productCartDos",{styles:"productCart.css", direcciones: direccion })
+            res.redirect("/compras/productCartDos")
         } catch (error) {
             
         }
@@ -163,16 +157,7 @@ module.exports = {
                 cvv: bcrypt.hashSync(req.body.cvv,10),
                 user_id: req.session.userLogged.id,
             })
-            tarjeta = await db.metodo.findAll(
-                {include: ['User'],
-                where: { 
-                    user_id: req.session.userLogged.id
-                } 
-            })
-            res.render("carrito/productCartTres",
-            {styles:"productCart.css", 
-            compras: compra,
-        tarjetas: tarjeta})
+            return res.redirect("/compras/productCartTres")
         } catch (error) {
             console.log(error)
         }

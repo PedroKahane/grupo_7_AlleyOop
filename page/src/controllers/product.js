@@ -17,7 +17,16 @@ module.exports = {
     tienda:(req,res) => res.render("products/tienda", {styles:"tienda.css", products: product.allWithExtra()}),
     product:(req,res) => res.render("products/productDetail",{styles:"productDetail.css", product: product.oneWithExtra(req.params.id)}),
     create: (req,res) => res.render("products/create",{styles:"editar.css",product:product.one(req.params.id),colors:color.all(),talles:talle.all(),equipos: equipos.all()}),
-    misCompras: (req,res) => res.render("products/misCompras",{styles:"ventas.css", compras: compras.comprasPorUsuario(req.session.userLogged.id) }),
+    misCompras: async (req,res) => { 
+        try {
+            let compras = await db.compras.findAll({include: ['User','product','entrega','metodo'], where : {
+                user_id: req.session.userLogged.id
+            }})
+            res.render("products/misCompras",{styles:"ventas.css", compras: compras })
+        } catch (error) {
+            console.log(error);
+        }
+    },
     save: async (req,res) => {
         const resultValidation = validationResult(req);
 
