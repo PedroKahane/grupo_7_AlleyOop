@@ -22,7 +22,8 @@ module.exports = {
     },
     ventas: async (req,res) =>{
         try {
-            let compras = await db.compras.findAll({include: ['User','product','entrega','metodo']})
+            let compras = await db.compras.findAll({include: ['User','product','entrega','metodo'],where: { 
+                estado_producto: [3,4]}})
             res.render("admin/ventas",{styles:"ventas.css",compras: compras})
         } catch (error) {
             console.log(error)
@@ -30,7 +31,9 @@ module.exports = {
     },
     ventasCanceladas: async (req,res) => {  
         try {
-            let compras = await db.compras.findAll({include: ['User','product','entrega','metodo']})
+            let compras = await db.compras.findAll({include: ['User','product','entrega','metodo'],
+            where: { 
+                estado_producto: 9}})
             res.render("admin/ventasCanceladas",{styles:"ventas.css",compras: compras})
         } catch (error) {
             console.log(error)
@@ -38,7 +41,9 @@ module.exports = {
     },
     ventasFinalizadas:async(req,res) =>{
         try {
-            let compras = await db.compras.findAll({include: ['User','product','entrega','metodo']})
+            let compras = await db.compras.findAll({include: ['User','product','entrega','metodo'],
+            where: { 
+                estado_producto: 10}})
             res.render("admin/ventasFinalizadas",{styles:"ventas.css",compras: compras})
         } catch (error) {
             console.log(error);

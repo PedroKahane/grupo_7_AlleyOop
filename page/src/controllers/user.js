@@ -222,7 +222,7 @@ module.exports = {
                     id: req.session.userLogged.id
                 }
             })
-            return res.redirect('/');
+            return res.redirect('/user/profile');
     
         } catch(error){
             return res.send(error)
@@ -241,7 +241,7 @@ module.exports = {
                     id: req.session.userLogged.id
                 }
             })
-            return res.redirect('/');
+            return res.redirect('/user/profile');
     
         } catch(error){
             return res.send(error)
