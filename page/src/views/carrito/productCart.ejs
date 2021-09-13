@@ -17,12 +17,12 @@
                     <i class="fas fa-times"></i>  
                 </fieldset>
                 <fieldset class="contenedor-item-foto">
-                    <img class="imagen_promocion" src="/uploads/<%= compras.productoId.imagenFrente %>" alt="">
+                    <img class="imagen_promocion" src="/uploads/<%= compras.product.imagen_frente %>" alt="">
                     <div class="contenedor-propiedades-articulo">
-                        <p class="titulo-producto">Camiseta <%= compras.productoId.equipos.equipo %> </p>
+                        <p class="titulo-producto">Camiseta <%= compras.product.equipo %> </p>
                         <div>
-                            <p class="subtitulo-articulo">Color: <%= compras.productoId.color.color %></p>
-                            <p class="subtitulo-articulo">Equipo: <%= compras.productoId.equipos.equipo %></p>
+                            <p class="subtitulo-articulo">Color: <%= compras.product.color %></p>
+                            <p class="subtitulo-articulo">Equipo: <%= compras.product.equipo %></p>
                         </div>
                         <div class="contenedor-cantidad">
                             <label class="subtitulo-articulo" for="cantidad">Cantidad:</label>
@@ -39,13 +39,13 @@
                                 <option value="10">10</option>
                             </select>
                         </div>
-                        <p class="precio">ARS <%= compras.productoId.precio %></p>
+                        <p class="precio">ARS <%= compras.product.precio %></p>
                     </div>
                 </fieldset>
                 
                 <fieldset class="contenedor-item">
                     <input type="hidden" name="id" value="<%= compras.id %>">
-                    <input type="hidden" name="precio" value="<%= compras.productoId.precio %>">
+                    <input type="hidden" name="precio" value="<%= compras.product.precio %>">
                     <button type="submit"  class="boton-compra">IR A DIRECCIÓN DE ENVÍO</button>
                 </fieldset>
             </form>

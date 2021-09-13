@@ -9,14 +9,16 @@
             <% products.forEach(product => { %>
                 <article class="articulo_destacado">
                     <figure>
-                        <img class="imagen_promocion" src="/uploads/<%= product.imagenFrente %>" alt="">
+                        <img class="imagen_promocion" src="/uploads/<%= product.imagen_frente %>" alt="">
                     </figure>
                     <div class="precio_descuento">
                         <p class="precio">$<%= product.precio %> </p>
-                        <p class="descuento"><%= product.descuento %>  % OFF</p>
+                        <% if (product.descuento > 0) { %>
+                            <p class="descuento"><%= product.descuento %>  % OFF</p>
+                        <% } %>
                     </div>
-                    <p class="descripcion">Camiseta <%= product.equipos.equipo %>  </p>
-                    <p class="jugador"><%= product.jugador %> (<%= product.numeroCamiseta %>)</p>
+                    <p class="descripcion">Camiseta <%= product.equipo %>  </p>
+                    <p class="jugador"><%= product.jugador %> (<%= product.numero_camiseta %>)</p>
                     <div class="boton_articulo">
                         <a href="/edit/<%= product.id %>" class="buton_edit celular"> <i class="fas fa-pencil-alt"></i></a>
                         <form action="/delete/<%= product.id %>?_method=DELETE" method="post" class="buton_delete celular">

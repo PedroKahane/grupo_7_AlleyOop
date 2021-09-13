@@ -14,7 +14,7 @@ module.exports = function(sequelize, DataTypes) {
             localidad:{
                 type: DataTypes.STRING
             },
-            coidgo_postal:{
+            codigo_postal:{
                 type: DataTypes.INTEGER,
             },
             telefono:{
@@ -30,7 +30,12 @@ module.exports = function(sequelize, DataTypes) {
 
     entrega_compra.associate = function(models){
         entrega_compra.belongsTo(models.User, {
+            as: "User",
             foreignKey: "user_id"
+        })
+        entrega_compra.hasMany(models.compras, {
+            as: "compras",
+            foreignKey: "entrega_id"
         })
     }
     return entrega_compra

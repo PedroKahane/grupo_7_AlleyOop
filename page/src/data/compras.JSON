@@ -137,7 +137,7 @@
     "precio": "6000",
     "cantidad": "1",
     "PrecioTotal": 6000,
-    "estadoProducto": "Confirmado",
+    "estadoProducto": "Cancelado",
     "nombre": "Pedro",
     "apellido": "Lopez",
     "email": "pedrolopez@gmail.com",

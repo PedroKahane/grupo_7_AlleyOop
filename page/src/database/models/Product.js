@@ -56,6 +56,7 @@ module.exports = function(sequelize, DataTypes) {
             foreignKey: "colors_id"
         });
         Product.hasMany(models.compras, {
+            as: "compra",
             foreignKey: "product_id"
         });
         Product.belongsToMany(models.Talle, {

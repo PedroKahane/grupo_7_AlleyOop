@@ -20,8 +20,7 @@ module.exports = {
             res.render("products/tienda", {styles:"tienda.css", products: products})
         } catch (error) {
             res.send(error);
-        }},
-    /* product:(req,res) => res.render("products/productDetail",{styles:"productDetail.css", product: product.oneWithExtra(req.params.id)}), */   
+        }},  
     product: async (req,res) => {
         try {
             let product = await db.Product.findByPk(req.params.id, {include: ["Talle"]})
@@ -29,7 +28,6 @@ module.exports = {
         } catch (error) {
             res.send(error);
         }},
-    /* create: (req,res) => res.render("products/create",{styles:"editar.css",product:product.one(req.params.id),colors:color.all(),talles:talle.all(),equipos: equipos.all()}), */
     create: async (req,res) => {
         try{
             return res.render("products/create", {
@@ -41,7 +39,16 @@ module.exports = {
             return res.send(error)
         }
     },
-    misCompras: (req,res) => res.render("products/misCompras",{styles:"ventas.css", compras: compras.comprasPorUsuario(req.session.userLogged.id) }),
+    misCompras: async (req,res) => { 
+        try {
+            let compras = await db.compras.findAll({include: ['User','product','entrega','metodo'], where : {
+                user_id: req.session.userLogged.id
+            }})
+            res.render("products/misCompras",{styles:"ventas.css", compras: compras })
+        } catch (error) {
+            console.log(error);
+        }
+    },
     save: async (req,res) => {
         const resultValidation = validationResult(req);
 
@@ -58,7 +65,6 @@ module.exports = {
                 res.send(error)
             }
         }
-        //return res.send(req.files)
         let imagenFrente = req.files != undefined ? req.files.find(archivo => archivo.fieldname == 'frente') : imagenDefault;
         let imagenEspalda = req.files != undefined ? req.files.find(archivo => archivo.fieldname == 'espalda') : imagenDefault;
         let productData =  {
@@ -74,7 +80,6 @@ module.exports = {
             colors_id: req.body.colors
         }
         const product = await db.Product.create(productData)
-        //db.product_talles.create()
         return res.redirect("/tienda")
     },
     edit: async (req,res) => {
@@ -106,7 +111,6 @@ module.exports = {
                 res.send(error)
             }
         }
-        
         let imagenFrente = req.files != undefined ? req.files.find(archivo => archivo.fieldname == 'frente') : imagenDefault;
         let imagenEspalda = req.files != undefined ? req.files.find(archivo => archivo.fieldname == 'espalda') : imagenDefault;
         let productData =  {
@@ -132,7 +136,6 @@ module.exports = {
         } catch (error) {
             console.log(error);
         }
-
     },
     colors: (req,res) => {
         if(req.query.colores != undefined){
