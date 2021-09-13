@@ -155,7 +155,7 @@ module.exports = {
         precio:5000,
         descuento:10,
         imagen_frente:'lillard-portland-frente.jpg',
-        imagen_espalda:'lillard-portland-espalda.jpg',
+        imagen_espalda:'lillard-portland-espalda.jpeg',
         descripcion: "Musculosa de Damian 'Logo' Lillard . Una de las actuales estrellas de liga que recientemente entró al selecto grupo de los 10 jugadores con más triples en la historia de la NBA, superando la barrera de los 1,988 tiros de larga distancia convertidos por Jason Kidd.",
         destacado:0,
         colors_id:5,
