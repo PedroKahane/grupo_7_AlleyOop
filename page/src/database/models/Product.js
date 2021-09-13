@@ -52,12 +52,14 @@ module.exports = function(sequelize, DataTypes) {
     
     Product.associate = function(models) {
         Product.belongsTo(models.Color, {
+            as: "Color",
             foreignKey: "colors_id"
         });
         Product.hasMany(models.compras, {
             foreignKey: "product_id"
         });
         Product.belongsToMany(models.Talle, {
+            as: "Talle",
             through: "product_talles",
             foreignKey: "product_id",
             otherKey: "talles_id",

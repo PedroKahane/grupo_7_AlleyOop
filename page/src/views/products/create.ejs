@@ -38,9 +38,9 @@
                     <label for="colors" class="titulo">Colors:</label>
                     <select name="colors" id="colors" >
                         <% if (locals.oldData && oldData.colors) { %>
-                            <option value="<%= oldData.colors %> " selected>Elegí el equipo:</option>
+                            <option value="<%= oldData.colors %> " selected>Elegí un color:</option>
                         <% } else { %>
-                            <option value="" selected>Elegí el equipo:</option>
+                            <option value="" selected>Elegí un color:</option>
                         <% } %>
                         <% colors.forEach(color => { %>
                             <option value="<%= color.id %>"><%= color.nombre %></option>
@@ -91,8 +91,8 @@
                 <fieldset>
                     <label for="destacado" class="titulo">Es destacado?</label>
                     <select name="destacado" id="destacado">
-                        <option value="destacado" >Destacado</option>
-                        <option value="noDestacado" selected>No destacado</option> 
+                        <option value="1" >Destacado</option>
+                        <option value="0" selected>No destacado</option> 
                     </select>
                 </fieldset>
                 <fieldset >

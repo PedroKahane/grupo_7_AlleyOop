@@ -27,15 +27,7 @@
                 </fieldset>
                 <fieldset>
                     <label for="equipo" class="titulo">Equipo:</label>
-                    <select name="equipo" id="equipo">
-                        <% equipos.forEach(equipo => { %>
-                            <% if (product.equipos == equipo.id) { %>
-                                <option value="<%= equipo.id %>" selected> <%= equipo.equipo %></option>
-                            <% } else { %>
-                                <option value="<%= equipo.id %>"> <%= equipo.equipo %></option>
-                            <% } %>
-                        <% }) %>
-                    </select>
+                    <input type="text" id="equipo" name="equipo" value="<%= locals.oldData ? oldData.equipo : product.equipo %>" class="border width">
                     <% if (locals.errors && errors.equipo) { %>
                         <p class="error"> 
                             <%= errors.equipo.msg %> 
@@ -45,12 +37,13 @@
                 <fieldset>
                     <label for="colors" class="titulo">Colors:</label>
                     <select name="colors" id="colors" >
+                        <% if (locals.oldData && oldData.colors) { %>
+                            <option value="<%= oldData.colors %> " selected>Elegí un color:</option>
+                        <% } else { %>
+                            <option value="" selected>Elegí un color:</option>
+                        <% } %>
                         <% colors.forEach(color => { %>
-                            <% if (product.color == color.id) { %>
-                                <option selected value="<%= color.id %>" ><%= color.color %></option>
-                            <% } else { %>
-                                <option value="<%= color.id %>"><%= color.color %></option>
-                            <% } %>
+                            <option value="<%= color.id %>"><%= color.nombre %></option>
                         <% }) %>
                     </select>
                     <% if (locals.errors && errors.colors) { %>
@@ -70,7 +63,7 @@
                 </fieldset>
                 <fieldset>
                     <label for="numeroCamiseta" class="titulo">Numero de camiseta:</label>
-                    <input type="numbre" name="numeroCamiseta" id="numeroCamiseta" value="<%= locals.oldData ? oldData.numero : product.numeroCamiseta %>" class="border width">
+                    <input type="numbre" name="numeroCamiseta" id="numeroCamiseta" value="<%= locals.oldData ? oldData.numeroCamiseta : product.numero_camiseta %>" class="border width">
                     <% if (locals.errors && errors.numeroCamiseta) { %>
                         <p class="error"> 
                             <%= errors.numeroCamiseta.msg %> 
@@ -98,12 +91,12 @@
                 <fieldset>
                     <label for="destacado" class="titulo">Es destacado?</label>
                     <select name="destacado" id="destacado">
-                        <% if (product.destacado == true || product.destacado == "true") { %>
-                            <option value=true selected>true</option>
-                            <option value=false>false</option>
+                        <% if (product.destacado == 1 || product.destacado == "1") { %>
+                            <option value=1 selected>true</option>
+                            <option value=0>false</option>
                         <% } else { %> 
-                            <option value=true >true</option>
-                            <option value=false selected>false</option>
+                            <option value=1 >true</option>
+                            <option value=0 selected>false</option>
                         <% } %> 
                     </select>
                     <% if (locals.errors && errors.talles) { %>
@@ -114,31 +107,24 @@
                 </fieldset>
                 <fieldset >
                     <label for="Talle" class="titulo">Talles disponibles:</label>
-                        <div id="radio">      
+                        <div id="radio">         
                         <% talles.forEach(talle => { %>
-                            <% let talleDisponible = product.talles.filter(productTalle => productTalle == talle.id) %>
-                                <% if (talle.id == talleDisponible) { %>
-                                    <div class="flex margin_radio">
-                                        <label for="<%= talle.id %>"><%= talle.talle %></label>
-                                        <input checked type="checkbox" value="<%= talle.id %>" id="<%= talle.id %>" name="talles">
-                                    </div>
-                                <% } else {%>
-                                    <div class="flex margin_radio">
-                                        <label for="<%= talle.id %>"><%= talle.talle %></label>
-                                        <input type="checkbox" value="<%= talle.id %>" id="<%= talle.id %>" name="talles">
-                                    </div>
-                                <% } %>
+                                <div class="flex margin_radio">
+                                    <label for="<%= talle.id %>"><%= talle.nombre %></label>
+                                    <input type="checkbox" name="talles" id="<%= talle.id %>" value="<%= talle.id %>" >
+                                </div>
                         <% }) %>
-                        </div>
+                    </div>
+                    <% if (locals.errors && errors.talles) { %>
+                        <p class="error"> 
+                            <%= errors.talles.msg %> 
+                        </p>
+                    <% } %>
                 </fieldset>
-                <% let numero_descripcion = 0 %>  
-                <% product.descripción.forEach(element => { %>
-                    <% numero_descripcion = numero_descripcion + 1 %>  
-                    <fieldset>
-                        <label for="descripción<%= numero_descripcion %>" class="titulo">Descripción <%= numero_descripcion %> </label>
-                        <textarea type="text" name="descripción<%= numero_descripcion %>" id="descripción<%= numero_descripcion %>" ><%= element %></textarea>
-                    </fieldset>
-                <% }) %>
+                <fieldset>
+                    <label for="descripcion" class="titulo">Descripción</label>
+                    <textarea type="text" name="descripcion" id="descripcion" value="<%= locals.oldData ? oldData.descripcion : product.descripcion %>"> <%= locals.oldData ? oldData.descripcion : product.descripcion %></textarea>
+                </fieldset>
                 <fieldset id="button_flex">
                     <button type="submit" id="submit">Send</button>
                 </fieldset>
