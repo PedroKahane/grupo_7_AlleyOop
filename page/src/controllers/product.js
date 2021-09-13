@@ -43,7 +43,10 @@ module.exports = {
         try {
             let compras = await db.compras.findAll({include: ['User','product','entrega','metodo'], where : {
                 user_id: req.session.userLogged.id
-            }})
+            },
+            order: [
+                ['id', 'DESC']
+            ]})
             res.render("products/misCompras",{styles:"ventas.css", compras: compras })
         } catch (error) {
             console.log(error);
@@ -137,11 +140,12 @@ module.exports = {
             console.log(error);
         }
     },
-    colors: (req,res) => {
+    colors: async (req,res) => {
         if(req.query.colores != undefined){
-        return res.render("products/filter", {styles:"tienda.css", products: product.filterByColors(req.query.colores)})
+        let products = await db.Product.findAll({include: ["Color"], where : { colors_id : req.query.colores} })
+        return res.render("products/tienda", {styles:"tienda.css", products: products})
         } else{
-            return res.render("products/tienda", {styles:"tienda.css", products: product.allWithExtra()})
+            return res.redirect("/tienda")
         }
     },
 }
