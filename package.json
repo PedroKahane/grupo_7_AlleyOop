@@ -4,7 +4,7 @@
   "description": "",
   "main": "node page/src/index.js",
   "scripts": {
-    "test": "npm run start",
+    "test": " node page/src/index.js",
     "start": "nodemon page/src/index.js"
   },
   "author": "",
