@@ -43,7 +43,10 @@ module.exports = {
         try {
             let compras = await db.compras.findAll({include: ['User','product','entrega','metodo'], where : {
                 user_id: req.session.userLogged.id
-            }})
+            },
+            order: [
+                ['id', 'DESC']
+            ]})
             res.render("products/misCompras",{styles:"ventas.css", compras: compras })
         } catch (error) {
             console.log(error);
@@ -54,6 +57,16 @@ module.exports = {
 
         if (!resultValidation.isEmpty()) {
             try {
+                if(req.files){
+                    let imagen_frente = path.resolve(__dirname,"../../public/uploads",req.file.filename[0])
+                    let imagen_espalda = path.resolve(__dirname,"../../public/uploads",req.file.filename[1])
+                    if(fs.existsSync(imagen_frente)) {
+                        fs.unlinkSync(imagen_frente)
+                    }
+                    if(fs.existsSync(imagen_espalda)) {
+                        fs.unlinkSync(imagen_espalda)
+                    }
+                }
                 return res.render("products/create", {
                     styles:"editar.css",
                     errors: resultValidation.mapped(),
@@ -79,11 +92,28 @@ module.exports = {
             destacado: parseInt(req.body.destacado),
             colors_id: req.body.colors
         }
+       
         const product = await db.Product.create(productData)
+        req.body.talles.forEach(talle => {
+            db.product_talles.create({
+                product_id : product.id,
+                talles_id : talle 
+            })
+        });
         return res.redirect("/tienda")
     },
     edit: async (req,res) => {
         try{
+            if(req.files){
+                let imagen_frente = path.resolve(__dirname,"../../public/uploads",req.file.filename[0])
+                let imagen_espalda = path.resolve(__dirname,"../../public/uploads",req.file.filename[1])
+                if(fs.existsSync(imagen_frente)) {
+                    fs.unlinkSync(imagen_frente)
+                }
+                if(fs.existsSync(imagen_espalda)) {
+                    fs.unlinkSync(imagen_espalda)
+                }
+            }
             return res.render("products/edit", {
                 styles:"editar.css",
                 colors: await db.Color.findAll(),
@@ -111,6 +141,16 @@ module.exports = {
                 res.send(error)
             }
         }
+        let productoAnterior = await db.Product.findByPk(req.params.id)
+
+        let imagen_frente = path.resolve(__dirname,"../../public/uploads",productoAnterior.imagen_frente)
+        let imagen_espalda = path.resolve(__dirname,"../../public/uploads",productoAnterior.imagen_espalda)
+        if(fs.existsSync(imagen_frente)) {
+            fs.unlinkSync(imagen_frente)
+        }
+        if(fs.existsSync(imagen_espalda)) {
+            fs.unlinkSync(imagen_espalda)
+        }
         let imagenFrente = req.files != undefined ? req.files.find(archivo => archivo.fieldname == 'frente') : imagenDefault;
         let imagenEspalda = req.files != undefined ? req.files.find(archivo => archivo.fieldname == 'espalda') : imagenDefault;
         let productData =  {
@@ -125,23 +165,42 @@ module.exports = {
             destacado: parseInt(req.body.destacado),
             colors_id: req.body.colors
         }
+        let talles = await db.product_talles.destroy({where: {product_id:req.params.id}})
         const product = await db.Product.update(productData, {where: {id: req.params.id}})
+
+        req.body.talles.forEach(talle => {
+            db.product_talles.create({
+                product_id : req.params.id,
+                talles_id : talle
+            })
+        });
         return res.redirect("/productDetail/" + req.params.id)
         
     },
     delete: async (req,res) => {
         try {
+            let talles = await db.product_talles.destroy({where: {product_id:req.params.id}})
+            let product = await db.Product.findOne({where: {id:req.params.id}})
+            let imagenFrente = path.resolve(__dirname,"../../public/uploads",product.imagen_frente)
+            let imagenEspalda = path.resolve(__dirname,"../../public/uploads",product.imagen_espalda)
+            if(fs.existsSync(imagenFrente)) {
+                fs.unlinkSync(imagenFrente)
+            }
+            if(fs.existsSync(imagenEspalda)) {
+                fs.unlinkSync(imagenEspalda)
+            }
             let result = await db.Product.destroy({where: {id:req.params.id}});
             return result == true ? res.redirect("/tienda") : res.status(500).send("Error en la carga")
         } catch (error) {
             console.log(error);
         }
     },
-    colors: (req,res) => {
+    colors: async (req,res) => {
         if(req.query.colores != undefined){
-        return res.render("products/filter", {styles:"tienda.css", products: product.filterByColors(req.query.colores)})
+        let products = await db.Product.findAll({include: ["Color"], where : { colors_id : req.query.colores} })
+        return res.render("products/tienda", {styles:"tienda.css", products: products})
         } else{
-            return res.render("products/tienda", {styles:"tienda.css", products: product.allWithExtra()})
+            return res.redirect("/tienda")
         }
     },
 }
