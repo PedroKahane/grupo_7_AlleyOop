@@ -54,6 +54,9 @@ module.exports = function(sequelize, DataTypes) {
         Pelicula.belogsTo(models.Color, {
             foreignKey: "colors_id"
         });
+        Pelicula.hasMany(models.compras, {
+            foreignKey: "product_id"
+        });
         Pelicula.belongsToMany(models.Talle, {
             through: "product_talles",
             foreignKey: "product_id",
