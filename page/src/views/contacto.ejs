@@ -3,7 +3,41 @@
     <%- include ("includes/head") %>
 <body>
     <%- include ("includes/header") %>
-    <main>
+    <main id="main_contacto">
+        <section class="contenedor_form">
+            <form id="contacto" action="">
+                <p id="titulo_contacto">Contactános</p>
+                <p id="subtitulo_contacto">¿Cómo podemos ayudar?</p>
+                <p id="mensaje_contacto">Todos los campos son obligatorios</p>
+                <div class="label_input">
+                    <input type="text" name="name" class="input" placeholder="Nombre y apellido">
+                </div>
+                <div class="label_input">
+                    <input type="email" name="mail" class="input" placeholder="E-mail">
+                </div>
+                <div class="label_input">
+                    <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Dejanos tu mensaje..."></textarea>
+                </div>
+                <button type="submit" class="submit">ENVIAR CONSULTA</button>
+            </form>
+        </section>
+        <section class="contenedor_imagen">
+            <picture class="imagen_contacto"></picture>
+        </section>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <main>
         <section>
             <form id="contacto" action="">
                 <p id="title_contacto">CONTACTO:</p>
@@ -22,7 +56,7 @@
                 <button type="submit" class="submit">ENVIAR CONSULTA</button>
             </form>
         </section>
-    </main>
+    </main> -->
     <%- include ("includes/footer") %>
 </body>
 </html>

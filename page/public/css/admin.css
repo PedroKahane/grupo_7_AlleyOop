@@ -5,25 +5,78 @@
     font-family: 'montserrat',sans-serif;
 }
 
-
-#divisor_main{
-    height: 100%;
-    margin: 5%;
+#main_admin {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
 }
-.button_admin{
+
+.contenedor_administrador {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #2e2e38;
+    width: 80%;
+    height: 40%;
+    margin-bottom: 20px;
+}
+
+.imagen_productos {
+    background-image: url(/images/imagen_productos.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    width: 50%;
+}
+
+.imagen_ventas {
+    background-image: url(/images/imagen_ventas.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    width: 50%;
+}
+
+.texto_boton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.button_admin {
+    width: 200px;
+    color: #FFF;
+    background-color: #1a1a24;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 14px;
+    text-transform: uppercase;
     text-decoration: none;
-    border: none;
-    background-color: #FF8200 ;
-    font-size: 48px;
-    width: 95%;
-    margin:  2.5%;
-    padding: 30px;
-    color: #0A0903;
-    border-radius: 35px;
     text-align: center;
+    padding: 12px 25px;
+    border-color: #FF8200;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 12px;
+    box-shadow: 0px 17px 9px -15px rgb(0 0 0 / 50%);
 }
+
+.button_admin:hover {
+    background-color: #FF8200;
+    transition-duration: 0.5s;
+}
+
+section div p {
+    font-size: 24px;
+    color: white;
+    padding-bottom: 30px;
+}
+
 #titulo_admin{
     font-size: 64px;
     font-weight: 600;
@@ -31,27 +84,58 @@
     margin-bottom: 100px;
     color: #0A0903;
 }
-@media (max-width:1000px){
-    .button_admin{
-        font-size: 32px;
-    }
-    #titulo_admin{
-        font-size: 42px;
-    }
-} 
-@media (max-width:681px){
-    .button_admin{
-        font-size: 24px;
-    }
-    #titulo_admin{
-        font-size: 32px;
-    }
-} 
-@media (max-width:381px){
-    .button_admin{
+
+@media (max-width:800px){
+    section div p {
         font-size: 16px;
     }
-    #titulo_admin{
-        font-size: 22px;
+    .button_admin {
+        width: 180px;
+        font-size: 12px;
+        padding: 12px 25px;
     }
-} 
+    .imagen_ventas {
+        background-position: -40px 0px;
+        width: 50%;
+    }
+    .imagen_productos {
+        background-position: -100px 0px;
+        width: 50%;
+    }
+
+}
+@media (max-width:600px){
+    .contenedor_administrador {
+        flex-direction: column;
+        align-items: center;
+    }
+    .texto_boton {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 25%;
+        width: 80%;
+    }
+    .imagen_productos {
+        height: 75%;
+        width: 100%;
+        background-position: 0px 0px;
+    }
+    .imagen_ventas {
+        height: 75%;
+        width: 100%;
+        background-position: 0px 0px;
+    }
+    .button_admin {
+        width: 180px;
+        height: 30px;
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+    section div p {
+        font-size: 12px;
+        margin-top: 25px;
+        font-weight: bold;
+    }
+
+}

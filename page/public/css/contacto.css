@@ -8,74 +8,155 @@
 html {
     background-color: #eee;;
 }
-#contacto {
-    width: 95vw;
-    border: 1px solid #0A0903;
-    border-radius: 20px;
-    margin: 10vh 2.5vw ;
-    background-color: #ffffff;
+
+#main_contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 1000px;
 }
+
+.contenedor_imagen{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 90%;
+}
+
+.contenedor_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2e2e38;
+    width: 60%;
+    height: 90%;
+}
+
+.imagen_contacto{
+    background-image: url(/images/imagen_contacto.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+#contacto{
+    height: 90%;
+    width: 80%;
+    
+}
+
+#titulo_contacto{
+    color: #FFC100;
+    font-size: 40px;
+    margin: 0px 0px 40px 0px;
+}
+
+#subtitulo_contacto{
+    color: white;
+    font-size: 32px;
+    margin: 40px 0px;
+}
+
+#mensaje_contacto{
+    color: white;
+    font-size: 16px;
+    margin: 40px 0px 5px 0px;
+    font-weight: 300;
+}
+
 .label_input {
     display: flex;
     flex-direction: column;
-    margin: 20px;
-}
-.label_input input {
-    border: 3px #ebebeb solid;
-    background-color: #ffffff;
-    border-radius: 30px;
-    padding: 10px 20px;
-}
-.label_input label {
-    font-size: 12px;
-    color: #0A0903;
-    margin-bottom: 5px;
-    margin-left: 15px;
-}
-#title_contacto {
-    font-size: 26px;
-    text-align: center;
-    margin-top: 15px;
-}
-textarea{
-    resize: none;
-    border: 3px #ebebeb solid;
-    background-color: #ffffff;
-    padding: 5px 5px;
-    border-radius: 10px;
+    margin: 0px 0px 20px 0px;
 }
 
 .submit {
-    width: 70%; 
+    width: 300px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px 25px;
+    border-color: #FF8200;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 12px;
+    box-shadow: 0px 17px 9px -15px rgb(0 0 0 / 50%);
+    background-color: #2e2e38;
+    color: white;
+}
+
+.submit:hover {
+    background-color: #FF8200;
+    transition-duration: 0.5s;
+}
+
+.label_input label {
+    font-size: 16px;
+    color:white;
+    margin-bottom: 5px;
+}
+
+.input {
+    background-color: #1a1a24;
+    padding: 26px 0px 26px 20px;
+    font-size: 16px;
+    margin: 8px 0;
+    color: white;
+    border: none;   
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+}
+
+#comentario{
+    background-color: #1a1a24;
+    padding: 26px 0px 26px 20px;
+    font-size: 16px;
+    margin: 8px 0;
+    color: white;
     border: none;
-    margin-left: 15%;
-    color: #FFFAFA;
-    background-color: #39b54a;
-    padding: 5px 10px;
-    border-radius: 30px;
-    margin-bottom: 25px;
+    height: 300px;
 }
-@media (min-width:450px){
+
+@media (max-width:630px){
+    #main_contacto {
+        justify-content: center;
+    }
+
+    .contenedor_imagen{
+        width: 0%;
+    }
+    
+    .contenedor_form{
+        width: 90%;
+    }
+    #titulo_contacto{
+        font-size: 30px;
+    }
+    
+    #subtitulo_contacto{
+        font-size: 24px;
+    }
+    
+    #mensaje_contacto{
+        font-size: 12px;
+    }
     .submit {
-        font-size: 22px;
-    }
-    #contacto  {
-        width: 70vw;
-        margin-left: 15vw;
-    }
-}
-@media (min-width:950px){
-    #contacto {
-        width: 40vw;
-        margin-left: 30vw;
-    }
-    .label_input{
-        margin-bottom: 40px;
-    }
-    textarea{
-        margin-bottom: 40px;
-    }
-    .label_input label{
-        font-size: 18px;
+        width: 200px;
+        font-size: 12px;
     }
 }
