@@ -27,16 +27,7 @@
                 </fieldset>
                 <fieldset>
                     <label for="equipo" class="titulo">Equipo:</label>
-                    <select name="equipo" id="equipo" >
-                        <% if (locals.oldData && oldData.equipo) { %>
-                            <option value="<%= oldData.equipo %> " selected>Elegí el equipo:</option>
-                        <% } else { %>
-                            <option value="" selected>Elegí el equipo:</option>
-                        <% } %>
-                        <% equipos.forEach(equipo => { %>
-                            <option value="<%= equipo.id %>"> <%= equipo.equipo %></option>
-                        <% }) %>
-                    </select>
+                    <input type="text" id="equipo" name="equipo" value="<%= locals.oldData ? oldData.equipo : null %>" class="border width">
                     <% if (locals.errors && errors.equipo) { %>
                         <p class="error"> 
                             <%= errors.equipo.msg %> 
@@ -47,12 +38,12 @@
                     <label for="colors" class="titulo">Colors:</label>
                     <select name="colors" id="colors" >
                         <% if (locals.oldData && oldData.colors) { %>
-                            <option value="<%= oldData.colors %> " selected>Elegí el equipo:</option>
+                            <option value="<%= oldData.colors %> " selected>Elegí un color:</option>
                         <% } else { %>
-                            <option value="" selected>Elegí el equipo:</option>
+                            <option value="" selected>Elegí un color:</option>
                         <% } %>
                         <% colors.forEach(color => { %>
-                            <option value="<%= color.id %>"><%= color.color %></option>
+                            <option value="<%= color.id %>"><%= color.nombre %></option>
                         <% }) %>
                     </select>
                     <% if (locals.errors && errors.colors) { %>
@@ -100,8 +91,8 @@
                 <fieldset>
                     <label for="destacado" class="titulo">Es destacado?</label>
                     <select name="destacado" id="destacado">
-                        <option value="destacado" >Destacado</option>
-                        <option value="noDestacado" selected>No destacado</option> 
+                        <option value="1" >Destacado</option>
+                        <option value="0" selected>No destacado</option> 
                     </select>
                 </fieldset>
                 <fieldset >
@@ -109,7 +100,7 @@
                         <div id="radio">         
                         <% talles.forEach(talle => { %>
                                 <div class="flex margin_radio">
-                                    <label for="<%= talle.id %>"><%= talle.talle %></label>
+                                    <label for="<%= talle.id %>"><%= talle.nombre %></label>
                                     <input type="checkbox" name="talles" id="<%= talle.id %>" value="<%= talle.id %>" >
                                 </div>
                         <% }) %>
@@ -121,12 +112,8 @@
                     <% } %>
                 </fieldset>  
                 <fieldset>
-                    <label for="descripcion1" class="titulo">Descripción 1</label>
-                    <textarea type="text" name="descripciones" id="descripcion1" value="<%= locals.oldData ? oldData.descripciones[0] : null %>"></textarea>
-                </fieldset>
-                <fieldset>
-                    <label for="descripcion2" class="titulo">Descripción 2</label>
-                    <textarea type="text" name="descripciones" id="descripcion2" value="<%= locals.oldData ? oldData.descripciones[1] : null %>"></textarea>
+                    <label for="descripcion" class="titulo">Descripción</label>
+                    <textarea type="text" name="descripcion" id="descripcion" value="<%= locals.oldData ? oldData.descripcion : null %>"></textarea>
                 </fieldset>
                 <fieldset id="button_flex">
                     <button type="submit" id="submit">Send</button>

@@ -5,7 +5,7 @@ const path = require('path')
 const fs = require('fs')
 const sequelize = require('sequelize')
 const bcrypt = require('bcrypt');
-let db = require("../database/models/index");
+const db = require("../database/models/index");
 const {Op} = sequelize
 const {like} = Op
 
@@ -222,7 +222,7 @@ module.exports = {
                     id: req.session.userLogged.id
                 }
             })
-            return res.redirect('/');
+            return res.redirect('/user/profile');
     
         } catch(error){
             return res.send(error)
@@ -241,7 +241,7 @@ module.exports = {
                     id: req.session.userLogged.id
                 }
             })
-            return res.redirect('/');
+            return res.redirect('/user/profile');
     
         } catch(error){
             return res.send(error)

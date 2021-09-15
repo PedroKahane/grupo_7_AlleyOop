@@ -385,5 +385,20 @@
       "Prenda para adultos Oficial de los Toronto Raptors",
       "Musculosa de 'T-Mac'. Siete veces seleccionado para disputar el All-Star Game. Ha ganado dos veces el título de máximo anotador de la liga, en 2003 y 2004."
     ]
+  },
+  {
+    "id": 19,
+    "precio": "",
+    "descuento": "",
+    "equipos": null,
+    "jugador": "",
+    "numeroCamiseta": "",
+    "color": null,
+    "destacado": "noDestacado",
+    "imagenFrente": null,
+    "imagenEspalda": null,
+    "talles": [
+      null
+    ]
   }
 ]

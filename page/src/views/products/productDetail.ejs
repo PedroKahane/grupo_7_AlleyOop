@@ -8,25 +8,25 @@
                 <article class="detalles_remera_container">
                     <div class="principal">
                         <div id="derecha_detail">
-                            <h2 class="none"> Musculosa <%= product.equipos.equipo %> (<%= product.numeroCamiseta %>)</h2>
-                            <img id="producto_principal" src="/uploads/<%= product.imagenFrente %>"  alt="Musculosa curry frente" class="producto_frente">
+                            <h2 class="none"> Musculosa <%= product.equipo %> (<%= product.numero_camiseta %>)</h2>
+                            <img id="producto_principal" src="/uploads/<%= product.imagen_frente %>"  alt="Musculosa curry frente" class="producto_frente">
                             <div class="otras-img-container">
-                                <img src="/uploads/<%= product.imagenFrente %>" alt="Mosculosa curry frente" class="frente" >
-                                <img src="/uploads/<%= product.imagenEspalda %>" alt="Mosculosa curry espalda" class="espalda">
+                                <img src="/uploads/<%= product.imagen_frente %>" alt="Mosculosa curry frente" class="frente" >
+                                <img src="/uploads/<%= product.imagen_espalda %>" alt="Mosculosa curry espalda" class="espalda">
                             </div>
                         </div>
                         <div class="info-container">
-                            <h2> Musculosa <%= product.equipos.equipo %> (<%= product.numeroCamiseta %>)</h2>
+                            <h2> Musculosa <%= product.equipo %> (<%= product.numero_camiseta %>)</h2>
                             <p class="precio">$<%= product.precio %></p>
                             <div class="seleccion-talla">
                                 <label for="">Talle: </label>
                                 <select name="talla">
-                                    <% if (Array.isArray(product.talles)) { %>
-                                        <% product.talles.forEach(element => { %>
+                                    <% if (Array.isArray(product.Talle)) { %>
+                                        <% product.Talle.forEach(element => { %>
                                             <option value="<%= element.abreviatura %>"><%= element.abreviatura %> </option>
                                             <% }) %>
                                     <% } else {%>
-                                        <option value="<%= product.talles.abreviatura %>"><%= product.talles.abreviatura %> </option>
+                                        <option value="<%= product.Talle.abreviatura %>"><%= product.Talle.abreviatura %> </option>
                                     <% } %>
                                 </select>
                             </div>
@@ -35,9 +35,7 @@
                                     <button type="submit" class="carrito-buttom-detail">AGREGAR AL CARRITO</button>
                                 </form> 
                             </div>
-                            <% product.descripción.forEach(element => { %>
-                            <p class="otra-desc"> <%= element %>  </p>
-                            <% }) %> 
+                            <p class="otra-desc"> <%= product.descripcion %>  </p>
                             <% if (locals.userLogged && locals.userLogged.admin) { %>
                             <div class="flex">
                                 <a href="/edit/<%= product.id %>" class="buton_edit destkop"> EDITAR</a>
