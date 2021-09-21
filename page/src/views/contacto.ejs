@@ -2,21 +2,50 @@
 <html lang="en">
     <%- include ("includes/head") %>
 <body>
+    
     <%- include ("includes/header") %>
     <main id="main_contacto">
         <section class="contenedor_form">
-            <form id="contacto" action="">
+            <form id="contacto" action="/contacto" method="POST">
                 <p id="titulo_contacto">Contactános</p>
                 <p id="subtitulo_contacto">¿Cómo podemos ayudar?</p>
                 <p id="mensaje_contacto">Todos los campos son obligatorios</p>
                 <div class="label_input">
-                    <input type="text" name="name" class="input" placeholder="Nombre y apellido">
+                    <div class="flex">
+                        <input type="text" name="name" class="input" placeholder="Nombre y apellido" value="<%= locals.oldData ? oldData.name : null %>">
+                        <i class="fas fa-exclamation-circle none"></i>
+                    </div>
+                    <p class="error"></p>
+                    <% if (locals.errors && errors.name) { %>
+                        <p class="error">
+                          <%= errors.name.msg %> 
+                        </p>
+                      <% } %>
                 </div>
                 <div class="label_input">
-                    <input type="email" name="mail" class="input" placeholder="E-mail">
+                    <div class="flex">
+                        <input type="text" name="mail" class="input" placeholder="E-mail" value="<%= locals.oldData ? oldData.mail : null %>"> 
+                        <i class="fas fa-exclamation-circle none"></i>
+                    </div>
+                <p class="error"></p>
+                    <% if (locals.errors && errors.mail) { %>
+                        <p class="error">
+                          <%= errors.mail.msg %> 
+                        </p>
+                      <% } %>
                 </div>
                 <div class="label_input">
-                    <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Dejanos tu mensaje..."></textarea>
+                    <div class="flex">
+                        <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Dejanos tu mensaje..."><%= locals.oldData ? oldData.mail : null %></textarea>
+                        <i class="fas fa-exclamation-circle none"></i>
+                    </div>
+                    <div id="contador">0/250</div>
+                    <p class="error" id="error_placeholder"></p>
+                    <% if (locals.errors && errors.comentario) { %>
+                        <p class="error">
+                          <%= errors.comentario.msg %> 
+                        </p>
+                      <% } %>
                 </div>
                 <button type="submit" class="submit">ENVIAR CONSULTA</button>
             </form>
@@ -26,38 +55,8 @@
         </section>
     </main>
 
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <main>
-        <section>
-            <form id="contacto" action="">
-                <p id="title_contacto">CONTACTO:</p>
-                <div class="label_input">
-                    <label for="name">Nombre y apellido:</label>
-                    <input type="text" name="name" id="name">
-                </div>
-                <div class="label_input">
-                    <label for="mail">Correo Electronico:</label>
-                    <input type="email" name="mail" id="mail">
-                </div>
-                <div class="label_input">
-                    <label for="mail">Dejanos tu comentario:</label>
-                    <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder=""></textarea>
-                </div>
-                <button type="submit" class="submit">ENVIAR CONSULTA</button>
-            </form>
-        </section>
-    </main> -->
     <%- include ("includes/footer") %>
+    <script src="/js/contacto.js"></script>
 </body>
 </html>
 
