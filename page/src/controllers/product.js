@@ -75,16 +75,10 @@ module.exports = {
                 res.send(error)
             }
         }
-        let productoAnterior = await db.Product.findByPk(req.params.id)
+    
 
-        let imagenFrente = path.resolve(__dirname,"../../public/uploads",productoAnterior.imagen_frente)
-        let imagenEspalda = path.resolve(__dirname,"../../public/uploads",productoAnterior.imagen_espalda)
-        if(fs.existsSync(imagenFrente)) {
-            fs.unlinkSync(imagenFrente)
-        }
-        if(fs.existsSync(imagenEspalda)) {
-            fs.unlinkSync(imagenEspalda)
-        }
+        let imagenFrente = req.files != undefined ? req.files.find(archivo => archivo.fieldname == 'frente') : imagenDefault;
+        let imagenEspalda = req.files != undefined ? req.files.find(archivo => archivo.fieldname == 'espalda') : imagenDefault;
         let productData =  {
             jugador: req.body.jugador,
             equipo: req.body.equipo,

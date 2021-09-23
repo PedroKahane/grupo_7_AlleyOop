@@ -13,7 +13,7 @@ html {
     align-items: center;
     justify-content: center;
 }
-#edit-form{
+#editForm{
     border: 1px solid #0A0903;
     border-radius: 20px;
     margin: 10vh 2.5vw;
@@ -76,7 +76,7 @@ textarea, select{
     text-align: center;
     margin-top: 15px;
 }
-#submit{
+#submit_create{
     width: 60%;
     border: none;
     color: #FFFAFA;
@@ -103,12 +103,50 @@ textarea{
     color: rgb(255, 0, 0);
     font-size: 12px;
 }
+.flex{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.fa-exclamation-circle{
+    z-index: 9;
+    position: relative;
+    right: 50px;
+    font-size: 24px;
+    color: rgb(255, 0, 0);
+    width: 0px;
+}
+.fa-check-circle{
+    z-index: 9;
+    position: relative;
+    right: 50px;
+    font-size: 24px;
+    color: rgb(44, 236, 44);
+    width: 0px;
+}
+.error_front{
+    border: 1px solid rgb(255, 0, 0);
+}
+.none{
+    display: none !important;
+}
+#contador{
+    color: #0A0903;
+    margin-left: 15px;
+    font-size: 14px;
+}
+.error_contador{
+    color: rgb(255, 0, 0) !important;
+}
+.green{
+    color: rgb(44, 236, 44);;
+}
 @media (min-width:450px){
     textarea{
         height: unset;
         border-radius: 30px !important;
     }
-    #submit{
+    #submit_create{
         width: 35%;
         font-size: 32px;
     }
