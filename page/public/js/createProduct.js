@@ -1,7 +1,6 @@
 const formElement = document.forms.editForm
 //console.log(formElement);
-const inputFilter = Array.from(formElement.elements).filter(elemento => elemento.getAttribute("name") != undefined)
-let inputs = inputFilter.filter(elemento => elemento.getAttribute("name") != "talles")
+const inputs = Array.from(formElement.elements).filter(elemento => elemento.getAttribute("name") != undefined)
 console.log(inputs);
 
 
@@ -141,10 +140,23 @@ inputs.forEach(input => {
                     error.innerHTML = null
                 }
             }
+            if(name == "talles"){
+                if(value == "" || value == null || value == undefined){
+                    arget.classList.add("error_front")
+                    target.classList.remove("success")
+                    error.innerHTML = "Debe seleccionar un talle"
+
+                } else{
+                    target.classList.add("success")
+                    target.classList.remove("error_front")
+                    error.innerHTML = null
+                }
+            }
         }
             
 
-    } else{
+    }
+     else{
         input.onchange = (evento) => {
             const target = evento.target;
             const name = target.getAttribute("name");
