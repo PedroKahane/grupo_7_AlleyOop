@@ -33,8 +33,13 @@ header {
     padding: 20px;
     font-size: 18px;
     font-weight: bold;
-    display: none;
+    border-bottom: 1px solid #FFFAFA;
+    text-align: center;
 }
+#menu_header:last-child{
+    border-bottom: none;
+}
+
 #icon_header a i {
     font-size: 1.7em;
     color: #FFFAFA;
@@ -63,12 +68,50 @@ header {
     text-decoration: none;
     color: white;
     align-items: center;
+    cursor: pointer;
 }
 .bienvenida_logged{
     display: none;
 }
 #header_bottom{
     justify-content: flex-start;
+}
+.dropdown{
+    
+    position: absolute;
+    top: 75px;
+    display: flex;
+    background-color: #FFEAAE;
+    flex-direction: column;
+    right: 10px;
+    width: 100%;
+    max-width: 180px;
+    transition: transform 500ms
+
+}
+.dropdown a {
+    text-decoration: none;
+    color: #0A0903;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-bottom: 1px solid #0A0903;
+    width: 100%;
+    text-align: center;
+}
+.none{
+    display: none;
+}
+.none_header{
+    display: none !important;
+}
+#menu_header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0A0903;
+    position: absolute;
+    top: 80px;
+    left: 0px;
 }
 @media (min-width:421px) {
     .imagen_header {
@@ -85,10 +128,20 @@ header {
     .logo_alley_oop {
         width: 160px;
     }
+    .none_header{
+        display: unset !important;
+    }
     .burger-menu {
         display: none;
     }
     #menu_header a {
         display: unset;
+        border-bottom: none;
+    }
+    #menu_header{
+        display: unset;
+        width: unset;
+        background-color: unset;
+        position: unset;
     }
 }

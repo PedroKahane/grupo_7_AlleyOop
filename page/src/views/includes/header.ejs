@@ -8,23 +8,27 @@
                 <img class="logo_alley_oop" src="/images/alley-oop-logo.png" alt="" width="120px">
             </a>
         </figure>
-        <section id="menu_header">
+        <section id="menu_header" class="none_header">
             <a href="/">Home</a>
             <a href="/tienda">Tienda</a>
             <a href="/contacto">Contacto</a>
-            <% if (locals.userLogged && locals.userLogged.admin) { %>
-                <a href="/admin/admin">Administrar</a>
-            <% } %> 
-            <% if (locals.isLogged) { %>
-                <a href="/misCompras">Mis compras</a>
-            <% } %> 
         </section>
         <section id="icon_header">
             <% if (locals.isLogged) { %>
-                <a id="a_img_log" href="/user/profile">
+                <div id="a_img_log">
                     <img src="/uploads/users/<%= locals.userLogged.image %> " alt="" height="32px" width="32px" id="image_perfil">
                     <p class="bienvenida_logged"> Bienvenido <%= locals.userLogged.first_name %> </p>
-                </a>
+                </div>
+                <div class="dropdown none">
+                    <a href="/user/profile">Profile</a>
+                    <% if (locals.isLogged) { %>
+                        <a href="/misCompras">Mis compras</a>
+                    <% } %> 
+                    <% if (locals.userLogged && locals.userLogged.admin) { %>
+                        <a href="/admin/admin">Administrar</a>
+                    <% } %> 
+                    <a href="/user/logout">Logout</a>
+                </div>
             <% } else { %>
                 <a class="icon_a" href="/user/login"><i class="fas fa-user"></i></a>
             <% } %>
@@ -32,5 +36,6 @@
                 <i class="fas fa-bars"></i>
             </div>
         </section>
+        <script src="/js/dropdown.js"></script>
     </div>
 </header>
