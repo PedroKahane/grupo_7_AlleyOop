@@ -85,26 +85,26 @@ section div p {
     color: #0A0903;
 }
 
-@media (max-width:800px){
+@media (max-width:1279px){
     section div p {
-        font-size: 16px;
+        font-size: 20px;
     }
     .button_admin {
-        width: 180px;
-        font-size: 12px;
+        width: 200px;
+        font-size: 14px;
         padding: 12px 25px;
     }
     .imagen_ventas {
-        background-position: -40px 0px;
+        background-position: -60px 0px;
         width: 50%;
     }
     .imagen_productos {
-        background-position: -100px 0px;
+        background-position: -120px 0px;
         width: 50%;
     }
 
 }
-@media (max-width:600px){
+@media (max-width:769px){
     .contenedor_administrador {
         flex-direction: column;
         align-items: center;
