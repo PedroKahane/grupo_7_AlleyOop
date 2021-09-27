@@ -1,8 +1,8 @@
 const path = require('path');
 const db = require('../database/models');
-const product = require("../models/product")
 
-;
+const { validationResult } = require('express-validator');
+
 
 module.exports = {
     index: async (req,res) => {
@@ -13,5 +13,19 @@ module.exports = {
         console.log(error);
         }
     },
-    contacto:(req,res) => res.render("contacto",{styles:"contacto.css", }),
+    contacto: (req,res) => res.render("contacto",{styles:"contacto.css"}),
+    contactoForm: (req,res) => {
+        const resultValidation = validationResult(req);
+
+        if (!resultValidation.isEmpty()) {
+            return res.render('contacto', {
+                styles:"contacto.css", 
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            });
+    } else{
+        return res.redirect("/")
+    }
+    
+}
 }

@@ -49,7 +49,7 @@ label{
     margin-right: 10px;
 
 }
-#submit{
+.submit{
     width: 75%;
     border: none;
     color: #FFFAFA;
@@ -199,11 +199,40 @@ form{
 .flex{
     display: flex;
 }
-.error {
-    margin-left: 20px;
+.error, #error_image {
+    margin-top: 5px;
+    margin-left: 10px;
     color: rgb(255, 0, 0);
     font-size: 12px;
 }
+.flex{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.fa-exclamation-circle{
+    z-index: 9;
+    position: relative;
+    right: 40px;
+    font-size: 24px;
+    color: rgb(255, 0, 0);
+    width: 0px;
+}
+.fa-check-circle{
+    z-index: 9;
+    position: relative;
+    right: 40px;
+    font-size: 24px;
+    color: rgb(44, 236, 44);
+    width: 0px;
+}
+.error_front{
+    border: 1px solid rgb(255, 0, 0);
+}
+.none{
+    display: none !important;
+}
+
 @media (max-width: 1400px) {
     .formularios{
         width: 95%;

@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -109,7 +109,8 @@ html {
     font-size: 16px;
     margin: 8px 0;
     color: white;
-    border: none;   
+    border: none;
+    width: 100%;
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: white;
@@ -130,8 +131,62 @@ html {
     color: white;
     border: none;
     height: 300px;
+    resize: none;
+    width: 100%;
 }
-
+.error {
+    color: rgb(255, 0, 0);
+    font-size: 14px;
+    font-weight: 500;
+}
+.green{
+    color: rgb(44, 236, 44);;
+}
+.error_front{
+    border-bottom: 1px solid rgb(255, 0, 0);
+    width: 100%;
+}
+.error_text{
+    border: 1px solid rgb(255, 0, 0) !important;
+    width: 100%;
+}
+.success_front{
+    border-bottom: 1px solid rgb(44, 236, 44) !important;
+    width: 100%;
+}
+.success_text{
+    border: 1px solid rgb(44, 236, 44) !important;
+    width: 100%;
+}
+.fa-exclamation-circle{
+    z-index: 9;
+    position: relative;
+    right: 40px;
+    font-size: 24px;
+    color: rgb(255, 0, 0);
+    width: 0px;
+}
+.fa-check-circle{
+    z-index: 9;
+    position: relative;
+    right: 40px;
+    font-size: 24px;
+    color: rgb(44, 236, 44);
+    width: 0px;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+#contador{
+    color: whitesmoke;
+}
+.error_contador{
+    color: rgb(255, 0, 0) !important;
+}
+.none{
+    display: none !important;
+}
 @media (max-width:630px){
     #main_contacto {
         justify-content: center;

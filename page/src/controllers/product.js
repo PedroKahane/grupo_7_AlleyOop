@@ -1,11 +1,5 @@
-
-const product = require("../models/product")
-const color = require('../models/color');
 const { validationResult } = require('express-validator');
-const talle = require('../models/talles');
-const equipos = require('../models/equipos');
-const compras = require('../models/compras');
-const { filterColors, filterByColors } = require("../models/product");
+
 const path = require('path')
 const fs = require('fs')
 const sequelize = require('sequelize')
@@ -58,14 +52,17 @@ module.exports = {
         if (!resultValidation.isEmpty()) {
             try {
                 if(req.files){
-                    let imagen_frente = path.resolve(__dirname,"../../public/uploads",req.file.filename[0])
-                    let imagen_espalda = path.resolve(__dirname,"../../public/uploads",req.file.filename[1])
+                    let imagen_frente = path.resolve(__dirname,"../../public/uploads",req.files[0].filename)
                     if(fs.existsSync(imagen_frente)) {
                         fs.unlinkSync(imagen_frente)
                     }
-                    if(fs.existsSync(imagen_espalda)) {
-                        fs.unlinkSync(imagen_espalda)
+                    if(req.files[1]){
+                        let imagen_espalda = path.resolve(__dirname,"../../public/uploads",req.files[1].filename)
+                         if(fs.existsSync(imagen_espalda)) {
+                            fs.unlinkSync(imagen_espalda)
+                        }
                     }
+                   
                 }
                 return res.render("products/create", {
                     styles:"editar.css",
@@ -78,6 +75,8 @@ module.exports = {
                 res.send(error)
             }
         }
+    
+
         let imagenFrente = req.files != undefined ? req.files.find(archivo => archivo.fieldname == 'frente') : imagenDefault;
         let imagenEspalda = req.files != undefined ? req.files.find(archivo => archivo.fieldname == 'espalda') : imagenDefault;
         let productData =  {
@@ -104,16 +103,6 @@ module.exports = {
     },
     edit: async (req,res) => {
         try{
-            if(req.files){
-                let imagen_frente = path.resolve(__dirname,"../../public/uploads",req.file.filename[0])
-                let imagen_espalda = path.resolve(__dirname,"../../public/uploads",req.file.filename[1])
-                if(fs.existsSync(imagen_frente)) {
-                    fs.unlinkSync(imagen_frente)
-                }
-                if(fs.existsSync(imagen_espalda)) {
-                    fs.unlinkSync(imagen_espalda)
-                }
-            }
             return res.render("products/edit", {
                 styles:"editar.css",
                 colors: await db.Color.findAll(),
@@ -129,6 +118,19 @@ module.exports = {
         
         if (!resultValidation.isEmpty()) {
             try {
+                if(req.files){
+                    let imagen_frente = path.resolve(__dirname,"../../public/uploads",req.files[0].filename)
+                    if(fs.existsSync(imagen_frente)) {
+                        fs.unlinkSync(imagen_frente)
+                    }
+                    if(req.files[1]){
+                        let imagen_espalda = path.resolve(__dirname,"../../public/uploads",req.files[1].filename)
+                         if(fs.existsSync(imagen_espalda)) {
+                            fs.unlinkSync(imagen_espalda)
+                        }
+                    }
+                   
+                }
                 return res.render("products/edit", {
                     styles:"editar.css",
                     errors: resultValidation.mapped(),

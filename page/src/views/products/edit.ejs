@@ -5,11 +5,15 @@
     <div class="contenedor">
         <%- include ("../includes/header") %>
         <main id="main_edit">
-            <form action="/update/<%= product.id %>?_method=PUT" method="POST" id="edit-form" enctype="multipart/form-data">
+            <form action="/update/<%= product.id %>?_method=PUT" method="POST" id="editForm" enctype="multipart/form-data">
                 <p class="title_edit">Editar camiseta de <%= product.jugador %> :</p>
                 <fieldset>
                     <label for="precio" class="titulo">Precio:</label>
-                    <input type="number" name="precio" id="precio" value="<%= locals.oldData ? oldData.precio : product.precio  %>"  class="border width">
+                    <div class="flex">
+                        <input type="number" name="precio" id="precio" value="<%= locals.oldData ? oldData.precio : product.precio  %>"  class="border width">
+                        <i class="fas fa-exclamation-circle none"></i>
+                    </div>
+                    <p class="error"></p>
                     <% if (locals.errors && errors.precio) { %>
                         <p class="error"> 
                             <%= errors.precio.msg %> 
@@ -18,7 +22,11 @@
                 </fieldset>
                 <fieldset>
                     <label for="descuento" class="titulo">Descuento:</label>
-                    <input type="number" name="descuento" id="descuento"  value="<%= locals.oldData ? oldData.descuento : product.descuento %>" class="border width">
+                    <div class="flex">    
+                        <input type="number" name="descuento" id="descuento"  value="<%= locals.oldData ? oldData.descuento : product.descuento %>" class="border width">
+                        <i class="fas fa-exclamation-circle none"></i>
+                    </div>
+                    <p class="error"></p>
                     <% if (locals.errors && errors.descuento) { %>
                         <p class="error"> 
                             <%= errors.descuento.msg %> 
@@ -27,7 +35,11 @@
                 </fieldset>
                 <fieldset>
                     <label for="equipo" class="titulo">Equipo:</label>
-                    <input type="text" id="equipo" name="equipo" value="<%= locals.oldData ? oldData.equipo : product.equipo %>" class="border width">
+                    <div class="flex">
+                        <input type="text" id="equipo" name="equipo" value="<%= locals.oldData ? oldData.equipo : product.equipo %>" class="border width">
+                        <i class="fas fa-exclamation-circle none"></i>
+                    </div>
+                    <p class="error"></p>
                     <% if (locals.errors && errors.equipo) { %>
                         <p class="error"> 
                             <%= errors.equipo.msg %> 
@@ -36,16 +48,20 @@
                 </fieldset>
                 <fieldset>
                     <label for="colors" class="titulo">Colors:</label>
-                    <select name="colors" id="colors" >
-                        <% if (locals.oldData && oldData.colors) { %>
-                            <option value="<%= oldData.colors %> " selected>Elegí un color:</option>
-                        <% } else { %>
-                            <option value="" selected>Elegí un color:</option>
-                        <% } %>
-                        <% colors.forEach(color => { %>
-                            <option value="<%= color.id %>"><%= color.nombre %></option>
-                        <% }) %>
-                    </select>
+                    <div class="flex">
+                        <select name="colors" id="colors" >
+                            <% if (locals.oldData && oldData.colors) { %>
+                                <option value="<%= oldData.colors %> " selected>Elegí un color:</option>
+                            <% } else { %>
+                                <option value="" selected>Elegí un color:</option>
+                            <% } %>
+                            <% colors.forEach(color => { %>
+                                <option value="<%= color.id %>"><%= color.nombre %></option>
+                            <% }) %>
+                        </select>
+                        <i class="fas fa-exclamation-circle none"></i>
+                    </div>
+                    <p class="error"></p>
                     <% if (locals.errors && errors.colors) { %>
                         <p class="error"> 
                             <%= errors.colors.msg %> 
@@ -54,7 +70,11 @@
                 </fieldset>
                 <fieldset>
                     <label for="jugador" class="titulo">Jugador:</label>
-                    <input type="text" name="jugador" id="jugador" value="<%= locals.oldData ? oldData.jugador : product.jugador %>" class="border width">
+                    <div class="flex">
+                        <input type="text" name="jugador" id="jugador" value="<%= locals.oldData ? oldData.jugador : product.jugador %>" class="border width">
+                        <i class="fas fa-exclamation-circle none"></i>
+                    </div>
+                    <p class="error"></p>
                     <% if (locals.errors && errors.jugador) { %>
                         <p class="error"> 
                             <%= errors.jugador.msg %> 
@@ -63,7 +83,11 @@
                 </fieldset>
                 <fieldset>
                     <label for="numeroCamiseta" class="titulo">Numero de camiseta:</label>
-                    <input type="numbre" name="numeroCamiseta" id="numeroCamiseta" value="<%= locals.oldData ? oldData.numeroCamiseta : product.numero_camiseta %>" class="border width">
+                    <div class="flex">
+                        <input type="numbre" name="numeroCamiseta" id="numeroCamiseta" value="<%= locals.oldData ? oldData.numeroCamiseta : product.numero_camiseta %>" class="border width">
+                        <i class="fas fa-exclamation-circle none"></i>
+                    </div>
+                    <p class="error"></p>
                     <% if (locals.errors && errors.numeroCamiseta) { %>
                         <p class="error"> 
                             <%= errors.numeroCamiseta.msg %> 
@@ -73,6 +97,7 @@
                 <fieldset>
                     <label for="frente" class="titulo">Imagen de frente:</label>
                     <input class="margin_radio width" type="file" name="frente" id="frente">
+                    <p class="error"></p>
                     <% if (locals.errors && errors.frente) { %>
                         <p class="error"> 
                             <%= errors.frente.msg %> 
@@ -82,6 +107,7 @@
                 <fieldset>
                     <label for="espalda" class="titulo">Imagen de espalda:</label>
                     <input class="margin_radio width" type="file" name="espalda" id="espalda">
+                    <p class="error"></p>
                     <% if (locals.errors && errors.espalda) { %>
                         <p class="error"> 
                             <%= errors.espalda.msg %> 
@@ -112,9 +138,12 @@
                                 <div class="flex margin_radio">
                                     <label for="<%= talle.id %>"><%= talle.nombre %></label>
                                     <input type="checkbox" name="talles" id="<%= talle.id %>" value="<%= talle.id %>" >
+                                    <i class="fas fa-exclamation-circle none"></i>
                                 </div>
                         <% }) %>
+                        <p class="error"></p>
                     </div>
+
                     <% if (locals.errors && errors.talles) { %>
                         <p class="error"> 
                             <%= errors.talles.msg %> 
@@ -123,15 +152,21 @@
                 </fieldset>
                 <fieldset>
                     <label for="descripcion" class="titulo">Descripción</label>
-                    <textarea type="text" name="descripcion" id="descripcion" value="<%= locals.oldData ? oldData.descripcion : product.descripcion %>"> <%= locals.oldData ? oldData.descripcion : product.descripcion %></textarea>
+                    <div class="flex">
+                        <textarea type="text" name="descripcion" id="descripcion" value="<%= locals.oldData ? oldData.descripcion : product.descripcion %>"><%= locals.oldData ? oldData.descripcion : product.descripcion %></textarea>
+                        <i class="fas fa-exclamation-circle none"></i>
+                    </div>
+                    <div id="contador"><%= product.descripcion.length %>/250</div>
+                    <p class="error" id="error_placeholder"></p>
                 </fieldset>
                 <fieldset id="button_flex">
-                    <button type="submit" id="submit">Send</button>
+                    <button type="submit" id="submit_create">Send</button>
                 </fieldset>
                 </form> 
         </main>
         <%- include ("../includes/footer") %>
     </div>
+    <script src="/js/createProduct.js"></script>
 </body>
 </html>
 
