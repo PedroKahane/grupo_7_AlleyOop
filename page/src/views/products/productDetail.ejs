@@ -10,8 +10,12 @@
                         <div id="derecha_detail">
                             <h2 class="none"> Musculosa <%= product.equipo %> (<%= product.numero_camiseta %>)</h2>
                             <img id="producto_principal" src="/uploads/<%= product.imagen_frente %>"  alt="Musculosa curry frente" class="producto_frente">
+                            <figure class="contenedor_img none">
+                                <img src="" class="original" alt="">
+                                <i class="fas fa-times" id="cancel_icon"></i>
+                            </figure>
                             <div class="otras-img-container">
-                                <img src="/uploads/<%= product.imagen_frente %>" alt="Mosculosa curry frente" class="frente" >
+                                <img src="/uploads/<%= product.imagen_frente %>" alt="Mosculosa curry frente" class="frente">
                                 <img src="/uploads/<%= product.imagen_espalda %>" alt="Mosculosa curry espalda" class="espalda">
                             </div>
                         </div>
@@ -56,6 +60,7 @@
         </main>
         <%- include ("../includes/footer") %>
     </div>
+    <script src="/js/productDetail.js"></script>
 </body>
 </html>
 

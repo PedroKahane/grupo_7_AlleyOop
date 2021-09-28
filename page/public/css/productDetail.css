@@ -7,7 +7,7 @@
 html {
       background-color: #eee;
   }
-  #derecha_detail{
+#derecha_detail{
       width: 50%;
   }
 main {
@@ -15,6 +15,7 @@ main {
     justify-content: center;
     align-items: center;
     padding: 112px;
+    min-height: calc(100vh - 140px);
 }
 .celular {
     display: none;
@@ -32,9 +33,9 @@ main {
     height: auto;
     box-shadow: 0px 1px 5px rgb(170, 170, 170);
     display: block;
-    transition: display 150ms;
     max-width: 340px;
     max-height: 340px;
+    cursor: pointer;
 }
 
 .info-container{
@@ -86,6 +87,7 @@ main {
 }
 .otras-img-container img{
     width: 60px;
+    cursor: pointer;
     height:60px;
 }
 .frente, .espalda {
@@ -156,6 +158,31 @@ h2
     display: flex;
     margin-top: 10px;
 }
+.contenedor_img.show{
+    position: fixed;
+    top: 0vh;
+    left: 0vw;
+    z-index: 9;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(25, 25, 25, 0.9);
+    transition: all 0.2s ease-in-out;
+}
+.original{
+    max-height: 85%;
+    width: auto;
+}
+.fa-times{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    color: whitesmoke;
+    font-size: 32px;
+    cursor: pointer;
+}
 @media (max-width:1200px) {
     main{
         width: 100%;
@@ -176,6 +203,7 @@ h2
     #producto_principal{
         height: 250px;
         width: 250px;
+        
     }
     .info-container{
         width: auto;
