@@ -71,7 +71,7 @@
     transition-duration: 0.5s;
 }
 
-section div p {
+.sec_div_p {
     font-size: 24px;
     color: white;
     padding-bottom: 30px;
@@ -86,7 +86,7 @@ section div p {
 }
 
 @media (max-width:1279px){
-    section div p {
+    .sec_div_p {
         font-size: 20px;
     }
     .button_admin {
@@ -132,7 +132,7 @@ section div p {
         font-size: 10px;
         padding: 6px 12px;
     }
-    section div p {
+    .sec_div_p {
         font-size: 12px;
         margin-top: 25px;
         font-weight: bold;
