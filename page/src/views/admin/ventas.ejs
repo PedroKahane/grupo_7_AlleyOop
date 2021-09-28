@@ -22,7 +22,7 @@
                         </a>
                         <div id="contenedor_descripciones">
                             <p class="descripcion"><span>Camiseta: </span> <%= compra.product.jugador %>-<%= compra.product.equipo %></p>
-                            <p class="descripcion"><span>Precio: </span> $<%= compra.PrecioTotal %>(Cant. de camisetas: <%= compra.cantidad %>) </p>
+                            <p class="descripcion"><span>Precio: </span> $<%= compra.precio_total %>(Cant. de camisetas: <%= compra.cantidad %>) </p>
                             <p class="descripcion"><span>Cliente: </span> <%= compra.User.first_name %> <%= compra.User.last_name %> </p>
                             <p class="descripcion"><span>Forma de pago: </span> <%= compra.metodo.metodo_de_pago %></p>
                             <p class="descripcion"><span>Direccion: </span> <%= compra.entrega.direccion %>-<%= compra.entrega.localidad %>(CP: <%= compra.entrega.codigopostal %>)</p>
