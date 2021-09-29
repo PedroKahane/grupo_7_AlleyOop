@@ -36,6 +36,9 @@ header {
     border-bottom: 1px solid #FFFAFA;
     text-align: center;
 }
+#menu_header a:first-child {
+    border-top: 1px solid #FFFAFA;
+}
 #menu_header:last-child{
     border-bottom: none;
 }
@@ -107,7 +110,17 @@ header {
     opacity: 1 !important;
     transition: all 1s ease !important;
 }
+#menu_header.show{
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: all 1s ease !important;
+}
 .hidden{
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease !important;
+}
+.hidden_burguer{
     visibility: hidden;
     opacity: 0;
     transition: all 1s ease !important;
@@ -124,9 +137,13 @@ header {
     width: 100%;
     background-color: #0A0903;
     position: absolute;
-    top: 80px;
+    top: 100px;;
     left: 0px;
 }
+.burger-menu {
+    cursor: pointer;
+}
+
 @media (min-width:421px) {
     .imagen_header {
         display: unset;
@@ -148,6 +165,14 @@ header {
     .burger-menu {
         display: none;
     }
+    .hidden_burguer{
+        visibility: unset;
+        opacity: unset;
+        transition: unset;
+    }
+    #menu_header a:first-child {
+        border-top: unset;
+    }
     #menu_header a {
         display: unset;
         border-bottom: none;
@@ -157,5 +182,8 @@ header {
         width: unset;
         background-color: unset;
         position: unset;
+    }
+    .none_burguer{
+        display: unset;
     }
 }
