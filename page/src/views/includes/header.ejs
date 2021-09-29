@@ -19,7 +19,7 @@
                     <img src="/uploads/users/<%= locals.userLogged.image %> " alt="" height="32px" width="32px" id="image_perfil">
                     <p class="bienvenida_logged"> Bienvenido <%= locals.userLogged.first_name %> </p>
                 </div>
-                <div class="dropdown none">
+                <div class="dropdown hidden none">
                     <a href="/user/profile">Profile</a>
                     <% if (locals.isLogged) { %>
                         <a href="/misCompras">Mis compras</a>
@@ -36,6 +36,6 @@
                 <i class="fas fa-bars"></i>
             </div>
         </section>
-        <script src="/js/dropdown.js"></script>
     </div>
+    <script src="/js/dropdown.js"></script>
 </header>
