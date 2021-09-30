@@ -110,7 +110,8 @@ header {
     opacity: 1 !important;
     transition: all 1s ease !important;
 }
-#menu_header.show{
+
+.show_burguer{
     visibility: visible !important;
     opacity: 1 !important;
     transition: all 1s ease !important;
@@ -129,7 +130,7 @@ header {
     display: none !important;
 }
 .none {
-    display: none;
+    display: none !important;
 }
 #menu_header{
     display: flex;
@@ -161,6 +162,11 @@ header {
     }
     .none_header{
         display: unset !important;
+    }
+    .show_burguer{
+        visibility: unset;
+        opacity: unset;
+        transition: unset;
     }
     .burger-menu {
         display: none;
