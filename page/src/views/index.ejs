@@ -23,7 +23,9 @@
                                 </figure>
                                 <div class="precio_descuento">
                                     <p class="precio">$<%= product.precio %></p>
-                                    <p class="descuento"><%= product.descuento %> % OFF</p>
+                                    <% if (product.descuento > 0) { %>
+                                        <p class="descuento"><%= product.descuento %>  % OFF</p>
+                                    <% } %>
                                 </div>
                                 <p class="descripcion">Camiseta <%= product.equipo %></p>
                                 <p class="jugador"><%= product.jugador %> (<%= product.numero_camiseta %>)</p>

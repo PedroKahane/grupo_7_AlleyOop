@@ -33,8 +33,16 @@ header {
     padding: 20px;
     font-size: 18px;
     font-weight: bold;
-    display: none;
+    border-bottom: 1px solid #FFFAFA;
+    text-align: center;
 }
+#menu_header a:first-child {
+    border-top: 1px solid #FFFAFA;
+}
+#menu_header:last-child{
+    border-bottom: none;
+}
+
 #icon_header a i {
     font-size: 1.7em;
     color: #FFFAFA;
@@ -63,6 +71,7 @@ header {
     text-decoration: none;
     color: white;
     align-items: center;
+    cursor: pointer;
 }
 .bienvenida_logged{
     display: none;
@@ -70,6 +79,72 @@ header {
 #header_bottom{
     justify-content: flex-start;
 }
+.dropdown{
+    
+    position: absolute;
+    top: 75px;
+    display: flex;
+    background: rgba(30,30,30, 0.9);
+    flex-direction: column;
+    right: 10px;
+    width: 100%;
+    max-width: 180px;
+    box-shadow: 0 27px 15px -17px rgb(0 0 0 / 30%), 0 2px 4px rgb(0 0 0 / 30%);
+}
+.dropdown a {
+    text-decoration: none;
+    color: #FFFAFA;
+    font-weight: 500;
+    padding: 10px 30px;
+    width: 100%;
+    text-align: center;
+}
+.dropdown a:hover {
+    background: rgba(20,20,20, 0.9);
+}
+.dropdown a:last-child{
+    border: none;
+}
+.dropdown.show{
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: all 1s ease !important;
+}
+
+.show_burguer{
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: all 1s ease !important;
+}
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease !important;
+}
+.hidden_burguer{
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease !important;
+}
+.none_header{
+    display: none !important;
+}
+.none {
+    display: none !important;
+}
+#menu_header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0A0903;
+    position: absolute;
+    top: 100px;;
+    left: 0px;
+}
+.burger-menu {
+    cursor: pointer;
+}
+
 @media (min-width:421px) {
     .imagen_header {
         display: unset;
@@ -85,10 +160,36 @@ header {
     .logo_alley_oop {
         width: 160px;
     }
+    .none_header{
+        display: unset !important;
+    }
+    .show_burguer{
+        visibility: unset;
+        opacity: unset;
+        transition: unset;
+    }
     .burger-menu {
         display: none;
     }
+    .hidden_burguer{
+        visibility: unset;
+        opacity: unset;
+        transition: unset;
+    }
+    #menu_header a:first-child {
+        border-top: unset;
+    }
     #menu_header a {
+        display: unset;
+        border-bottom: none;
+    }
+    #menu_header{
+        display: unset;
+        width: unset;
+        background-color: unset;
+        position: unset;
+    }
+    .none_burguer{
         display: unset;
     }
 }
