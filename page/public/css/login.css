@@ -131,6 +131,7 @@
     justify-content: flex-start;
     width: 100%;
     margin-left: 15px;
+    margin-top: 20px;
 }
 .check_remember{
     display: flex;
@@ -143,9 +144,11 @@
     font-size: 16px;
 }
 .error {
-    margin-left: 40px;
+    text-align: left;
     color: rgb(255, 0, 0);
-    font-size: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: -10px;
 }
 .flex_column{
     display: flex;
@@ -154,9 +157,51 @@
 }
 .error_login {
     color: rgb(255, 0, 0);
-    font-size: 12px;
+    font-size: 13px;
     align-self: self-start;
     margin-left: 20px;
+    font-weight: 700;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+.fa-exclamation-circle{
+    z-index: 9;
+    position: relative;
+    right: 40px;
+    font-size: 24px;
+    color: rgb(255, 0, 0);
+    width: 0px;
+}
+
+.fa-check-circle{
+    z-index: 9;
+    position: relative;
+    right: 40px;
+    font-size: 24px;
+    color: rgb(44, 236, 44);
+    width: 0px;
+}
+.error_front{
+    border: 1px solid rgb(255, 0, 0);
+}
+.none{
+    display: none !important;
+}
+
+fieldset{
+    display: flex;
+    align-items: flex-start;
+    margin: 5px;
+    width: 100%;
+    flex-direction: column;
+    border: none;
 }
 
 @media (max-width:450px) {
