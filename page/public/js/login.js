@@ -38,7 +38,7 @@ inputs.forEach(input => {
 
         if(name == "password"){
             
-            if(value.length < 8){
+            if(value.length < 6){
                 target.classList.add("error_front")
                 target.classList.remove("success")
                 icon.classList.remove("none")
@@ -67,6 +67,4 @@ formElement.onsubmit = (evento) =>{
     } else{
         alert("Completa todos los campos")
     }
-    
-
 }
