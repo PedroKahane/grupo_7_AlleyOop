@@ -2,10 +2,10 @@
   "name": "page",
   "version": "1.0.0",
   "description": "",
-  "main": "node page/src/index.js",
+  "main": "node src/index.js",
   "scripts": {
-    "test": "node page/src/index.js",
-    "start": "nodemon page/src/index.js"
+    "test": "node src/index.js",
+    "start": "nodemon src/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,7 +20,7 @@
     "method-override": "^3.0.0",
     "multer": "^1.4.2",
     "mysql2": "^2.3.0",
-    "nodemon": "^2.0.12",
+    "nodemon": "^2.0.13",
     "sequelize": "^6.6.5",
     "sequelize-cli": "^6.2.0"
   }
