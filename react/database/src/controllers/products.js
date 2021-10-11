@@ -12,6 +12,15 @@ module.exports = {
             attributes: ['id', 'jugador','equipo','descripcion'],
         })
             let colors = await db.Color.findAll()
+            colors.forEach(element => {
+                let element = []
+                products.forEach(producto => {
+                    if(element.id == producto.colores_id){
+
+                    }
+
+                })
+            });
             res.json({
                 count: products.length,
                 colors: colors.length,
