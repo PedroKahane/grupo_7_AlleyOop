@@ -16,10 +16,10 @@ module.exports = {
                 let element = []
                 products.forEach(producto => {
                     if(element.id == producto.colores_id){
-
+                        element.push(products)
                     }
-
                 })
+                
             });
             res.json({
                 count: products.length,
