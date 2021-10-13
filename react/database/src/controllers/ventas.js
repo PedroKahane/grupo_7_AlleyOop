@@ -18,7 +18,8 @@ module.exports = {
         })
             res.json({
                 count: ventas.length,
-                data: ventas
+                data: ventas,
+                ventas: ventas.id
             })
         } catch (error) {
            console.log(error); 
