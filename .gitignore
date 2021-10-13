@@ -1,3 +1,4 @@
 node_modules/
 .DS_Store
 /page/src/database/config/config.js
+/react/database/src/config/config.js

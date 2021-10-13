@@ -11,10 +11,22 @@ module.exports = {
             let users = await db.User.findAll({
             attributes: ['id', 'email','first_name','last_name','user_name'],
         })
+            let usuarios = []
+            users.forEach(element => {
+                users = {
+                    id : element.id,
+                    email : element.email,
+                    firstName : element.first_name,
+                    lastName : element.last_name,
+                    userName : element.user_name,
+                    url : "http://localhost:3001/users/" + element.id 
+                }
+                usuarios.push(users)
+            })
             res.json({
-                count: users.length,
+                count: usuarios.length,
                 data: { 
-                    users: users,
+                    users: usuarios,
                 }
             })
         } catch (error) {
@@ -26,8 +38,19 @@ module.exports = {
             let user = await db.User.findByPk(req.params.id, {
                 attributes: ['id', 'email','first_name','last_name','user_name','image', 'createdAt', 'updatedAt']
             })
+            usuario = {
+                id : user.id,
+                email : user.email,
+                firstName : user.first_name,
+                lastName : user.last_name,
+                userName : user.user_name,
+                imagen : "http://localhost:3001/uploads/users/" + user.image,
+                createdAt: user.createdAt,
+                updatedAt: user.updatedAt,
+
+            }
             res.json({
-                user: user
+                user: usuario
             })
         } catch (error) {
             console.log(error);

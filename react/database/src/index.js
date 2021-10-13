@@ -7,11 +7,11 @@ app.use(express.json())
 
 const productRoutes = require("./router/products")
 const ventasRoutes = require("./router/ventas")
-//const usersRoutes = require("./router/users")
+const usersRoutes = require("./router/users")
 
 app.use("/products", productRoutes)
 app.use("/ventas", ventasRoutes)
-//app.use("/users", usersRoutes)
+app.use("/users", usersRoutes)
 
 
 app.use(express.static(path.resolve(__dirname,"../public")));
