@@ -13,16 +13,26 @@
                     <a class="menu_user active" href="/user/register"> REGISTRATE</a>
                 </div>
 
-                <form  method="POST" class="form_register" action="/user/register" enctype="multipart/form-data">
+                <form  method="POST" class="form_register" action="/user/register" enctype="multipart/form-data" id="form_register">
                     <div class="flex">
-                        <div class="flex_column"><input type="text" name="email" id="email" value="<%= locals.oldData ? oldData.email : null %>"  placeholder="Correo electronico">
+                        <div class="flex_column">
+                            <div class="flex_input">
+                                <input type="text" name="email" id="email" value="<%= locals.oldData ? oldData.email : null %>"  placeholder="Correo electronico">
+                                <i class="fas fa-exclamation-circle none"></i>
+                            </div>
+                            <p class="error"></p>
                             <% if (locals.errors && errors.email) { %>
                                 <p class="error"> 
                                     <%= errors.email.msg %> 
                                 </p>
                             <% } %>
                         </div>
-                        <div class="flex_column"><input type="text" name="userName" id="userName" value="<%= locals.oldData ? oldData.userName : null %>" placeholder="Elegi un nombre de usuario">
+                        <div class="flex_column">
+                            <div class="flex_input">
+                                <input type="text" name="userName" id="userName" value="<%= locals.oldData ? oldData.userName : null %>" placeholder="Elegi un nombre de usuario">
+                                <i class="fas fa-exclamation-circle none"></i>
+                            </div>
+                            <p class="error"></p>
                             <% if (locals.errors && errors.userName) { %>
                                 <p class="error"> 
                                     <%= errors.userName.msg %> 
@@ -31,14 +41,24 @@
                         </div>
                     </div>
                     <div class="flex">
-                        <div class="flex_column"><input type="text" name="firstName" id="firstName" value="<%= locals.oldData ? oldData.firstName : null %>" placeholder="Nombre">
-                                <% if (locals.errors && errors.firstName) { %>
+                        <div class="flex_column">
+                            <div class="flex_input">
+                                <input type="text" name="firstName" id="firstName" value="<%= locals.oldData ? oldData.firstName : null %>" placeholder="Nombre">
+                                <i class="fas fa-exclamation-circle none"></i>
+                            </div>
+                            <p class="error"></p>   
+                            <% if (locals.errors && errors.firstName) { %>
                                     <p class="error"> 
                                         <%= errors.firstName.msg %> 
                                     </p>
                                 <% } %>
                         </div>
-                        <div class="flex_column"><input type="text" name="lastName" id="lastName" value="<%= locals.oldData ? oldData.lastName : null %>" placeholder="Apellido">
+                        <div class="flex_column">
+                            <div class="flex_input">
+                                <input type="text" name="lastName" id="lastName" value="<%= locals.oldData ? oldData.lastName : null %>" placeholder="Apellido">
+                                <i class="fas fa-exclamation-circle none"></i>
+                            </div>
+                            <p class="error"></p>
                             <% if (locals.errors && errors.lastName) { %>
                                 <p class="error"> 
                                     <%= errors.lastName.msg %> 
@@ -47,7 +67,12 @@
                         </div>
                     </div>
                     <div class="flex">
-                        <div class="flex_column"><input type="password" name="password" id="password" placeholder="Escribi tu contaseña">
+                        <div class="flex_column">
+                            <div class="flex_input">
+                                <input type="password" name="password" id="password" placeholder="Escribi tu contaseña">
+                                <i class="fas fa-exclamation-circle none"></i>
+                            </div>
+                            <p class="error"></p>
                             <% if (locals.errors && errors.password) { %>
                                 <p class="error"> 
                                     <%= errors.password.msg %> 
@@ -55,7 +80,8 @@
                             <% } %>
                         </div>
                         <div class="flex_column">
-                            <input type="file" name="image">
+                            <input type="file" name="image" id="image" class="success">
+                            <p class="error"></p>
                         </div>
                     </div>
                     
@@ -65,5 +91,6 @@
             </div>
         </section>
     </main>
+    <script src="/js/register.js"></script>
 </body>
 </html>

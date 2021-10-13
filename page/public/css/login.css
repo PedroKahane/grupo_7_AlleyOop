@@ -7,6 +7,7 @@
 .flex{
     display: flex;
     width: 100%;
+    margin-bottom: 10px;
 }
 #section_login {
     display: flex;
@@ -21,7 +22,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 450px;
+    width: 600px;
     margin: 145px 0px;
     border-radius:70px;
 }
@@ -31,7 +32,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 700px;
+    width: 1000px;
     margin: 145px 0px;
     border-radius:70px;
 }
@@ -149,12 +150,21 @@
     font-size: 13px;
     font-weight: 700;
     margin-top: -10px;
+    margin-left: 30px;
 }
 .flex_column{
+    width: 50%;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    width: 50%;
 }
+.flex_input{
+    
+    text-align: center;
+    display: flex;
+}
+
+
 .error_login {
     color: rgb(255, 0, 0);
     font-size: 13px;
@@ -169,8 +179,6 @@
     width: 100%;
 }
 
-
-
 .fa-exclamation-circle{
     z-index: 9;
     position: relative;
@@ -178,6 +186,15 @@
     font-size: 24px;
     color: rgb(255, 0, 0);
     width: 0px;
+}
+.fa-exclamation-circle-register{
+    z-index: 9;
+    position: relative;
+    right: 60px;
+    font-size: 24px;
+    color: rgb(255, 0, 0);
+    width: 0px;
+    margin-top: 27px;
 }
 
 .fa-check-circle{
@@ -188,6 +205,17 @@
     color: rgb(44, 236, 44);
     width: 0px;
 }
+.fa-check-circle-register{
+    z-index: 9;
+    position: relative;
+    right: 60px;
+    font-size: 24px;
+    color: rgb(44, 236, 44);
+    width: 0px;
+    margin-top: 27px;
+}
+
+
 .error_front{
     border: 1px solid rgb(255, 0, 0);
 }

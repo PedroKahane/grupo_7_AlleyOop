@@ -32,16 +32,24 @@ module.exports = {
             });
         }
         try {
-            let userInDB = await db.User.findOne(
+            let mailInDB = await db.User.findOne(
                 {
                     where: { 
                         email: req.body.email
                     }
                 })
-                if(userInDB) {
-                    let imagenFrente = path.resolve(__dirname,"../../public/uploads/users/",req.file.filename)
-                    if(fs.existsSync(imagenFrente) && req.file.filename != "Default.png") {
-                        fs.unlinkSync(imagenFrente)
+                let userInDB = await db.User.findOne(
+                    {
+                        where: { 
+                            user_name: req.body.userName
+                        }
+                    })
+                if(mailInDB) {
+                    if(req.file != undefined){
+                        let imagenFrente = path.resolve(__dirname,"../../public/uploads/users/",req.file.filename)
+                        if(fs.existsSync(imagenFrente) && req.file.filename != "Default.png") {
+                            fs.unlinkSync(imagenFrente)
+                        }
                     }
                     return res.render('users/register', {
                       errors: {
@@ -52,20 +60,12 @@ module.exports = {
                       oldData: req.body,
                       styles:"login.css"   
                     });
-                }
-        } catch (error) {
-            console.log(error)
-        }
-        try {
-            let userInDB = await db.User.findOne(
-                {
-                    where: { 
-                        user_name: req.body.userName
-                    }
-                })
-                if(userInDB) {
-                    if(fs.existsSync(imagenFrente) && req.file.filename != "Default.png") {
-                        fs.unlinkSync(imagenFrente)
+                } else if(userInDB){
+                    if(req.file != undefined){
+                        let imagenFrente = path.resolve(__dirname,"../../public/uploads/users/",req.file.filename)
+                        if(fs.existsSync(imagenFrente) && req.file.filename != "Default.png") {
+                            fs.unlinkSync(imagenFrente)
+                        }
                     }
                     return res.render('users/register', {
                       errors: {
@@ -76,24 +76,22 @@ module.exports = {
                       oldData: req.body,
                       styles:"login.css"   
                     });
+                } else{
+                    db.User.create( {
+                        email : req.body.email,
+                        first_name: req.body.firstName,
+                        last_name: req.body.lastName,
+                        user_name:req.body.userName,
+                        password: bcrypt.hashSync(req.body.password, 10),
+                        image: req.file != undefined ? req.file.filename : "Default.png",
+                        admin: String(req.body.email).includes("@alleyoop") ? 1 : 0
+                    })
+                    return res.redirect('/user/login');
+        
                 }
-        } catch (error) {
+                }
+         catch (error) {
             console.log(error)
-        }
-        try{
-            db.User.create( {
-                email : req.body.email,
-                first_name: req.body.firstName,
-                last_name: req.body.lastName,
-                user_name:req.body.userName,
-                password: bcrypt.hashSync(req.body.password, 10),
-                image: req.file != undefined ? req.file.filename : "Default.png",
-                admin: String(req.body.email).includes("@alleyoop") ? 1 : 0
-            })
-            return res.redirect('/user/login');
-
-        } catch(error){
-            return res.send(error)
         }
         
     
