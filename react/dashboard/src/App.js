@@ -12,7 +12,7 @@ function App() {
     <Router>
     <div className="App">
       <Sidebar/>
-      <div>
+      <div className="main">
         <Route exact path = "/" component = {Home} />
         <Route exact path = "/Sales" component = {Ventas} />
         <Route exact path = "/Users" component = {Usuarios} />
