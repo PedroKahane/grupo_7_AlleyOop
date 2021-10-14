@@ -1,4 +1,4 @@
-import '../components/App.css';
+import '../App.css';
 
 function Home(props) {
     return(

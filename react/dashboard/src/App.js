@@ -1,9 +1,9 @@
 import './App.css';
-import Sidebar from './Sidebar';
-import Home from './../pages/home';
-import Ventas from './../pages/ventas';
-import Usuarios from './../pages/usuarios';
-import Productos from './../pages/productos'
+import Sidebar from './components/Sidebar';
+import Home from './pages/home';
+import Ventas from './pages/ventas';
+import Usuarios from './pages/usuarios';
+import Productos from './pages/productos'
 
 import {BrowserRouter as Router ,Route} from 'react-router-dom'
 

@@ -1,6 +1,6 @@
 import Button from './button-sidebar';
 import logo from './../assets/alley-oop-logo.png'
-import './App.css';
+import '../App.css';
 
 function Sidebar() {
     return(
