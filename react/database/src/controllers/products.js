@@ -17,6 +17,10 @@ module.exports = {
                 
                 countByColor[element.nombre] = element.products.length
             });
+            let lastProduct = await db.Product.findAll({include: ['Color'],
+            attributes: ['jugador', 'equipo', 'descripcion', 'precio', 'imagen_frente'], limit: 1, order: [
+                ['id', 'DESC']
+            ]})
             let productos = []
             products.forEach(element => {
                 products = {
@@ -35,7 +39,8 @@ module.exports = {
                 countByColor: countByColor,
                 data: { 
                     products: productos,
-                }
+                },
+                UltimoProducto: lastProduct
             })
         } catch (error) {
            console.log(error); 

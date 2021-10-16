@@ -1,11 +1,13 @@
+
 import '../App.css';
 
-function Productos(props) {
+import productsByColor from '../components/productsByColor';
+
+
+function Products() {
     return(
-        <fragment>
-         
-        </fragment>
+        <div></div>
     )
 }
 
-export default Productos
+export default Products
