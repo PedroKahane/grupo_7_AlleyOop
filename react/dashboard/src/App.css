@@ -113,7 +113,6 @@
   height: 300px;
   background-color: whitesmoke;
 }
-<<<<<<< HEAD
 .tituloVentas{
   font-size: 32px;
   text-align: center;
@@ -148,10 +147,8 @@
 }
 span{
   font-weight: 700;
-=======
 
 .not-found {
   margin-top: 15px;
   text-align: center;
->>>>>>> 23d7904ba0a70543d653602276d12ed7d9cef051
 }
