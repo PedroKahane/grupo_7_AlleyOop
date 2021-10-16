@@ -30,7 +30,7 @@ module.exports = {
                 productos.push(products)
             })
             res.json({
-                count: products.length,
+                count: productos.length,
                 colors: colors.length,
                 countByColor: countByColor,
                 data: { 
