@@ -1,7 +1,7 @@
 
 import '../App.css';
 
-import productsByColor from '../components/productsByColor';
+//import productsByColor from '../components/productsByColor';
 
 
 function Products() {

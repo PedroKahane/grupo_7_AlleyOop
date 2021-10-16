@@ -10,7 +10,12 @@ module.exports = {
         try {
             let users = await db.User.findAll({
             attributes: ['id', 'email','first_name','last_name','user_name'],
+
         })
+            let lastUser = await db.User.findAll({ attributes: ['id', 'email','first_name','last_name','user_name'], 
+            limit: 1, order: [
+            ['id', 'DESC']
+        ]})
             let usuarios = []
             users.forEach(element => {
                 users = {
@@ -27,7 +32,9 @@ module.exports = {
                 count: usuarios.length,
                 data: { 
                     users: usuarios,
-                }
+                },
+                lastUser: lastUser,
+            
             })
         } catch (error) {
            console.log(error); 

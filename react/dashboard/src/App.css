@@ -99,3 +99,8 @@
   height: 300px;
   background-color: whitesmoke;
 }
+
+.not-found {
+  margin-top: 15px;
+  text-align: center;
+}
