@@ -1,0 +1,96 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'montserrat', sans-serif;
+}
+.sidebar{
+  width: 200px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(52, 64, 90);
+}
+.logo-sidebar{
+  padding: 20px;
+  width: 100%;
+  border-bottom: 1px solid whitesmoke;
+}
+.selector_menu{
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.selector_menu:hover{
+  background-color: rgb(62, 78, 100);
+}
+.selector_menu p{
+  font-size: 18px;
+  color: whitesmoke;
+  margin: 0px 15px;
+  font-weight: 600;
+  font-family: 'montserrat',sans-serif;
+}
+.selector_menu i{
+  color: whitesmoke;
+  font-size: 14px;
+}
+.Card{
+  width: 45%;
+  margin: 25px 2.5%;
+  background-color: whitesmoke;
+  padding: 10px;
+  border-radius: 20px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+}
+.title_card{
+  font-size: 16px;
+  font-family: 'montserrat',sans-serif;
+  color: #0A0903;
+  padding-bottom: 10px;
+  font-weight: 700;
+  text-align: center;
+}
+.info_card{
+  font-size: 32px;
+  font-family: 'montserrat', sans-serif;
+  color: #0A0903;
+  font-weight: 700;
+  text-align: center;
+}
+.App{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+.home{
+  width: 100vw;
+}
+.main{
+  width: 100%;
+  background-color: #dddddd;
+}
+.flex_column{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Card i{
+  font-size: 32px;
+  color: #0A0903;
+}
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+.icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+}

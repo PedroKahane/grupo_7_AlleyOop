@@ -9,12 +9,12 @@ const {like} = Op
 module.exports = {
     list: async (req,res) =>  {
         try {
-            let ventas = await db.compras.findAll({include: ["product"],where: { 
-                estado_producto: [3,4,9,10]},
-                order: [
-                    ['id', 'DESC']
-                ],
-                attributes: ['id', 'precio_total'],
+        let ventas = await db.compras.findAll({include: ["product"],where: { 
+            estado_producto: [3,4,9,10]},
+            order: [
+                ['id', 'DESC']
+            ],
+            attributes: ['id', 'precio_total'],
         })
         let ultimas5Ventas = await db.compras.findAll({include: ["product"],where: { 
             estado_producto: [3,4,9,10]},
@@ -33,6 +33,12 @@ module.exports = {
                 }
             });
             let ultimasVentas = []
+            let TotalIngresos = 0
+            
+            ventas.forEach(element => {
+                TotalIngresos += element.precio_total 
+                
+            });
             ultimas5Ventas.forEach(element => {
                 products = {
                     id : element.id,
@@ -49,6 +55,7 @@ module.exports = {
                 ultimasVentas.push(products)
             })
             res.json({
+                TotalIngresos: TotalIngresos,
                 count: ventas.length,
                 countByProduct: countByProduct,
                 ultimas5Ventas:ultimasVentas,
