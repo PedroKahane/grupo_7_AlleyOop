@@ -8,7 +8,7 @@ function CardMAin(props) {
                 <p className="title_card">{props.titulo}</p>
                 <p className="info_card">{props.number}</p>
                 </div>
-                <div className={props.background}>
+                <div className="icon">
                     <i className={props.svg}></i>
                 </div>
             </div>
