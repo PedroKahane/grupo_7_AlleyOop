@@ -120,6 +120,16 @@
   text-align: center;
   font-weight: 700;
 }
+.fa-clock{
+  font-size: 32px;
+  margin: 5px;
+}
+.flex_center{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
 .content_ventas{
   width: 100%;
   padding: 10px;

@@ -60,7 +60,10 @@ class Ventas extends Component {
              svg ="fas fa-wallet"
              ></CardMAin>
              <div className="ultimasVentas">
+                 <div className="flex_center">
+                 <i className="fas fa-clock"></i>
                  <p className="tituloVentas">Ultimas Cinco Ventas: </p>
+                 </div>
                 {this.state.Ultimas5Ventas.map((element) => {
                     return <Ultimas5Ventas
                     precio ={element.precio_total}
