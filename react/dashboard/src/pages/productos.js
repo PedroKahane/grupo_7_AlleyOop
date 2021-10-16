@@ -1,7 +1,6 @@
 
 import '../App.css';
 
-import productsByColor from '../components/productsByColor';
 
 
 function Products() {
