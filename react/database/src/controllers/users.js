@@ -9,17 +9,19 @@ module.exports = {
     list: async (req,res) =>  {
         try {
             let users = await db.User.findAll({
-            attributes: ['id', 'email','first_name','last_name','user_name'],
+            attributes: ['id', 'admin', 'email','first_name','last_name','user_name'],
 
         })
             let lastUser = await db.User.findAll({ attributes: ['id', 'email','first_name','last_name','user_name'], 
             limit: 1, order: [
             ['id', 'DESC']
         ]})
+            let userAdmin = []
             let usuarios = []
             users.forEach(element => {
                 users = {
                     id : element.id,
+                    admin : element.admin,
                     email : element.email,
                     firstName : element.first_name,
                     lastName : element.last_name,
@@ -27,8 +29,12 @@ module.exports = {
                     url : "http://localhost:3001/users/" + element.id 
                 }
                 usuarios.push(users)
+                if (users.admin > 0) {
+                    userAdmin.push(users)
+                }
             })
             res.json({
+                countAdmins: userAdmin.length,
                 count: usuarios.length,
                 data: { 
                     users: usuarios,
