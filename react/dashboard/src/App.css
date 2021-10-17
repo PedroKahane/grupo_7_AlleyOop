@@ -70,7 +70,7 @@
   text-align: center;
 }
 .info_card{
-  font-size: 32px;
+  font-size: 48px;
   font-family: 'montserrat', sans-serif;
   color: #0A0903;
   font-weight: 700;
@@ -95,7 +95,7 @@
   justify-content: center;
 }
 .Card i{
-  font-size: 32px;
+  font-size: 48px;
   color: #0A0903;
 }
 .flex{
