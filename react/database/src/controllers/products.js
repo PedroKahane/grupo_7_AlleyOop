@@ -40,7 +40,7 @@ module.exports = {
                 data: { 
                     products: productos,
                 },
-                UltimoProducto: lastProduct
+                lastProduct: lastProduct
             })
         } catch (error) {
            console.log(error); 

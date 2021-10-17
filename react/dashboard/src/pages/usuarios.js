@@ -8,6 +8,7 @@ class Usuarios extends Component {
         super(props)
         this.state = {
             count: 0,
+            countAdmins: 0,
             lastUser:[]
     
         }
@@ -20,12 +21,18 @@ class Usuarios extends Component {
     }
     componentDidMount(){
         this.apiCall(`http://localhost:3001/users`, this.mostrarCount)
+        this.apiCall(`http://localhost:3001/users`, this.mostrarCountAdmins)
         this.apiCall(`http://localhost:3001/users`, this.mostrarLastUser)
         
     }
     mostrarCount = (data) => {
         this.setState({
             count: data.count
+        })
+    }
+    mostrarCountAdmins = (data) => {
+        this.setState({
+            countAdmins: data.countAdmins
         })
     }
     mostrarLastUser = (data) => {
@@ -45,6 +52,11 @@ class Usuarios extends Component {
                 titulo = "Numero de usuarios: "
                 number = {this.state.count}
                 svg ="fas fa-user"
+                ></CardMAin>
+                <CardMAin
+                titulo = "Numero de administradores: "
+                number = {this.state.countAdmins}
+                svg ="fas fa-user-cog"
                 ></CardMAin>
                 <div className="ultimasVentas">
                     <div className="flex_center">
