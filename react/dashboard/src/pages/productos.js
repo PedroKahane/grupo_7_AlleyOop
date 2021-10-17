@@ -8,7 +8,9 @@ class Productos extends Component {
         super(props)
         this.state = {
             countProducts: 0,
-            lastProduct: []
+            countProductosEnOferta: 0,
+            lastProduct: [],
+
     
         }
     }
@@ -21,12 +23,18 @@ class Productos extends Component {
     componentDidMount(){
         this.apiCall(`http://localhost:3001/products`, this.mostrarCountProducts)
         this.apiCall(`http://localhost:3001/products`, this.mostrarLastProduct)
+        this.apiCall(`http://localhost:3001/products`, this.mostrarProductosEnOferta)
         
         
     }
     mostrarCountProducts = (data) => {
         this.setState({
             countProducts : data.count
+        })
+    }
+    mostrarProductosEnOferta = (data) => {
+        this.setState({
+            countProductosEnOferta: data.countProductosEnOferta
         })
     }
     mostrarLastProduct = (data) => {
@@ -46,6 +54,11 @@ class Productos extends Component {
                 titulo = "Cantidad de productos: "
                 number = {this.state.countProducts}
                 svg="fas fa-archive"
+                ></CardMAin>
+                <CardMAin
+                titulo = "Cantidad de productos en oferta: "
+                number = {this.state.countProductosEnOferta}
+                svg="fas fa-tags"
                 ></CardMAin>
                 <div className="ultimasVentas">
                     <div className="flex_center">
