@@ -60,8 +60,8 @@ class Ventas extends Component {
              number = {this.state.Ingresos}
              svg ="fas fa-wallet"
              ></CardMAin>
-             <div className="ultimas5Ventas">
-                 <div className="flex_center_5">
+             <div className="ultimasVentas">
+                 <div className="flex_center">
                  <i className="fas fa-clock"></i>
                  <p className="tituloVentas">Ultimas Cinco Ventas: </p>
                  </div>

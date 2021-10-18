@@ -96,8 +96,8 @@ class Productos extends Component {
                         ></UltimoProducto>
                     })}
                 </div>
-                <div className="ultimas5Ventas">
-                    <div className="flex_center_5">
+                <div className="ultimasVentas">
+                    <div className="flex_center">
                     <i className="fas fa-basketball-ball"></i>
                     <p className="tituloVentas">Listado de productos: </p>
                     </div>
