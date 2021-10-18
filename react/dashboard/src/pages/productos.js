@@ -3,7 +3,7 @@ import '../App.css';
 import CardMAin from '../components/Card-Main';
 import UltimoProducto from '../components/ultimoProducto';
 import PieChart from '../components/Pie';
-import Listado from '../components/Listado';
+import ListadoProductos from '../components/ListadoProductos';
 
 class Productos extends Component {
     constructor(props){
@@ -15,7 +15,6 @@ class Productos extends Component {
             listadoProductos: [],
             lastProduct: [],
 
-    
         }
     }
     apiCall(url, consecuencia){
@@ -98,15 +97,20 @@ class Productos extends Component {
                 </div>
                 <div className="ultimasVentas">
                     <div className="flex_center">
-                    <i className="fas fa-basketball-ball"></i>
+                    <i className="fas fa-tshirt"></i>
                     <p className="tituloVentas">Listado de productos: </p>
                     </div>
+                    <div className="content_subtitulo_listado">
+                    <h2 className="titulo_2">ID</h2>
+                    <h2 className="titulo_2">Jugador</h2>
+                    <h2 className="titulo_2">Color</h2>
+                    </div>
                     {this.state.listadoProductos.map((element) => {
-                        return <Listado
+                        return <ListadoProductos
                         id ={element.id}
                         jugador ={element.jugador}
                         color ={element.color}
-                        ></Listado>
+                        ></ListadoProductos>
                     })}
                 </div>
                 <PieChart></PieChart>
