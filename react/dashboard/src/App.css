@@ -205,18 +205,16 @@ span{
   margin-top: 15px;
   text-align: center;
 }
-.graph {
-  padding: 80px;
-  padding-top: 0px;
-  width: 80% !important;
-  height: auto !important;
+.Bar{
+  width: 40%;
+  margin: 50px 5% ;
 }
-.graph_pie{
-  padding: 80px;
+/* .graph_pie{
+  padding: 2.5% 80px;
   padding-top: 0px;
-  width: 70% !important;
+  width: 45% !important;
   height: auto !important;
-}
+} */
 .title_graph{
   padding-top: 80px;
   text-align: center;

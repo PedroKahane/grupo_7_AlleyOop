@@ -1,6 +1,8 @@
 
 import React, {Component,} from 'react'
 import '../App.css';
+import PieChart from '../components/Pie';
+import VerticalBar from '../components/Chart';
 
 
 import CardMAin from '../components/Card-Main';
@@ -76,6 +78,8 @@ class Home extends Component {
              number = {this.state.Ingresos}
              svg ="fas fa-wallet"
              ></CardMAin>
+             <VerticalBar></VerticalBar>
+             <PieChart></PieChart>
             </div>
         )
     }

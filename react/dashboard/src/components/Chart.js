@@ -45,6 +45,7 @@ const options = {
 
 const VerticalBar = (props) => (
   <>
+  <div className="Bar">
     <div className='header'>
       <h1 className='title_graph'>Cantidad de Ventas por Producto</h1>
       <div className='links'>
@@ -53,6 +54,7 @@ const VerticalBar = (props) => (
     <div className="bar_content">
         <Bar className="graph" data={data} options={options} />
 
+    </div>
     </div>
   </>
 );

@@ -30,6 +30,7 @@ const data = {
 
 const PieChart = () => (
   <>
+  <div className="Bar">
     <div className='header'>
       <h1 className='title_graph'>Productos de cada color</h1>
       <div className='links'>
@@ -37,6 +38,7 @@ const PieChart = () => (
     </div>
     <div className="bar_content">
     <Pie className="graph_pie" data={data} />
+    </div>
     </div>
   </>
 );
