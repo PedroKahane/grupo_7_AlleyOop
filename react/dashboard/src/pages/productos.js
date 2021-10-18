@@ -9,6 +9,7 @@ class Productos extends Component {
         this.state = {
             countProducts: 0,
             countProductosEnOferta: 0,
+            countProductosDestacados: 0,
             lastProduct: [],
 
     
@@ -24,6 +25,7 @@ class Productos extends Component {
         this.apiCall(`http://localhost:3001/products`, this.mostrarCountProducts)
         this.apiCall(`http://localhost:3001/products`, this.mostrarLastProduct)
         this.apiCall(`http://localhost:3001/products`, this.mostrarProductosEnOferta)
+        this.apiCall(`http://localhost:3001/products`, this.mostrarProductosDestacados)
         
         
     }
@@ -35,6 +37,11 @@ class Productos extends Component {
     mostrarProductosEnOferta = (data) => {
         this.setState({
             countProductosEnOferta: data.countProductosEnOferta
+        })
+    }
+    mostrarProductosDestacados = (data) => {
+        this.setState({
+            countProductosDestacados: data.countProductosDestacados
         })
     }
     mostrarLastProduct = (data) => {
@@ -59,6 +66,11 @@ class Productos extends Component {
                 titulo = "Cantidad de productos en oferta: "
                 number = {this.state.countProductosEnOferta}
                 svg="fas fa-tags"
+                ></CardMAin>
+                <CardMAin
+                titulo = "Cantidad de productos destacados: "
+                number = {this.state.countProductosDestacados}
+                svg="fas fa-bolt"
                 ></CardMAin>
                 <div className="ultimasVentas">
                     <div className="flex_center">

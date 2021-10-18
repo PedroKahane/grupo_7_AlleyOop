@@ -9,7 +9,7 @@ module.exports = {
     list: async (req,res) =>  {
         try {
             let products = await db.Product.findAll({include: ["Color"],
-            attributes: ['id', 'jugador','equipo','descripcion', 'descuento'],
+            attributes: ['id', 'jugador','equipo','descripcion', 'descuento', 'destacado'],
         })
             let colors = await db.Color.findAll({include: ["products"]})
             let countByColor = {}
@@ -23,6 +23,7 @@ module.exports = {
             ]})
             let productos = []
             let productosEnOferta = []
+            let productosDestacados = []
             products.forEach(element => {
                 products = {
                     id : element.id,
@@ -31,16 +32,23 @@ module.exports = {
                     descripcion : element.descripcion,
                     color : element.Color.nombre,
                     descuento: element.descuento,
+                    destacado: element.destacado,
                     url : "http://localhost:3001/products/" + element.id 
                 }
                 productos.push(products)
+                
                 if (products.descuento > 0) {
                     productosEnOferta.push(products)
+                }
+            
+                if (products.destacado > 0) {
+                    productosDestacados.push(products)
                 }
             })
             res.json({
                 count: productos.length,
                 countProductosEnOferta: productosEnOferta.length,
+                countProductosDestacados: productosDestacados.length,
                 colors: colors.length,
                 countByColor: countByColor,
                 data: { 
