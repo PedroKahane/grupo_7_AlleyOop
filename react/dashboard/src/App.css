@@ -90,7 +90,6 @@
 }
 .App{
   display: flex;
-  width: 100vw;
   min-height: 100vh;
 }
 .home{
@@ -166,7 +165,6 @@
 }
 .content_ventas{
   width: 100%;
-  height: 105px;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -187,6 +185,7 @@
 }
 .datos_product{
   font-size: 18px;
+  text-align: left;
 
 }
 .flex_ventas{
@@ -212,6 +211,12 @@ span{
   width: 80% !important;
   height: auto !important;
 }
+.graph_pie{
+  padding: 80px;
+  padding-top: 0px;
+  width: 70% !important;
+  height: auto !important;
+}
 .title_graph{
   padding-top: 80px;
   text-align: center;
@@ -226,4 +231,7 @@ span{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.id_email {
+  width: 70%;
 }

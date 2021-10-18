@@ -31,11 +31,13 @@ const data = {
 const PieChart = () => (
   <>
     <div className='header'>
-      <h1 className='title'>Productos de cada color</h1>
+      <h1 className='title_graph'>Productos de cada color</h1>
       <div className='links'>
       </div>
     </div>
-    <Pie data={data} />
+    <div className="bar_content">
+    <Pie className="graph_pie" data={data} />
+    </div>
   </>
 );
 
