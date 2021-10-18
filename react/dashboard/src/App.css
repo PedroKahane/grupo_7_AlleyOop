@@ -73,6 +73,7 @@
   padding: 10px;
   border-radius: 20px;
 }
+
 .title_card{
   font-size: 16px;
   font-family: 'montserrat',sans-serif;
@@ -170,6 +171,14 @@
   flex-direction: column;
   border-top: 1px solid #0A0903;
 }
+.content_ventas_listado{
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #0A0903;
+  
+}
 .borders:nth-child(3), .borders:nth-child(5){
   border-top: 1px solid #0A0903;
 }
@@ -192,6 +201,13 @@
   display: flex;
   width: 100%;
   justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+.flex_ventas_listado{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
   align-items: center;
   padding: 10px;
 }
@@ -234,4 +250,7 @@ span{
 }
 .id_email {
   width: 70%;
+}
+.flex_ventas_listado .titulo {
+  margin: 0px 20px;
 }

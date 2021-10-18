@@ -31,7 +31,17 @@ const data = {
 };
 
 const options = { 
-    
+  plugins: {
+    legend: {
+        font: {
+        size: 22,
+        family: 'tahoma',
+        weight: 'normal',
+        style: 'italic'
+      },
+
+    }
+  },
   scales: {
     yAxes: [
       {
