@@ -2,7 +2,7 @@ import '../App.css';
 
 function Ultimas5Ventas(props) {
     return (
-        <div className="content_ventas">
+        <div className="content5_ventas borders">
             <div className="flex_ventas">
             <p className="titulo_5"><span>Precio: </span>{props.precio}</p>
             <p className="titulo_5"> <span>Cantidad: </span>{props.cantidad}</p>

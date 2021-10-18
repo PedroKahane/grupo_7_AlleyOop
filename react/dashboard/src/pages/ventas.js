@@ -4,6 +4,7 @@ import '../App.css';
 
 import CardMAin from '../components/Card-Main';
 import Ultimas5Ventas from '../components/tarjetaUltimas5Ventas';
+import VerticalBar from '../components/Chart';
 
 
 class Ventas extends Component {
@@ -59,8 +60,8 @@ class Ventas extends Component {
              number = {this.state.Ingresos}
              svg ="fas fa-wallet"
              ></CardMAin>
-             <div className="ultimasVentas">
-                 <div className="flex_center">
+             <div className="ultimas5Ventas">
+                 <div className="flex_center_5">
                  <i className="fas fa-clock"></i>
                  <p className="tituloVentas">Ultimas Cinco Ventas: </p>
                  </div>
@@ -73,6 +74,7 @@ class Ventas extends Component {
                     ></Ultimas5Ventas>
                 })}
              </div>
+             <VerticalBar></VerticalBar>
             </div>
         )
     }

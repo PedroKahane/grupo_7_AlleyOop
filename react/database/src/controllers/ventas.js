@@ -9,7 +9,7 @@ const {like} = Op
 module.exports = {
     list: async (req,res) =>  {
         try {
-        let ventas = await db.compras.findAll({include: ["product"],where: { 
+        let Ventas = await db.compras.findAll({include: ["product"],where: { 
             estado_producto: [3,4,9,10]},
             order: [
                 ['id', 'DESC']
@@ -24,21 +24,25 @@ module.exports = {
             attributes: ['id', 'precio_total', 'cantidad'],
             limit : 5,
     })
-            let ventasPorProducto = await db.Product.findAll({include : ["compra"]
-        })
-            let countByProduct = {}
-            ventasPorProducto.forEach(element => {
-                if(element.compra.length > 0){
-                    countByProduct[element.jugador] = element.compra.length
-                }
-            });
-            let ultimasVentas = []
+            let ventasPorProducto = await db.Product.findAll({include : ["compra"]})
             let TotalIngresos = 0
-            
-            ventas.forEach(element => {
+            Ventas.forEach(element => {
                 TotalIngresos += element.precio_total 
                 
             });
+            let countByProduct = []
+            ventasPorProducto.forEach(element => {
+                if(element.compra.length > 0){
+                    ventas = {
+                        nombre: element.jugador,
+                        cantidad: element.compra.length
+                    }
+                    countByProduct.push(ventas)
+                }
+            });
+            let ultimasVentas = []
+            
+            
             ultimas5Ventas.forEach(element => {
                 products = {
                     id : element.id,
@@ -56,7 +60,7 @@ module.exports = {
             })
             res.json({
                 TotalIngresos: TotalIngresos,
-                count: ventas.length,
+                count: Ventas.length,
                 countByProduct: countByProduct,
                 ultimas5Ventas:ultimasVentas,
             })

@@ -1,7 +1,10 @@
 
-import React, {Component} from 'react'
+import React, {Component,} from 'react'
 import '../App.css';
+
+
 import CardMAin from '../components/Card-Main';
+
 
 class Home extends Component {
     constructor(props){
@@ -49,6 +52,7 @@ class Home extends Component {
 
     }
     
+      
     render() {
         return(
             <div className="flex">

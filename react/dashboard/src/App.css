@@ -6,7 +6,8 @@
 }
 .sidebar{
   width: 200px;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   background-color: rgb(52, 64, 90);
@@ -54,6 +55,17 @@
   padding: 10px;
   border-radius: 20px;
 }
+.ultimas5Ventas{
+  width: 100%;
+  margin: 25px 2.5%;
+  background-color: whitesmoke;
+  padding: 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
 .ultimasVentas{
   width: 45%;
   margin: 25px 2.5%;
@@ -79,7 +91,7 @@
 .App{
   display: flex;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 .home{
   width: 100vw;
@@ -132,11 +144,25 @@
   font-size: 32px;
   margin: 5px;
 }
-.flex_center{
+.flex_center_5{
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+.flex_center{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.content5_ventas{
+  width: 50%;
+  height: 105px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 .content_ventas{
   width: 100%;
@@ -146,7 +172,16 @@
   flex-direction: column;
   border-top: 1px solid #0A0903;
 }
-
+.borders:nth-child(3), .borders:nth-child(5){
+  border-top: 1px solid #0A0903;
+}
+.borders:nth-child(2), .borders:nth-child(4){
+  border-top: 1px solid #0A0903;
+  border-right: 1px solid #0A0903;
+}
+.borders:nth-child(4), .borders:nth-child(5){
+  border-bottom: 1px solid #0A0903;
+}
 .titulo_5{
   font-size: 26px;
 }
@@ -170,4 +205,25 @@ span{
 .not-found {
   margin-top: 15px;
   text-align: center;
+}
+.graph {
+  padding: 80px;
+  padding-top: 0px;
+  width: 80% !important;
+  height: auto !important;
+}
+.title_graph{
+  padding-top: 80px;
+  text-align: center;
+  font-size: 22px;
+}
+.header{
+  width: 100%;
+}
+
+.bar_content{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
