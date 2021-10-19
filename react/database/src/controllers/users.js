@@ -12,12 +12,13 @@ module.exports = {
             attributes: ['id', 'admin', 'email','first_name','last_name','user_name'],
 
         })
-            let lastUser = await db.User.findAll({ attributes: ['id', 'email','first_name','last_name','user_name'], 
+            let lastUser = await db.User.findAll({ attributes: ['id', 'email','first_name','last_name','user_name','image'], 
             limit: 1, order: [
             ['id', 'DESC']
         ]})
             let userAdmin = []
             let usuarios = []
+            let ultimoUsuario = []
             users.forEach(element => {
                 users = {
                     id : element.id,
@@ -33,13 +34,23 @@ module.exports = {
                     userAdmin.push(users)
                 }
             })
+            lastUser.forEach(element => {
+                user= {
+                    id : element.id,
+                    email : element.email,
+                    firstName : element.first_name,
+                    lastName : element.last_name,
+                    image: "http://localhost:3001/uploads/users/" + element.image,
+                }
+                ultimoUsuario.push(user)
+            })
             res.json({
                 countAdmins: userAdmin.length,
                 count: usuarios.length,
                 data: { 
                     users: usuarios,
                 },
-                lastUser: lastUser,
+                lastUser: ultimoUsuario,
             
             })
         } catch (error) {

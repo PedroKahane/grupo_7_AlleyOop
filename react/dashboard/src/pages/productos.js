@@ -76,11 +76,6 @@ class Productos extends Component {
                 number = {this.state.countProductosEnOferta}
                 svg="fas fa-tags"
                 ></CardMAin>
-                <CardMAin
-                titulo = "Cantidad de productos destacados: "
-                number = {this.state.countProductosDestacados}
-                svg="fas fa-bolt"
-                ></CardMAin>
                 <div className="ultimasVentas">
                     <div className="flex_center">
                     <i className="fas fa-basketball-ball"></i>
@@ -91,10 +86,16 @@ class Productos extends Component {
                         jugador ={element.jugador}
                         equipo ={element.equipo}
                         precio ={element.precio}
-                        color ={element.Color.nombre}
+                        color ={element.color}
+                        imagen = {element.imagenEspalda}
                         ></UltimoProducto>
                     })}
                 </div>
+                <CardMAin
+                titulo = "Cantidad de productos destacados: "
+                number = {this.state.countProductosDestacados}
+                svg="fas fa-bolt"
+                ></CardMAin>
                 <div className="ultimasVentas">
                     <div className="flex_center">
                     <i className="fas fa-tshirt"></i>

@@ -18,12 +18,13 @@ module.exports = {
                 countByColor[element.nombre] = element.products.length
             });
             let lastProduct = await db.Product.findAll({include: ['Color'],
-            attributes: ['jugador', 'equipo', 'descripcion', 'precio', 'imagen_frente'], limit: 1, order: [
+            attributes: ['jugador', 'equipo', 'descripcion', 'precio', 'imagen_espalda'], limit: 1, order: [
                 ['id', 'DESC']
             ]})
             let productos = []
             let productosEnOferta = []
             let productosDestacados = []
+            let ultimoProducto = []
             products.forEach(element => {
                 products = {
                     id : element.id,
@@ -45,6 +46,16 @@ module.exports = {
                     productosDestacados.push(products)
                 }
             })
+            lastProduct.forEach(element => {
+                product= {
+                    jugador : element.jugador,
+                    equipo : element.equipo,
+                    color : element.Color.nombre,
+                    precio : element.precio,
+                    imagenEspalda: "http://localhost:3001/uploads/" + element.imagen_espalda
+                }
+                ultimoProducto.push(product)
+            })
             res.json({
                 count: productos.length,
                 countProductosEnOferta: productosEnOferta.length,
@@ -54,7 +65,8 @@ module.exports = {
                 data: { 
                     products: productos,
                 },
-                lastProduct: lastProduct,
+                lastProduct: ultimoProducto,
+
             
             })
         } catch (error) {
