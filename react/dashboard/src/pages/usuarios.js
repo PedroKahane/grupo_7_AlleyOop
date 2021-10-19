@@ -80,8 +80,8 @@ class Usuarios extends Component {
                     </div>
                     {this.state.lastUser.map((element) => {
                         return <UltimoUsuario
-                        nombre ={element.first_name}
-                        apellido ={element.last_name}
+                        nombre ={element.firstName}
+                        apellido ={element.lastName}
                         id ={element.id}
                         email ={element.email}
                         ></UltimoUsuario>
