@@ -14,6 +14,7 @@ class Productos extends Component {
             countProductosDestacados: 0,
             listadoProductos: [],
             lastProduct: [],
+            countByColor: [],
 
         }
     }
@@ -34,7 +35,8 @@ class Productos extends Component {
     }
     mostrarCountProducts = (data) => {
         this.setState({
-            countProducts : data.count
+            countProducts : data.count,
+            countByColor: data.countByColor
         })
     }
     mostrarProductosEnOferta = (data) => {
@@ -64,6 +66,18 @@ class Productos extends Component {
     }
     
     render() {
+        const data2 = {
+            labels: this.state.countByColor.map((element) => element.nombre),
+            datasets: [
+              {
+                label: 'Cantidad de productos',
+                data :  this.state.countByColor.map((element) => element.cantidad),
+                backgroundColor: this.state.countByColor.map((element) => element.paletaRgba),
+                borderColor: this.state.countByColor.map((element) => element.paleta),
+                borderWidth: 1,
+              },
+            ],
+          };
         return(
             <div className="flex">
                 <CardMAin
@@ -113,7 +127,9 @@ class Productos extends Component {
                         ></ListadoProductos>
                     })}
                 </div>
-                <PieChart></PieChart>
+                <PieChart
+                data = {data2}
+                ></PieChart>
             </div>
         )
     }

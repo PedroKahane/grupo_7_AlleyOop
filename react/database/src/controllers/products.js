@@ -12,11 +12,18 @@ module.exports = {
             attributes: ['id', 'jugador','equipo','descripcion', 'descuento', 'destacado'],
         })
             let colors = await db.Color.findAll({include: ["products"]})
-            let countByColor = {}
+            let countByColor = []
             colors.forEach(element => {
-                
-                countByColor[element.nombre] = element.products.length
-            });
+                if(element.products.length > 0){
+                        let productos = {
+                            nombre: element.nombre,
+                            paleta: element.paleta,
+                            paletaRgba: element.paletaRgba,
+                            cantidad: element.products.length
+                     }
+                     countByColor.push(productos)
+                 }
+             });
             let lastProduct = await db.Product.findAll({include: ['Color'],
             attributes: ['jugador', 'equipo', 'descripcion', 'precio', 'imagen_frente'], limit: 1, order: [
                 ['id', 'DESC']
