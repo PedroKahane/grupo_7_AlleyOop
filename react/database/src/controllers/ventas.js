@@ -41,8 +41,6 @@ module.exports = {
                 }
             });
             let ultimasVentas = []
-            
-            
             ultimas5Ventas.forEach(element => {
                 products = {
                     id : element.id,
