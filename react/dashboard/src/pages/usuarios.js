@@ -76,7 +76,7 @@ class Usuarios extends Component {
                     <h2 className="titulo_2">ID</h2>
                     <h2 className="titulo_2">Nombre</h2>
                     <h2 className="titulo_2">Apellido</h2>
-                    <h2 className="titulo_2">E-mail</h2>
+                    <h2 className="titulo_2 email">E-mail</h2>
                     </div>
                     {this.state.lastUser.map((element) => {
                         return <UltimoUsuario
@@ -95,7 +95,7 @@ class Usuarios extends Component {
                     <div className="content_subtitulo_listado">
                     <h2 className="titulo_2">ID</h2>
                     <h2 className="titulo_2">Nombre</h2>
-                    <h2 className="titulo_2">E-mail</h2>
+                    <h2 className="titulo_2 email_lista">E-mail</h2>
                     </div>
                     {this.state.listadoUsuarios.map((element) => {
                         return <ListadoUsuarios

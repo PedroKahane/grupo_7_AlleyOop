@@ -7,7 +7,7 @@ function UltimoUsuario(props) {
             <p className="titulo">{props.id}</p>    
             <p className="titulo">{props.nombre}</p>
             <p className="titulo">{props.apellido}</p>
-            <p className="titulo">{props.email}</p>
+            <p className="titulo email">{props.email}</p>
             </div>
         </div>
     )
