@@ -343,7 +343,7 @@ span{
   .logo-sidebar{
     display: none;
   }
-  .sidebar:hover{
+  /* .sidebar:hover{
     width: 200px;
   }
   .sidebar:hover .selector_menu p{
@@ -354,9 +354,19 @@ span{
   }
   .sidebar:hover .logo-sidebar{
     display: unset;
-  }
+  } */
   .email{
     display: none;
+  }
+  .titulo{
+    font-size: 8px;
+    margin: 0px 5px;
+    width: unset;
+  }
+  .titulo_2{
+    font-size: 12px;
+    margin: 0 5px;
+    width: unset;
   }
 }
 @media (max-width: 500px) {
