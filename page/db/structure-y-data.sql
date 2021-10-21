@@ -142,7 +142,7 @@ CREATE TABLE `colores` (
 
 LOCK TABLES `colores` WRITE;
 /*!40000 ALTER TABLE `colores` DISABLE KEYS */;
-INSERT INTO `colores` VALUES (1,'azul','rgb(54, 162, 235)','rgba(54, 162, 235,0.2)',NULL,NULL),(2,'Roja','rgb(255, 99, 132,)','rgba(255, 99, 132, 0.2)',NULL,NULL),(3,'verde','RGB(75, 192, 192)','rgba(75,192,192,0.2)',NULL,NULL),(4,'violeta','RGB(153, 102, 255)','rgba(153,102,255,0.2)',NULL,NULL),(5,'negra','rgb(68,68,70)','rgba(68,68,70,0.2)',NULL,NULL), (6,'amarilla', 'rgb(255, 206, 86)','rgba(255, 206, 86, 0.2)',NULL,NULL);
+INSERT INTO `colores` VALUES (1,'azul','rgb(54, 162, 235)','rgba(54, 162, 235,0.2)',NULL,NULL),(2,'Roja','rgb(255, 99, 132)','rgba(255, 99, 132, 0.2)',NULL,NULL),(3,'verde','RGB(75, 192, 192)','rgba(75,192,192,0.2)',NULL,NULL),(4,'violeta','RGB(153, 102, 255)','rgba(153,102,255,0.2)',NULL,NULL),(5,'negra','rgb(68,68,70)','rgba(68,68,70,0.2)',NULL,NULL), (6,'amarilla', 'rgb(255, 206, 86)','rgba(255, 206, 86, 0.2)',NULL,NULL);
 /*!40000 ALTER TABLE `colores` ENABLE KEYS */;
 UNLOCK TABLES;
 
