@@ -27,7 +27,7 @@
                             <p class="descripcion"><span>Forma de pago: </span> <%= compra.metodo.metodo_de_pago %></p>
                             <p class="descripcion"><span>Direccion: </span> <%= compra.entrega.direccion %>-<%= compra.entrega.localidad %>(CP: <%= compra.entrega.codigopostal %>)</p>
                             <% if (compra.estado_producto == 3) { %>
-                                <p class="descripcion"><span>Estado: </span>Completado</p>
+                                <p class="descripcion"><span>Estado: </span>Confirmado</p>
                             <% } %>
                             <% if (compra.estado_producto == 4) { %>
                                 <p class="descripcion"><span>Estado: </span>En proceso de envio</p>
