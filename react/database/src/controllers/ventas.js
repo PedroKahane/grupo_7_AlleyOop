@@ -10,14 +10,14 @@ module.exports = {
     list: async (req,res) =>  {
         try {
         let Ventas = await db.compras.findAll({include: ["product"],where: { 
-            estado_producto: [3,4,9,10]},
+            estado_producto: [3,4,10]},
             order: [
                 ['id', 'DESC']
             ],
             attributes: ['id', 'precio_total'],
         })
         let ultimas5Ventas = await db.compras.findAll({include: ["product"],where: { 
-            estado_producto: [3,4,9,10]},
+            estado_producto: [3,4,10]},
             order: [
                 ['id', 'DESC']
             ],
