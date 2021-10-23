@@ -1,5 +1,6 @@
 import Button from './button-sidebar';
 import logo from './../assets/alley-oop-logo.png'
+import logoMini from './../assets/alley-oop-logo_pelota.png'
 import '../App.css';
 
 function Sidebar() {
@@ -7,6 +8,7 @@ function Sidebar() {
         <fragment>
             <div className="sidebar">
                 <img className="logo-sidebar" src={logo} alt="Alley-oop"></img>
+                <img className="logo-sidebar_responsive" src={logoMini} alt="Alley-oop"></img>
                 <Button 
                 nombre = "Home"
                 svg = "fas fa-home"

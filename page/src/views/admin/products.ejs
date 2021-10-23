@@ -6,6 +6,14 @@
 <main id="main_tienda">
         <p id="title_admin">ADMINISTRAR PRODUCTOS:</p>
         <div id="articulos_promocion">
+            <article class="articulo_destacado sumar">
+                <p id="p_creacion">Crear un nuevo producto</p>
+                <a href="/create">
+                    <div class="background_plus">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </a>
+            </article>     
             <% products.forEach(product => { %>
                 <article class="articulo_destacado">
                     <figure>
@@ -28,14 +36,7 @@
                     </div>
                 </article>        
             <% }) %>
-            <article class="articulo_destacado sumar">
-                <p id="p_creacion">Crear un nuevo producto</p>
-                <a href="/create">
-                    <div class="background_plus">
-                        <i class="fas fa-plus"></i>
-                    </div>
-                </a>
-            </article>     
+            
         </div>
     </main>
     <%- include ("../includes/footer") %>

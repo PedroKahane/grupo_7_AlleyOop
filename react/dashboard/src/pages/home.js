@@ -15,7 +15,9 @@ class Home extends Component {
             count : 0,
             countProducts: 0,
             countVentas: 0,
-            Ingresos: 0 
+            Ingresos: 0,
+            countByproduct: [],
+            countByColor: []
         }
     }
     apiCall(url, consecuencia){
@@ -37,7 +39,8 @@ class Home extends Component {
     }
     mostrarCountProducts = (data) => {
         this.setState({
-            countProducts : data.count
+            countProducts : data.count,
+            countByColor: data.countByColor
         })
     }
     mostrarCountVentas = (data) => {
@@ -46,16 +49,57 @@ class Home extends Component {
         })
     }
     mostrarIngresos = (data) => {
+        console.log(data);
         this.setState({
-            Ingresos : '$ ' + data.TotalIngresos
+            Ingresos : '$ ' + data.TotalIngresos,
+            countByproduct: data.countByProduct
         })
+        console.log(this.state.countByproduct);
     }
     componentDidUpdate(){
 
     }
-    
+
       
     render() {
+        const data = {
+            labels: this.state.countByproduct.map((element) => element.nombre),
+            datasets: [
+              {
+                label: 'Ventas',
+                data: this.state.countByproduct.map((element) => element.cantidad),
+                backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)',
+                  'rgba(75, 192, 192, 0.2)',
+                  'rgba(153, 102, 255, 0.2)',
+                  'rgba(255, 159, 64, 0.2)',
+                ],
+                borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(255, 159, 64, 1)',
+                ],
+                borderWidth: 0.5,
+              },
+            ],
+          };
+          const data2 = {
+            labels: this.state.countByColor.map((element) => element.nombre),
+            datasets: [
+              {
+                label: 'Cantidad de productos',
+                data :  this.state.countByColor.map((element) => element.cantidad),
+                backgroundColor: this.state.countByColor.map((element) => element.paletaRgba),
+                borderColor: this.state.countByColor.map((element) => element.paleta),
+                borderWidth: 1,
+              },
+            ],
+          };
         return(
             <div className="flex">
              <CardMAin
@@ -78,8 +122,12 @@ class Home extends Component {
              number = {this.state.Ingresos}
              svg ="fas fa-wallet"
              ></CardMAin>
-             <VerticalBar></VerticalBar>
-             <PieChart></PieChart>
+             <VerticalBar
+             data = {data}
+             ></VerticalBar>
+             <PieChart
+             data = {data2}
+             ></PieChart>
             </div>
         )
     }

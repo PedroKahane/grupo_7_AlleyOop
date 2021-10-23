@@ -13,7 +13,8 @@ class Ventas extends Component {
         this.state = {
             countVentas: 0,
             Ingresos: 0,
-            Ultimas5Ventas: []
+            Ultimas5Ventas: [],
+            countByproduct: [],
         }
     }
     apiCall(url, consecuencia){
@@ -29,7 +30,8 @@ class Ventas extends Component {
     }
     mostrarCountVentas = (data) => {
         this.setState({
-            countVentas : data.count
+            countVentas : data.count,
+            countByproduct: data.countByProduct
         })
     }
     mostrarIngresos = (data) => {
@@ -48,6 +50,32 @@ class Ventas extends Component {
     }
     
     render() {
+        const data = {
+            labels: this.state.countByproduct.map((element) => element.nombre),
+            datasets: [
+              {
+                label: 'Ventas',
+                data: this.state.countByproduct.map((element) => element.cantidad),
+                backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)',
+                  'rgba(75, 192, 192, 0.2)',
+                  'rgba(153, 102, 255, 0.2)',
+                  'rgba(255, 159, 64, 0.2)',
+                ],
+                borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(255, 159, 64, 1)',
+                ],
+                borderWidth: 0.5,
+              },
+            ],
+          };
         return(
             <div className="flex">
              <CardMAin
@@ -74,7 +102,9 @@ class Ventas extends Component {
                     ></Ultimas5Ventas>
                 })}
              </div>
-             <VerticalBar></VerticalBar>
+             <VerticalBar
+             data = {data}
+             ></VerticalBar>
             </div>
         )
     }

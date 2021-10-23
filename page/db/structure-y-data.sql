@@ -129,6 +129,7 @@ CREATE TABLE `colores` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `paleta` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `paletaRgba` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `createdAt` DATE DEFAULT NULL,
   `updatedAt` DATE DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -141,7 +142,7 @@ CREATE TABLE `colores` (
 
 LOCK TABLES `colores` WRITE;
 /*!40000 ALTER TABLE `colores` DISABLE KEYS */;
-INSERT INTO `colores` VALUES (1,'azul','rgb(46,36,185)',NULL,NULL),(2,'Roja','rgb(165,25,25)',NULL,NULL),(3,'verde','rgb(7,53,0)',NULL,NULL),(4,'violeta','rgb(39,0,99)',NULL,NULL),(5,'negra','rgb(15,15,15)',NULL,NULL), (6,'amarilla', 'rgb(255,255,0)',NULL,NULL);
+INSERT INTO `colores` VALUES (1,'azul','rgb(54, 162, 235)','rgba(54, 162, 235,0.2)',NULL,NULL),(2,'Roja','rgb(255, 99, 132)','rgba(255, 99, 132, 0.2)',NULL,NULL),(3,'verde','RGB(75, 192, 192)','rgba(75,192,192,0.2)',NULL,NULL),(4,'violeta','RGB(153, 102, 255)','rgba(153,102,255,0.2)',NULL,NULL),(5,'negra','rgb(68,68,70)','rgba(68,68,70,0.2)',NULL,NULL), (6,'amarilla', 'rgb(255, 206, 86)','rgba(255, 206, 86, 0.2)',NULL,NULL);
 /*!40000 ALTER TABLE `colores` ENABLE KEYS */;
 UNLOCK TABLES;
 

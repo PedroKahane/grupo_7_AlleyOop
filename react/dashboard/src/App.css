@@ -275,9 +275,104 @@ span{
 .id_email {
   width: 70%;
 }
+.logo-sidebar_responsive{
+  display: none;
+}
 .imagen_producto {
   height: 120px;
   width: 120px;
   border: 2px solid #FF8200;
   border-radius: 10px;
+}
+@media (max-width:1000px){
+  .Card{
+    width: 95%;
+  }
+  .ultimasVentas{
+    width: 95%;
+  }
+  .Bar{
+    width: 95%;
+  }
+  .titulo{
+    font-size: 10px;
+  }
+  .titulo_2{
+    font-size: 16px;
+  }
+ 
+}
+@media (max-width: 650px) {
+  .Card i{
+    font-size: 26px;
+  }
+  .info_card{
+    font-size: 22px;
+  }
+  .title_card{
+    font-size: 14px;
+  }
+  .fa-basketball-ball, .fa-tshirt, .fa-user, .fa-user-plus, .fa-clock{
+    font-size: 22px;
+  }
+  .tituloVentas{
+    font-size: 22px;
+  }
+  .datos_product{
+    font-size: 14px;
+  }
+  .sidebar{
+    width: 70px;
+    z-index: 9;
+    transition: 1000ms ease-in-out;
+  }
+  .selector_menu p{
+    display: none;
+  }
+  .selector_menu{
+    justify-content: center;
+    padding: 15px 5px;
+  }
+  .logo-sidebar_responsive{
+    display: unset;
+    border-bottom: 1px solid whitesmoke;
+    width: 100%;
+    padding: 20px;
+    height: auto;
+  }
+  .logo-sidebar{
+    display: none;
+  }
+  /* .sidebar:hover{
+    width: 200px;
+  }
+  .sidebar:hover .selector_menu p{
+    display: unset;
+  }
+  .sidebar:hover .logo-sidebar_responsive{
+    display: none;
+  }
+  .sidebar:hover .logo-sidebar{
+    display: unset;
+  } */
+  .email{
+    display: none;
+  }
+  .titulo{
+    font-size: 8px;
+    margin: 0px 5px;
+    width: unset;
+  }
+  .titulo_2{
+    font-size: 12px;
+    margin: 0 5px;
+    width: unset;
+  }
+}
+@media (max-width: 500px) {
+  .imagen_producto{
+    width: 60px;
+    height: 60px;
+    border: 1px solid #FF8200;
+  }
 }

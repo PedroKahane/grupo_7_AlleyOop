@@ -12,6 +12,10 @@ module.exports = function(sequelize, DataTypes) {
         paleta:{
             type: DataTypes.STRING,
             allowNull: false,
+        },
+        paletaRgba:{
+            type: DataTypes.STRING,
+            allowNull: false,
         }
     },{
         tableName: "colores",

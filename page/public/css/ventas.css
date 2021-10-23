@@ -116,13 +116,13 @@
     color: white;
 }
 .titulo_cancelado{
-    font-size: 22px;
+    font-size: 18px;
 }
 .cruz_cancelada{
-    font-size: 48px;
+    font-size: 32px;
     background-color: #d82e2e;
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     border-radius: 100%;
     color: whitesmoke;
     text-align: center;
@@ -139,10 +139,10 @@
     border: 1px #ededed solid;
 }
 .tic_terminado{
-    font-size: 48px;
+    font-size: 32px;
     background-color: #39b54a;
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     border-radius: 100%;
     color: whitesmoke;
     text-align: center;
