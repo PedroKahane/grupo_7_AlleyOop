@@ -234,6 +234,19 @@ input[type=submit]{
 .boton-compra{
     cursor: pointer;
 }
+.borrar_filtro{
+    text-decoration: none;
+    color: #1a1a24;
+    font-size: 12px;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.borrar_filtro i{
+    margin-right: 5px;
+}
 @media (min-width:790px) {
     .articulo_destacado{
         width: 43%;
