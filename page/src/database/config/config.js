@@ -1,5 +1,13 @@
 module.exports = {
   "development": {
+    "username": "roufzyvygwswh28ek2ot",
+    "password": "q0Up32wfLtBY1GSNyULL",
+    "database": "bhz6rlsq7ia0ivt8esdj",
+    "host": "bhz6rlsq7ia0ivt8esdj-mysql.services.clever-cloud.com",
+    "dialect": "mysql",
+    "port" : "3306"
+  },
+  "test": {
     "username": "root",
     "password": null,
     "database": "alley_oop",
@@ -7,18 +15,12 @@ module.exports = {
     "dialect": "mysql",
     "port": "3306"
   },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "roufzyvygwswh28ek2ot",
+    "password": "q0Up32wfLtBY1GSNyULL",
+    "database": "bhz6rlsq7ia0ivt8esdj",
+    "host": "bhz6rlsq7ia0ivt8esdj-mysql.services.clever-cloud.com",
+    "dialect": "mysql",
+    "port" : "3306"
   }
 }
